@@ -12,11 +12,14 @@ There are 3 trading styles: investing, swing trading, and scalping.
 There are 6 markets to trade: OTC (pinks), equities, commodities, futures, cryptocurrencies, and options.
 Fortunes have been made in each of the 18 possiblities.  So it's not what you do, but how you do it.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|                  | Investing | Swing Trading | Scalping |
+|------------------|-----------|---------------|----------|
+| OTC              |           | x             |          |
+| Equities         | x         |               |          |
+| Commodities      |           |               |          |
+| Futures          |           |               |          |
+| Cryptocurrencies |           | x             |          |
+| Options          |           |               | x        |
 
 In order, I've tried swing trading OTC, investing in equities, swing trading cryptocurrencies, and scalping options.  Probably 90% of my time has been spent scalping options.
 
