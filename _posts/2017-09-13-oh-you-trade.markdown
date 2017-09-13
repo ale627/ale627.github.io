@@ -12,8 +12,10 @@ There are 3 trading styles: investing, swing trading, and scalping.
 There are 6 markets to trade: OTC (pinks), equities, commodities, futures, cryptocurrencies, and options.
 Fortunes have been made in each of the 18 possiblities.  So it's not what you do, but how you do it.
 
+In order, I've tried swing trading OTC, investing in equities, swing trading cryptocurrencies, and scalping options.  Probably 90% of my time has been spent scalping options.
+
 |                  | Investing | Swing Trading | Scalping |
-|------------------|-----------|---------------|----------|
+|------------------|:---------:|:-------------:|:--------:|
 | OTC              |           | x             |          |
 | Equities         | x         |               |          |
 | Commodities      |           |               |          |
@@ -21,16 +23,22 @@ Fortunes have been made in each of the 18 possiblities.  So it's not what you do
 | Cryptocurrencies |           | x             |          |
 | Options          |           |               | x        |
 
-In order, I've tried swing trading OTC, investing in equities, swing trading cryptocurrencies, and scalping options.  Probably 90% of my time has been spent scalping options.
+
 
 Options are "derivatives" created to hedge underlying positions.  There are a lot of complicated options strategies involving selling them, buying one and selling another, etc.
 
->If Goldman had a load of `$GM` and suddenly `$TSLA` is founded and poses a large threat to `$GM`, Goldman would want to lower its risk.  Goldman's can't just liquidate his stake.  So Goldman says to Silverman (who is also long `$GM`), "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  Sounds good to Silverman, so he writes up a contract and sells it to Goldman.  That's a put option.
+Here's an example of a put option.
 
-Later on: `$GM` tanks.  Goldman goes to Silverman at Christmas.  Goldman offloads his `$GM` shares to Silverman at the price from several months ago, much higher.  For a nominal fee, Goldman avoided significant losses.
-Or: If `$GM` had gone up, or not changed price, the option would have been useless.
+Goldman holds a lot of `$GM` as part of its Blue Chip ETF.  `$TSLA` is founded and poses a significant threat to `$GM`. Goldman wants to lower risk.  Goldman's can't just liquidate his stake.  
+His buddy Silverman is also long `$GM`.
+So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  Sounds good to Silverman, so he writes up a contract and sells it to Goldman.
+...
+If `$GM` tanks, Goldman could offload his `$GM` shares to Silverman at the higher price from several months ago.
+If `$GM` price goes up or doesn't move, the option would have been useless.
 
-With a L1 clearance, you can buy options without owning the underlying, as long as you sell before expiration.  And options expiring each Wednesday and Friday are available as low as $.01/share.
+Although options were created as hedges, they are frequently traded "naked" or without owning the underlying.  This creates aggressive risk.
+
+Naked option risk/return profile is like a wager you might make with a friend.  There are odds, capital at risk, and defined end.  
 
 Within the past several months, FinTwit traders [@JMVala_Trades][jm] and [@TheTradingNinja][ninja] took options accounts from $300-$10,000 and $150-$25,000 respectively.  These returns are impossible in any other capacity.
 
