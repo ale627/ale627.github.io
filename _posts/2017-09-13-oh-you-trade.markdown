@@ -16,7 +16,7 @@ In order, I've tried swing trading OTC, investing in equities, swing trading cry
 
 Options are "derivatives" created to hedge underlying positions.  There are a lot of complicated options strategies involving selling them, buying one and selling another, etc.
 
-_If Goldman had a load of $GM and suddenly '$TSLA' is founded and poses a large threat to '$GM', Goldman would want to lower its risk.  Goldman's stake is probably illiquid.  Goldman says to Silverman, who is a big '$GM' fan, "I'll give you $1 now for the right to sell a share of '$GM' to you at today's price until the new year".  Sounds good to Silverman, so he writes up a contract and sells it to Goldman._  That's a put option.
+>If Goldman had a load of `$GM` and suddenly `$TSLA` is founded and poses a large threat to `$GM`, Goldman would want to lower its risk.  Goldman's stake is probably illiquid.  Goldman says to Silverman, who is a big `$GM` fan, "I'll give you $1 now for the right to sell a share of `$GM` to you at today's price until the new year".  Sounds good to Silverman, so he writes up a contract and sells it to Goldman.  That's a put option.
 
 Later on: '$GM' tanks.  Goldman goes to Silverman at Christmas.  Goldman offloads his '$GM' shares to Silverman at the price from several months ago, much higher.  For a nominal fee, Goldman avoided significant losses.
 Or: If '$GM' had gone up, or not changed price, the option would have been useless.
