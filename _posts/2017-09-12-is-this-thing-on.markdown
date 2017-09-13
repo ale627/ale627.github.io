@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "is this thing on?"
+title:  "Is this thing on?"
 date:   2017-09-12 15:05:00 -0700
 categories:
 ---
