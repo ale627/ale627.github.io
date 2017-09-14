@@ -21,6 +21,9 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
+  body table {
+    border-spacing: 10px;
+    border-color: #ff0000; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -474,7 +477,3 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
-
-table {
-  border-spacing: 10px;
-  border-color: #ff0000; }

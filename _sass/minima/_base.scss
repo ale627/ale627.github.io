@@ -24,6 +24,12 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+
+  table {
+  border-spacing: 10px;
+  border-color: #ff0000;
+}
+
 }
 
 
