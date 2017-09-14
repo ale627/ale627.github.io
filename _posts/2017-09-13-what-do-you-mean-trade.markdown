@@ -15,13 +15,13 @@ Careers have been made in each of the 18 possiblities.
 I've tried swing trading OTC, investing in equities, swing trading cryptocurrencies, and scalping options.  90% scalping options.
 
 |                  | Investing | Swing Trading | Scalping |
-|------------------|:---------:|:-------------:|:--------:|
+|------------------|-----------|---------------|----------|
 | OTC              |           | x             |          |
 | Equities         | x         |               |          |
 | Commodities      |           |               |          |
 | Futures          |           |               |          |
 | Cryptocurrencies |           | x             |          |
-| Options          |           |               | x        |
+| Options                      |               | x        |
 
 
 # What are Options
