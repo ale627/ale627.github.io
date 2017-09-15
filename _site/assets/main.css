@@ -163,13 +163,14 @@ pre {
 
 .site-title {
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  color: #B6DEBD; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #81c68d; }
 
 .site-nav {
   float: right;
@@ -282,7 +283,7 @@ pre {
   padding: 30px 0; }
 
 .page-heading {
-  font-size: 20px; }
+  font-size: 32px; }
 
 .post-list {
   margin-left: 0;
