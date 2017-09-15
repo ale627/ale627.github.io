@@ -6,13 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>What do you mean trade?</title>
-  <meta name="description" content="Types of Trading If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.">
+  <title>What do you mean, trade?</title>
+  <meta name="description" content="If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.">
+  
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/2017/09/13/what-do-you-mean-trade.html">
+  <link rel="canonical" href="http://localhost:4000/2017/09/13/what-trade.html">
   <link rel="alternate" type="application/rss+xml" title="ale627" href="/feed.xml">
   
+
+
   
 </head>
 
@@ -60,6 +65,11 @@
           
             
             
+            <a class="page-link" href="/test/">Test</a>
+            
+          
+            
+            
           
         </div>
       </nav>
@@ -73,7 +83,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">What do you mean trade?</h1>
+    <h1 class="post-title" itemprop="name headline">What do you mean, trade?</h1>
     <p class="post-meta">
       <time datetime="2017-09-13T15:05:00-07:00" itemprop="datePublished">
         
@@ -83,8 +93,27 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="types-of-trading">Types of Trading</h1>
-<p>If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.</p>
+    <p>If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are Options</a>    <ul>
+      <li><a href="#put-option-example" id="markdown-toc-put-option-example">Put Option Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#option-mechanics" id="markdown-toc-option-mechanics">Option Mechanics</a>    <ul>
+      <li><a href="#call-vs-equity-example" id="markdown-toc-call-vs-equity-example">Call vs Equity Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#risk" id="markdown-toc-risk">Risk</a>    <ul>
+      <li><a href="#charts" id="markdown-toc-charts">Charts</a>        <ul>
+          <li><a href="#increase-win-rate" id="markdown-toc-increase-win-rate">Increase Win Rate</a></li>
+          <li><a href="#increase-rr" id="markdown-toc-increase-rr">Increase R/R</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#reference" id="markdown-toc-reference">Reference</a></li>
+</ul>
 
 <p>There are 3 trading styles: investing, swing trading, and scalping.
 There are 6 markets to trade: OTC (pinks), equities, commodities, futures, cryptocurrencies, and options.
@@ -96,47 +125,47 @@ Careers have been made in each of the 18 possiblities.</p>
   <thead>
     <tr>
       <th> </th>
-      <th>Investing</th>
-      <th>Swing Trading</th>
-      <th>Scalping</th>
+      <th style="text-align: center">Investing</th>
+      <th style="text-align: center">Swing Trading</th>
+      <th style="text-align: center">Scalping</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>OTC</td>
-      <td> </td>
-      <td>x</td>
-      <td> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center"> </td>
     </tr>
     <tr>
       <td>Equities</td>
-      <td>x</td>
-      <td> </td>
-      <td> </td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
     </tr>
     <tr>
       <td>Commodities</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
     </tr>
     <tr>
       <td>Futures</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
     </tr>
     <tr>
       <td>Cryptocurrencies</td>
-      <td> </td>
-      <td>x</td>
-      <td> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center"> </td>
     </tr>
     <tr>
       <td>Options</td>
-      <td> </td>
-      <td>x</td>
-      <td> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">x</td>
     </tr>
   </tbody>
 </table>
@@ -186,16 +215,16 @@ Expectancy goes up if you have more % trades that work, or if you increase your 
 
 <p><em>Random position sizing affects expectancy, ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.</em></p>
 
-<h1 id="charts">Charts</h1>
+<h2 id="charts">Charts</h2>
 <p>Charts are useful for increasing win rate, and R/R.</p>
 
 <p><em>The most common type of chart for traders is the candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.  Each of these candlestick bodies contain important information: Open, High, Low, Close.  The longer the period contained by the candlestick, the more significant its levels are.</em></p>
 
-<h2 id="increase-win-rate">Increase Win Rate</h2>
+<h3 id="increase-win-rate">Increase Win Rate</h3>
 <p>A common method of finding reliable moves is to start on the weekly chart, look for trends, and trade the breakouts.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If price breaks above $200, that signals a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.</p>
 
-<h1 id="increase-rr">Increase R/R</h1>
+<h3 id="increase-rr">Increase R/R</h3>
 <p>You increase R/R by defining risk, and fitting your position size to that risk.<br />
 For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is the bottom, then you can build a trade around this idea.  If you want to lose no more than $50 on the trade, you can buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $12, $15.</p>
 
@@ -252,7 +281,7 @@ For example say you want to buy the bottom in <code class="highlighter-rouge">$S
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>I am an analyst at Oracle, a sailor who won RBBS &#39;16, and an active options trader living in the SF Bay Area.
+        <p>Dylan Ale + GitHub Pages + Jekyll + Minima + Arimo + Inconsolata = ale627.github.io
 </p>
       </div>
     </div>

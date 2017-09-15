@@ -1,6 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-13T23:20:27-07:00</updated><id>/</id><title type="html">ale627</title><subtitle>I am an analyst at Oracle, a sailor who won RBBS '16, and an active options trader living in the SF Bay Area.
-</subtitle><entry><title type="html">What do you mean trade?</title><link href="/2017/09/13/what-do-you-mean-trade.html" rel="alternate" type="text/html" title="What do you mean trade?" /><published>2017-09-13T15:05:00-07:00</published><updated>2017-09-13T15:05:00-07:00</updated><id>/2017/09/13/what-do-you-mean-trade</id><content type="html" xml:base="/2017/09/13/what-do-you-mean-trade.html">&lt;h1 id=&quot;types-of-trading&quot;&gt;Types of Trading&lt;/h1&gt;
-&lt;p&gt;If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-14T16:18:35-07:00</updated><id>http://localhost:4000/</id><title type="html">ale627</title><subtitle>Dylan Ale + GitHub Pages + Jekyll + Minima + Arimo + Inconsolata = ale627.github.io
+</subtitle><entry><title type="html">Finless Foods</title><link href="http://localhost:4000/2017/09/14/finless-foods.html" rel="alternate" type="text/html" title="Finless Foods" /><published>2017-09-14T14:30:00-07:00</published><updated>2017-09-14T14:30:00-07:00</updated><id>http://localhost:4000/2017/09/14/finless-foods</id><content type="html" xml:base="http://localhost:4000/2017/09/14/finless-foods.html">&lt;p&gt;I met some interesting people in a roundabout way last week.&lt;/p&gt;
+
+&lt;p&gt;Zois, my housemate’s friend from Chile, stayed on our couch last week.  He invited me to Massive Attack at 1015 Folsom with Emily, a friend visiting SF.  Emily was staying in SoMa with Mike, who she met in Taiwan.&lt;/p&gt;
+
+&lt;p&gt;Mike lives with Brian, and together they run Finless Foods, a new food startup creating fish without fishing or farming.  They’re growing fish meat from stem cells.  Finless is creating surimi (fish paste) in the lab now.&lt;/p&gt;
+
+&lt;p&gt;Their fish is healthier.  Caught fish contains mercury and plastic, while farmed fish contains antibiotics and hormones.
+As the fish is grown without a body of water, it can be produced anywhere.
+Moreover, since no fish are harmed, it appeals to folks who are vegan for ethical reasons.
+The last hurdle from the green crowd is: can this fish be produced in a way that is less carbon intensive than normal?&lt;/p&gt;
+
+&lt;p&gt;When Zois and I picked Mike, Brian, and their co-worker had just wrapped up an initial tasting.  Mike joked that he was looking forward to “only” having to speak in front of 1000 people the following week.  Easy, in comparison.&lt;/p&gt;
+
+&lt;p&gt;Zois, Emily, Mike, and I went to Massive Attack together.  It was a fun show, closing with “Teardrop”.  Afterwards, we took a peek at the IndieBio incubator which was right around the corner.&lt;/p&gt;
+
+&lt;p&gt;The following morning, Mike mentioned that he had actually felt unstressed for the first time in months.  Balance is important!
+(An hour later he was off to New York on a plane.)&lt;/p&gt;
+
+&lt;p&gt;Here’s the link to that talk, IndieBio SF Demo Day 5.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UPnDtDXz9s8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Good luck to &lt;a href=&quot;https://twitter.com/finlessfoods&quot;&gt;Finless Foods&lt;/a&gt;!!&lt;/p&gt;</content><author><name></name></author><summary type="html">I met some interesting people in a roundabout way last week.</summary></entry><entry><title type="html">What do you mean, trade?</title><link href="http://localhost:4000/2017/09/13/what-trade.html" rel="alternate" type="text/html" title="What do you mean, trade?" /><published>2017-09-13T15:05:00-07:00</published><updated>2017-09-13T15:05:00-07:00</updated><id>http://localhost:4000/2017/09/13/what-trade</id><content type="html" xml:base="http://localhost:4000/2017/09/13/what-trade.html">&lt;p&gt;If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-are-options&quot; id=&quot;markdown-toc-what-are-options&quot;&gt;What are Options&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#put-option-example&quot; id=&quot;markdown-toc-put-option-example&quot;&gt;Put Option Example&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#option-mechanics&quot; id=&quot;markdown-toc-option-mechanics&quot;&gt;Option Mechanics&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#call-vs-equity-example&quot; id=&quot;markdown-toc-call-vs-equity-example&quot;&gt;Call vs Equity Example&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#risk&quot; id=&quot;markdown-toc-risk&quot;&gt;Risk&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#charts&quot; id=&quot;markdown-toc-charts&quot;&gt;Charts&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#increase-win-rate&quot; id=&quot;markdown-toc-increase-win-rate&quot;&gt;Increase Win Rate&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#increase-rr&quot; id=&quot;markdown-toc-increase-rr&quot;&gt;Increase R/R&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#reference&quot; id=&quot;markdown-toc-reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;There are 3 trading styles: investing, swing trading, and scalping.
 There are 6 markets to trade: OTC (pinks), equities, commodities, futures, cryptocurrencies, and options.
@@ -12,47 +52,47 @@ Careers have been made in each of the 18 possiblities.&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Investing&lt;/th&gt;
-      &lt;th&gt;Swing Trading&lt;/th&gt;
-      &lt;th&gt;Scalping&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Investing&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Swing Trading&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Scalping&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;OTC&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;x&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Equities&lt;/td&gt;
-      &lt;td&gt;x&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Commodities&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Futures&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Cryptocurrencies&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;x&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Options&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;x&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -102,36 +142,24 @@ Expectancy goes up if you have more % trades that work, or if you increase your 
 
 &lt;p&gt;&lt;em&gt;Random position sizing affects expectancy, ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;charts&quot;&gt;Charts&lt;/h1&gt;
+&lt;h2 id=&quot;charts&quot;&gt;Charts&lt;/h2&gt;
 &lt;p&gt;Charts are useful for increasing win rate, and R/R.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The most common type of chart for traders is the candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.  Each of these candlestick bodies contain important information: Open, High, Low, Close.  The longer the period contained by the candlestick, the more significant its levels are.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;increase-win-rate&quot;&gt;Increase Win Rate&lt;/h2&gt;
+&lt;h3 id=&quot;increase-win-rate&quot;&gt;Increase Win Rate&lt;/h3&gt;
 &lt;p&gt;A common method of finding reliable moves is to start on the weekly chart, look for trends, and trade the breakouts.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If price breaks above $200, that signals a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.&lt;/p&gt;
 
-&lt;h1 id=&quot;increase-rr&quot;&gt;Increase R/R&lt;/h1&gt;
+&lt;h3 id=&quot;increase-rr&quot;&gt;Increase R/R&lt;/h3&gt;
 &lt;p&gt;You increase R/R by defining risk, and fitting your position size to that risk.&lt;br /&gt;
 For example say you want to buy the bottom in &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt;.  It has been going down ever since it IPO’d.  If last week &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; hit $10 and bounced to $11, and you think $10 is the bottom, then you can build a trade around this idea.  If you want to lose no more than $50 on the trade, you can buy 50 shares and stop out below $10.  If you are correct and &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $12, $15.&lt;/p&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;Within the past several months, FinTwit traders &lt;a href=&quot;https://twitter.com/jmvala_trades&quot;&gt;@JMVala_Trades&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/thetradingninja&quot;&gt;@TheTradingNinja&lt;/a&gt; took options accounts from $300-$10,000 and $150-$25,000 respectively.  These returns are impossible in any other capacity.&lt;/p&gt;</content><author><name></name></author><summary type="html">Types of Trading If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.</summary></entry><entry><title type="html">Is this thing on?</title><link href="/2017/09/12/is-this-thing-on.html" rel="alternate" type="text/html" title="Is this thing on?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>/2017/09/12/is-this-thing-on</id><content type="html" xml:base="/2017/09/12/is-this-thing-on.html">&lt;p&gt;What is a blog for?  You see a ton of blogs being created.  Usually they only have a handful of posts from a few years ago.  How the heck can this blog become anything different?&lt;/p&gt;
+&lt;p&gt;Within the past several months, FinTwit traders &lt;a href=&quot;https://twitter.com/jmvala_trades&quot;&gt;@JMVala_Trades&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/thetradingninja&quot;&gt;@TheTradingNinja&lt;/a&gt; took options accounts from $300-$10,000 and $150-$25,000 respectively.  These returns are impossible in any other capacity.&lt;/p&gt;</content><author><name></name></author><summary type="html">If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.</summary></entry><entry><title type="html">*tap *tap Is this thing on?</title><link href="http://localhost:4000/2017/09/12/is-on.html" rel="alternate" type="text/html" title="*tap *tap Is this thing on?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>http://localhost:4000/2017/09/12/is-on</id><content type="html" xml:base="http://localhost:4000/2017/09/12/is-on.html">&lt;p&gt;What is a blog for?  You see a ton of blogs being created.  Usually they only have a handful of posts from a few years ago.  How the heck can this blog become anything different?&lt;/p&gt;
 
 &lt;p&gt;The reason so many blogs deprecate is: the owners don’t really care about them!  At the end of the day, these bloggers are not actually writing for themselves.  They’re writing to some perceived high-value audience and putting on a persona in order to write TO them.&lt;/p&gt;
 
 &lt;p&gt;Turns out, that sort of pandering is inauthentic, so it’s boring.  And unsustainable on the long run.  So guess what?  This is going to be the exact opposite.  I’m going to write randomly, and only about things that interest me.  There will be no minimum length post, and no general topic.&lt;/p&gt;
 
-&lt;p&gt;Buckle up!&lt;/p&gt;</content><author><name></name></author><summary type="html">What is a blog for? You see a ton of blogs being created. Usually they only have a handful of posts from a few years ago. How the heck can this blog become anything different?</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2017/09/12/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-09-12T14:41:01-07:00</published><updated>2017-09-12T14:41:01-07:00</updated><id>/jekyll/update/2017/09/12/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2017/09/12/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Buckle up!&lt;/p&gt;</content><author><name></name></author><summary type="html">What is a blog for? You see a ton of blogs being created. Usually they only have a handful of posts from a few years ago. How the heck can this blog become anything different?</summary></entry></feed>
