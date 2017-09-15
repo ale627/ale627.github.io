@@ -25,13 +25,10 @@ Zois, Emily, Mike, and I went to Massive Attack together.  It was a fun show, cl
 The following morning, Mike mentioned that he had actually felt unstressed for the first time in months.  Balance is important!
 (An hour later he was off to New York on a plane.)
 
-Here's the link to the "1000 people" talk mentioned above - IndieBio SF Demo Day 5.
+Here's the link to the "1000 people" talk mentioned above - [IndieBio SF Demo Day 5][ib].
 
-<div class="container">
-<iframe src="https://www.youtube.com/embed/UPnDtDXz9s8" 
-frameborder="0" allowfullscreen class="video"></iframe>
-</div>
 
 Good luck to [Finless Foods][fin]!!
 
+[ib]: https://youtu.be/UPnDtDXz9s8?t=1h2m30s
 [fin]: https://twitter.com/finlessfoods
