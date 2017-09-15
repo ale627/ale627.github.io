@@ -16,13 +16,13 @@ Mike lives with Brian, and together they run Finless Foods, a new food startup c
 - As the fish is grown without a body of water, production can be geographically distributed.
 - Since no fish are harmed, Finless appeals to ethical vegans.
 
-An interesting question my housemate Ian asked is: can this fish be produced in a way that is less carbon intensive than normal?
+An interesting question my housemate Ian asked is: can this fish be produced in a way that is less carbon intensive than the usual process?
 
-When Zois and I picked Mike, Brian, and their co-worker had just wrapped up an initial tasting.  "This is more than half of the company in the backseat, right now!" they joked as they piled in.  Mike said that he was looking forward to "only" having to speak in front of 1000 people the following week.  Easy, in comparison.  
+When Zois and I picked up Mike, Brian, and co-worker Jihyun, they had just wrapped up an initial tasting.  "This is three quarters of the company in the backseat, right now!" they joked as they piled in.  Mike was looking forward to "only" having to speak in front of 1000 people the following week.  Easy, in comparison.  
 
 Zois, Emily, Mike, and I went to Massive Attack together.  It was a fun show, closing with "Teardrop".  Afterwards, we took a peek at the IndieBio incubator which was right around the corner.
 
-The following morning, Mike mentioned that he had actually felt unstressed for the first time in months.  Balance is important!
+In the morning, Mike mentioned that he had actually felt unstressed for the first time in months.  Balance is important!
 (An hour later he was off to New York on a plane.)
 
 Here's the link to the "1000 people" talk mentioned above - [IndieBio SF Demo Day 5][ib].
