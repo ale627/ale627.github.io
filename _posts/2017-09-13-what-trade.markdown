@@ -33,7 +33,7 @@ Here's an example of a put option.
 
 ## Put Option Example
 Goldman holds a lot of `$GM` in its Blue Chip ETF.  `$TSLA` is founded and poses a significant threat to `$GM`. Goldman wants to lower risk.  Goldman's can't just liquidate the stake.  
-His buddy Silverman is also long `$GM`.
+His buddy Silverman is a big `$GM` bull.
 So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  Sounds good to Silverman, so he writes a contract and sells it to Goldman.
 
 If `$GM` tanks, Goldman could offload his `$GM` shares to Silverman at the higher price from several months ago.
@@ -85,7 +85,8 @@ You increase R/R by defining risk, and fitting your position size to that risk.
 For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is the bottom, then you can build a trade around this idea.  If you want to lose no more than $50 on the trade, you can buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $12, $15.
 
 # Reference
-Within the past several months, FinTwit traders [@JMVala_Trades][jm] and [@TheTradingNinja][ninja] took options accounts from $300-$10,000 and $150-$25,000 respectively.  These returns are impossible in any other capacity.
+[@JMVala_Trades][jm] $300-$10,000 
+[@TheTradingNinja][ninja] $150-$50,000
 
 
 
