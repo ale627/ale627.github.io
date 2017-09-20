@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What do you mean, trade?"
+title:  "Intro to Options Trading"
 date:   2017-09-13 15:05:00 -0700
 categories:
 ---
@@ -85,14 +85,11 @@ You increase R/R by defining risk, and fitting your position size to that risk.
 For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is the bottom, then you can build a trade around this idea.  If you want to lose no more than $50 on the trade, you can buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $12, $15.
 
 # Reference
-[@JMVala_Trades][jm] $300-$10,000 
-[@TheTradingNinja][ninja] $150-$50,000
+[Twitter List of Traders][list]
 
 
+[list]: https://twitter.com/ale627/lists/trading-whitelist
 
-
-[jm]: https://twitter.com/jmvala_trades
-[ninja]: https://twitter.com/thetradingninja
 
 
 
