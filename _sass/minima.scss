@@ -16,13 +16,13 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #888888 !default;
+$text-color:       #333333 !default;
 $background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
-$title-color:	   #B6DEBD;
+$brand-color:      #00281f !default;
+$title-color:	   #135589;
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color:       #aaaaaa !default;
+$grey-color-light: lighten($grey-color, 20%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area

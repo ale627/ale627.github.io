@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "Arimo", sans-serif;
-  color: #888888;
+  color: #333333;
   background-color: #fdfdfd;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -92,18 +92,19 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: #aeaeae; }
+  color: #595959; }
 
 /**
  * Links
  */
 a {
-  color: #2a7ae2;
-  text-decoration: none; }
+  color: #00281f;
+  text-decoration: underline; }
   a:visited {
-    color: #4088e5; }
+    color: black; }
   a:hover {
-    color: #1a62bf; }
+    color: #00a882;
+    text-decoration: none; }
   .social-media-list a:hover {
     text-decoration: none; }
     .social-media-list a:hover .username {
@@ -113,8 +114,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: #aaaaaa;
+  border-left: 4px solid #dddddd;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -128,7 +129,7 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #dddddd;
   border-radius: 3px;
   background-color: #eef; }
 
@@ -175,7 +176,7 @@ pre {
   display: inline-block;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: #aaaaaa; }
 
 .social-media-list .icon {
   padding-right: 5px; }
@@ -186,8 +187,8 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 5px solid #6a6a6a;
+  border-bottom: 1px solid #dddddd;
   min-height: 55.95px;
   position: relative; }
 
@@ -198,9 +199,10 @@ pre {
   letter-spacing: 1px;
   margin-bottom: 0;
   float: left;
-  color: #B6DEBD; }
+  color: #135589;
+  text-decoration: none; }
   .site-title:hover {
-    color: #4ead5f; }
+    color: #228ce0; }
 
 .site-nav {
   float: right;
@@ -210,7 +212,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #888888;
+    color: #333333;
     font-family: "Arimo", sans-serif;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
@@ -221,7 +223,7 @@ pre {
       top: 9px;
       right: 15px;
       background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
+      border: 1px solid #dddddd;
       border-radius: 5px;
       text-align: right; }
       .site-nav label[for="nav-trigger"] {
@@ -240,7 +242,7 @@ pre {
         padding-top: 10px;
         text-align: center; }
         .site-nav .menu-icon > svg path {
-          fill: #424242; }
+          fill: #6a6a6a; }
       .site-nav input ~ .trigger {
         clear: both;
         display: none; }
@@ -258,7 +260,7 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #dddddd;
   padding: 30px 0; }
 
 .footer-heading {
@@ -272,7 +274,7 @@ pre {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #828282;
+  color: #aaaaaa;
   margin-left: -15px; }
 
 .footer-col {
@@ -314,7 +316,8 @@ pre {
 
 .page-heading {
   font-size: 32px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  color: #dddddd; }
 
 .post-list {
   margin-left: 0;
@@ -324,12 +327,13 @@ pre {
 
 .post-meta {
   font-size: 14px;
-  color: #828282;
+  color: #aaaaaa;
   font-family: "Inconsolata", monospace; }
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  text-decoration: none; }
 
 /**
  * Posts
@@ -340,7 +344,8 @@ pre {
 .post-title {
   font-size: 42px;
   letter-spacing: 1px;
-  line-height: 1; }
+  line-height: 1;
+  color: #aaaaaa; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }

@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/09/13/options-trading.html">
+  <link rel="canonical" href="/2017/09/13/what-trade.html">
   <link rel="alternate" type="application/rss+xml" title="ale627" href="/feed.xml">
   
 
@@ -98,17 +98,19 @@
 
 <ul id="markdown-toc">
   <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are Options</a>    <ul>
-      <li><a href="#put-option-example" id="markdown-toc-put-option-example">Put Option Example</a></li>
+      <li><a href="#why-options-exist" id="markdown-toc-why-options-exist">Why Options exist</a></li>
+      <li><a href="#how-options-work" id="markdown-toc-how-options-work">How Options Work</a>        <ul>
+          <li><a href="#advantage-of-option-over-stock" id="markdown-toc-advantage-of-option-over-stock">Advantage of Option over Stock</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="#option-mechanics" id="markdown-toc-option-mechanics">Option Mechanics</a>    <ul>
-      <li><a href="#call-vs-equity-example" id="markdown-toc-call-vs-equity-example">Call vs Equity Example</a></li>
-    </ul>
-  </li>
-  <li><a href="#risk" id="markdown-toc-risk">Risk</a>    <ul>
-      <li><a href="#charts" id="markdown-toc-charts">Charts</a>        <ul>
-          <li><a href="#increase-win-rate" id="markdown-toc-increase-win-rate">Increase Win Rate</a></li>
-          <li><a href="#increase-rr" id="markdown-toc-increase-rr">Increase R/R</a></li>
+  <li><a href="#how-to-think-about-risk" id="markdown-toc-how-to-think-about-risk">How to think about Risk</a></li>
+  <li><a href="#finding-trades" id="markdown-toc-finding-trades">Finding Trades</a></li>
+  <li><a href="#technical-charts" id="markdown-toc-technical-charts">Technical Charts</a>    <ul>
+      <li><a href="#indicators" id="markdown-toc-indicators">Indicators</a>        <ul>
+          <li><a href="#moving-averages" id="markdown-toc-moving-averages">Moving Averages</a></li>
+          <li><a href="#fibonacci-levels" id="markdown-toc-fibonacci-levels">Fibonacci Levels</a></li>
         </ul>
       </li>
     </ul>
@@ -176,7 +178,7 @@ Careers have been made in each of the 18 possiblities.</p>
 
 <p>Here’s an example of a put option.</p>
 
-<h2 id="put-option-example">Put Option Example</h2>
+<h2 id="why-options-exist">Why Options exist</h2>
 <p>Goldman holds a lot of <code class="highlighter-rouge">$GM</code> in its Blue Chip ETF.  <code class="highlighter-rouge">$TSLA</code> is founded and poses a significant threat to <code class="highlighter-rouge">$GM</code>. Goldman wants to lower risk.  Goldman’s can’t just liquidate the stake.<br />
 His buddy Silverman is a big <code class="highlighter-rouge">$GM</code> bull.
 So Goldman says to Silverman, “I’ll give you a dime now for the right to sell you a <code class="highlighter-rouge">$GM</code> share at today’s price until the new year”.  Sounds good to Silverman, so he writes a contract and sells it to Goldman.</p>
@@ -186,7 +188,7 @@ If <code class="highlighter-rouge">$GM</code> price goes up or doesn’t move, t
 
 <p>That’s a put option.</p>
 
-<h1 id="option-mechanics">Option Mechanics</h1>
+<h2 id="how-options-work">How Options Work</h2>
 <p>Options are frequently traded “naked” or without owning the underlying.<br />
 Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract’s time to expiration.</p>
 
@@ -195,39 +197,91 @@ A conservative swing setup is an in-the-money LEAP option.  This position is exp
 
 <p>So the value of options is the ability to specifically express your view in the market.</p>
 
-<h2 id="call-vs-equity-example">Call vs Equity Example</h2>
+<h3 id="advantage-of-option-over-stock">Advantage of Option over Stock</h3>
 <p>Say you think $AAPL is going to go up from $150 to $160 during the special event this week.<br />
-You could spend $15,000 on 100 shares for a potential return of $1000.  1000/15000 = 6.6% return
-Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. 1000/200 = 500% return
+You could spend $15,000 on 100 shares for a potential return of $1000.  <code class="highlighter-rouge">1000/15000 = 6.6% return</code>
+Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. <code class="highlighter-rouge">1000/200 = 500% return</code>
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.</p>
 
 <p>Some powerful stuff!</p>
 
-<h1 id="risk">Risk</h1>
+<h1 id="how-to-think-about-risk">How to think about Risk</h1>
 
-<p>Proper risk control means a risk/return profile like a wager you might make with a friend.  There are odds, a wager, and defined event.<br />
-For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10.</p>
+<p>Proper risk control means a risk/return profile like a wager you might make with a friend.  There are odds, a wager, and defined event.</p>
 
-<p><em>Equity traders using this system limit their risk with a stop, usually 2 x ATR(13) or key MAs.  The most common MAs to see are 8 and 21 for short term trading and 50 and 200 for long term trading.  5, 10, 14, and 30 are also used.</em></p>
+<p>For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10.</p>
 
-<p>The goal is to maximize your expectancy per trade.<br />
-Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))
+<p><em>The only way to trade is define risk similarly.  You can do this with a stop, or betting small.  Once your risk is defined, you can examine potential return targets.</em></p>
+
+<p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
+<code class="highlighter-rouge">R = (profit or loss)/(risked amount)</code></p>
+
+<p>For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is the bottom and $15 is the target, then you can build a trade around this idea.</p>
+
+<p>If you want to lose no more than $50 on the trade, you can do two things:
+-buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
+-buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</p>
+
+<p>Random position sizing affects expectancy.
+ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.</p>
+
+<p>The goal is to maximize your overall expectancy.<br />
+<code class="highlighter-rouge">Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))</code>
 Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.</p>
 
-<p><em>Random position sizing affects expectancy, ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.</em></p>
+<h1 id="finding-trades">Finding Trades</h1>
+<p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
 
-<h2 id="charts">Charts</h2>
-<p>Charts are useful for increasing win rate, and R/R.</p>
+<p>2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.</p>
 
-<p><em>The most common type of chart for traders is the candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.  Each of these candlestick bodies contain important information: Open, High, Low, Close.  The longer the period contained by the candlestick, the more significant its levels are.</em></p>
-
-<h3 id="increase-win-rate">Increase Win Rate</h3>
-<p>A common method of finding reliable moves is to start on the weekly chart, look for trends, and trade the breakouts.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If price breaks above $200, that signals a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
+<p>To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.</p>
 
-<h3 id="increase-rr">Increase R/R</h3>
-<p>You increase R/R by defining risk, and fitting your position size to that risk.<br />
-For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is the bottom, then you can build a trade around this idea.  If you want to lose no more than $50 on the trade, you can buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $12, $15.</p>
+<h1 id="technical-charts">Technical Charts</h1>
+<p>Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.<br />
+Heikin Ashi charts show trend reversals.<br />
+Bar charts reduce noise for long term trades.</p>
+
+<p>The most common type of chart for traders is the Candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.<br />
+Each of these candlestick bodies contain info: <code class="highlighter-rouge">Open, High, Low, Close</code>  The longer the period contained by the candlestick, the more significant its levels are.</p>
+
+<p>As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.</p>
+
+<h2 id="indicators">Indicators</h2>
+<p>Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.</p>
+
+<p>I use Moving Averages and Fibonacci levels.  Here are some of the others:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">VWAP</code> (volume weighted average price)</li>
+  <li><code class="highlighter-rouge">KC</code> (keltner curves)</li>
+  <li>
+    <p><code class="highlighter-rouge">BB</code> (bollinger bands)</p>
+  </li>
+  <li><code class="highlighter-rouge">RSI</code> (relative strength index)</li>
+  <li><code class="highlighter-rouge">MACD</code> (moving average convergence divergence)</li>
+  <li>
+    <p><code class="highlighter-rouge">%R</code> (william’s %R)</p>
+  </li>
+  <li><code class="highlighter-rouge">ATR</code> (average true range)</li>
+</ul>
+
+<h3 id="moving-averages">Moving Averages</h3>
+<p>Moving Averages are lines used as support/resistance.<br />
+ie. Longs are valid above the Moving Average, while Shorts are valid below the Moving Average.</p>
+
+<p>The most common Moving Averages to see are 8 and 21 for short term trading and 50 and 200 for long term trading.  5, 10, 14, and 30 are also used.</p>
+
+<p>Importantly, Moving Averages vary depending on timeframe.  For example, a 8MA on the 15m chart is equal to 24MA on the 5m chart because it contains 120 minutes.</p>
+
+<p>Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.</p>
+
+<h3 id="fibonacci-levels">Fibonacci Levels</h3>
+<p>Fibonacci Levels are from the Fibonacci sequence where each number (after two 1’s) is the sum of the two before it.  This growth pattern shows up in nature such as plants.<br />
+Its application in the market is in measuring moves.</p>
+
+<p>The levels are 23.6%, 38.2%, 50%, 61.8%, and 100%.
+The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that’s a healthy move.</p>
 
 <h1 id="reference">Reference</h1>
 <p><a href="https://twitter.com/ale627/lists/trading-whitelist">Twitter List of Traders</a></p>
