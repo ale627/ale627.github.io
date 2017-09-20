@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-19T23:52:34-07:00</updated><id>http://localhost:4000/</id><title type="html">ale627</title><subtitle>Dylan Ale + GitHub Pages + Jekyll + Minima + Arimo + Inconsolata = ale627.github.io
-</subtitle><entry><title type="html">Finless Foods</title><link href="http://localhost:4000/2017/09/14/finless-foods.html" rel="alternate" type="text/html" title="Finless Foods" /><published>2017-09-14T14:30:00-07:00</published><updated>2017-09-14T14:30:00-07:00</updated><id>http://localhost:4000/2017/09/14/finless-foods</id><content type="html" xml:base="http://localhost:4000/2017/09/14/finless-foods.html">&lt;p&gt;I met some cool people in a roundabout way last week.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-20T10:39:52-07:00</updated><id>/</id><title type="html">ale627</title><subtitle>Dylan Ale + GitHub Pages + Jekyll + Minima + Arimo + Inconsolata = ale627.github.io
+</subtitle><entry><title type="html">Finless Foods</title><link href="/2017/09/14/finless-foods.html" rel="alternate" type="text/html" title="Finless Foods" /><published>2017-09-14T14:30:00-07:00</published><updated>2017-09-14T14:30:00-07:00</updated><id>/2017/09/14/finless-foods</id><content type="html" xml:base="/2017/09/14/finless-foods.html">&lt;p&gt;I met some cool people in a roundabout way last week.&lt;/p&gt;
 
 &lt;p&gt;Zois -my housemate Ian’s friend from time in Chile- stayed on our couch for a few days.  He invited me to Massive Attack at 1015 Folsom with Emily, a friend visiting SF.  Emily was staying in SoMa with Mike, who she met in Taiwan.&lt;/p&gt;
 
@@ -28,23 +28,27 @@
 &lt;iframe src=&quot;https://www.youtube.com/embed/UPnDtDXz9s8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Good luck to &lt;a href=&quot;https://twitter.com/finlessfoods&quot;&gt;Finless Foods&lt;/a&gt;!!&lt;/p&gt;</content><author><name></name></author><summary type="html">I met some cool people in a roundabout way last week.</summary></entry><entry><title type="html">Intro to Options Trading</title><link href="http://localhost:4000/2017/09/13/what-trade.html" rel="alternate" type="text/html" title="Intro to Options Trading" /><published>2017-09-13T15:05:00-07:00</published><updated>2017-09-13T15:05:00-07:00</updated><id>http://localhost:4000/2017/09/13/what-trade</id><content type="html" xml:base="http://localhost:4000/2017/09/13/what-trade.html">&lt;p&gt;If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.&lt;/p&gt;
+&lt;p&gt;Good luck to &lt;a href=&quot;https://twitter.com/finlessfoods&quot;&gt;Finless Foods&lt;/a&gt;!!&lt;/p&gt;</content><author><name></name></author><summary type="html">I met some cool people in a roundabout way last week.</summary></entry><entry><title type="html">Intro to Options Trading</title><link href="/2017/09/13/what-trade.html" rel="alternate" type="text/html" title="Intro to Options Trading" /><published>2017-09-13T15:05:00-07:00</published><updated>2017-09-13T15:05:00-07:00</updated><id>/2017/09/13/what-trade</id><content type="html" xml:base="/2017/09/13/what-trade.html">&lt;p&gt;If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-are-options&quot; id=&quot;markdown-toc-what-are-options&quot;&gt;What are Options&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#why-options-exist&quot; id=&quot;markdown-toc-why-options-exist&quot;&gt;Why Options exist&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#how-options-work&quot; id=&quot;markdown-toc-how-options-work&quot;&gt;How Options Work&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#advantage-of-option-over-stock&quot; id=&quot;markdown-toc-advantage-of-option-over-stock&quot;&gt;Advantage of Option over Stock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#trading-vs-investing&quot; id=&quot;markdown-toc-trading-vs-investing&quot;&gt;Trading vs Investing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-are-options&quot; id=&quot;markdown-toc-what-are-options&quot;&gt;What are options&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#why-options-exist&quot; id=&quot;markdown-toc-why-options-exist&quot;&gt;Why options exist&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#how-options-work&quot; id=&quot;markdown-toc-how-options-work&quot;&gt;How options work&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#advantage-of-option-over-stock&quot; id=&quot;markdown-toc-advantage-of-option-over-stock&quot;&gt;Advantage of option over stock&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-to-think-about-risk&quot; id=&quot;markdown-toc-how-to-think-about-risk&quot;&gt;How to think about Risk&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#finding-trades&quot; id=&quot;markdown-toc-finding-trades&quot;&gt;Finding Trades&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#technical-charts&quot; id=&quot;markdown-toc-technical-charts&quot;&gt;Technical Charts&lt;/a&gt;    &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-think-about-risk&quot; id=&quot;markdown-toc-how-to-think-about-risk&quot;&gt;How to think about risk&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#support-and-resistance&quot; id=&quot;markdown-toc-support-and-resistance&quot;&gt;Support and resistance&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#finding-trades&quot; id=&quot;markdown-toc-finding-trades&quot;&gt;Finding trades&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#technical-charts&quot; id=&quot;markdown-toc-technical-charts&quot;&gt;Technical charts&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#indicators&quot; id=&quot;markdown-toc-indicators&quot;&gt;Indicators&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#moving-averages&quot; id=&quot;markdown-toc-moving-averages&quot;&gt;Moving Averages&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#fibonacci-levels&quot; id=&quot;markdown-toc-fibonacci-levels&quot;&gt;Fibonacci Levels&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#moving-averages&quot; id=&quot;markdown-toc-moving-averages&quot;&gt;Moving averages&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#fibonacci-levels&quot; id=&quot;markdown-toc-fibonacci-levels&quot;&gt;Fibonacci levels&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -107,12 +111,42 @@ Careers have been made in each of the 18 possiblities.&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;what-are-options&quot;&gt;What are Options&lt;/h1&gt;
+&lt;h1 id=&quot;trading-vs-investing&quot;&gt;Trading vs Investing&lt;/h1&gt;
+&lt;p&gt;Trading is different from investing.&lt;br /&gt;
+Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.
+Short term trading is called Scalping.
+Long term trading is called Swing Trading.
+Trading looks at price action to find prices that offer good risk/return versus an area of support.  It uses a systematic approach.
+Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I’ve seen described.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backtesting&lt;/li&gt;
+  &lt;li&gt;Trading Signals&lt;/li&gt;
+  &lt;li&gt;Risk and Position Management&lt;/li&gt;
+  &lt;li&gt;Portfolio and Order Management&lt;/li&gt;
+  &lt;li&gt;Execution&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reporting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Price Stream&lt;/li&gt;
+  &lt;li&gt;Trading Strategy&lt;/li&gt;
+  &lt;li&gt;Risk Management&lt;/li&gt;
+  &lt;li&gt;Execution Handler&lt;/li&gt;
+  &lt;li&gt;Logging&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are interested in building a trade system, start pulling some basic data into &lt;a href=&quot;https://google.com/sheets&quot;&gt;Google Sheets&lt;/a&gt; and running backtests on &lt;a href=&quot;https://quantopian.com&quot;&gt;Quantopian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn’t make money, right?&lt;/p&gt;
+
+&lt;p&gt;I use options to increase leverage.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-options&quot;&gt;What are options&lt;/h1&gt;
 &lt;p&gt;Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.&lt;/p&gt;
 
 &lt;p&gt;Here’s an example of a put option.&lt;/p&gt;
 
-&lt;h2 id=&quot;why-options-exist&quot;&gt;Why Options exist&lt;/h2&gt;
+&lt;h2 id=&quot;why-options-exist&quot;&gt;Why options exist&lt;/h2&gt;
 &lt;p&gt;Goldman holds a lot of &lt;code class=&quot;highlighter-rouge&quot;&gt;$GM&lt;/code&gt; in its Blue Chip ETF.  &lt;code class=&quot;highlighter-rouge&quot;&gt;$TSLA&lt;/code&gt; is founded and poses a significant threat to &lt;code class=&quot;highlighter-rouge&quot;&gt;$GM&lt;/code&gt;. Goldman wants to lower risk.  Goldman’s can’t just liquidate the stake.&lt;br /&gt;
 His buddy Silverman is a big &lt;code class=&quot;highlighter-rouge&quot;&gt;$GM&lt;/code&gt; bull.
 So Goldman says to Silverman, “I’ll give you a dime now for the right to sell you a &lt;code class=&quot;highlighter-rouge&quot;&gt;$GM&lt;/code&gt; share at today’s price until the new year”.  Sounds good to Silverman, so he writes a contract and sells it to Goldman.&lt;/p&gt;
@@ -122,7 +156,7 @@ If &lt;code class=&quot;highlighter-rouge&quot;&gt;$GM&lt;/code&gt; price goes u
 
 &lt;p&gt;That’s a put option.&lt;/p&gt;
 
-&lt;h2 id=&quot;how-options-work&quot;&gt;How Options Work&lt;/h2&gt;
+&lt;h2 id=&quot;how-options-work&quot;&gt;How options work&lt;/h2&gt;
 &lt;p&gt;Options are frequently traded “naked” or without owning the underlying.&lt;br /&gt;
 Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract’s time to expiration.&lt;/p&gt;
 
@@ -131,17 +165,16 @@ A conservative swing setup is an in-the-money LEAP option.  This position is exp
 
 &lt;p&gt;So the value of options is the ability to specifically express your view in the market.&lt;/p&gt;
 
-&lt;h3 id=&quot;advantage-of-option-over-stock&quot;&gt;Advantage of Option over Stock&lt;/h3&gt;
-&lt;p&gt;Say you think $AAPL is going to go up from $150 to $160 during the special event this week.&lt;br /&gt;
+&lt;h3 id=&quot;advantage-of-option-over-stock&quot;&gt;Advantage of option over stock&lt;/h3&gt;
+&lt;p&gt;Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.&lt;br /&gt;
 You could spend $15,000 on 100 shares for a potential return of $1000.  &lt;code class=&quot;highlighter-rouge&quot;&gt;1000/15000 = 6.6% return&lt;/code&gt;
 Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. &lt;code class=&quot;highlighter-rouge&quot;&gt;1000/200 = 500% return&lt;/code&gt;
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.&lt;/p&gt;
 
 &lt;p&gt;Some powerful stuff!&lt;/p&gt;
 
-&lt;h1 id=&quot;how-to-think-about-risk&quot;&gt;How to think about Risk&lt;/h1&gt;
-
-&lt;p&gt;Proper risk control means a risk/return profile like a wager you might make with a friend.  There are odds, a wager, and defined event.&lt;/p&gt;
+&lt;h1 id=&quot;how-to-think-about-risk&quot;&gt;How to think about risk&lt;/h1&gt;
+&lt;p&gt;Proper risk control means a risk/return profile like a friendly wager.  There are odds, a wager, and an outcome you’re betting on.&lt;/p&gt;
 
 &lt;p&gt;For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10.&lt;/p&gt;
 
@@ -150,12 +183,6 @@ If Apple announces that they are getting out of the computer business and the st
 &lt;p&gt;Each trade is measured by R - how many units of risk you won or lost on the trade.&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;R = (profit or loss)/(risked amount)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;For example say you want to buy the bottom in &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt;.  It has been going down ever since it IPO’d.  If last week &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; hit $10 and bounced to $11, and you think $10 is the bottom and $15 is the target, then you can build a trade around this idea.&lt;/p&gt;
-
-&lt;p&gt;If you want to lose no more than $50 on the trade, you can do two things:
--buy 50 shares and stop out below $10.  If you are correct and &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
--buy a weekly 10 call option around $120 and set a stop at $70.  If &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; hits $15 the option will be worth at least $500, a 10R trade.&lt;/p&gt;
-
 &lt;p&gt;Random position sizing affects expectancy.
 ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.&lt;/p&gt;
 
@@ -163,7 +190,16 @@ ie. a red-herring event can wipe out a portfolio, so traders focused on risk wil
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))&lt;/code&gt;
 Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.&lt;/p&gt;
 
-&lt;h1 id=&quot;finding-trades&quot;&gt;Finding Trades&lt;/h1&gt;
+&lt;h2 id=&quot;support-and-resistance&quot;&gt;Support and resistance&lt;/h2&gt;
+&lt;p&gt;Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).&lt;/p&gt;
+
+&lt;p&gt;For example say you want to buy the bottom in &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt;.  It has been going down ever since it IPO’d.  If last week &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea.&lt;/p&gt;
+
+&lt;p&gt;If you want to lose no more than $50 on the trade, you can do two things:
+-buy 50 shares and stop out below $10.  If you are correct and &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
+-buy a weekly 10 call option around $120 and set a stop at $70.  If &lt;code class=&quot;highlighter-rouge&quot;&gt;$SNAP&lt;/code&gt; hits $15 the option will be worth at least $500, a 10R trade.&lt;/p&gt;
+
+&lt;h1 id=&quot;finding-trades&quot;&gt;Finding trades&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;You are trying to find fast directional moves as early as possible without decreasing odds&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.&lt;/p&gt;
@@ -171,7 +207,7 @@ Expectancy goes up if you have more % trades that work, or if you increase your 
 &lt;p&gt;To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.&lt;/p&gt;
 
-&lt;h1 id=&quot;technical-charts&quot;&gt;Technical Charts&lt;/h1&gt;
+&lt;h1 id=&quot;technical-charts&quot;&gt;Technical charts&lt;/h1&gt;
 &lt;p&gt;Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.&lt;br /&gt;
 Heikin Ashi charts show trend reversals.&lt;br /&gt;
 Bar charts reduce noise for long term trades.&lt;/p&gt;
@@ -200,7 +236,7 @@ Each of these candlestick bodies contain info: &lt;code class=&quot;highlighter-
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ATR&lt;/code&gt; (average true range)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;moving-averages&quot;&gt;Moving Averages&lt;/h3&gt;
+&lt;h3 id=&quot;moving-averages&quot;&gt;Moving averages&lt;/h3&gt;
 &lt;p&gt;Moving Averages are lines used as support/resistance.&lt;br /&gt;
 ie. Longs are valid above the Moving Average, while Shorts are valid below the Moving Average.&lt;/p&gt;
 
@@ -210,7 +246,7 @@ ie. Longs are valid above the Moving Average, while Shorts are valid below the M
 
 &lt;p&gt;Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.&lt;/p&gt;
 
-&lt;h3 id=&quot;fibonacci-levels&quot;&gt;Fibonacci Levels&lt;/h3&gt;
+&lt;h3 id=&quot;fibonacci-levels&quot;&gt;Fibonacci levels&lt;/h3&gt;
 &lt;p&gt;Fibonacci Levels are from the Fibonacci sequence where each number (after two 1’s) is the sum of the two before it.  This growth pattern shows up in nature such as plants.&lt;br /&gt;
 Its application in the market is in measuring moves.&lt;/p&gt;
 
@@ -218,7 +254,7 @@ Its application in the market is in measuring moves.&lt;/p&gt;
 The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that’s a healthy move.&lt;/p&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/ale627/lists/trading-whitelist&quot;&gt;Twitter List of Traders&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.</summary></entry><entry><title type="html">What is this?</title><link href="http://localhost:4000/2017/09/12/what.html" rel="alternate" type="text/html" title="What is this?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>http://localhost:4000/2017/09/12/what</id><content type="html" xml:base="http://localhost:4000/2017/09/12/what.html">&lt;p&gt;What is a blog for?  You see a ton of blogs being created.  Usually they only have a handful of posts from a few years ago.  How the heck can this blog become anything different?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/ale627/lists/trading-whitelist&quot;&gt;Twitter List of Traders&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.</summary></entry><entry><title type="html">What is this?</title><link href="/2017/09/12/what.html" rel="alternate" type="text/html" title="What is this?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>/2017/09/12/what</id><content type="html" xml:base="/2017/09/12/what.html">&lt;p&gt;What is a blog for?  You see a ton of blogs being created.  Usually they only have a handful of posts from a few years ago.  How the heck can this blog become anything different?&lt;/p&gt;
 
 &lt;p&gt;The reason so many blogs deprecate is: the owners don’t really care about them!  At the end of the day, these bloggers are not actually writing for themselves.  They’re writing to some perceived high-value audience and putting on a persona in order to write TO them.&lt;/p&gt;
 

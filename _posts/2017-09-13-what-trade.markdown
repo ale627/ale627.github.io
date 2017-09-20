@@ -25,13 +25,39 @@ I've tried swing trading OTC, investing in equities, swing trading cryptocurrenc
 | Cryptocurrencies |           | x             |          |
 | Options          |           |               | x        |
 
+# Trading vs Investing
+Trading is different from investing.  
+Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.
+Short term trading is called Scalping.
+Long term trading is called Swing Trading.
+Trading looks at price action to find prices that offer good risk/return versus an area of support.  It uses a systematic approach.
+Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.
 
-# What are Options
+- Backtesting
+- Trading Signals
+- Risk and Position Management
+- Portfolio and Order Management
+- Execution
+- Reporting
+
+- Price Stream
+- Trading Strategy
+- Risk Management
+- Execution Handler
+- Logging
+
+If you are interested in building a trade system, start pulling some basic data into [Google Sheets][gs] and running backtests on [Quantopian][quant].
+
+Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn't make money, right?
+
+I use options to increase leverage.
+
+# What are options
 Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.
 
 Here's an example of a put option.
 
-## Why Options exist
+## Why options exist
 Goldman holds a lot of `$GM` in its Blue Chip ETF.  `$TSLA` is founded and poses a significant threat to `$GM`. Goldman wants to lower risk.  Goldman's can't just liquidate the stake.  
 His buddy Silverman is a big `$GM` bull.
 So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  Sounds good to Silverman, so he writes a contract and sells it to Goldman.
@@ -41,26 +67,26 @@ If `$GM` price goes up or doesn't move, the put option will been worthless.
 
 That's a put option.
 
-## How Options Work
+## How options work
 Options are frequently traded "naked" or without owning the underlying.  
 Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract's time to expiration.  
 
 An aggressive scalp setup is an out-of-the-money weekly option.  This position is cheap because the stock needs to move a lot in a little time (low probability).
 A conservative swing setup is an in-the-money LEAP option.  This position is expensive because the stock has wiggle room and lots of time (high probability).
 
-So the value of options is the ability to specifically express your view in the market.  
+So the value of options is the ability to specifically express your view in the market.   
 
-### Advantage of Option over Stock
-Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  
+### Advantage of option over stock
+Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
 You could spend $15,000 on 100 shares for a potential return of $1000.  `1000/15000 = 6.6% return`
 Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. `1000/200 = 500% return`
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.
 
 Some powerful stuff!
 
-# How to think about Risk
 
-Proper risk control means a risk/return profile like a wager you might make with a friend.  There are odds, a wager, and defined event.
+# How to think about risk
+Proper risk control means a risk/return profile like a friendly wager.  There are odds, a wager, and an outcome you're betting on.
 
 For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10. 
 
@@ -69,12 +95,6 @@ For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, b
 Each trade is measured by R - how many units of risk you won or lost on the trade.  
 `R = (profit or loss)/(risked amount)`
 
-For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is the bottom and $15 is the target, then you can build a trade around this idea. 
-
-If you want to lose no more than $50 on the trade, you can do two things:
--buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
--buy a weekly 10 call option around $120 and set a stop at $70.  If `$SNAP` hits $15 the option will be worth at least $500, a 10R trade.
-
 Random position sizing affects expectancy.
 ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.
 
@@ -82,7 +102,17 @@ The goal is to maximize your overall expectancy.
 `Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))`
 Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.
 
-# Finding Trades
+## Support and resistance
+Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).
+
+For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea. 
+
+If you want to lose no more than $50 on the trade, you can do two things:
+-buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
+-buy a weekly 10 call option around $120 and set a stop at $70.  If `$SNAP` hits $15 the option will be worth at least $500, a 10R trade.
+
+
+# Finding trades
 **You are trying to find fast directional moves as early as possible without decreasing odds**.
 
 2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.  
@@ -91,7 +121,7 @@ To buy a breakout, first you have to identify it.  Start on higher timeframes li
 Additionally, you could go into the lower timeframes and confirm price continuation.
 
 
-# Technical Charts
+# Technical charts
 Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.  
 Heikin Ashi charts show trend reversals.  
 Bar charts reduce noise for long term trades.
@@ -116,7 +146,7 @@ I use Moving Averages and Fibonacci levels.  Here are some of the others:
 
 - `ATR` (average true range)
 
-### Moving Averages
+### Moving averages
 Moving Averages are lines used as support/resistance.  
 ie. Longs are valid above the Moving Average, while Shorts are valid below the Moving Average.  
 
@@ -126,7 +156,7 @@ Importantly, Moving Averages vary depending on timeframe.  For example, a 8MA on
 
 Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.
 
-### Fibonacci Levels
+### Fibonacci levels
 Fibonacci Levels are from the Fibonacci sequence where each number (after two 1's) is the sum of the two before it.  This growth pattern shows up in nature such as plants.  
 Its application in the market is in measuring moves.
 
@@ -138,6 +168,8 @@ The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that's a 
 
 
 [list]: https://twitter.com/ale627/lists/trading-whitelist
+[gs]: https://google.com/sheets
+[quant]: https://quantopian.com
 
 
 

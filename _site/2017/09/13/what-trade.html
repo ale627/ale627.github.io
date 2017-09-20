@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/09/13/what-trade.html">
+  <link rel="canonical" href="/2017/09/13/what-trade.html">
   <link rel="alternate" type="application/rss+xml" title="ale627" href="/feed.xml">
   
 
@@ -97,20 +97,24 @@
     <p>If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are Options</a>    <ul>
-      <li><a href="#why-options-exist" id="markdown-toc-why-options-exist">Why Options exist</a></li>
-      <li><a href="#how-options-work" id="markdown-toc-how-options-work">How Options Work</a>        <ul>
-          <li><a href="#advantage-of-option-over-stock" id="markdown-toc-advantage-of-option-over-stock">Advantage of Option over Stock</a></li>
+  <li><a href="#trading-vs-investing" id="markdown-toc-trading-vs-investing">Trading vs Investing</a></li>
+  <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are options</a>    <ul>
+      <li><a href="#why-options-exist" id="markdown-toc-why-options-exist">Why options exist</a></li>
+      <li><a href="#how-options-work" id="markdown-toc-how-options-work">How options work</a>        <ul>
+          <li><a href="#advantage-of-option-over-stock" id="markdown-toc-advantage-of-option-over-stock">Advantage of option over stock</a></li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><a href="#how-to-think-about-risk" id="markdown-toc-how-to-think-about-risk">How to think about Risk</a></li>
-  <li><a href="#finding-trades" id="markdown-toc-finding-trades">Finding Trades</a></li>
-  <li><a href="#technical-charts" id="markdown-toc-technical-charts">Technical Charts</a>    <ul>
+  <li><a href="#how-to-think-about-risk" id="markdown-toc-how-to-think-about-risk">How to think about risk</a>    <ul>
+      <li><a href="#support-and-resistance" id="markdown-toc-support-and-resistance">Support and resistance</a></li>
+    </ul>
+  </li>
+  <li><a href="#finding-trades" id="markdown-toc-finding-trades">Finding trades</a></li>
+  <li><a href="#technical-charts" id="markdown-toc-technical-charts">Technical charts</a>    <ul>
       <li><a href="#indicators" id="markdown-toc-indicators">Indicators</a>        <ul>
-          <li><a href="#moving-averages" id="markdown-toc-moving-averages">Moving Averages</a></li>
-          <li><a href="#fibonacci-levels" id="markdown-toc-fibonacci-levels">Fibonacci Levels</a></li>
+          <li><a href="#moving-averages" id="markdown-toc-moving-averages">Moving averages</a></li>
+          <li><a href="#fibonacci-levels" id="markdown-toc-fibonacci-levels">Fibonacci levels</a></li>
         </ul>
       </li>
     </ul>
@@ -173,12 +177,42 @@ Careers have been made in each of the 18 possiblities.</p>
   </tbody>
 </table>
 
-<h1 id="what-are-options">What are Options</h1>
+<h1 id="trading-vs-investing">Trading vs Investing</h1>
+<p>Trading is different from investing.<br />
+Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.
+Short term trading is called Scalping.
+Long term trading is called Swing Trading.
+Trading looks at price action to find prices that offer good risk/return versus an area of support.  It uses a systematic approach.
+Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I’ve seen described.</p>
+
+<ul>
+  <li>Backtesting</li>
+  <li>Trading Signals</li>
+  <li>Risk and Position Management</li>
+  <li>Portfolio and Order Management</li>
+  <li>Execution</li>
+  <li>
+    <p>Reporting</p>
+  </li>
+  <li>Price Stream</li>
+  <li>Trading Strategy</li>
+  <li>Risk Management</li>
+  <li>Execution Handler</li>
+  <li>Logging</li>
+</ul>
+
+<p>If you are interested in building a trade system, start pulling some basic data into <a href="https://google.com/sheets">Google Sheets</a> and running backtests on <a href="https://quantopian.com">Quantopian</a>.</p>
+
+<p>Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn’t make money, right?</p>
+
+<p>I use options to increase leverage.</p>
+
+<h1 id="what-are-options">What are options</h1>
 <p>Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.</p>
 
 <p>Here’s an example of a put option.</p>
 
-<h2 id="why-options-exist">Why Options exist</h2>
+<h2 id="why-options-exist">Why options exist</h2>
 <p>Goldman holds a lot of <code class="highlighter-rouge">$GM</code> in its Blue Chip ETF.  <code class="highlighter-rouge">$TSLA</code> is founded and poses a significant threat to <code class="highlighter-rouge">$GM</code>. Goldman wants to lower risk.  Goldman’s can’t just liquidate the stake.<br />
 His buddy Silverman is a big <code class="highlighter-rouge">$GM</code> bull.
 So Goldman says to Silverman, “I’ll give you a dime now for the right to sell you a <code class="highlighter-rouge">$GM</code> share at today’s price until the new year”.  Sounds good to Silverman, so he writes a contract and sells it to Goldman.</p>
@@ -188,7 +222,7 @@ If <code class="highlighter-rouge">$GM</code> price goes up or doesn’t move, t
 
 <p>That’s a put option.</p>
 
-<h2 id="how-options-work">How Options Work</h2>
+<h2 id="how-options-work">How options work</h2>
 <p>Options are frequently traded “naked” or without owning the underlying.<br />
 Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract’s time to expiration.</p>
 
@@ -197,17 +231,16 @@ A conservative swing setup is an in-the-money LEAP option.  This position is exp
 
 <p>So the value of options is the ability to specifically express your view in the market.</p>
 
-<h3 id="advantage-of-option-over-stock">Advantage of Option over Stock</h3>
-<p>Say you think $AAPL is going to go up from $150 to $160 during the special event this week.<br />
+<h3 id="advantage-of-option-over-stock">Advantage of option over stock</h3>
+<p>Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.<br />
 You could spend $15,000 on 100 shares for a potential return of $1000.  <code class="highlighter-rouge">1000/15000 = 6.6% return</code>
 Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. <code class="highlighter-rouge">1000/200 = 500% return</code>
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.</p>
 
 <p>Some powerful stuff!</p>
 
-<h1 id="how-to-think-about-risk">How to think about Risk</h1>
-
-<p>Proper risk control means a risk/return profile like a wager you might make with a friend.  There are odds, a wager, and defined event.</p>
+<h1 id="how-to-think-about-risk">How to think about risk</h1>
+<p>Proper risk control means a risk/return profile like a friendly wager.  There are odds, a wager, and an outcome you’re betting on.</p>
 
 <p>For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10.</p>
 
@@ -216,12 +249,6 @@ If Apple announces that they are getting out of the computer business and the st
 <p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
 <code class="highlighter-rouge">R = (profit or loss)/(risked amount)</code></p>
 
-<p>For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is the bottom and $15 is the target, then you can build a trade around this idea.</p>
-
-<p>If you want to lose no more than $50 on the trade, you can do two things:
--buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
--buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</p>
-
 <p>Random position sizing affects expectancy.
 ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.</p>
 
@@ -229,7 +256,16 @@ ie. a red-herring event can wipe out a portfolio, so traders focused on risk wil
 <code class="highlighter-rouge">Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))</code>
 Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.</p>
 
-<h1 id="finding-trades">Finding Trades</h1>
+<h2 id="support-and-resistance">Support and resistance</h2>
+<p>Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).</p>
+
+<p>For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea.</p>
+
+<p>If you want to lose no more than $50 on the trade, you can do two things:
+-buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
+-buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</p>
+
+<h1 id="finding-trades">Finding trades</h1>
 <p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
 
 <p>2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.</p>
@@ -237,7 +273,7 @@ Expectancy goes up if you have more % trades that work, or if you increase your 
 <p>To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.</p>
 
-<h1 id="technical-charts">Technical Charts</h1>
+<h1 id="technical-charts">Technical charts</h1>
 <p>Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.<br />
 Heikin Ashi charts show trend reversals.<br />
 Bar charts reduce noise for long term trades.</p>
@@ -266,7 +302,7 @@ Each of these candlestick bodies contain info: <code class="highlighter-rouge">O
   <li><code class="highlighter-rouge">ATR</code> (average true range)</li>
 </ul>
 
-<h3 id="moving-averages">Moving Averages</h3>
+<h3 id="moving-averages">Moving averages</h3>
 <p>Moving Averages are lines used as support/resistance.<br />
 ie. Longs are valid above the Moving Average, while Shorts are valid below the Moving Average.</p>
 
@@ -276,7 +312,7 @@ ie. Longs are valid above the Moving Average, while Shorts are valid below the M
 
 <p>Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.</p>
 
-<h3 id="fibonacci-levels">Fibonacci Levels</h3>
+<h3 id="fibonacci-levels">Fibonacci levels</h3>
 <p>Fibonacci Levels are from the Fibonacci sequence where each number (after two 1’s) is the sum of the two before it.  This growth pattern shows up in nature such as plants.<br />
 Its application in the market is in measuring moves.</p>
 
