@@ -18,10 +18,11 @@
   margin-bottom: 0;
   float: left;
   color: $title-color;
-  text-decoration: none;
 
   &:hover {
-    color: lighten($title-color, 20%);
+    color: lighten(#d90000, 20%);
+    text-decoration: none;
+
   }
 }
 
@@ -186,7 +187,7 @@
 .page-heading {
   @include relative-font-size(2);
   letter-spacing: 1px;
-  color: $grey-color-light;
+  color: $grey-color;
 
 }
 
@@ -201,14 +202,18 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: $grey-color-dark;
   font-family: $second-font-family;
 }
 
 .post-link {
   display: block;
   @include relative-font-size(1.5);
-  text-decoration: none;
+
+    &:hover {
+    text-decoration: none;
+
+  }
 
 }
 
@@ -225,7 +230,7 @@
   @include relative-font-size(2.625);
   letter-spacing: 1px;
   line-height: 1;
-  color: $grey-color;
+  color: $post-color;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
