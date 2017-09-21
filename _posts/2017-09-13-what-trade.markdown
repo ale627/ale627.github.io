@@ -5,7 +5,7 @@ date:   2017-09-13 15:05:00 -0700
 categories:
 ---
 
-If someone asks me about trading, I usually can't speak very well about it on the spot.  So here we go.  
+If someone asks me about trading, it's tough to give a good answer on the spot.  So I'm gonna write it out.  
 
 * TOC
 {:toc}
@@ -25,32 +25,14 @@ I've tried swing trading OTC, investing in equities, swing trading cryptocurrenc
 | Cryptocurrencies |           | x             |          |
 | Options          |           |               | x        |
 
-# Trading vs Investing
-Trading is different from investing.  
-Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.
-Short term trading is called Scalping.
-Long term trading is called Swing Trading.
-Trading looks at price action to find prices that offer good risk/return versus an area of support.  It uses a systematic approach.
-Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.
+# Trading styles
+Investing, Swing Trading, Scalping... what do they all mean?
 
-- Backtesting
-- Trading Signals
-- Risk and Position Management
-- Portfolio and Order Management
-- Execution
-- Reporting
+Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.  **This is not what I do.**
 
-- Price Stream
-- Trading Strategy
-- Risk Management
-- Execution Handler
-- Logging
+Trading is the focus of this article. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term. (usually intraday)
 
-If you are interested in building a trade system, start pulling some basic data into [Google Sheets][gs] and running backtests on [Quantopian][quant].
-
-Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn't make money, right?
-
-I use options to increase leverage.
+Trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.
 
 # What are options
 Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.
@@ -74,7 +56,7 @@ Risk is premium paid.  Premium is based on the underlying price relative to the 
 An aggressive scalp setup is an out-of-the-money weekly option.  This position is cheap because the stock needs to move a lot in a little time (low probability).
 A conservative swing setup is an in-the-money LEAP option.  This position is expensive because the stock has wiggle room and lots of time (high probability).
 
-So the value of options is the ability to specifically express your view in the market.   
+The advantage of options is the ability to specifically express your view in the market.   
 
 ### Advantage of option over stock
 Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
@@ -84,25 +66,23 @@ If Apple announces that they are getting out of the computer business and the st
 
 Some powerful stuff!
 
+# What is risk
+Risk is the possibility of loss.  Any activity is inherently risky.  But people still drink, smoke, drive cars, eat BBQ, and do other "risky" things.  Trading is definitely risky.
 
-# How to think about risk
-Proper risk control means a risk/return profile like a friendly wager.  There are odds, a wager, and an outcome you're betting on.
+Taking risk on is the only way you can do anything in life.  There's the risk of dying, the risk of taking a big loss, the risk of missed opportunities.  **You only learn by taking on risk.**
 
-For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10. 
+How do you operate in a risky environment?  When driving, you reduce the risk of dying by wearing a seatbelt.  When managing multiple positions, you diversify across uncorrelated assets.  
 
-*The only way to trade is define risk similarly.  You can do this with a stop, or betting small.  Once your risk is defined, you can examine potential return targets.*
+When managing a single position, you set a stop loss.  
+This is the max amount you can lose.  How much are you really OK with losing?  You will not win every time.  
 
-Each trade is measured by R - how many units of risk you won or lost on the trade.  
-`R = (profit or loss)/(risked amount)`
+The best way to approach a trade is to accept the loss ahead of time.  **Your default mindset should be that you will be wrong.**  This way, you are not micromanaging the trade or scalping a promising swing.
 
-Random position sizing affects expectancy.
-ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.
+You put your stop at a level of support if you are long, or a level of resistance if you are short.
 
-The goal is to maximize your overall expectancy.  
-`Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))`
-Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.
+## Support/resistance
+Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.
 
-## Support and resistance
 Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).
 
 For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea. 
@@ -111,17 +91,49 @@ If you want to lose no more than $50 on the trade, you can do two things:
 -buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
 -buy a weekly 10 call option around $120 and set a stop at $70.  If `$SNAP` hits $15 the option will be worth at least $500, a 10R trade.
 
+## Measuring risk
 
-# Finding trades
-**You are trying to find fast directional moves as early as possible without decreasing odds**.
+Each trade is measured by R - how many units of risk you won or lost on the trade.  
+`R = (profit or loss)/(risked amount)`
 
-2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.  
+The goal is to maximize your overall expectancy.  
+`Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))`
 
-To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that's a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
-Additionally, you could go into the lower timeframes and confirm price continuation.
+If you win 50% of trades and win 1R per trade, your expectancy is 0.
+If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.
 
+Here's the table showing expectancy, given a `Win %` and an `R`.
 
-# Technical charts
+| Win % |  1R |  2R |  3R |  4R |  5R |
+|-------|:---:|:---:|:---:|:---:|:---:|
+| 10    | -.8 | -.7 | -.6 | -.5 | -.4 |
+| 20    | -.6 | -.4 | -.2 | 0   |  .2 |
+| 30    | -.4 | -.1 |  .2 |  .5 |  .8 |
+| 40    | -.2 |  .2 |  .6 | 1   | 1.4 |
+| 50    | 0   |  .5 | 1   | 1.5 | 2   |
+| 60    |  .2 |  .8 | 1.4 | 2   | 2.6 |
+| 70    |  .4 | 1.1 | 1.8 | 2.5 | 3.2 |
+| 80    |  .6 | 1.4 | 2.2 | 3   | 3.8 |
+| 90    |  .8 | 1.7 | 2.6 | 3.5 | 4.4 |
+| 100   | 1   | 2   | 3   | 4   | 5   |
+
+Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.
+
+Random position sizing affects expectancy.
+ie. a red-herring event on a too-large position could kill a portfolio, so traders focused on risk will size their positions equally.
+
+# The auction
+Any series can be analyzed with an understanding of the underlying phenomenon.  In this instance, it's a market.
+
+Markets are made up of buyers and sellers at an auction.  This is the reason price analysis has predictive value - it allows you to identify buyers and sellers, and their stops.  
+Participants have a trade idea and are positioned accordingly.  Buyers have entered at support, and sellers have exited at resistance.  
+
+If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.  
+
+If price pushes up against resistance, it will absorbed by the stops of all the sellers at that level.  If there are more buyers now than sellers previously, price will break above that level.
+
+# Charts
+
 Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.  
 Heikin Ashi charts show trend reversals.  
 Bar charts reduce noise for long term trades.
@@ -130,6 +142,16 @@ The most common type of chart for traders is the Candlestick chart.  A candlesti
 Each of these candlestick bodies contain info: `Open, High, Low, Close`  The longer the period contained by the candlestick, the more significant its levels are.  
 
 As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.  
+
+# Trade setups
+**You are trying to find fast directional moves as early as possible without decreasing odds**.
+
+2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.  
+
+To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that's a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
+Additionally, you could go into the lower timeframes and confirm price continuation.
+
+Trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.
 
 ## Indicators
 Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.  
@@ -162,6 +184,31 @@ Its application in the market is in measuring moves.
 
 The levels are 23.6%, 38.2%, 50%, 61.8%, and 100%.
 The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that's a healthy move.
+
+# Edge
+Of course, you didn't show up to lose.  You have to define your edge.  Edge emerges from a combination of factors - trade selection, risk control, trade management.
+
+With a defined edge, you can stop avoiding risk and move towards risk.
+
+# Trading Systems
+Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.
+
+- Backtesting
+- Trading Signals
+- Risk and Position Management
+- Portfolio and Order Management
+- Execution
+- Reporting
+
+- Price Stream
+- Trading Strategy
+- Risk Management
+- Execution Handler
+- Logging
+
+If you are interested in building a trade system, start pulling some basic data into [Google Sheets][gs] and running backtests on [Quantopian][quant].
+
+Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn't make money, right?
 
 # Reference
 [Twitter List of Traders][list]

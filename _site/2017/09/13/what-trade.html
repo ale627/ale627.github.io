@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Intro to Options Trading</title>
-  <meta name="description" content="If someone asks me about trading, I usually can’t speak very well about it on the spot. So here we go.">
+  <meta name="description" content="If someone asks me about trading, it’s tough to give a good answer on the spot. So I’m gonna write it out.">
   
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
@@ -94,10 +94,10 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>If someone asks me about trading, I usually can’t speak very well about it on the spot.  So here we go.</p>
+    <p>If someone asks me about trading, it’s tough to give a good answer on the spot.  So I’m gonna write it out.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#trading-vs-investing" id="markdown-toc-trading-vs-investing">Trading vs Investing</a></li>
+  <li><a href="#trading-styles" id="markdown-toc-trading-styles">Trading styles</a></li>
   <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are options</a>    <ul>
       <li><a href="#why-options-exist" id="markdown-toc-why-options-exist">Why options exist</a></li>
       <li><a href="#how-options-work" id="markdown-toc-how-options-work">How options work</a>        <ul>
@@ -106,12 +106,14 @@
       </li>
     </ul>
   </li>
-  <li><a href="#how-to-think-about-risk" id="markdown-toc-how-to-think-about-risk">How to think about risk</a>    <ul>
-      <li><a href="#support-and-resistance" id="markdown-toc-support-and-resistance">Support and resistance</a></li>
+  <li><a href="#what-is-risk" id="markdown-toc-what-is-risk">What is risk</a>    <ul>
+      <li><a href="#supportresistance" id="markdown-toc-supportresistance">Support/resistance</a></li>
+      <li><a href="#measuring-risk" id="markdown-toc-measuring-risk">Measuring risk</a></li>
     </ul>
   </li>
-  <li><a href="#finding-trades" id="markdown-toc-finding-trades">Finding trades</a></li>
-  <li><a href="#technical-charts" id="markdown-toc-technical-charts">Technical charts</a>    <ul>
+  <li><a href="#the-auction" id="markdown-toc-the-auction">The auction</a></li>
+  <li><a href="#charts" id="markdown-toc-charts">Charts</a></li>
+  <li><a href="#trade-setups" id="markdown-toc-trade-setups">Trade setups</a>    <ul>
       <li><a href="#indicators" id="markdown-toc-indicators">Indicators</a>        <ul>
           <li><a href="#moving-averages" id="markdown-toc-moving-averages">Moving averages</a></li>
           <li><a href="#fibonacci-levels" id="markdown-toc-fibonacci-levels">Fibonacci levels</a></li>
@@ -119,6 +121,8 @@
       </li>
     </ul>
   </li>
+  <li><a href="#edge" id="markdown-toc-edge">Edge</a></li>
+  <li><a href="#trading-systems" id="markdown-toc-trading-systems">Trading Systems</a></li>
   <li><a href="#reference" id="markdown-toc-reference">Reference</a></li>
 </ul>
 
@@ -177,35 +181,14 @@ Careers have been made in each of the 18 possiblities.</p>
   </tbody>
 </table>
 
-<h1 id="trading-vs-investing">Trading vs Investing</h1>
-<p>Trading is different from investing.<br />
-Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.
-Short term trading is called Scalping.
-Long term trading is called Swing Trading.
-Trading looks at price action to find prices that offer good risk/return versus an area of support.  It uses a systematic approach.
-Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I’ve seen described.</p>
+<h1 id="trading-styles">Trading styles</h1>
+<p>Investing, Swing Trading, Scalping… what do they all mean?</p>
 
-<ul>
-  <li>Backtesting</li>
-  <li>Trading Signals</li>
-  <li>Risk and Position Management</li>
-  <li>Portfolio and Order Management</li>
-  <li>Execution</li>
-  <li>
-    <p>Reporting</p>
-  </li>
-  <li>Price Stream</li>
-  <li>Trading Strategy</li>
-  <li>Risk Management</li>
-  <li>Execution Handler</li>
-  <li>Logging</li>
-</ul>
+<p>Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.  <strong>This is not what I do.</strong></p>
 
-<p>If you are interested in building a trade system, start pulling some basic data into <a href="https://google.com/sheets">Google Sheets</a> and running backtests on <a href="https://quantopian.com">Quantopian</a>.</p>
+<p>Trading is the focus of this article. A trade is a “swing” if it is medium-long term, while it is a “scalp” if it is short term. (usually intraday)</p>
 
-<p>Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn’t make money, right?</p>
-
-<p>I use options to increase leverage.</p>
+<p>Trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.</p>
 
 <h1 id="what-are-options">What are options</h1>
 <p>Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.</p>
@@ -229,7 +212,7 @@ Risk is premium paid.  Premium is based on the underlying price relative to the 
 <p>An aggressive scalp setup is an out-of-the-money weekly option.  This position is cheap because the stock needs to move a lot in a little time (low probability).
 A conservative swing setup is an in-the-money LEAP option.  This position is expensive because the stock has wiggle room and lots of time (high probability).</p>
 
-<p>So the value of options is the ability to specifically express your view in the market.</p>
+<p>The advantage of options is the ability to specifically express your view in the market.</p>
 
 <h3 id="advantage-of-option-over-stock">Advantage of option over stock</h3>
 <p>Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.<br />
@@ -239,24 +222,23 @@ If Apple announces that they are getting out of the computer business and the st
 
 <p>Some powerful stuff!</p>
 
-<h1 id="how-to-think-about-risk">How to think about risk</h1>
-<p>Proper risk control means a risk/return profile like a friendly wager.  There are odds, a wager, and an outcome you’re betting on.</p>
+<h1 id="what-is-risk">What is risk</h1>
+<p>Risk is the possibility of loss.  Any activity is inherently risky.  But people still drink, smoke, drive cars, eat BBQ, and do other “risky” things.  Trading is definitely risky.</p>
 
-<p>For example, Pats vs 49ers.  A confident Pats fan offers a 49ers fan 2:1 odds, betting him $5 that the Pats beat the 49ers. If Pats win he gets $5, lose and owes $10.</p>
+<p>Taking risk on is the only way you can do anything in life.  There’s the risk of dying, the risk of taking a big loss, the risk of missed opportunities.  <strong>You only learn by taking on risk.</strong></p>
 
-<p><em>The only way to trade is define risk similarly.  You can do this with a stop, or betting small.  Once your risk is defined, you can examine potential return targets.</em></p>
+<p>How do you operate in a risky environment?  When driving, you reduce the risk of dying by wearing a seatbelt.  When managing multiple positions, you diversify across uncorrelated assets.</p>
 
-<p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
-<code class="highlighter-rouge">R = (profit or loss)/(risked amount)</code></p>
+<p>When managing a single position, you set a stop loss.<br />
+This is the max amount you can lose.  How much are you really OK with losing?  You will not win every time.</p>
 
-<p>Random position sizing affects expectancy.
-ie. a red-herring event can wipe out a portfolio, so traders focused on risk will size their positions equally.</p>
+<p>The best way to approach a trade is to accept the loss ahead of time.  <strong>Your default mindset should be that you will be wrong.</strong>  This way, you are not micromanaging the trade or scalping a promising swing.</p>
 
-<p>The goal is to maximize your overall expectancy.<br />
-<code class="highlighter-rouge">Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))</code>
-Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.</p>
+<p>You put your stop at a level of support if you are long, or a level of resistance if you are short.</p>
 
-<h2 id="support-and-resistance">Support and resistance</h2>
+<h2 id="supportresistance">Support/resistance</h2>
+<p>Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.</p>
+
 <p>Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).</p>
 
 <p>For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea.</p>
@@ -265,15 +247,131 @@ Expectancy goes up if you have more % trades that work, or if you increase your 
 -buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
 -buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</p>
 
-<h1 id="finding-trades">Finding trades</h1>
-<p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
+<h2 id="measuring-risk">Measuring risk</h2>
 
-<p>2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.</p>
+<p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
+<code class="highlighter-rouge">R = (profit or loss)/(risked amount)</code></p>
 
-<p>To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
-Additionally, you could go into the lower timeframes and confirm price continuation.</p>
+<p>The goal is to maximize your overall expectancy.<br />
+<code class="highlighter-rouge">Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))</code></p>
 
-<h1 id="technical-charts">Technical charts</h1>
+<p>If you win 50% of trades and win 1R per trade, your expectancy is 0.
+If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.</p>
+
+<p>Here’s the table showing expectancy, given a <code class="highlighter-rouge">Win %</code> and an <code class="highlighter-rouge">R</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Win %</th>
+      <th style="text-align: center">1R</th>
+      <th style="text-align: center">2R</th>
+      <th style="text-align: center">3R</th>
+      <th style="text-align: center">4R</th>
+      <th style="text-align: center">5R</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td style="text-align: center">-.8</td>
+      <td style="text-align: center">-.7</td>
+      <td style="text-align: center">-.6</td>
+      <td style="text-align: center">-.5</td>
+      <td style="text-align: center">-.4</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td style="text-align: center">-.6</td>
+      <td style="text-align: center">-.4</td>
+      <td style="text-align: center">-.2</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">.2</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td style="text-align: center">-.4</td>
+      <td style="text-align: center">-.1</td>
+      <td style="text-align: center">.2</td>
+      <td style="text-align: center">.5</td>
+      <td style="text-align: center">.8</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td style="text-align: center">-.2</td>
+      <td style="text-align: center">.2</td>
+      <td style="text-align: center">.6</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.4</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">.5</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1.5</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td style="text-align: center">.2</td>
+      <td style="text-align: center">.8</td>
+      <td style="text-align: center">1.4</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.6</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td style="text-align: center">.4</td>
+      <td style="text-align: center">1.1</td>
+      <td style="text-align: center">1.8</td>
+      <td style="text-align: center">2.5</td>
+      <td style="text-align: center">3.2</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td style="text-align: center">.6</td>
+      <td style="text-align: center">1.4</td>
+      <td style="text-align: center">2.2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">3.8</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td style="text-align: center">.8</td>
+      <td style="text-align: center">1.7</td>
+      <td style="text-align: center">2.6</td>
+      <td style="text-align: center">3.5</td>
+      <td style="text-align: center">4.4</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Expectancy goes up if you have more % trades that work, or if you increase your win size or decrease your loss size.</p>
+
+<p>Random position sizing affects expectancy.
+ie. a red-herring event on a too-large position could kill a portfolio, so traders focused on risk will size their positions equally.</p>
+
+<h1 id="the-auction">The auction</h1>
+<p>Any series can be analyzed with an understanding of the underlying phenomenon.  In this instance, it’s a market.</p>
+
+<p>Markets are made up of buyers and sellers at an auction.  This is the reason price analysis has predictive value - it allows you to identify buyers and sellers, and their stops.<br />
+Participants have a trade idea and are positioned accordingly.  Buyers have entered at support, and sellers have exited at resistance.</p>
+
+<p>If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.</p>
+
+<p>If price pushes up against resistance, it will absorbed by the stops of all the sellers at that level.  If there are more buyers now than sellers previously, price will break above that level.</p>
+
+<h1 id="charts">Charts</h1>
+
 <p>Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.<br />
 Heikin Ashi charts show trend reversals.<br />
 Bar charts reduce noise for long term trades.</p>
@@ -282,6 +380,16 @@ Bar charts reduce noise for long term trades.</p>
 Each of these candlestick bodies contain info: <code class="highlighter-rouge">Open, High, Low, Close</code>  The longer the period contained by the candlestick, the more significant its levels are.</p>
 
 <p>As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.</p>
+
+<h1 id="trade-setups">Trade setups</h1>
+<p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
+
+<p>2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.</p>
+
+<p>To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
+Additionally, you could go into the lower timeframes and confirm price continuation.</p>
+
+<p>**Confluence, Mosaic Theory</p>
 
 <h2 id="indicators">Indicators</h2>
 <p>Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.</p>
@@ -318,6 +426,34 @@ Its application in the market is in measuring moves.</p>
 
 <p>The levels are 23.6%, 38.2%, 50%, 61.8%, and 100%.
 The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that’s a healthy move.</p>
+
+<h1 id="edge">Edge</h1>
+<p>Of course, you didn’t show up to lose.  You have to define your edge.  Edge emerges from a combination of factors - trade selection, risk control, trade management.</p>
+
+<p>With a defined edge, you can stop avoiding risk and move towards risk.</p>
+
+<h1 id="trading-systems">Trading Systems</h1>
+<p>Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I’ve seen described.</p>
+
+<ul>
+  <li>Backtesting</li>
+  <li>Trading Signals</li>
+  <li>Risk and Position Management</li>
+  <li>Portfolio and Order Management</li>
+  <li>Execution</li>
+  <li>
+    <p>Reporting</p>
+  </li>
+  <li>Price Stream</li>
+  <li>Trading Strategy</li>
+  <li>Risk Management</li>
+  <li>Execution Handler</li>
+  <li>Logging</li>
+</ul>
+
+<p>If you are interested in building a trade system, start pulling some basic data into <a href="https://google.com/sheets">Google Sheets</a> and running backtests on <a href="https://quantopian.com">Quantopian</a>.</p>
+
+<p>Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn’t make money, right?</p>
 
 <h1 id="reference">Reference</h1>
 <p><a href="https://twitter.com/ale627/lists/trading-whitelist">Twitter List of Traders</a></p>
