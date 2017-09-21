@@ -22,7 +22,11 @@
   &:hover {
     color: #ff4136;
     text-decoration: none;
-
+/*
+  &:visited {
+    color: darken($title-color, 10%);
+  }
+*/
   }
 }
 

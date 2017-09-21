@@ -100,9 +100,11 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #0080ff;
-  text-decoration: none; }
-  a:visited {
-    color: #005ab3; }
+  text-decoration: none;
+  /*  &:visited {
+      color: darken($brand-color, 15%);
+    }
+  */ }
   a:hover {
     color: #005ab3;
     text-decoration: underline; }
@@ -203,7 +205,12 @@ pre {
   color: #2ecc40; }
   .site-title:hover {
     color: #ff4136;
-    text-decoration: none; }
+    text-decoration: none;
+    /*
+      &:visited {
+        color: darken($title-color, 10%);
+      }
+    */ }
 
 .site-nav {
   float: right;
