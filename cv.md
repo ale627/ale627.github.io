@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: CV
-permalink: /assets/resume.pdf
+permalink: /resume.pdf
 ---
 
 
