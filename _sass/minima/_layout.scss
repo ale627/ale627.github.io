@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 5px solid $head-color;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
@@ -231,13 +231,13 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2);
   letter-spacing: 1px;
   line-height: 1;
   color: $post-color;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1.75);
   }
 }
 
@@ -245,18 +245,18 @@
   margin-bottom: $spacing-unit;
 
   h1 {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1.75);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+      @include relative-font-size(1.675);
     }
   }
 
   h2 {
-    @include relative-font-size(1.85);
+    @include relative-font-size(1.675);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.675);
+      @include relative-font-size(1.475);
     }
   }
 
@@ -269,7 +269,7 @@
   }
 
   h4 {
-    @include relative-font-size(1.1);
+    @include relative-font-size(1.375);
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);

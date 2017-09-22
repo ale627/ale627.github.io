@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "Arimo", sans-serif;
-  color: #001f3f;
+  color: #757575;
   background-color: #fdfdfd;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -22,12 +22,12 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.7;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
+  animation: fadein 1.25s;
+  -moz-animation: fadein 1.25s;
   /* Firefox */
-  -webkit-animation: fadein 1s;
+  -webkit-animation: fadein 1.25s;
   /* Safari and Chrome */
-  -o-animation: fadein 1s;
+  -o-animation: fadein 1.25s;
   /* Opera */ }
 
 @keyframes fadein {
@@ -93,7 +93,7 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: #aaaaaa; }
+  color: #777777; }
 
 /**
  * Links
@@ -190,7 +190,7 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #6a6a6a;
+  border-top: 5px solid #85144b;
   border-bottom: 1px solid #dddddd;
   min-height: 55.95px;
   position: relative; }
@@ -220,7 +220,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #001f3f;
+    color: #757575;
     font-family: "Arimo", sans-serif;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
@@ -250,7 +250,7 @@ pre {
         padding-top: 10px;
         text-align: center; }
         .site-nav .menu-icon > svg path {
-          fill: #6a6a6a; }
+          fill: #777777; }
       .site-nav input ~ .trigger {
         clear: both;
         display: none; }
@@ -335,7 +335,7 @@ pre {
 
 .post-meta {
   font-size: 14px;
-  color: #6a6a6a;
+  color: #777777;
   font-family: "Inconsolata", monospace; }
 
 .post-link {
@@ -351,33 +351,33 @@ pre {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  font-size: 32px;
   letter-spacing: 1px;
   line-height: 1;
-  color: #aaaaaa; }
+  color: #777777; }
   @media screen and (max-width: 800px) {
     .post-title {
-      font-size: 36px; } }
+      font-size: 28px; } }
 
 .post-content {
   margin-bottom: 30px; }
   .post-content h1 {
-    font-size: 36px; }
+    font-size: 28px; }
     @media screen and (max-width: 800px) {
       .post-content h1 {
-        font-size: 28px; } }
+        font-size: 26.8px; } }
   .post-content h2 {
-    font-size: 29.6px; }
+    font-size: 26.8px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 26.8px; } }
+        font-size: 23.6px; } }
   .post-content h3 {
     font-size: 23.6px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
-    font-size: 17.6px; }
+    font-size: 22px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
@@ -537,7 +537,7 @@ td {
 th {
   padding: 8px;
   color: #ffffff;
-  background: #4caf50;
+  background: #3D9970;
   font-weight: 300; }
 
 tr:nth-child(even) {

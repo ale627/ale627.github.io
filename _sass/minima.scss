@@ -16,15 +16,16 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #001f3f !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #0080ff !default;
+$text-color:       #757575 !default;  //light-blue darken-4 materialize
+$background-color: #fdfdfd !default; //whiteish
+$brand-color:      #0080ff !default; //blue
+$head-color: 	   #85144b !default; //maroon, http://clrs.cc/
 $grey-color:       #aaaaaa !default;
 $grey-color-light: lighten($grey-color, 20%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark:  darken($grey-color, 20%) !default;
 
-$post-color:	   $grey-color;
-$title-color:	   #2ecc40;
+$post-color:	   $grey-color-dark;
+$title-color:	   #2ecc40;  //green, http://clrs.cc/
 
 
 // Width of the content area

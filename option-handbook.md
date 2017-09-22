@@ -1,36 +1,48 @@
 ---
 layout: post
-title:  "Intro to Options Trading"
-date:   2017-09-13 15:05:00 -0700
+title:  "Option Trader's Handbook"
 categories:
 ---
 
-If someone asks me about trading, it's tough to give a good answer on the spot.  So I'm gonna write it out.  
+If someone asks me about trading, it's tough to give a good answer on the spot.  So I decided to write it out in a post.
+
+Over the course of several weeks it expanded into a corpus of trading knowledge.  It now has a dedicated page and sees routine edits.  Check back.
 
 * TOC
 {:toc}
 
+# Trading styles and markets
 There are 3 trading styles: investing, swing trading, and scalping.
-There are 6 markets to trade: OTC (pinks), equities, commodities, futures, cryptocurrencies, and options.
-Careers have been made in each of the 18 possiblities.
+There are 6 markets to trade: OTC (pinks), equities, futures, commodities, cryptocurrencies, and options.
 
-I've tried swing trading OTC, investing in equities, swing trading cryptocurrencies, and scalping options.  90% scalping options.
+OTC, over-the-counter, "pinks", and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.
+
+Equities refers to exchange traded stocks.  This is the most common route to investing and trading.
+
+Futures are dated based on month and are the market's best guess of future value.  These trade 24/7.
+Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.
+
+Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
+
+Careers have been made across styles and markets.
+
+Here's what I've tried:
 
 |                  | Investing | Swing Trading | Scalping |
 |------------------|:---------:|:-------------:|:--------:|
-| OTC              |           | x             |          |
-| Equities         | x         |               |          |
+| OTC              |           | 1 year        |          |
+| Equities         | 6 years   |               |          |
 | Commodities      |           |               |          |
 | Futures          |           |               |          |
-| Cryptocurrencies |           | x             |          |
-| Options          |           |               | x        |
+| Cryptocurrencies |           | 1 year        |          |
+| Options          |           |               | 2 years  |
 
-# Trading styles
+
 Investing, Swing Trading, Scalping... what do they all mean?
 
-Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.  **This is not what I do.**
+Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.  I have maintained a passive portfolio for 6 years, as well as a 401k, but I do not manage either of them.  They are diversified across low-fee ETFs.
 
-Trading is the focus of this article. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term. (usually intraday)
+Trading is the focus of this handbook. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term. (usually intraday)
 
 Trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.
 
@@ -105,7 +117,7 @@ If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.
 Here's the table showing expectancy, given a `Win %` and an `R`.
 
 | Win % |  1R |  2R |  3R |  4R |  5R |
-|-------|:---:|:---:|:---:|:---:|:---:|
+|:-----:|:---:|:---:|:---:|:---:|:---:|
 | 10    | -.8 | -.7 | -.6 | -.5 | -.4 |
 | 20    | -.6 | -.4 | -.2 | 0   |  .2 |
 | 30    | -.4 | -.1 |  .2 |  .5 |  .8 |
@@ -127,7 +139,6 @@ Any series can be analyzed with an understanding of the underlying phenomenon.  
 
 Markets are made up of buyers and sellers at an auction.  This is the reason price analysis has predictive value - it allows you to identify buyers and sellers, and their stops.  
 Participants have a trade idea and are positioned accordingly.  Buyers have entered at support, and sellers have exited at resistance.  
-
 If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.  
 
 If price pushes up against resistance, it will absorbed by the stops of all the sellers at that level.  If there are more buyers now than sellers previously, price will break above that level.
@@ -143,7 +154,7 @@ Each of these candlestick bodies contain info: `Open, High, Low, Close`  The lon
 
 As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.  
 
-# Trade setups
+## Trade setups
 **You are trying to find fast directional moves as early as possible without decreasing odds**.
 
 2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.  

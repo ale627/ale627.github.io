@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Finless Foods"
+title:  "Meeting Finless Foods"
 date:   2017-09-14 14:30:00 -0700
 categories:
 ---
