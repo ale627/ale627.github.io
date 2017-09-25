@@ -1,15 +1,42 @@
 ---
 layout: post
-title:  "What is this?"
+title:  "Why do blogs die?"
 date:   2017-09-12 15:05:00 -0700
 categories:
 ---
 
 
-What is a blog for?  You see a ton of blogs being created.  Usually they only have a handful of posts from a few years ago.  How the heck can this blog become anything different?
+Blogs are everywhere.  You probably have an old one under your bed somewhere.  
 
-The reason so many blogs deprecate is: the owners don't really care about them!  At the end of the day, these bloggers are not actually writing for themselves.  They're writing to some perceived high-value audience and putting on a persona in order to write TO them.  
+They're started by teachers, travellers, investors, product people and developers.  
 
-Turns out, that sort of pandering is inauthentic, so it's boring.  And unsustainable on the long run.  So guess what?  This is going to be the exact opposite.  I'm going to write randomly, and only about things that interest me.  There will be no minimum length post, and no general topic.  
+They're hosted on Blogger, Wordpress, or Tumblr.  Or on Squarespace, Ghost, Wix, Weebly, etc.
+
+They're painstakenly designed, categorized, and paletted.  
+
+Then there's 5 posts total and the most recent one is from over 2 years ago.
+It's tragic really.  So much intent and good will, stopped dead in its tracks.  
+
+Here's this person who put in a ton of platform work to connect with the world, and you can just see how quickly it fizzled and died.
+
+Why?
+
+**A) People make blogs about stuff they want to be an expert in, not about stuff they're already experts in.
+B) Turns out, it's tiring to try to be something you're not.**
+
+The author is neither writing for themselves nor from actual knowledge.  They're writing to some pie-in-the-sky audience and putting on a persona to attract them.  
+
+It gets harder to write over time because there's no new ideas being discussed, only regurgitation.
+
+This ecosystem of B.S is particularly obvious with LinkedIn published articles lately. 
+
+A job seeker mashes his keyboard for a few hours to create a listicle (5 ways to be more productive at work).  Upon reading it he thinks to himself in horror, "What did I just write?"  Given the *huge* sunk cost of having written the article, he shrugs and hits SUBMIT, figuring some actual professional will be able to understand what he's getting at.  
+Later a reader clicks on and skims through the article, thinking to himself, "What is this that I'm reading?"  Confused and wasted, he shrugs and hits LIKE, figuring someone will see his like and think he understood it.
+
+We can all agree the internet doesn't need any more of that kind of stuff.  It's wasting everyone's time.
+
+So guess what?  This is going to be the exact opposite.  
+
+I'm going to write randomly and colloquially, and only about things that I understand and that interest me.  There will be no standard length post, and no general topic.  Posts will be edited over time.
 
 Buckle up!

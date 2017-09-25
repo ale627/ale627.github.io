@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Option Trader's Handbook"
+title:  "Trading Reference"
 categories:
 ---
 
-If someone asks me about trading, it's tough to give a good answer on the spot.  So I decided to write it out in a post.
+If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics?
 
-Over the course of several weeks it expanded into a corpus of trading knowledge.  It now has a dedicated page and sees routine edits.  Check back.
+So I decided to write it out in a post.  Over the course of several weeks I expanded several sections and reflowed the writing.  The Option Trader's Handbook now has a dedicated page and receives routine edits.  Check back.
 
 * TOC
 {:toc}
