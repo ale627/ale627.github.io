@@ -96,10 +96,14 @@
   <div class="post-content" itemprop="articleBody">
     <p>If someone asks me about trading, I usually can’t give a good answer because I’m not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics?</p>
 
-<p>So I decided to write it out in a post.  Over the course of several weeks I expanded several sections and reflowed the writing.  The Option Trader’s Handbook now has a dedicated page and receives routine edits.  Check back.</p>
+<p>So I decided to write it out.  Over the course of several weeks I expanded several sections and reflowed the writing.  This reference now has a dedicated page and receives routine edits.  Check back as it expands into a corpus of knowledge.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#trading-styles-and-markets" id="markdown-toc-trading-styles-and-markets">Trading styles and markets</a></li>
+  <li><a href="#trading-styles-and-markets" id="markdown-toc-trading-styles-and-markets">Trading styles and markets</a>    <ul>
+      <li><a href="#investing" id="markdown-toc-investing">Investing</a></li>
+      <li><a href="#price-action-trading" id="markdown-toc-price-action-trading">Price action trading</a></li>
+    </ul>
+  </li>
   <li><a href="#what-are-options" id="markdown-toc-what-are-options">What are options</a>    <ul>
       <li><a href="#why-options-exist" id="markdown-toc-why-options-exist">Why options exist</a></li>
       <li><a href="#how-options-work" id="markdown-toc-how-options-work">How options work</a>        <ul>
@@ -108,14 +112,29 @@
       </li>
     </ul>
   </li>
-  <li><a href="#what-is-risk" id="markdown-toc-what-is-risk">What is risk</a>    <ul>
-      <li><a href="#supportresistance" id="markdown-toc-supportresistance">Support/resistance</a></li>
-      <li><a href="#measuring-risk" id="markdown-toc-measuring-risk">Measuring risk</a></li>
+  <li><a href="#characterizing-risk" id="markdown-toc-characterizing-risk">Characterizing risk</a>    <ul>
+      <li><a href="#market-dynamics" id="markdown-toc-market-dynamics">Market dynamics</a>        <ul>
+          <li><a href="#mean-reversion" id="markdown-toc-mean-reversion">Mean reversion</a></li>
+          <li><a href="#the-auction" id="markdown-toc-the-auction">The auction</a>            <ul>
+              <li><a href="#memory" id="markdown-toc-memory">Memory</a></li>
+            </ul>
+          </li>
+          <li><a href="#support-and-resistance" id="markdown-toc-support-and-resistance">Support and resistance</a></li>
+        </ul>
+      </li>
+      <li><a href="#measuring-risk" id="markdown-toc-measuring-risk">Measuring risk</a>        <ul>
+          <li><a href="#r" id="markdown-toc-r">R</a></li>
+          <li><a href="#expectancy" id="markdown-toc-expectancy">Expectancy</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><a href="#the-auction" id="markdown-toc-the-auction">The auction</a></li>
-  <li><a href="#charts" id="markdown-toc-charts">Charts</a>    <ul>
-      <li><a href="#trade-setups" id="markdown-toc-trade-setups">Trade setups</a></li>
+  <li><a href="#price-charts" id="markdown-toc-price-charts">Price Charts</a>    <ul>
+      <li><a href="#trade-setups" id="markdown-toc-trade-setups">Trade setups</a>        <ul>
+          <li><a href="#buying-dips-and-selling-rips" id="markdown-toc-buying-dips-and-selling-rips">Buying dips and selling rips</a></li>
+          <li><a href="#buying-breakouts" id="markdown-toc-buying-breakouts">Buying breakouts</a></li>
+        </ul>
+      </li>
       <li><a href="#indicators" id="markdown-toc-indicators">Indicators</a>        <ul>
           <li><a href="#moving-averages" id="markdown-toc-moving-averages">Moving averages</a></li>
           <li><a href="#fibonacci-levels" id="markdown-toc-fibonacci-levels">Fibonacci levels</a></li>
@@ -129,12 +148,12 @@
 </ul>
 
 <h1 id="trading-styles-and-markets">Trading styles and markets</h1>
-<p>There are 3 trading styles: investing, swing trading, and scalping.
+<p>There are 2 trading styles: investing and price action trading.
 There are 6 markets to trade: OTC (pinks), equities, futures, commodities, cryptocurrencies, and options.</p>
 
 <p>OTC, over-the-counter, “pinks”, and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.</p>
 
-<p>Equities refers to exchange traded stocks.  This is the most common route to investing and trading.</p>
+<p>Equities refers to exchange traded stocks.  This is the most common vehicle for investing and trading.</p>
 
 <p>Futures are dated based on month and are the market’s best guess of future value.  These trade 24/7.
 Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.</p>
@@ -149,58 +168,75 @@ Commodities are futures contracts for amounts of commodities such as hog, corn, 
   <thead>
     <tr>
       <th> </th>
-      <th style="text-align: center">Investing</th>
-      <th style="text-align: center">Swing Trading</th>
-      <th style="text-align: center">Scalping</th>
+      <th style="text-align: right">Investing</th>
+      <th style="text-align: right">Price Action Trading</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>OTC</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center">1 year</td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">1 year</td>
     </tr>
     <tr>
       <td>Equities</td>
-      <td style="text-align: center">6 years</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right">6 years</td>
+      <td style="text-align: right"> </td>
     </tr>
     <tr>
       <td>Commodities</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
     </tr>
     <tr>
       <td>Futures</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
     </tr>
     <tr>
       <td>Cryptocurrencies</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center">1 year</td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">1 year</td>
     </tr>
     <tr>
       <td>Options</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center">2 years</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">2 years</td>
     </tr>
   </tbody>
 </table>
 
-<p>Investing, Swing Trading, Scalping… what do they all mean?</p>
+<p>What’s the difference between investing and price action trading?</p>
 
-<p>Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.  I have maintained a passive portfolio for 6 years, as well as a 401k, but I do not manage either of them.  They are diversified across low-fee ETFs.</p>
+<h2 id="investing">Investing</h2>
+<p>Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now “cheaper.”  Time horizon is long term.</p>
 
-<p>Trading is the focus of this handbook. A trade is a “swing” if it is medium-long term, while it is a “scalp” if it is short term. (usually intraday)</p>
+<p>The two approaches to investing are Growth and Value.</p>
 
-<p>Trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.</p>
+<p>Growth looks for strong earnings.</p>
+
+<p>Value looks for undervalued instances.
+There are various measurements value investors use in assessing a stock’s value.</p>
+
+<ul>
+  <li>Price/Equity</li>
+  <li>Price/Book</li>
+  <li>Debt/Equity</li>
+</ul>
+
+<p>These are calculated from the company’s released financial statements:</p>
+<ul>
+  <li>Cash Flow Statement</li>
+  <li>Balance Sheet</li>
+  <li>Income Statement</li>
+</ul>
+
+<p>I have maintained a passive portfolio for 6 years, as well as a 401k, but I do not manage either of them.  They are diversified across low-fee ETFs.</p>
+
+<h2 id="price-action-trading">Price action trading</h2>
+<p>Price action trading is the focus of this reference. A trade is a “swing” if it is medium-long term, while it is a “scalp” if it is short term. (usually intraday)</p>
+
+<p>Price action trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.</p>
 
 <h1 id="what-are-options">What are options</h1>
 <p>Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.</p>
@@ -234,41 +270,85 @@ If Apple announces that they are getting out of the computer business and the st
 
 <p>Some powerful stuff!</p>
 
-<h1 id="what-is-risk">What is risk</h1>
+<h1 id="characterizing-risk">Characterizing risk</h1>
 <p>Risk is the possibility of loss.  Any activity is inherently risky.  But people still drink, smoke, drive cars, eat BBQ, and do other “risky” things.  Trading is definitely risky.</p>
 
 <p>Taking risk on is the only way you can do anything in life.  There’s the risk of dying, the risk of taking a big loss, the risk of missed opportunities.  <strong>You only learn by taking on risk.</strong></p>
 
-<p>How do you operate in a risky environment?  When driving, you reduce the risk of dying by wearing a seatbelt.  When managing multiple positions, you diversify across uncorrelated assets.</p>
+<p>How do you operate in a risky environment?  When driving, you reduce the risk of dying by wearing a seatbelt.</p>
+
+<p>When managing multiple positions, you diversify across uncorrelated assets.  This keeps exogenous factors from causing a drawdown across holdings, therefore decreasing portfolio risk.  See <a href="htts://en.wikipedia.org/wiki/Efficient_frontier">Efficient frontier</a> on Wikipedia for a better explanation.</p>
 
 <p>When managing a single position, you set a stop loss.<br />
-This is the max amount you can lose.  How much are you really OK with losing?  You will not win every time.</p>
+This is the max amount you can lose.  <strong>How much are you really OK with losing?</strong></p>
+
+<p>Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.  There’s no way around this.</p>
+
+<p>You will not win every time.  So you need to have a “bad plan” or a way to manage your position if it goes against you.</p>
+
+<p>It is very easy to rationalize a bad position and hold onto a losing position, hoping it will return.  This is called “holding the bag.”  The problem with this approach is: if you are trading price action, and price has decreased more than you expected, you have received bearish info which further invalidates your trade idea.  So remaining in the position is not a sound trading move, it is purely emotional.</p>
+
+<p>Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.</p>
+
+<p>Let’s be real: since it’s real money, there will always be emotion.  The goal is to trade safely, so your emotions are not in control.</p>
 
 <p>The best way to approach a trade is to accept the loss ahead of time.  <strong>Your default mindset should be that you will be wrong.</strong>  This way, you are not micromanaging the trade or scalping a promising swing.</p>
 
 <p>You put your stop at a level of support if you are long, or a level of resistance if you are short.</p>
 
-<h2 id="supportresistance">Support/resistance</h2>
-<p>Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.</p>
+<h2 id="market-dynamics">Market dynamics</h2>
+<p>What does support and resistance mean, or more precisely how do you assert where these are?  Before we talk about these concepts, we first have to build our basis in the understanding of market dynamics.</p>
 
-<p>Support and resistance are important concepts in trading.  Once identified, you want to enter longs at support and exit at resistance, and vice versa for shorts (enter at resistance, exit at support).</p>
+<h3 id="mean-reversion">Mean reversion</h3>
+<p>Any series will tend to revert to its trend over time, simply due to the definition of a trend.  Once the series extends beyond statistical norms, odds are it will revert.</p>
+
+<h3 id="the-auction">The auction</h3>
+<p>Any series can be analyzed with an understanding of the underlying phenomenon.  In this instance, it’s a market.</p>
+
+<p>Markets are made up of buyers and sellers at an auction.  This is the reason price analysis has predictive value - it allows you to identify where buyers and sellers are positioned.<br />
+Participants have a trade idea and are positioned accordingly.  Buyers are at support, and sellers are at resistance.</p>
+
+<h4 id="memory">Memory</h4>
+<p>Since these participants are acting on all timescales short and long, there is a memory to the market.  Positions persist over time, so areas of reversal in the past remain significant going forward.  This is another reason why charts are so intuitively useful, especially on longer timeframes.</p>
+
+<h3 id="support-and-resistance">Support and resistance</h3>
+<p>Support and resistance are important concepts in price action trading.  Once identified, you want to enter longs at support and exit at resistance, and enter shorts and resistance and exit at support.</p>
+
+<p>Support and resistance are horizontal or diagonal lines extending along local lows and highs.  Their slope indicates relative demand and supply. Horizontal lines are more reliable than diagonal lines, as the participants are “holding the line” on their position, not being forced to adjust to new levels.</p>
+
+<p>If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.</p>
+
+<p>If price pushes up against resistance, it will absorbed by the stops of all the sellers at that level.  If there are more buyers now than sellers previously, price will break above that level.</p>
+
+<p>For example, an upsloping support line means higher lows, which means each time sellers have attempted to break down price, buyers have stepped in before their previous buy point to defend their positions.  There are more and more buyers.</p>
+
+<p>A horizontal resistance line is like a brick roof.  Imagine mario jumping to break through it.  Each time it is tested, more sellers stop out - the roof gets weaker.</p>
+
+<h2 id="measuring-risk">Measuring risk</h2>
+<p>Whether trading or investing, you must size your positions appropriately.</p>
+
+<p>As a rule of thumb, each position should risk 2% of your portfolio.  More risk means more emotions and exposure to exogenous factors unrelated to your trade thesis.</p>
+
+<p>A portfolio of $10,000 therefore could risk $200.</p>
+
+<h3 id="r">R</h3>
+<p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
+<code class="highlighter-rouge">R = (profit or loss)/(risked amount</code></p>
 
 <p>For example say you want to buy the bottom in <code class="highlighter-rouge">$SNAP</code>.  It has been going down ever since it IPO’d.  If last week <code class="highlighter-rouge">$SNAP</code> hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea.</p>
 
-<p>If you want to lose no more than $50 on the trade, you can do two things:
--buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
--buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</p>
+<p>If you want to lose no more than $50 on the trade, you can do two things:</p>
+<ul>
+  <li>buy 50 shares and stop out below $10.  If you are correct and <code class="highlighter-rouge">$SNAP</code> continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.</li>
+  <li>buy a weekly 10 call option around $120 and set a stop at $70.  If <code class="highlighter-rouge">$SNAP</code> hits $15 the option will be worth at least $500, a 10R trade.</li>
+</ul>
 
-<h2 id="measuring-risk">Measuring risk</h2>
-
-<p>Each trade is measured by R - how many units of risk you won or lost on the trade.<br />
-<code class="highlighter-rouge">R = (profit or loss)/(risked amount)</code></p>
-
-<p>The goal is to maximize your overall expectancy.<br />
+<h3 id="expectancy">Expectancy</h3>
+<p>The overall goal is to maximize your overall expectancy.<br />
 <code class="highlighter-rouge">Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))</code></p>
 
-<p>If you win 50% of trades and win 1R per trade, your expectancy is 0.
-If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.</p>
+<p><em>If you win 50% of trades and win 1R per trade, your expectancy is 0.
+If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.</em></p>
 
 <p>Here’s the table showing expectancy, given a <code class="highlighter-rouge">Win %</code> and an <code class="highlighter-rouge">R</code>.</p>
 
@@ -372,17 +452,7 @@ If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.</p>
 <p>Random position sizing affects expectancy.
 ie. a red-herring event on a too-large position could kill a portfolio, so traders focused on risk will size their positions equally.</p>
 
-<h1 id="the-auction">The auction</h1>
-<p>Any series can be analyzed with an understanding of the underlying phenomenon.  In this instance, it’s a market.</p>
-
-<p>Markets are made up of buyers and sellers at an auction.  This is the reason price analysis has predictive value - it allows you to identify buyers and sellers, and their stops.<br />
-Participants have a trade idea and are positioned accordingly.  Buyers have entered at support, and sellers have exited at resistance.<br />
-If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.</p>
-
-<p>If price pushes up against resistance, it will absorbed by the stops of all the sellers at that level.  If there are more buyers now than sellers previously, price will break above that level.</p>
-
-<h1 id="charts">Charts</h1>
-
+<h1 id="price-charts">Price Charts</h1>
 <p>Charts are visualizations of price action.  There are several types beyond the default line chart.  Besides the Candlestick chart, two other charts are common.<br />
 Heikin Ashi charts show trend reversals.<br />
 Bar charts reduce noise for long term trades.</p>
@@ -395,17 +465,49 @@ Each of these candlestick bodies contain info: <code class="highlighter-rouge">O
 <h2 id="trade-setups">Trade setups</h2>
 <p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
 
-<p>2 common methods of finding reliable moves is buying dips in uptrends or rips in downtrends, or buying breakouts.</p>
+<p>As uncorrelated assets reduce risk in a portfolio, trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.</p>
 
+<p>There are several general shapes which price action will take, given a market condition, that indicates specific information.</p>
+<ul>
+  <li>Head and Shoulders
+This is a bearish (sell signal) pattern that is characterized by a three highs, with H1 even with H3 and H2 above both.  This is what major tops look like.</li>
+  <li>Inverse Head and Shoulders
+This is the opposite of the H&amp;S as a buy signal, with L2 below L3=L1.  This is usually a reliable bull signal to the top of the initial selling before L1.</li>
+  <li>Flag
+This is a channel that develops following a bullish or bearish move.  It is a continuation signal on a break.</li>
+  <li>Pennant
+This is a triangle of narrowing support and resistance that develops after a move.  It is usually a continuation move, and includes the time of continuation at the intersection of S/R.</li>
+  <li>Rising Wedge
+Rising wedges tend to develop at the end of uptrends as a reversal signal.  Their vertice formed by S/R is the point of expected directional shift.</li>
+  <li>Falling Wedge
+Falling wedges are a very reliable method of buying bottoms.  They are a bullish reversal signal at the intersection of S/R and are often reliable to the top of resistance’s first point.</li>
+</ul>
+
+<p>2 common methods of finding reliable moves is buying dips in uptrends or selling rips in downtrends, or buying breakouts.  The former is better in shorter timeframes or to trade around positions, while the latter is a longer timeframe approach for entering holding positions. (investments)</p>
+
+<h3 id="buying-dips-and-selling-rips">Buying dips and selling rips</h3>
+<p>BTFD (buy the fucking dip) or less commonly STFR (sell the fucking rip) is very counterintuitive but essential to grasp in today’s markets.  BTFD has been working since early 2016 as the market has trended up strongly.  STFR works in bear markets.</p>
+
+<p>In order to do the above, you need to identify the market trend, then identify support and resistance.</p>
+
+<p>In a bull market, support and resistance will likely form either a channel, a flag, or a pennant.  This simple strategy can be used within the the pattern created by support and resistance, or aggressively on breaks of the pattern by assuming the break is false.
+Buy at or beyond support, and sell at or beyond resistance.</p>
+
+<h3 id="buying-breakouts">Buying breakouts</h3>
 <p>To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that’s a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
-Additionally, you could go into the lower timeframes and confirm price continuation.</p>
-
-<p>Trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.</p>
+Additionally, you could go into the lower timeframes and confirm price continuation.
+As price often will retest the breakout area, some traders will use the breakout-retest as their primary signal to get long.  This eliminates the mean reverting reversal that is common after the strong rip from the breakout buyer/seller imbalance.</p>
 
 <h2 id="indicators">Indicators</h2>
 <p>Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.</p>
 
-<p>I use Moving Averages and Fibonacci levels.  Here are some of the others:</p>
+<p>The reason indicators work, in my opinion, is their succinct capture of human trading psychology.  Charts as a visual system enable the viewer to estimate the relative significance of price moves.  Indicators are derived from this price, summarizing specific aspects of the price movement.  They are like business reports, enabling a higher level view into the data.  Of course, they are not all always relevant.  But if you know the correct conditions under which to apply an indicator, they do accurately predict participant reactions.</p>
+
+<p>The reason why price tends to react <em>exactly</em> to indicator values is hard to identify.  It is partially due to the snowball effect of their usage, wherein more participants relying on these indicators increases their significance.</p>
+
+<p>We <em>could</em> be just collectively imagining it.</p>
+
+<p>I use moving averages and fibonacci levels.  Here are some of the others:</p>
 
 <ul>
   <li><code class="highlighter-rouge">VWAP</code> (volume weighted average price)</li>
@@ -422,12 +524,14 @@ Additionally, you could go into the lower timeframes and confirm price continuat
 </ul>
 
 <h3 id="moving-averages">Moving averages</h3>
-<p>Moving Averages are lines used as support/resistance.<br />
+<p>Moving Averages are lines used as dynamic support/resistance.<br />
 ie. Longs are valid above the Moving Average, while Shorts are valid below the Moving Average.</p>
 
 <p>The most common Moving Averages to see are 8 and 21 for short term trading and 50 and 200 for long term trading.  5, 10, 14, and 30 are also used.</p>
 
-<p>Importantly, Moving Averages vary depending on timeframe.  For example, a 8MA on the 15m chart is equal to 24MA on the 5m chart because it contains 120 minutes.</p>
+<p>Stocks in a short term trend hold the 8 and 21 MA, while stocks in a long term uptrend hold the 50 and 200 MA.  A price break of the lower MA (8, 50) indicates caution and a break of the higher MA (21, 200) indicates a trend reversal.  These signals are especially reliable on a break below followed by a retest that rejects closely below the MA.</p>
+
+<p>Important to note, Moving Averages vary depending on timeframe.  So they move around if you change timeframes.  For example, a 8MA on the 15m chart is equal to 24MA on the 5m chart because it contains 120 minutes.</p>
 
 <p>Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.</p>
 
@@ -435,8 +539,12 @@ ie. Longs are valid above the Moving Average, while Shorts are valid below the M
 <p>Fibonacci Levels are from the Fibonacci sequence where each number (after two 1’s) is the sum of the two before it.  This growth pattern shows up in nature such as plants.<br />
 Its application in the market is in measuring moves.</p>
 
-<p>The levels are 23.6%, 38.2%, 50%, 61.8%, and 100%.
+<p>The levels are: <code class="highlighter-rouge">23.6%, 38.2%, 50%, 61.8%, 100%, 161.8%, 261.8%..</code>
 The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that’s a healthy move.</p>
+
+<p>Of course, it makes some non-fancy sense that 61.8% would be an approximate good place for a trade to hold, as it’s a little less than 2/3.  But that doesn’t account for the numerous instances of price reversing directly (to the .01) at the various fibonacci levels.</p>
+
+<p>Breakouts tend to extend from 100% to 161.8% and 261.8% as upside targets.</p>
 
 <h1 id="edge">Edge</h1>
 <p>Of course, you didn’t show up to lose.  You have to define your edge.  Edge emerges from a combination of factors - trade selection, risk control, trade management.</p>
