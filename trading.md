@@ -4,7 +4,7 @@ title:  "Trading Reference"
 categories:
 ---
 
-If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics?
+If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics, and how are they related?
 
 So I decided to write it out.  Over the course of several weeks I expanded several sections and reflowed the writing.  This reference now has a dedicated page and receives routine edits.  Check back as it expands into a corpus of knowledge.
 
@@ -13,16 +13,16 @@ So I decided to write it out.  Over the course of several weeks I expanded sever
 
 # Trading styles and markets
 There are 2 trading styles: investing and price action trading.
-There are 6 markets to trade: OTC (pinks), equities, futures, commodities, cryptocurrencies, and options.
+There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.
 
-OTC, over-the-counter, "pinks", and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.
+- OTC, over-the-counter, "pinks", and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.
 
-Equities refers to exchange traded stocks.  This is the most common vehicle for investing and trading.
+- Equities refers to exchange traded stocks.  This is the most common vehicle for investing and trading.
 
-Futures are dated based on month and are the market's best guess of future value.  These trade 24/7.
-Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.
+- Futures are dated based on month and are the market's best guess of future value.  These trade 24/7.
+- Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.
 
-Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
+- Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
 
 Careers have been made across styles and markets.
 
@@ -34,13 +34,15 @@ Here's what I've tried:
 | Equities         | 6 years   |                      |
 | Commodities      |           |                      |
 | Futures          |           |                      |
-| Cryptocurrencies |           | 1 year               |
+| Crypto           |           | 1 year               |
 | Options          |           | 2 years              |
 
 What's the difference between investing and price action trading?
 
 ## Investing
-Investing involves fundamental analysis and a fair value.  It says nothing about short term price movement, and may encourage adding to losing positions as the equity is now "cheaper."  Time horizon is long term.  
+Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).
+
+Investing has no opinion about short term price movement, and may encourage adding to losing positions as the stock is "cheaper."  The art is in distinguishing between a cheaper yet still sound investment, and an investment that is no longer valid.  Time horizon is long term.  
 
 The two approaches to investing are Growth and Value.  
 
