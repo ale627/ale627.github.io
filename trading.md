@@ -288,11 +288,16 @@ Breakouts tend to extend from 100% to 161.8% and 261.8% as upside targets.
 # Edge
 Of course, you didn't show up to lose.  You have to define your edge.  Edge emerges from a combination of factors - trade selection, risk control, trade management.
 
+Edge can be defined ahead of time with backtesting, but plenty of issues arise with backtest reliability, including in-sample size, out-of-sample testing, and controlling for relevant factors.  
+
+Edge can be refined over time with a trade journal, by trading small and documenting your success factors and risk factors.  Once you see what works, you can capture this edge and automate away your risk.
+
 With a defined edge, you can stop avoiding risk and move towards risk.
 
 # Trading Systems
-Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.
+Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.  They are both full stack from generation to tracking.
 
+System 1:
 - Backtesting
 - Trading Signals
 - Risk and Position Management
@@ -300,6 +305,7 @@ Trading systems are modularized and cover the full process, from trade ideas to 
 - Execution
 - Reporting
 
+System 2:
 - Price Stream
 - Trading Strategy
 - Risk Management
