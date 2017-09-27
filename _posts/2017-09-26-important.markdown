@@ -7,37 +7,39 @@ categories:
 
 What is important to you?  Is anything important to you?  
 
-Not everyone has the same priorities in life.  Some people don't have priorities.  Most people do have priorities but they are flimsy, because they're made on-the-fly or as a result of circumstances.
+Not everyone has the same priorities in life.  Some people don't have priorities.  Most people do have priorities but they are flimsy - made on-the-fly or as a result of circumstances.
 
 Flimsy priorities lead to fuzzy decision making, meaning you might do different things under the same circumstances.  The only long-term output from this sort of process is randomness.
 
 Therefore it's important to define your priorities in a robust way, even if those priorities are to relax 24/7 and never wear shoes.  It's important to decide and know why you decided, to avoid regret later in life.
 
-Here's the scary thing.  No one else cares.  They're too busy trying to do their own thing.  Even licensed professionals and family members will only be able to provide advice from their point of view, through their personal filter of experiences and biases.
-
-**Make life quality your #1 life mission.**
-It's up to you to decide on and get what you want in life.  How do you decide on what you want?  The kind of person you are informs your priorities.
-
 * TOC
 {:toc}
 
+Here's the scary thing: no one really cares if you hit your priorities.  They're too busy trying to do their own thing.  Even licensed professionals and family members will only be able to provide advice from their point of view, through their personal filter of experiences and biases.
+
+You need to buy in to the idea that you are solely responsible for determining your quality of life by setting and executing your priorities.
+**Make life quality your #1 life mission.**
+
+It's up to you to decide on and get what you want in life.  How do you decide on what you want?  The kind of person you are informs your priorities.
+
 # What's your mix?
-All people exist along a spectrum of time orientation.  Out of 100%, you are part living in the "now" and part in the future.  Tied to this orientation are several more concrete characteristics that may help you decide.  Think hippy on one hand, and financial analyst on the other.  
+All people exist along a spectrum of time orientation.  Of 100%, you are partially living in the "now" and partially in the future.  Tied to this orientation are several more concrete characteristics that describe the two ends.  Think hippy on one hand, and financial analyst on the other.  
 
 Are you more rational and logical, or emotional and intuitive?  Do you seek comfort and happiness, or growth and achievement?  Are you whimsical, or deliberate?
 
-| Present          | Future      |
-|:----------------:|:-----------:|
-| Emotional        | Rational    |
-| Intuitive        | Logical     |
-| Comfort          | Growth      |
-| Happiness        | Achievement |
-| Whimsical        | Deliberate  |
+| Orientation:     | Now       | Future     |
+|:-----------------|:----------|:-----------|
+| **Seeks:**       | Happiness | Success    |
+| **Priorities:**  | Comfort   | Growth     |
+| **Mindset:**     | Emotional | Rational   |
+| **Decisions:**   | Intuitive | Logical    |
+| **Actions:**     | Whimsical | Deliberate |
 
-- If you live in the "now", you prioritize happiness.
-Happiness, or the absence of stress and anxiety, comes from matching your surroundings to your inner self.  It means doing what you want.
+- If you live in the "now", you seek happiness by prioritizing comfort, and with an emotional mindset make intuitive decisions to take whimsical actions.
+Happiness, or the absence of depression and anxiety, comes from matching your surroundings to your inner self.  It means doing what you want.
 
-- If you live for the future, you prioritize success.
+- If you live for the future, you seek success by prioritizing growth, and with a rational mindset make logical decisions to take deliberate actions.
 Success, or the accomplishment of goals, is the result of delayed gratification and persistent effort to affect an outcome.  It means doing what must be done.
 
 Present happiness and future success stand opposed to each other and represent a trade-off.  More of one means less of the other.  So what is your desired mix of happiness and achievement?  50/50?  70/30?
@@ -45,6 +47,10 @@ Present happiness and future success stand opposed to each other and represent a
 Can you define what happiness and achievement looks like to you?
 
 # Present happiness
+To be happy and present is a great feeling.  You're engaged in a flow state with the world, acting reflexively and appropriately.  You're not thinking of the past (depression) or the future (anxiety).  You feel an energy flowing through you and your mood is high.
+
+How do we get there?
+
 To define your happiness, you need to first know your self.  Have you spent time introspectively examining the sources of your identity?  The sources are "Nature" and "Nurture".  Within each source are several factors.
 
 Nurture:
@@ -71,7 +77,7 @@ If you grew up in Asia and moved to the Midwest, some authentic Dim Sum would li
 **Who you think you are is not necessarily who you actually are.**  Don't let yourself be so focused on seeming normal that you neglect to actually be happy.  This is way too common.
 
 # Future success
-What are your goals?  As a young person, it's important to think deliberately about what you want to do.  There are 80 years in life, and about 50 weeks a year, so there are 4000 weeks in life.
+What are your goals?  As a young person, it's important to think deliberately about what you want to do.  There are 80 years in life, and about 50 weeks a year, so there are 4000 weeks in life.  
 
 Why do you want to succeed at anything at all?  Why be anything or do anything, when you could more easily be and do nothing?  **It is in the human spirit to continually reach for richer experience.**
 

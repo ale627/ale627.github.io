@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-26T16:08:59-07:00</updated><id>/</id><title type="html">ale627</title><subtitle>I'm an analyst, sailor, &amp; trader near SF. ghpages+jekyll+minima+arimo/inconsolata
-</subtitle><entry><title type="html">What is important?</title><link href="/2017/09/26/important.html" rel="alternate" type="text/html" title="What is important?" /><published>2017-09-26T11:00:00-07:00</published><updated>2017-09-26T11:00:00-07:00</updated><id>/2017/09/26/important</id><content type="html" xml:base="/2017/09/26/important.html">&lt;p&gt;What is important to you?  Is anything important to you?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-26T18:21:15-07:00</updated><id>http://localhost:4000/</id><title type="html">ale627</title><subtitle>I'm an analyst, sailor, &amp; trader near SF. ghpages+jekyll+minima+arimo/inconsolata
+</subtitle><entry><title type="html">What is important?</title><link href="http://localhost:4000/2017/09/26/important.html" rel="alternate" type="text/html" title="What is important?" /><published>2017-09-26T11:00:00-07:00</published><updated>2017-09-26T11:00:00-07:00</updated><id>http://localhost:4000/2017/09/26/important</id><content type="html" xml:base="http://localhost:4000/2017/09/26/important.html">&lt;p&gt;What is important to you?  Is anything important to you?&lt;/p&gt;
 
-&lt;p&gt;Not everyone has the same priorities in life.  Some people don’t have priorities.  Most people do have priorities but they are flimsy, because they’re made on-the-fly or as a result of circumstances.&lt;/p&gt;
+&lt;p&gt;Not everyone has the same priorities in life.  Some people don’t have priorities.  Most people do have priorities but they are flimsy - made on-the-fly or as a result of circumstances.&lt;/p&gt;
 
 &lt;p&gt;Flimsy priorities lead to fuzzy decision making, meaning you might do different things under the same circumstances.  The only long-term output from this sort of process is randomness.&lt;/p&gt;
 
 &lt;p&gt;Therefore it’s important to define your priorities in a robust way, even if those priorities are to relax 24/7 and never wear shoes.  It’s important to decide and know why you decided, to avoid regret later in life.&lt;/p&gt;
-
-&lt;p&gt;Here’s the scary thing.  No one else cares.  They’re too busy trying to do their own thing.  Even licensed professionals and family members will only be able to provide advice from their point of view, through their personal filter of experiences and biases.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Make life quality your #1 life mission.&lt;/strong&gt;
-It’s up to you to decide on and get what you want in life.  How do you decide on what you want?  The kind of person you are informs your priorities.&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#whats-your-mix&quot; id=&quot;markdown-toc-whats-your-mix&quot;&gt;What’s your mix?&lt;/a&gt;&lt;/li&gt;
@@ -20,49 +15,62 @@ It’s up to you to decide on and get what you want in life.  How do you decide 
   &lt;li&gt;&lt;a href=&quot;#ego&quot; id=&quot;markdown-toc-ego&quot;&gt;Ego&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Here’s the scary thing: no one really cares if you hit your priorities.  They’re too busy trying to do their own thing.  Even licensed professionals and family members will only be able to provide advice from their point of view, through their personal filter of experiences and biases.&lt;/p&gt;
+
+&lt;p&gt;You need to buy in to the idea that you are solely responsible for determining your quality of life by setting and executing your priorities.
+&lt;strong&gt;Make life quality your #1 life mission.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s up to you to decide on and get what you want in life.  How do you decide on what you want?  The kind of person you are informs your priorities.&lt;/p&gt;
+
 &lt;h1 id=&quot;whats-your-mix&quot;&gt;What’s your mix?&lt;/h1&gt;
-&lt;p&gt;All people exist along a spectrum of time orientation.  Out of 100%, you are part living in the “now” and part in the future.  Tied to this orientation are several more concrete characteristics that may help you decide.  Think hippy on one hand, and financial analyst on the other.&lt;/p&gt;
+&lt;p&gt;All people exist along a spectrum of time orientation.  Of 100%, you are partially living in the “now” and partially in the future.  Tied to this orientation are several more concrete characteristics that describe the two ends.  Think hippy on one hand, and financial analyst on the other.&lt;/p&gt;
 
 &lt;p&gt;Are you more rational and logical, or emotional and intuitive?  Do you seek comfort and happiness, or growth and achievement?  Are you whimsical, or deliberate?&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Present&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Future&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Orientation:&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Now&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Future&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Emotional&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Rational&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Seeks:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Happiness&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Success&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Intuitive&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Logical&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Priorities:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Comfort&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Growth&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Comfort&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Growth&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Mindset:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Emotional&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Rational&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Happiness&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Achievement&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Decisions:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Intuitive&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Logical&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Whimsical&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Deliberate&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Actions:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Whimsical&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Deliberate&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;If you live in the “now”, you prioritize happiness.
-Happiness, or the absence of stress and anxiety, comes from matching your surroundings to your inner self.  It means doing what you want.&lt;/p&gt;
+    &lt;p&gt;If you live in the “now”, you seek happiness by prioritizing comfort, and with an emotional mindset make intuitive decisions to take whimsical actions.
+Happiness, or the absence of depression and anxiety, comes from matching your surroundings to your inner self.  It means doing what you want.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;If you live for the future, you prioritize success.
+    &lt;p&gt;If you live for the future, you seek success by prioritizing growth, and with a rational mindset make logical decisions to take deliberate actions.
 Success, or the accomplishment of goals, is the result of delayed gratification and persistent effort to affect an outcome.  It means doing what must be done.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -72,6 +80,10 @@ Success, or the accomplishment of goals, is the result of delayed gratification 
 &lt;p&gt;Can you define what happiness and achievement looks like to you?&lt;/p&gt;
 
 &lt;h1 id=&quot;present-happiness&quot;&gt;Present happiness&lt;/h1&gt;
+&lt;p&gt;To be happy and present is a great feeling.  You’re engaged in a flow state with the world, acting reflexively and appropriately.  You’re not thinking of the past (depression) or the future (anxiety).  You feel an energy flowing through you and your mood is high.&lt;/p&gt;
+
+&lt;p&gt;How do we get there?&lt;/p&gt;
+
 &lt;p&gt;To define your happiness, you need to first know your self.  Have you spent time introspectively examining the sources of your identity?  The sources are “Nature” and “Nurture”.  Within each source are several factors.&lt;/p&gt;
 
 &lt;p&gt;Nurture:&lt;/p&gt;
@@ -143,18 +155,18 @@ Success, or the accomplishment of goals, is the result of delayed gratification 
 
 &lt;p&gt;You may notice that your wants are fleeting.  As soon as you get something, you want something else.  To this end, the only way out of the rat race is to stop wanting.  You stop wanting by killing your ego.&lt;/p&gt;
 
-&lt;p&gt;The ultimate objective is to free yourself of ego.  Without ego, you are able to interact with the world without a filter of perception, seeing and experiencing things as they truly are.  This real interaction is the truest form of living, as it is open to actual reality.  Do you dare jettison the basis of your current happiness and future goals, in pursuit of an objective truth?  Whether that is something you are interested in is something to decide for yourself.&lt;/p&gt;</content><author><name></name></author><summary type="html">What is important to you? Is anything important to you?</summary></entry><entry><title type="html">NHL preseason in a suite</title><link href="/2017/09/22/nhl.html" rel="alternate" type="text/html" title="NHL preseason in a suite" /><published>2017-09-22T11:00:00-07:00</published><updated>2017-09-22T11:00:00-07:00</updated><id>/2017/09/22/nhl</id><content type="html" xml:base="/2017/09/22/nhl.html">&lt;p&gt;I got the last minute invite to join Brian with an extra ticket to the suites at the Sharks preseason NHL game last night.  His cousin Eric works at MicroSemi, a semiconductor company.  MicroSemi has a suite at SAP Center.&lt;/p&gt;
+&lt;p&gt;The ultimate objective is to free yourself of ego.  Without ego, you are able to interact with the world without a filter of perception, seeing and experiencing things as they truly are.  This real interaction is the truest form of living, as it is open to actual reality.  Do you dare jettison the basis of your current happiness and future goals, in pursuit of an objective truth?  Whether that is something you are interested in is something to decide for yourself.&lt;/p&gt;</content><author><name></name></author><summary type="html">What is important to you? Is anything important to you?</summary></entry><entry><title type="html">NHL preseason in a suite</title><link href="http://localhost:4000/2017/09/22/nhl.html" rel="alternate" type="text/html" title="NHL preseason in a suite" /><published>2017-09-22T11:00:00-07:00</published><updated>2017-09-22T11:00:00-07:00</updated><id>http://localhost:4000/2017/09/22/nhl</id><content type="html" xml:base="http://localhost:4000/2017/09/22/nhl.html">&lt;p&gt;I got the last minute invite to join Brian with an extra ticket to the suites at the Sharks preseason NHL game last night.  His cousin Eric works at MicroSemi, a semiconductor company.  MicroSemi has a suite at SAP Center.&lt;/p&gt;
 
 &lt;p&gt;We joined a gathering of NVIDIA and MicroSemi folks who work together.  San Jose Sharks vs the brand spankin’ new Golden Knights from Las Vegas.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;When a new team like the Golden Knights is chartered - one MicroSemi guy explained - instead of only being able to hire from the free agent pool, each existing team reserves a certain number of players, then the new team selects some unreserved players from each team for their roster.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Catering provided beer and wine, hotdogs, sliders, and cookies.  Of course nothing is free and everything is overpriced but MicroSemi set us up well.  The suites, which run around the whole stadium, are all in the nosebleed section, but you can see the puck at all times due to the angle of the seating and the rink lighting.&lt;/p&gt;
+&lt;p&gt;Of course nothing is free and everything is overpriced but MicroSemi set us up well.  Catering provided beer and wine, hotdogs, sliders, and cookies.  The suites, which run around the whole stadium, are all in the nosebleed section, but you can see the puck at all times due to the angle of the seating and the rink lighting.&lt;/p&gt;
 
 &lt;p&gt;The game was exciting with 7 goals total.  No scores in the first period, with 4 in a row by San Jose in the 2nd.  At this point I admit to betting Brian $5 on the Knights scoring.&lt;/p&gt;
 
 &lt;p&gt;Final score San Jose 5 - Las Vegas 2.&lt;br /&gt;
-Good fun!  Thanks again to Brian, Eric and MicroSemi.&lt;/p&gt;</content><author><name></name></author><summary type="html">I got the last minute invite to join Brian with an extra ticket to the suites at the Sharks preseason NHL game last night. His cousin Eric works at MicroSemi, a semiconductor company. MicroSemi has a suite at SAP Center.</summary></entry><entry><title type="html">Van Damme camping</title><link href="/2017/09/21/van-damme.html" rel="alternate" type="text/html" title="Van Damme camping" /><published>2017-09-21T10:30:00-07:00</published><updated>2017-09-21T10:30:00-07:00</updated><id>/2017/09/21/van-damme</id><content type="html" xml:base="/2017/09/21/van-damme.html">&lt;p&gt;Before this next weekend gets started, I wanted to get the details of my trip to Mendocino on paper.&lt;/p&gt;
+Good fun!  Thanks again to Brian, Eric and MicroSemi.&lt;/p&gt;</content><author><name></name></author><summary type="html">I got the last minute invite to join Brian with an extra ticket to the suites at the Sharks preseason NHL game last night. His cousin Eric works at MicroSemi, a semiconductor company. MicroSemi has a suite at SAP Center.</summary></entry><entry><title type="html">Van Damme camping</title><link href="http://localhost:4000/2017/09/21/van-damme.html" rel="alternate" type="text/html" title="Van Damme camping" /><published>2017-09-21T10:30:00-07:00</published><updated>2017-09-21T10:30:00-07:00</updated><id>http://localhost:4000/2017/09/21/van-damme</id><content type="html" xml:base="http://localhost:4000/2017/09/21/van-damme.html">&lt;p&gt;Before this next weekend gets started, I wanted to get the details of my trip to Mendocino on paper.&lt;/p&gt;
 
 &lt;p&gt;Jake, Brian, and I camped at Van Damme State Park Friday and Saturday night.  (Van &lt;em&gt;Damme&lt;/em&gt;, gurl)&lt;/p&gt;
 
@@ -192,7 +204,7 @@ Good fun!  Thanks again to Brian, Eric and MicroSemi.&lt;/p&gt;</content><author
   &lt;li&gt;
     &lt;p&gt;Russian River Brewery, home of Pliny the Elder/Younger.  A great pit stop on the way back.  It was very busy with locals on Sunday as it is happy hour all day, so we ate down the street at a burger joint and came back.  I tried the Golden Ale and grabbed a growler of Pliny.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Before this next weekend gets started, I wanted to get the details of my trip to Mendocino on paper.</summary></entry><entry><title type="html">Finless Foods fun</title><link href="/2017/09/14/finless.html" rel="alternate" type="text/html" title="Finless Foods fun" /><published>2017-09-14T14:30:00-07:00</published><updated>2017-09-14T14:30:00-07:00</updated><id>/2017/09/14/finless</id><content type="html" xml:base="/2017/09/14/finless.html">&lt;p&gt;I met some cool people in a roundabout way last week.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Before this next weekend gets started, I wanted to get the details of my trip to Mendocino on paper.</summary></entry><entry><title type="html">Finless Foods fun</title><link href="http://localhost:4000/2017/09/14/finless.html" rel="alternate" type="text/html" title="Finless Foods fun" /><published>2017-09-14T14:30:00-07:00</published><updated>2017-09-14T14:30:00-07:00</updated><id>http://localhost:4000/2017/09/14/finless</id><content type="html" xml:base="http://localhost:4000/2017/09/14/finless.html">&lt;p&gt;I met some cool people in a roundabout way last week.&lt;/p&gt;
 
 &lt;p&gt;Zois -my housemate Ian’s friend from time in Chile- stayed on our couch for a few days.  He invited me to Massive Attack at 1015 Folsom with Emily, a friend visiting SF.  Emily was staying in SoMa with Mike, who she met in Taiwan.&lt;/p&gt;
 
@@ -221,7 +233,7 @@ Good fun!  Thanks again to Brian, Eric and MicroSemi.&lt;/p&gt;</content><author
 &lt;iframe src=&quot;https://www.youtube.com/embed/UPnDtDXz9s8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Good luck to &lt;a href=&quot;https://twitter.com/finlessfoods&quot;&gt;Finless Foods&lt;/a&gt;!!&lt;/p&gt;</content><author><name></name></author><summary type="html">I met some cool people in a roundabout way last week.</summary></entry><entry><title type="html">Why do blogs die?</title><link href="/2017/09/12/what.html" rel="alternate" type="text/html" title="Why do blogs die?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>/2017/09/12/what</id><content type="html" xml:base="/2017/09/12/what.html">&lt;p&gt;Blogs are everywhere.  You probably have an old one under your bed somewhere.&lt;/p&gt;
+&lt;p&gt;Good luck to &lt;a href=&quot;https://twitter.com/finlessfoods&quot;&gt;Finless Foods&lt;/a&gt;!!&lt;/p&gt;</content><author><name></name></author><summary type="html">I met some cool people in a roundabout way last week.</summary></entry><entry><title type="html">Why do blogs die?</title><link href="http://localhost:4000/2017/09/12/what.html" rel="alternate" type="text/html" title="Why do blogs die?" /><published>2017-09-12T15:05:00-07:00</published><updated>2017-09-12T15:05:00-07:00</updated><id>http://localhost:4000/2017/09/12/what</id><content type="html" xml:base="http://localhost:4000/2017/09/12/what.html">&lt;p&gt;Blogs are everywhere.  You probably have an old one under your bed somewhere.&lt;/p&gt;
 
 &lt;p&gt;They’re started by teachers, travellers, investors, product people and developers.&lt;/p&gt;
 
