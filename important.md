@@ -4,7 +4,7 @@ title:  "What's Important"
 categories:
 ---
 
-What is important to you?  Is anything important to you?  
+Is anything important to you?  
 
 Not everyone has the same priorities in life.  Some people don't have priorities.  Most people do have priorities but they are flimsy - made on-the-fly or as a result of circumstances.
 
@@ -43,44 +43,51 @@ Happiness, or the absence of depression and anxiety, comes from matching your su
 - If you live for the future, you seek success by prioritizing growth, and with a rational mindset make logical decisions to take deliberate actions.
 Success, or the accomplishment of goals, is the result of delayed gratification and persistent effort to affect an outcome.  It means doing what must be done.
 
-Present happiness and future success stand opposed to each other and represent a trade-off.  More of one means less of the other.  So what is your desired mix of happiness and achievement?  50/50?  70/30?
+Present happiness and future success stand opposed to each other and represent a trade-off.  More of one means less of the other.  So what is your desired mix of happiness and success?  50/50?  70/30?
 
-Can you define what happiness and achievement looks like to you?
+Can you define what happiness and success looks like to you?
 
 # Present happiness
 To be happy and present is a great feeling.  You're engaged in a flow state with the world, acting reflexively and appropriately.  You're not thinking of the past (depression) or the future (anxiety).  You feel an energy flowing through you and your mood is high.
 
 How do we get there?
 
+## The self
 To define your happiness, you need to first know your self.  Have you spent time introspectively examining the sources of your identity?  The sources are "Nature" and "Nurture".  Within each source are several factors.
 
 Nurture:
 - Place of birth
+- Family
 - Upbringing
-- School years
+- K-12-college
 - Foods
 - Culture
+- Sports
 
 Nature:
-- Thought patterns
+- Recurring thought patterns
 - Vices
-- Favorite activities
+- Hobbies
 - Personality type
 - Spiritual beliefs
 - Carnal desires
 
-These identity factors all affect your happiness.  Can you recall times you were very happy?  What was happening? 
+These factors underly your identity and informs your happiness.  **You'll be happier doing something related to these factors.** Recall times you were very happy - what was happening? 
 
-If you're a tough guy and absolutely loved going to the petting zoo, then if you want to be happy you better schedule some petting time.  
+Odds are it involved one or several of the above factors. 
+*A trip home.  A childhood food.  A forgotten hobby.* 
 
-If you grew up in Asia and moved to the Midwest, some authentic Dim Sum would likely go a long way.
+**Who you think you are is not necessarily who you actually are.**  It's easy to get caught up in the world and lose your roots.  Don't become so focused on seeming normal that you neglect to actually be happy.  This is way too common.  "Normal" is subjective and does not have your best interests at heart.
 
-**Who you think you are is not necessarily who you actually are.**  Don't let yourself be so focused on seeming normal that you neglect to actually be happy.  This is way too common.
+## Others
+Other people (beyond family) are another major source of happiness.  The catch is you need to be present to meet these people.  
+
+You should surround yourself with others who inspire, elevate, and complement your self.  Take a lover that cherishes your happiness and understands your identity.  Honest interaction with true intent is an instant source of flow.  These interactions compound into bonds which can alter your life in ways individual effort never can.
 
 # Future success
 What are your goals?  As a young person, it's important to think deliberately about what you want to do.  There are 80 years in life, and about 50 weeks a year, so there are 4000 weeks in life.  
 
-Why do you want to succeed at anything at all?  Why be anything or do anything, when you could more easily be and do nothing?  **It is in the human spirit to continually reach for richer experience.**
+Why do you want to succeed at anything at all?  Why be anything or do anything, when you could more easily be and do nothing?  **It is in the human spirit to continually reach for richer experience.**  For a mortal with an ego (anyone), there is intense appeal in creating something which outlasts you.  It is a test of your abilities.
 
 Many goals require years of specific and concentrated effort and are mutually exclusive with other goals.  You can't achieve them all, so which goals are the most important to you?
 
@@ -108,10 +115,12 @@ Given that you know what makes you happy, if you feel anxiety or stress, it mean
 Given that you know what to do to succeed, if you feel like you're spinning your wheels, it means you are living too much in the now.  Consult your established goals.
 
 # Ego
-I've given tips for identifying and getting your most personal desires.
+I've given tips for identifying and getting what's important to you.
 
-Desires, whether short-term happiness or long-term accomplishments, arise out of our ego.  Getting what you want fufills the ego.
+These things you want, whether short-term happiness or long-term accomplishments, arise from ego.  Getting what you want fulfills the ego, briefly.
 
-You may notice that your wants are fleeting.  As soon as you get something, you want something else.  To this end, the only way out of the rat race is to stop wanting.  You stop wanting by killing your ego.
+You may notice that your wants are fleeting.  As soon as you get something, you want something else.  The ego will grow unattended.  To this end, the only way out of the rat race is to stop wanting.  You stop wanting by killing your ego.
 
-The ultimate objective is to free yourself of ego.  Without ego, you are able to interact with the world without a filter of perception, seeing and experiencing things as they truly are.  This real interaction is the truest form of living, as it is open to actual reality.  Do you dare jettison the basis of your current happiness and future goals, in pursuit of an objective truth?  Whether that is something you are interested in is something to decide for yourself.
+Without ego, you are able to interact with the world without a filter of perception, seeing and experiencing things as they truly are.  This real interaction is the truest form of living, as it is open to actual reality.  
+
+Do you dare jettison the basis of your current happiness and future goals, in pursuit of an objective truth?  Is such a state of neutrality really desirable?  
