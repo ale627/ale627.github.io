@@ -98,7 +98,8 @@
 <p>So I decided to write it out.  Over the course of several weeks I expanded several sections and reflowed the writing.  This reference now has a dedicated page and receives routine edits.  Check back as it expands into a corpus of knowledge.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#trading-styles-and-markets" id="markdown-toc-trading-styles-and-markets">Trading styles and markets</a>    <ul>
+  <li><a href="#markets" id="markdown-toc-markets">Markets</a></li>
+  <li><a href="#styles" id="markdown-toc-styles">Styles</a>    <ul>
       <li><a href="#investing" id="markdown-toc-investing">Investing</a></li>
       <li><a href="#price-action-trading" id="markdown-toc-price-action-trading">Price action trading</a></li>
     </ul>
@@ -146,9 +147,8 @@
   <li><a href="#reference" id="markdown-toc-reference">Reference</a></li>
 </ul>
 
-<h1 id="trading-styles-and-markets">Trading styles and markets</h1>
-<p>There are 2 trading styles: investing and price action trading.
-There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.</p>
+<h1 id="markets">Markets</h1>
+<p>There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.</p>
 
 <ul>
   <li>
@@ -164,7 +164,8 @@ There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrenc
   <li>Cryptocurrencies are blockchain based digital currencies.  <code class="highlighter-rouge">$BTCUSD</code>, <code class="highlighter-rouge">$ETHUSD</code>, and <code class="highlighter-rouge">$LTCUSD</code> are the most common currently.</li>
 </ul>
 
-<p>Careers have been made across styles and markets.</p>
+<h1 id="styles">Styles</h1>
+<p>There are 2 trading styles: investing and price action trading.</p>
 
 <p>Here’s what I’ve tried:</p>
 
@@ -210,7 +211,7 @@ There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrenc
   </tbody>
 </table>
 
-<p>What’s the difference between investing and price action trading?</p>
+<p>What’s the difference between the styles?</p>
 
 <h2 id="investing">Investing</h2>
 <p>Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).</p>
@@ -260,13 +261,38 @@ If <code class="highlighter-rouge">$GM</code> price goes up or doesn’t move, t
 <p>That’s a put option.</p>
 
 <h2 id="how-options-work">How options work</h2>
-<p>Options are frequently traded “naked” or without owning the underlying.<br />
-Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract’s time to expiration.</p>
+<p>Options are frequently traded “naked” or without owning the underlying.</p>
 
-<p>An aggressive scalp setup is an out-of-the-money weekly option.  This position is cheap because the stock needs to move a lot in a little time (low probability).
-A conservative swing setup is an in-the-money LEAP option.  This position is expensive because the stock has wiggle room and lots of time (high probability).</p>
+<p>An option’s strike is the price you can execute the option at:</p>
+<ul>
+  <li>A call option is OTM (out-of-the-money) if the underlying &gt; strike.</li>
+  <li>A call option is ATM (at-the-money) if the underlying = strike.</li>
+  <li>A call option is ITM (in-the-money) if the underlying &lt; strike.</li>
+</ul>
 
-<p>The advantage of options is the ability to specifically express your view in the market.</p>
+<p>Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract’s time to expiration.</p>
+
+<p>Therefore, as opposed to equities where you only lose money if price goes against you, an option buyer loses money (premium decreases) if:</p>
+<ol>
+  <li>Price goes against you</li>
+  <li>Volatility decreases</li>
+  <li>Time decays</li>
+</ol>
+
+<p>As a result of those factors, specific types of moves are suited to option buyers.
+<strong>Look for fast directional moves as early as possible without decreasing odds.</strong>  Price goes with you and volatility increases, while time decays only slightly.</p>
+
+<p>How does this work across trade styles?</p>
+<ul>
+  <li>An aggressive scalp setup (“Lotto”) is an out-of-the-money weekly option.  This position is low probability because the stock needs to move a lot in a little time.  Therefore the option is cheap.</li>
+  <li>A conservative swing setup (“LEAP”) is an in-the-money long-term option.  This position is high probability because the stock has wiggle room and lots of time.  Therefore the option is expensive.</li>
+</ul>
+
+<p>There’s no free lunch - Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.</p>
+
+<p>The advantage of options is the ability to specifically express your level of certainty of a given price move in a given time.</p>
+
+<p>(Options on equities are not bought to directly take advantage of volatility increases.  This can be accomplished by going long the volatility index (VIX) through ETFs such as 1x <code class="highlighter-rouge">$VXX</code> and 3x <code class="highlighter-rouge">$UVXY</code>.)</p>
 
 <h3 id="advantage-of-option-over-stock">Advantage of option over stock</h3>
 <p>Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.<br />
@@ -287,8 +313,6 @@ If Apple announces that they are getting out of the computer business and the st
 
 <p>When managing a single position, you set a stop loss.<br />
 This is the max amount you can lose.  <strong>How much are you really OK with losing?</strong></p>
-
-<p>Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.  There’s no way around this.</p>
 
 <p>You will not win every time.  So you need to have a “bad plan” or a way to manage your position if it goes against you.</p>
 
@@ -320,7 +344,7 @@ Participants have a trade idea and are positioned accordingly.  Buyers are at su
 <h3 id="support-and-resistance">Support and resistance</h3>
 <p>Support and resistance are important concepts in price action trading.  Once identified, you want to enter longs at support and exit at resistance, and enter shorts and resistance and exit at support.</p>
 
-<p>Support and resistance are horizontal or diagonal lines extending along local lows and highs.  Their slope indicates relative demand and supply. Horizontal lines are more reliable than diagonal lines, as the participants are “holding the line” on their position, not being forced to adjust to new levels.</p>
+<p>Support and resistance are horizontal or diagonal lines extending along local lows and highs.  Their slope indicates relative demand and supply. <strong>Horizontal lines are more reliable than diagonal lines, as the participants are “holding the line” on their position, not being forced to adjust to new levels.</strong></p>
 
 <p>If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.</p>
 
@@ -469,8 +493,6 @@ Each of these candlestick bodies contain info: <code class="highlighter-rouge">O
 <p>As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.</p>
 
 <h2 id="trade-setups">Trade setups</h2>
-<p><strong>You are trying to find fast directional moves as early as possible without decreasing odds</strong>.</p>
-
 <p>As uncorrelated assets reduce risk in a portfolio, trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.</p>
 
 <p>There are several general shapes which price action will take, given a market condition, that indicates specific information.</p>

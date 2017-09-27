@@ -11,8 +11,7 @@ So I decided to write it out.  Over the course of several weeks I expanded sever
 * TOC
 {:toc}
 
-# Trading styles and markets
-There are 2 trading styles: investing and price action trading.
+# Markets
 There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.
 
 - OTC, over-the-counter, "pinks", and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.
@@ -24,7 +23,9 @@ There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrenc
 
 - Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
 
-Careers have been made across styles and markets.
+
+# Styles
+There are 2 trading styles: investing and price action trading.  
 
 Here's what I've tried:
 
@@ -37,7 +38,7 @@ Here's what I've tried:
 | Crypto           |           | 1 year               |
 | Options          |           | 2 years              |
 
-What's the difference between investing and price action trading?
+What's the difference between the styles?
 
 ## Investing
 Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).
@@ -85,12 +86,31 @@ That's a put option.
 
 ## How options work
 Options are frequently traded "naked" or without owning the underlying.  
+
+An option's strike is the price you can execute the option at:
+- A call option is OTM (out-of-the-money) if the underlying > strike.
+- A call option is ATM (at-the-money) if the underlying = strike.
+- A call option is ITM (in-the-money) if the underlying < strike.
+
 Risk is premium paid.  Premium is based on the underlying price relative to the contract strike, the underlying volatility, and the contract's time to expiration.  
 
-An aggressive scalp setup is an out-of-the-money weekly option.  This position is cheap because the stock needs to move a lot in a little time (low probability).
-A conservative swing setup is an in-the-money LEAP option.  This position is expensive because the stock has wiggle room and lots of time (high probability).
+Therefore, as opposed to equities where you only lose money if price goes against you, an option buyer loses money (premium decreases) if:
+1. Price goes against you
+2. Volatility decreases
+3. Time decays
 
-The advantage of options is the ability to specifically express your view in the market.   
+As a result of those factors, specific types of moves are suited to option buyers.
+**Look for fast directional moves as early as possible without decreasing odds.**  Price goes with you and volatility increases, while time decays only slightly.   
+
+How does this work across trade styles?
+- An aggressive scalp setup ("Lotto") is an out-of-the-money weekly option.  This position is low probability because the stock needs to move a lot in a little time.  Therefore the option is cheap.
+- A conservative swing setup ("LEAP") is an in-the-money long-term option.  This position is high probability because the stock has wiggle room and lots of time.  Therefore the option is expensive.
+
+There's no free lunch - Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.
+
+The advantage of options is the ability to specifically express your level of certainty of a given price move in a given time. 
+
+(Options on equities are not bought to directly take advantage of volatility increases.  This can be accomplished by going long the volatility index (VIX) through ETFs such as 1x `$VXX` and 3x `$UVXY`.)
 
 ### Advantage of option over stock
 Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
@@ -111,8 +131,6 @@ When managing multiple positions, you diversify across uncorrelated assets.  Thi
 
 When managing a single position, you set a stop loss.  
 This is the max amount you can lose.  **How much are you really OK with losing?**  
-
-Trades that have a high probability of working have a low payout, and trades that have a low probability of working have a high payout.  There's no way around this.
 
 You will not win every time.  So you need to have a "bad plan" or a way to manage your position if it goes against you.  
 
@@ -144,7 +162,7 @@ Since these participants are acting on all timescales short and long, there is a
 ### Support and resistance
 Support and resistance are important concepts in price action trading.  Once identified, you want to enter longs at support and exit at resistance, and enter shorts and resistance and exit at support.
 
-Support and resistance are horizontal or diagonal lines extending along local lows and highs.  Their slope indicates relative demand and supply. Horizontal lines are more reliable than diagonal lines, as the participants are "holding the line" on their position, not being forced to adjust to new levels.
+Support and resistance are horizontal or diagonal lines extending along local lows and highs.  Their slope indicates relative demand and supply. **Horizontal lines are more reliable than diagonal lines, as the participants are "holding the line" on their position, not being forced to adjust to new levels.**
 
 If price retraces and retests support, price will be absorbed by the stops of all the buyers who bought at that level.  If there are more sellers now than buyers previously, price will break below the level.  
 
@@ -210,8 +228,6 @@ Each of these candlestick bodies contain info: `Open, High, Low, Close`  The lon
 As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.  
 
 ## Trade setups
-**You are trying to find fast directional moves as early as possible without decreasing odds**.
-
 As uncorrelated assets reduce risk in a portfolio, trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.
 
 There are several general shapes which price action will take, given a market condition, that indicates specific information.
