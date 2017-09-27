@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is important?"
+title:  "What's Important"
 categories:
 ---
 
