@@ -110,9 +110,9 @@ This framework allows clarity of thought.  With action items in mind, your subco
 
 # Putting it together
 Identifying your priority mix and delineating what happiness and success look like lets you troubleshoot your lifestyle more accurately than a therapist.  
-Given that you know what makes you happy, if you feel anxiety or stress, it means you are living too much in the future.  Do things that stoke your true identity.
+Given that you know what makes you happy, if you feel anxiety or stress, it means you are living too much in the future.  Do things that stoke your true identity, or engage others.
 
-Given that you know what to do to succeed, if you feel like you're spinning your wheels, it means you are living too much in the now.  Consult your established goals.
+Given that you know what to do to succeed, if you feel like you're not making progress, it means you are living too much in the now.  Consult your established goals and roadmaps.
 
 # Ego
 I've given tips for identifying and getting what's important to you.
