@@ -23,7 +23,9 @@ You need to buy in to the idea that you are solely responsible for determining y
 It's up to you to decide on and get what you want in life.  How do you decide on what you want?  The kind of person you are informs your priorities.
 
 # What's your mix?
-All people exist along a spectrum of time orientation.  Of 100%, you are partially living in the "now" and partially in the future.  Tied to this orientation are several more concrete characteristics that describe the two ends.  Think hippy on one hand, and financial analyst on the other.  
+All people exist along a spectrum of time orientation.  Only in rare instances of mental disorder do you see people living 100% in present or future.
+
+Out of 100%, you are partially living in the "now" and partially in the future.  Tied to this orientation are several more concrete characteristics that describe the two sides.  Think hippy on one hand, and financial analyst on the other.  
 
 Are you more rational and logical, or emotional and intuitive?  Do you seek comfort and happiness, or growth and achievement?  Are you whimsical, or deliberate?
 
@@ -71,7 +73,7 @@ These identity factors all affect your happiness.  Can you recall times you were
 
 If you're a tough guy and absolutely loved going to the petting zoo, then if you want to be happy you better schedule some petting time.  
 
-If you grew up in Asia and moved to the Midwest, some authentic Dim Sum would likely go a long way to improving your happiness.
+If you grew up in Asia and moved to the Midwest, some authentic Dim Sum would likely go a long way.
 
 **Who you think you are is not necessarily who you actually are.**  Don't let yourself be so focused on seeming normal that you neglect to actually be happy.  This is way too common.
 
@@ -85,13 +87,13 @@ Many goals require years of specific and concentrated effort and are mutually ex
 There are different types of goals.
 - Physical feats
 - Social connections
-- Money accumulation
-- Things to own
-- Things to do
+- Capital accumulation
+- Items
+- Experiences
 
 Once you have defined and prioritized your goals, you can build a gameplan.  
 
-Warren Buffett 25-5 rule has you list your 25 (career) goals, then circle the top 5 and disregard the bottom 20 thereafter.  With this handful of goals, you can construct 1, 3, 5, and 10 year plans with action items relating your current situation to your desired situation.  
+Warren Buffett 25-5 rule has you list your 25 goals, then circle the top 5 and disregard the bottom 20 thereafter.  With this handful of goals, you can construct 1, 3, 5, and 10 year plans with action items relating your current situation to your desired situation.  
 
 This framework allows clarity of thought.  With action items in mind, your subconscious can:
 - Spend time wrestling with these goals to arrive at novel solutions (the AHA! moment in the shower)
@@ -101,7 +103,6 @@ This framework allows clarity of thought.  With action items in mind, your subco
 
 # Putting it together
 Identifying your priority mix and delineating what happiness and success look like lets you troubleshoot your lifestyle more accurately than a therapist.  
-
 Given that you know what makes you happy, if you feel anxiety or stress, it means you are living too much in the future.  Do things that stoke your true identity.
 
 Given that you know what to do to succeed, if you feel like you're spinning your wheels, it means you are living too much in the now.  Consult your established goals.
