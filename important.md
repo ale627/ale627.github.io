@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "What's Important"
-categories:
+title:  "Important"
 ---
 
 Is anything important to you?  
