@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Trading Reference"
-categories:
 ---
 
 If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics, and how are they related?

@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Arimo", sans-serif;
+  font: 400 16px/1.5 "Chivo", sans-serif;
   color: #757575;
   background-color: #fdfdfd;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,7 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  letter-spacing: .25px;
+  letter-spacing: .2px;
   line-height: 1.6;
   animation: fadein 1.25s;
   -moz-animation: fadein 1.25s;
@@ -223,7 +223,7 @@ pre {
     display: none; }
   .site-nav .page-link {
     color: #757575;
-    font-family: "Arimo", sans-serif;
+    font-family: "Chivo", sans-serif;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -340,6 +340,18 @@ pre {
   color: #777777;
   font-family: "Inconsolata", monospace; }
 
+.post-category {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  border-radius: .25em;
+  padding: .2em .4em .2em;
+  opacity: .65; }
+
+.post-category:empty {
+  padding: 0; }
+
 .post-link {
   display: block;
   font-size: 24px; }
@@ -362,7 +374,8 @@ pre {
       font-size: 28px; } }
 
 .post-content {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-family: "Inconsolata", monospace; }
   .post-content h1 {
     font-size: 28px; }
     @media screen and (max-width: 800px) {
@@ -525,6 +538,17 @@ pre {
   .highlight .il {
     color: #099; }
 
+/*
+.post-content p:first-child:first-letter {
+  color: #903;
+  float: left;
+  font-size: 55px;
+  line-height: 40px;
+  padding-top: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+*/
 table {
   border-spacing: 10px;
   border-collapse: collapse;
@@ -569,6 +593,7 @@ tr:nth-child(odd) {
   font-size: .85em;
   margin-bottom: 1em;
   line-height: 1.4;
+  font-family: "Chivo", sans-serif;
   padding: 10px 20px 10px 30px;
   width: auto;
   font-weight: 700; }

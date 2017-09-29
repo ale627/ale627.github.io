@@ -210,6 +210,23 @@
   font-family: $second-font-family;
 }
 
+//added category labels, assoc. span found in home.html under post-meta
+//:empty removes color from posts w/o labels
+
+.post-category {
+  font-size: $small-font-size;
+  color: #fff;
+  font-family: $second-font-family;
+  font-weight: bold;
+  border-radius: .25em;
+  padding: .2em .4em .2em;
+  opacity: .65;
+}
+.post-category:empty {
+  padding: 0;
+}
+
+
 .post-link {
   display: block;
   @include relative-font-size(1.5);
@@ -243,6 +260,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  font-family: $second-font-family;
 
   h1 {
     @include relative-font-size(1.75);

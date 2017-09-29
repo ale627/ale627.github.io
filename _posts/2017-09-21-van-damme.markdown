@@ -2,7 +2,8 @@
 layout: post
 title:  "Van Damme camping"
 date:   2017-09-21 10:30:00 -0700
-categories:
+category: trip
+color: rgb(61, 153, 112)
 ---
 
 Before this next weekend gets started, I wanted to get the details of my trip to Mendocino on paper.  
