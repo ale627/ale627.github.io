@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Trading Ref."
+title:  Trading Reference Guide
+pagename: Trading Ref
 ---
 
 If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics, and how are they related?
@@ -113,8 +114,12 @@ The advantage of options is the ability to specifically express your level of ce
 
 ### Advantage of option over stock
 Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
-You could spend $15,000 on 100 shares for a potential return of $1000.  `1000/15000 = 6.6% return`
-Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. `1000/200 = 500% return`
+You could spend $15,000 on 100 shares for a potential return of $1000.  
+`1000/15000 = 6.6% return`
+
+Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. 
+`1000/200 = 500% return`
+
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.
 
 Some powerful stuff!

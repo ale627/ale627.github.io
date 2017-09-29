@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Important"
+title:  "What is important to you?"
+pagename: "Important"
 ---
 
 Is anything important to you?  
