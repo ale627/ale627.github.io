@@ -134,9 +134,10 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #dddddd;
+  border: 1px solid #fae7b3;
   border-radius: 3px;
-  background-color: #eef; }
+  background-color: #fdf6e3;
+  color: #2ecc40; }
 
 code {
   padding: 1px 5px; }

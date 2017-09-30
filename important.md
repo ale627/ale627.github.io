@@ -32,10 +32,10 @@ Are you more rational and logical, or emotional and intuitive?  Do you seek comf
 | Orientation:     | Now       | Future     |
 |:-----------------|:----------|:-----------|
 | **Seeks:**       | Happiness | Success    |
-| **Priorities:**  | Comfort   | Growth     |
+| **Priority:**    | Comfort   | Growth     |
 | **Mindset:**     | Emotional | Rational   |
 | **Decisions:**   | Intuitive | Logical    |
-| **Actions:**     | Whimsical | Deliberate |
+| **Action:**      | Whimsical | Deliberate |
 
 - If you live in the "now", you seek happiness by prioritizing comfort, and with an emotional mindset make intuitive decisions to take whimsical actions.
 Happiness, or the absence of depression and anxiety, comes from matching your surroundings to your inner self.  It means doing what you want.

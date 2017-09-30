@@ -27,18 +27,7 @@ There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrenc
 # Styles
 There are 2 trading styles: investing and price action trading.  
 
-Here's what I've tried:
-
-|                  | Investing | Price Action Trading |
-|------------------|----------:|---------------------:|
-| OTC              |           | 1 year               | 
-| Equities         | 6 years   |                      |
-| Commodities      |           |                      |
-| Futures          |           |                      |
-| Crypto           |           | 1 year               |
-| Options          |           | 2 years              |
-
-What's the difference between the styles?
+What's the difference between the styles?  Value vs price.  
 
 ## Investing
 Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).
@@ -68,6 +57,17 @@ I have maintained a passive portfolio for 6 years, as well as a 401k, but I do n
 Price action trading is the focus of this reference. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term. (usually intraday)
 
 Price action trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.
+
+Here's my experience across styles and markets:
+
+|                  | Investing | Price Action Trading |
+|------------------|----------:|---------------------:|
+| OTC              |           | 1 year               | 
+| Equities         | 6 years   |                      |
+| Commodities      |           |                      |
+| Futures          |           |                      |
+| Crypto           |           | 1 year               |
+| Options          |           | 2 years              |
 
 # What are options
 Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.

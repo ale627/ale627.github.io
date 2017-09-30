@@ -6,9 +6,9 @@
 //$base-font-family: 'Arimo', sans-serif !default;
 $base-font-family: 'Chivo', sans-serif !default;
 
-
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
+
 $small-font-size:  $base-font-size * 0.875 !default;
 
 $second-font-family: 'Inconsolata', monospace;
@@ -16,12 +16,14 @@ $second-font-family: 'Inconsolata', monospace;
 
 
 $base-line-height: 1.5 !default;
-
 $spacing-unit:     30px !default;
 
+
+//colors
 $text-color:       #757575 !default;  //light-blue darken-4 materialize
 $background-color: #fdfdfd !default; //whiteish
 $brand-color:      #0080ff !default; //blue
+
 $head-color: 	   #85144b !default; //maroon, http://clrs.cc/
 $grey-color:       #aaaaaa !default;
 $grey-color-light: lighten($grey-color, 20%) !default;
@@ -29,6 +31,11 @@ $grey-color-dark:  darken($grey-color, 20%) !default;
 
 $post-color:	   $grey-color-dark;
 $title-color:	   #2ecc40;  //green, http://clrs.cc/
+
+$table-color:	   #3D9970;
+$code-color:	   #fdf6e3;
+
+
 
 
 // Width of the content area
