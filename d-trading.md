@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /trading.html
 title:  Trading Reference Guide
 pagename: Trading Ref
 ---
@@ -27,7 +28,7 @@ There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrenc
 # Styles
 There are 2 trading styles: investing and price action trading.  
 
-What's the difference between the styles?  Value vs price.  
+What's the difference between the styles?  The difference is whether you are a follower of value or price.  
 
 ## Investing
 Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).
@@ -253,15 +254,24 @@ Falling wedges are a very reliable method of buying bottoms.  They are a bullish
 ### Buying dips and selling rips
 BTFD (buy the fucking dip) or less commonly STFR (sell the fucking rip) is very counterintuitive but essential to grasp in today's markets.  BTFD has been working since early 2016 as the market has trended up strongly.  STFR works in bear markets.  
 
-In order to do the above, you need to identify the market trend, then identify support and resistance.  
+A gap in either direction can provide the range necessary to trade short term.  If the overnight session action leads to significantly different opening prices from yesterday's close, either the gap will fill or the gap will provide buy/sell imbalance fuel (a "short squeeze" if up, or a sell panic if down).  
+
+Normally, to BTFD/STFR you need to identify the market trend, then identify support and resistance.  
 
 In a bull market, support and resistance will likely form either a channel, a flag, or a pennant.  This simple strategy can be used within the the pattern created by support and resistance, or aggressively on breaks of the pattern by assuming the break is false.
 Buy at or beyond support, and sell at or beyond resistance.  
 
-### Buying breakouts
-To buy a breakout, first you have to identify it.  Start on higher timeframes like the weekly chart and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that's a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
+Buying beyond support is called "catching a falling knife."
+
+### Breakouts
+To buy a breakout, first you have to identify it.  Start on higher timeframes (weekly or monthly chart) and find levels of resistance.  If price has not been able to get past $200 in several years, a break above $200 would be meaningful.  If, after a series of higher lows, price breaks above $200, that's a bullish move.  Bullish moves signal a surplus of buyers vs sellers.  Therefore, trading this setup would give a higher than average win rate.
 Additionally, you could go into the lower timeframes and confirm price continuation.
 As price often will retest the breakout area, some traders will use the breakout-retest as their primary signal to get long.  This eliminates the mean reverting reversal that is common after the strong rip from the breakout buyer/seller imbalance.
+
+### Gaps
+Another s
+
+### Catching a falling knife
 
 ## Indicators
 Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.  

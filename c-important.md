@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /important.html
 title:  "What is important to you?"
 pagename: "Important"
 ---
