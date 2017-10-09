@@ -544,12 +544,12 @@ pre {
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: #fff;
-  grid-template-columns: 10% 30% 30% 30%; }
+  grid-template-columns: 10% 35% 35% 20%; }
 
 .column {
   text-align: center;
-  font-weight: 900;
-  color: white;
+  font-weight: 300;
+  color: #fdfdfd;
   padding: 0px 5px;
   font-family: "Inconsolata", monospace; }
 
@@ -557,10 +557,11 @@ pre {
   background-color: white;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 1px;
   text-align: left;
   color: #fdfdfd;
   font-family: "Chivo", sans-serif;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
@@ -569,53 +570,52 @@ pre {
 .detail {
   font-size: 90%;
   text-transform: none;
+  letter-spacing: 0px;
   font-weight: 300;
-  color: black;
+  color: #696969;
   text-align: left;
   padding: 10px; }
 
 .date {
-  color: #aaaaaa; }
+  color: #999; }
 
 .year {
   padding: 70px 10px;
-  background-color: #dddddd;
-  color: black;
+  background-color: #f0f0f0;
+  color: #999;
   font-size: 200%; }
 
 .current {
   padding: 20px 10px; }
 
 .analytics {
-  color: #85144b; }
+  color: #b71c1c; }
 
 .aa {
-  background-color: #ff5950; }
+  background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); }
   .aa:hover {
-    background-color: #ffa19c; }
+    background: #b71c1c; }
 
 .oracle {
   height: 500px; }
 
 .adobe {
-  height: 200px; }
+  height: 250px; }
 
 .workr {
-  height: 150px; }
-
-.lodge {
   height: 200px; }
 
 .kyc {
   height: 600px; }
 
 .sailing {
-  color: #0080ff; }
+  color: #0182e7; }
 
 .ss {
-  background-color: #0080ff; }
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .ss:hover {
-    background-color: #4da6ff; }
+    background: #01579b; }
 
 .gg {
   height: 50px; }
@@ -627,30 +627,31 @@ pre {
   height: 500px; }
 
 .youths {
-  height: 100px; }
+  height: 300px; }
 
 .bemis {
-  height: 200px; }
+  height: 400px; }
 
 .states {
-  height: 200px; }
+  height: 400px; }
 
 .traps {
   height: 200px; }
 
 .trading {
-  color: #2ecc40; }
+  color: #ff8f00; }
 
 .tt {
-  background-color: #2ecc40; }
+  background: linear-gradient(to right, #eacda3, #d6ae7b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .tt:hover {
-    background-color: #69dd76; }
+    background: #ff8f00; }
 
 .options {
-  height: 400px; }
+  height: 300px; }
 
 .equity {
-  height: 600px; }
+  height: 800px; }
 
 /* drop cap
 .post-content p:first-child:first-letter {

@@ -2,15 +2,15 @@
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: #fff;
-  grid-template-columns: 10% 30% 30% 30%;
+  grid-template-columns: 10% 35% 35% 20%;
 
 
 }
 
 .column {
  text-align: center;
- font-weight: 900;
- color: white;
+ font-weight: 300;
+ color: $background-color;
  padding: 0px 5px;
  font-family: $second-font-family;
 }
@@ -20,10 +20,11 @@
   background-color: white;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 1px;
   text-align: left;
-  color: #fdfdfd;
+  color: $background-color;
   font-family: $base-font-family;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
@@ -33,20 +34,21 @@
 .detail {
   font-size: 90%;
   text-transform: none;
+  letter-spacing: 0px;
   font-weight: 300;
-  color: black;
+  color: $text-color;
   text-align: left;
   padding: 10px;
 }
 
 
 .date {
-  color: $grey-color;
+  color: #999;
 }
 .year {
   padding: 70px 10px;
-  background-color: $grey-color-light;
-  color: black;
+  background-color: darken($background-color, 5%);
+  color: #999;
   font-size: 200%;
 }
 .current {
@@ -56,14 +58,14 @@
 
 
 .analytics {
-  color: #85144b;
+  color: #b71c1c;
 }
 
 .aa {
-  background-color: lighten(#ff4136, 5%);
+  background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 
     &:hover {
-    background-color: lighten(#ff4136, 20%);
+    background: #b71c1c;
   }
 }
 
@@ -72,14 +74,10 @@
 }
 
 .adobe {
-  height: 200px;
+  height: 250px;
 }
 
 .workr {
-  height: 150px;
-}
-
-.lodge {
   height: 200px;
 }
 
@@ -88,14 +86,14 @@
 }
 
 .sailing {
-  color: #0080ff;
+  color: lighten(#01579b, 15%);
 }
 
 .ss {
-  background-color: #0080ff;
+  background: linear-gradient(to right, #83a4d4, #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   &:hover {
-    background-color: lighten(#0080ff, 15%);
+    background: #01579b;
   }
 }
 
@@ -119,18 +117,18 @@
 }
 
 .youths {
-  height: 100px;
+  height: 300px;
 }
 
 .cisa {
 }
 
 .bemis {
-  height: 200px;
+  height: 400px;
 }
 
 .states {
-  height: 200px;
+  height: 400px;
 }
 
 .traps {
@@ -139,21 +137,21 @@
 
 
 .trading {
-  color: #2ecc40;
+  color: #ff8f00;
 }
 
 .tt {
-  background-color: #2ecc40;
+  background: linear-gradient(to right, #eacda3, #d6ae7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   &:hover {
-    background-color: lighten(#2ecc40, 15%);
+    background: #ff8f00;
   }
 }
 
 .options {
-  height: 400px;
+  height: 300px;
 }
 
 .equity {
-  height: 600px;
+  height: 800px;
 }
