@@ -269,9 +269,10 @@ Additionally, you could go into the lower timeframes and confirm price continuat
 As price often will retest the breakout area, some traders will use the breakout-retest as their primary signal to get long.  This eliminates the mean reverting reversal that is common after the strong rip from the breakout buyer/seller imbalance.
 
 ### Gaps
-Another s
+Another tradeable setup is an overnight gap.  Price tends to continue in the direction of the gap, as the overnight trade imbalance is usually due to a material exogenous event.
 
 ### Catching a falling knife
+Catching a falling knife is buying a stock that has fallen sharp and fast, in hopes of the reason for the sell-off being invalid.
 
 ## Indicators
 Indicators are price calculations with a trailing period. They are used to build trade confidence, and define risk.  
