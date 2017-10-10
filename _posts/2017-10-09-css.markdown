@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "HTML and CSS Grid"
+date:   2017-10-09 12:00:00 -0700
+category: how-to
+color: rgb(171, 71, 188)
+---
+
+I just figured out how HTML and CSS work so lemme tell ya.  (tbd)
