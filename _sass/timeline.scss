@@ -2,7 +2,8 @@
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: $background-color;
-  grid-template-columns: 75px 35% 35% 20%;
+  //grid-template-columns: 75px 35% 35% 20%;
+  grid-template-columns: 50px 45% 435;
 
 
 }
@@ -60,7 +61,19 @@ color: $grey-color-light;
 
 
 .detail {
-  font-size: 90%;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: $background-color;
+  text-align: left;
+  padding: 10px 15px;
+  line-height: 20px;
+  display:inline-block;
+}
+
+.shorter{
+  font-size: 16px;
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 300;
@@ -68,6 +81,47 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px;
   line-height: 20px;
+  display:none;
+}
+
+.summary{
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: $background-color;
+  text-align: left;
+  padding: 10px;
+  line-height: 20px;
+  display:none;
+}
+
+@media screen and (max-width: 800px) {
+    .detail{
+       display:none;
+    }
+
+    .shorter{
+       display:inline-block;
+    }
+
+    .summary{
+       display:none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .detail{
+       display:none;
+    }
+
+    .shorter{
+       display:none;
+    }
+
+    .summary{
+       display:inline-block;
+    }
 }
 
 
@@ -76,7 +130,7 @@ color: $grey-color-light;
   text-align: center;
 }
 .year {
-  padding-bottom: 225px;
+  padding-bottom: 300px;
   text-align: right;
   //background-color: darken($background-color, 5%);
   color: #999;
@@ -85,7 +139,7 @@ color: $grey-color-light;
 
 }
 .current {
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   box-shadow: none;
 
 }
@@ -105,15 +159,23 @@ color: $grey-color-light;
 }
 
 .oracle {
-
+  height: 400px;
 }
 
 .adobe {
-  height: 250px;
+  height: 300px;
+}
+
+.scu {
+  height: 750px;
 }
 
 .workr {
   height: 200px;
+}
+
+.workr-kyc-gap {
+  height: 100px;
 }
 
 .kyc {
@@ -133,22 +195,28 @@ color: $grey-color-light;
 }
 
 .aldo {
+  height: 120px;
 }
 
 .westpoint {
+  height: 140px;
 
 }
 
 .gg {
-  //height: 90px;
+  height: 160px;
 }
 
 .bbs {
-  height: 120px;
+  height: 200px;
+}
+
+.bb-college-gap {
+  height: 150px;
 }
 
 .college {
-  height: 500px;
+  height: 600px;
 }
 
 .youths {
@@ -156,6 +224,7 @@ color: $grey-color-light;
 }
 
 .cisa {
+  height: 150px;
 }
 
 .bemis {
@@ -175,8 +244,9 @@ color: $grey-color-light;
   color: #006400;
 }
 
+/*
 .tt {
-  background: linear-gradient(to top, #1FA463, #03CEA4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #1FA463, #03CEA4); 
 
   &:hover {
     background: #006400;
@@ -190,3 +260,4 @@ color: $grey-color-light;
 .equity {
   height: 800px;
 }
+*/

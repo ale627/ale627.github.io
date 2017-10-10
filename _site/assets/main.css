@@ -544,7 +544,7 @@ pre {
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: #fdfdfd;
-  grid-template-columns: 75px 35% 35% 20%; }
+  grid-template-columns: 50px 45% 435; }
 
 .column {
   text-align: center;
@@ -584,28 +584,69 @@ pre {
   color: #dddddd; }
 
 .detail {
-  font-size: 90%;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #fdfdfd;
+  text-align: left;
+  padding: 10px 15px;
+  line-height: 20px;
+  display: inline-block; }
+
+.shorter {
+  font-size: 16px;
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 300;
   color: #fdfdfd;
   text-align: left;
   padding: 10px;
-  line-height: 20px; }
+  line-height: 20px;
+  display: none; }
 
+.summary {
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #fdfdfd;
+  text-align: left;
+  padding: 10px;
+  line-height: 20px;
+  display: none; }
+
+@media screen and (max-width: 800px) {
+  .detail {
+    display: none; }
+
+  .shorter {
+    display: inline-block; }
+
+  .summary {
+    display: none; } }
+@media screen and (max-width: 500px) {
+  .detail {
+    display: none; }
+
+  .shorter {
+    display: none; }
+
+  .summary {
+    display: inline-block; } }
 .date {
   color: #999;
   text-align: center; }
 
 .year {
-  padding-bottom: 225px;
+  padding-bottom: 300px;
   text-align: right;
   color: #999;
   font-size: 100%;
   box-shadow: none; }
 
 .current {
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   box-shadow: none; }
 
 .analytics {
@@ -616,11 +657,20 @@ pre {
   .aa:hover {
     background: #b71c1c; }
 
+.oracle {
+  height: 400px; }
+
 .adobe {
-  height: 250px; }
+  height: 300px; }
+
+.scu {
+  height: 750px; }
 
 .workr {
   height: 200px; }
+
+.workr-kyc-gap {
+  height: 100px; }
 
 .kyc {
   height: 600px; }
@@ -634,14 +684,29 @@ pre {
   .ss:hover {
     background: #01579b; }
 
-.bbs {
+.aldo {
   height: 120px; }
 
+.westpoint {
+  height: 140px; }
+
+.gg {
+  height: 160px; }
+
+.bbs {
+  height: 200px; }
+
+.bb-college-gap {
+  height: 150px; }
+
 .college {
-  height: 500px; }
+  height: 600px; }
 
 .youths {
   height: 300px; }
+
+.cisa {
+  height: 150px; }
 
 .bemis {
   height: 300px; }
@@ -655,18 +720,23 @@ pre {
 .trading {
   color: #006400; }
 
+/*
 .tt {
-  background: linear-gradient(to top, #1FA463, #03CEA4);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  .tt:hover {
-    background: #006400; }
+  background: linear-gradient(to top, #1FA463, #03CEA4); 
+
+  &:hover {
+    background: #006400;
+  }
+}
 
 .options {
-  height: 300px; }
+  height: 300px;
+}
 
 .equity {
-  height: 800px; }
-
+  height: 800px;
+}
+*/
 /* drop cap
 .post-content p:first-child:first-letter {
   color: #903;
@@ -680,9 +750,10 @@ pre {
 */
 .top-border {
   border-top: 3px solid;
-  -moz-border-image: -moz-linear-gradient(left, #9e0142 0%, #9e0142 5%, #d53e4f 9%, #d53e4f 14%, #f46d43 18%, #f46d43 23%, #fdae61 27%, #fdae61 32%, #fee08b 36%, #fee08b 41%, #ffffbf 46%, #ffffbf 50%, #e6f598 55%, #e6f598 59%, #abdda4 64%, #abdda4 68%, #66c2a5 73%, #66c2a5 77%, #3288bd 82%, #3288bd 86%, #5e4fa2 91%, #5e4fa2 96%, #5e4fa2 100%);
-  -webkit-border-image: -webkit-linear-gradient(left, #9e0142 0%, #9e0142 5%, #d53e4f 9%, #d53e4f 14%, #f46d43 18%, #f46d43 23%, #fdae61 27%, #fdae61 32%, #fee08b 36%, #fee08b 41%, #ffffbf 46%, #ffffbf 50%, #e6f598 55%, #e6f598 59%, #abdda4 64%, #abdda4 68%, #66c2a5 73%, #66c2a5 77%, #3288bd 82%, #3288bd 86%, #5e4fa2 91%, #5e4fa2 96%, #5e4fa2 100%);
-  border-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  -moz-border-image: -moz-linear-gradient(left, #40e0d0, #ff8c00, #ff0080);
+  -webkit-border-image: -webkit-linear-gradient(left, #40e0d0, #ff8c00, #ff0080);
+  border-image: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-image-slice: 1; }
 
 table {
