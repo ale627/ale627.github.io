@@ -557,27 +557,31 @@ pre {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
   color: #fdfdfd;
   font-family: "Chivo", sans-serif;
   border-radius: 3px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
 .type {
   font-style: italic;
   text-transform: none;
   font-size: 14px;
   font-weight: 300;
-  line-height: 14px; }
+  line-height: 14px;
+  color: #dddddd; }
 
 .location {
   font-style: italic;
   font-size: 12px;
   text-transform: none;
   font-weight: 300;
-  letter-spacing: 0px; }
+  letter-spacing: 0px;
+  color: #dddddd; }
 
 .detail {
   font-size: 90%;
@@ -586,7 +590,8 @@ pre {
   font-weight: 300;
   color: #fdfdfd;
   text-align: left;
-  padding: 10px; }
+  padding: 10px;
+  line-height: 20px; }
 
 .date {
   color: #999;
@@ -596,10 +601,12 @@ pre {
   padding-bottom: 225px;
   text-align: right;
   color: #999;
-  font-size: 100%; }
+  font-size: 100%;
+  box-shadow: none; }
 
 .current {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  box-shadow: none; }
 
 .analytics {
   color: #b71c1c; }
@@ -608,9 +615,6 @@ pre {
   background: linear-gradient(to top, #c6322a 0%, #dd4b39 100%); }
   .aa:hover {
     background: #b71c1c; }
-
-.oracle {
-  height: 500px; }
 
 .adobe {
   height: 250px; }
