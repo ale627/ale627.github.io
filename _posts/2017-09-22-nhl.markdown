@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "NHL preseason in a suite"
+title:  "NHL pre: Sharks vs Knights"
 date:   2017-09-22 11:00:00 -0700
-categories:
+category: sport
+color: tan
 ---
 
 I got the last minute invite to join Brian with an extra ticket to the suites at the Sharks preseason NHL game last night.  His cousin Eric works at MicroSemi, a semiconductor company.  MicroSemi has a suite at SAP Center.

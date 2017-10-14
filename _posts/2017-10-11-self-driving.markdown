@@ -1,19 +1,43 @@
 ---
 layout: post
-title:  "Will self-driving cars cut me off?"
+title:  "Self-driving aggression"
 date:   2017-10-09 12:00:00 -0700
 category: traffic
-color: rgb(255, 114, 33)
+//color: rgb(255, 114, 33)
+color: rgb(250, 210, 1)
 ---
 
-I recently moved to San Jose, so I have to take the 87 to and from work.  On the way home, the merge from 101 to 87 is particularly atrocious.  
+I recently moved to San Jose, so I have to commute on the 87 and 101.  On the way home, the merge from 101 to 87 is particularly atrocious.  
 
-It's one of those combo on/off lanes.  The right lane merge from Trimble onto 101 becomes the merge from 101 to 87.  So cars are trying to get out of the lane at the same time cars are trying to get in the lane.  This one lane solution creates a lot of traffic.  
+It's a right side combined on-ramp/off-ramp.  The on-ramp Trimble Rd -> 101 becomes the offramp 101 -> 87.  So cars are exiting the lane at the same time cars are entering the lane.  This combined use of a single lane creates bumper to bumper traffic.  
 
-Polite southbound commuters will get into the merge lane as soon as possible, to get out of the way and allow traffic continuing on 101 past 87 to flow freely.  
+There are two approaches to merging from 101 to 87.
 
-Some jerks like to zoom forward in the second-to-right lane with the intention of merging onto 87, attempting to cut in line.  Sometimes these people find a spot to cut someone off, slowing the entire merge lane to a stop.  Other times they are stuck stopped in the middle of the freeway with their blinker on, as the cars already in the right lane indignantly prevent them from merging.  
+Polite southbound commuters will merge ASAP, to allow traffic continuing on 101 past 87 to flow.  
 
-My question is - will self-driving cars try to pull this kind of stunt?  Will we have adjustable levels of aggression available to select?  I hope not - because if a self-driving car tries to cut in line and then cut me off, you can bet I'm not letting it in.
+Some jerks zoom forward in the 2nd right lane to skip the 97 lineup.  
+Usually these people wedge themselves in too late, slowing the whole merge lane to a stop.  
+Other times they are stuck stopped in the middle of the freeway with their blinker on, as the cars already in the right lane prevent them from merging. (ostensibly to teach them a lesson) 
 
-/traffic rage
+It's a huge mess, partially due to the road design and partially due to driver behavior.  I can't help but think of a self-driving future.
+
+My questions are:
+- Will self-driving cars drive aggressively to the detriment of the whole?
+
+- Or will they only do what's best for the group?
+		-If beta by design, will regular cars be able to drive even more aggressively?
+
+- Will self-driving aggression be user-controlled?
+	- If user-controlled, will there be incentives to keep levels low?  Why wouldn't everyone set the aggression at 10/10?  (related to insurance premiums)
+
+- Or decided by the car?
+	- If car-controlled, will each car be competing on time or other convenience factors?
+
+
+Kinda looking forward to their debut, kinda not.  I'm afraid the future will be frustrating too, but in a different way, where all our cars are unwilling to just scoot ahead. 
+
+Check out [this Fortune article][fortune] about how Google is humanizing their cars. 
+
+
+
+[fortune]: [http://fortune.com/2015/09/29/google-self-driving-cars-humans/]

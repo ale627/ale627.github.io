@@ -752,8 +752,7 @@ pre {
   border-top: 3px solid;
   -moz-border-image: -moz-linear-gradient(left, #40e0d0, #ff8c00, #ff0080);
   -webkit-border-image: -webkit-linear-gradient(left, #40e0d0, #ff8c00, #ff0080);
-  border-image: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-image: linear-gradient(to right, #874da2 0%, #c43a30 100%);
   border-image-slice: 1; }
 
 table {

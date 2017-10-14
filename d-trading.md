@@ -1,13 +1,13 @@
 ---
 layout: post
 permalink: /trading.html
-title:  Trading Reference Guide
-pagename: Trading Ref
+title:  Trading Reference
+pagename: Trading
 ---
 
-If someone asks me about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics, and how are they related?
+If asked about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics and how are they related?
 
-So I decided to write it out.  Over the course of several weeks I expanded several sections and reflowed the writing.  This reference now has a dedicated page and receives routine edits.  Check back as it expands into a corpus of knowledge.
+So I've written it out.  Over the course of several weeks I expanded and rearranged several sections.  This reference now has a dedicated page and receives routine edits.  Check back as it evolves.
 
 * TOC
 {:toc}
@@ -33,7 +33,9 @@ What's the difference between the styles?  The difference is whether you are a f
 ## Investing
 Investing involves fundamental analysis and a fair value, with the assumption that over time the market will reflect actual value.  Maybe you remember some fundamental valuation models from school, such as DCF (Discounted Cash Flow) and CAPM (Capital Asset Pricing Model).
 
-Investing has no opinion about short term price movement, and may encourage adding to losing positions as the stock is "cheaper."  The art is in distinguishing between a cheaper yet still sound investment, and an investment that is no longer valid.  Time horizon is long term.  
+Investing has no opinion about short term price movement, and may encourage adding to losing positions as the stock is "cheaper."  The art is in distinguishing between a cheaper yet still sound investment, and an investment that is no longer valid.  
+
+Time horizon is long term.  The longer the time horizon, the higher likelihood of fundamental analysis coming to fruition.
 
 The two approaches to investing are Growth and Value.  
 
@@ -55,7 +57,9 @@ These are calculated from the company's released financial statements:
 I have maintained a passive portfolio for 6 years, as well as a 401k, but I do not manage either of them.  They are diversified across low-fee ETFs.
 
 ## Price action trading
-Price action trading is the focus of this reference. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term. (usually intraday)
+Price action trading is the focus of this reference. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term.
+
+Definitions of long, medium, and short term are subjective, but for our purposes here long will refer to >= 1 quarter, medium will refer to >= 1 month, and short will refer to < 1 month.
 
 Price action trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.
 
@@ -73,20 +77,24 @@ Here's my experience across styles and markets:
 # What are options
 Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.
 
-Here's an example of a put option.
+Here's a quick scenario demonstrating why options exist.
 
-## Why options exist
-Goldman holds a lot of `$GM` in its Blue Chip ETF.  `$TSLA` is founded and poses a significant threat to `$GM`. Goldman wants to lower risk.  Goldman's can't just liquidate the stake.  
-His buddy Silverman is a big `$GM` bull.
-So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  Sounds good to Silverman, so he writes a contract and sells it to Goldman.
+## The original option
+*Goldman holds a lot of General Motors in its Blue Chip ETF.  
+Tesla Motors is founded and poses a significant threat to `$GM`. 
+Goldman wants to reduce exposure to `$GM` downside.  Goldman's can't liquidate the stake.*  
+
+*His buddy Silverman is a big `$GM` bull.
+So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  
+Sounds good to Silverman, (who doesn't think `$GM` is going down) so he writes a contract and sells it to Goldman.*
 
 If `$GM` tanks, Goldman could offload his `$GM` shares to Silverman at the higher price from several months ago.
-If `$GM` price goes up or doesn't move, the put option will been worthless.
+If `$GM` price goes up or doesn't move, the option will go to zero.
 
-That's a put option.
+That's a put.
 
 ## How options work
-Options are frequently traded "naked" or without owning the underlying.  
+Options are commonly traded "naked" or without owning the underlying.  Used in this way, options offer cheap margin and limited downside.  However, most expire worthless.
 
 An option's strike is the price you can execute the option at:
 - A call option is OTM (out-of-the-money) if the underlying > strike.
@@ -113,7 +121,18 @@ The advantage of options is the ability to specifically express your level of ce
 
 (Options on equities are not bought to directly take advantage of volatility increases.  This can be accomplished by going long the volatility index (VIX) through ETFs such as 1x `$VXX` and 3x `$UVXY`.)
 
-### Advantage of option over stock
+### Greeks
+The "greeks" are mathematical factors that contribute to option price.  While I simplified premium above by breaking it into price/strike difference + volatility + time to expiration, quants look at option pricing a little differently.
+
+- Delta is the % option price will change based on underlying.  Delta is between 1 and 0 and asymptotically approaches 1 as moneyness (ITM) increases.  This is because deep ITM options are very close to owning the underlying.
+A delta of .5 means a move of $2 will give $1 option change.
+
+- Gamma is the derivative of delta, measuring the % delta changes based on underlying.
+
+- Theta is the amount of daily loss to time decay.  "Theta burn" is when the underlying does not move, but the option loses value as time decays.  This happens rapidly towards the end of the option contract, on Fridays.  The effect can be so great that the underlying may realize its entire move to target and you may not profit or even lose money on the position.
+
+
+### Why option over stock
 Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
 You could spend $15,000 on 100 shares for a potential return of $1000.  
 `1000/15000 = 6.6% return`
@@ -126,26 +145,20 @@ If Apple announces that they are getting out of the computer business and the st
 Some powerful stuff!
 
 # Characterizing risk
-Risk is the possibility of loss.  Any activity is inherently risky.  But people still drink, smoke, drive cars, eat BBQ, and do other "risky" things.  Trading is definitely risky.
+Risk is the possibility of loss.  Any activity involves risk.  
 
-Taking risk on is the only way you can do anything in life.  There's the risk of dying, the risk of taking a big loss, the risk of missed opportunities.  **You only learn by taking on risk.**
+There's the risk of getting cancer, of dying, of taking a big loss, of missed opportunities.  Yet people drink, smoke, eat BBQ, drive cars, and do other "risky" things because there is an arguably higher return.  
 
-How do you operate in a risky environment?  When driving, you reduce the risk of dying by wearing a seatbelt.  
+Trading is definitely risky.  
 
-When managing multiple positions, you diversify across uncorrelated assets.  This keeps exogenous factors from causing a drawdown across holdings, therefore decreasing portfolio risk.  See [Efficient frontier][ef] on Wikipedia for a better explanation.
+How do you operate in a risky environment?  You take steps to reduce your risk exposure.  
 
-When managing a single position, you set a stop loss.  
+- When driving, you wear a seatbelt.  
+
+- When investing a portfolio, you diversify across uncorrelated assets.  This keeps exogenous factors from causing a drawdown across holdings, therefore decreasing portfolio risk.  See [Efficient frontier][ef] on Wikipedia for a better explanation.
+
+- When trading a single position, you set a stop loss.  
 This is the max amount you can lose.  **How much are you really OK with losing?**  
-
-You will not win every time.  So you need to have a "bad plan" or a way to manage your position if it goes against you.  
-
-It is very easy to rationalize a bad position and hold onto a losing position, hoping it will return.  This is called "holding the bag."  The problem with this approach is: if you are trading price action, and price has decreased more than you expected, you have received bearish info which further invalidates your trade idea.  So remaining in the position is not a sound trading move, it is purely emotional.
-
-Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.  
-
-Let's be real: since it's real money, there will always be emotion.  The goal is to trade safely, so your emotions are not in control.  
-
-The best way to approach a trade is to accept the loss ahead of time.  **Your default mindset should be that you will be wrong.**  This way, you are not micromanaging the trade or scalping a promising swing.
 
 You put your stop at a level of support if you are long, or a level of resistance if you are short.
 
@@ -308,18 +321,21 @@ Important to note, Moving Averages vary depending on timeframe.  So they move ar
 Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.
 
 ### Fibonacci levels
-Fibonacci Levels are from the Fibonacci sequence where each number (after two 1's) is the sum of the two before it.  This growth pattern shows up in nature such as plants.  
-Its application in the market is in measuring moves.
+Fibonacci Levels are from the Fibonacci sequence where each number (after two 1's) is the sum of the two before it.  This growth pattern shows up in nature such as flower petal and plant leaf arrangements, tree branching, nautilus shell chambers, etc.  
+
+Its application in the market is in measuring moves, as the market tends to expand in a natural way, given price is an aggregation of natural market participants' motives.
 
 The levels are: `23.6%, 38.2%, 50%, 61.8%, 100%, 161.8%, 261.8%..`
-The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that's a healthy move.
+The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that's a healthy move and solid support level to trade against.
 
 Of course, it makes some non-fancy sense that 61.8% would be an approximate good place for a trade to hold, as it's a little less than 2/3.  But that doesn't account for the numerous instances of price reversing directly (to the .01) at the various fibonacci levels.
 
 Breakouts tend to extend from 100% to 161.8% and 261.8% as upside targets.
 
 # Edge
-Of course, you didn't show up to lose.  You have to define your edge.  Edge emerges from a combination of factors - trade selection, risk control, trade management.
+You have to define your edge so you can capture it.  Edge emerges from a combination of factors - trade selection, risk control, trade management.
+
+Edge is the reason you show up to trade.  If there's no edge, there's no incentive to trade.  This isn't the casino.  You're not here to gamble.  If you are going to lose in the long run, don't start.
 
 Edge can be defined ahead of time with backtesting, but plenty of issues arise with backtest reliability, including in-sample size, out-of-sample testing, and controlling for relevant factors.  
 
@@ -327,8 +343,47 @@ Edge can be refined over time with a trade journal, by trading small and documen
 
 With a defined edge, you can stop avoiding risk and move towards risk.
 
-# Trading Systems
-Trading systems are modularized and cover the full process, from trade ideas to trading and journaling.  Here are two systems I've seen described.  They are both full stack from generation to tracking.
+# Trading psychology
+Even with a perfect setup, defined edge, and written trade plan, the trade won't necessarily work.  
+A trader's psyche is the weakest, and therefore most important link.
+
+Trading psychology is usually ignored because it manifests in various forms so doesn't have one answer.  
+
+## Fear of loss
+
+Most likely, you're afraid of losing.  After all, you got into trading to get rich, right? 
+
+Maybe you're so afraid of losing that you sell your winners as soon as they're marginally green.  After all, letting profits slip away is a sure way to lose more often, right?  So you end up with a lot of small winners.
+
+Maybe you're so afraid of losing that you hold your losers until expiration.  Taking a loss when it still has a chance of turning into a winner is a sure way to lose more often, right?  So you end up with a few big losers.
+
+Sure, it might feel good, but small winners and big losers lead to low expectancy.  You just ruined your trade system.
+
+## Lack of faith
+
+Maybe you have no faith in your system.  Everyone says the market is efficient and random.  
+So you lack conviction and hesitate to take entries as they appear.  Better to get in a tad late than to enter too early, right?  You enter late, and further from your stopping level, increasing risk needlessly.
+
+Or you have too much faith in your system.  You take positions willy-nilly, not considering correlation or event risk.  The FED raises interest rates, and all your positions drop together.
+
+Being too careful or too careless can ruin your system too.
+
+## The answer
+
+You will not win every time because you won't be right every time.  So you need to have a "bad plan" or a way to manage your position if it goes against you.  
+
+It is very easy to rationalize a bad position and hold onto a losing position, hoping it will return.  This is called "holding the bag."  The problem with this approach is: if you are trading price action, and price has decreased more than you expected, you have received bearish info which further invalidates your trade idea.  So remaining in the position is not a sound trading move, it is purely emotional.
+
+Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.  
+
+Let's be real: since it's real money, there will always be emotion.  The goal is to trade safely, so your emotions are not in control.  
+
+The best way to remove emotions from the trade is to accept the loss ahead of time.  Your default mindset should be that you will be wrong.  This way, you don't micromanage the trade.
+
+# Trading systems
+Trading systems are modular and cover the full process, from ideas to trading and journaling.  They are becoming more popular lately, with access to open source tools and real time data.  Their main benefit is the elimination of human emotion.
+
+Here are two systems I've seen described.  They are both full stack from generation to tracking.
 
 System 1:
 - Backtesting
