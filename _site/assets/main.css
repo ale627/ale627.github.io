@@ -565,7 +565,14 @@ pre {
   margin: 10px 0px;
   font-size: 110%;
   word-wrap: break-word;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  opacity: 0.85;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+
+.content:hover {
+  opacity: 1;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
 
 .type {
   font-style: italic;
@@ -635,7 +642,7 @@ pre {
   .summary {
     display: inline-block; } }
 .date {
-  color: #999;
+  color: #bfbfbf;
   text-align: center; }
 
 .year {
@@ -643,19 +650,30 @@ pre {
   text-align: right;
   color: #999;
   font-size: 100%;
-  box-shadow: none; }
+  box-shadow: none;
+  position: relative; }
+
+.year:hover {
+  box-shadow: 0 0px 0px black; }
+
+.year:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 45px;
+  bottom: 0;
+  left: 50%;
+  border-left: 3px dotted #dddddd;
+  transform: translate(-50%); }
 
 .current {
-  padding-bottom: 250px;
-  box-shadow: none; }
+  padding-bottom: 250px; }
 
 .analytics {
-  color: #b71c1c; }
+  color: #eea29c; }
 
 .aa {
-  background: linear-gradient(to top, #c6322a 0%, #dd4b39 100%); }
-  .aa:hover {
-    background: #b71c1c; }
+  background: #e3655b; }
 
 .oracle {
   height: 450px; }
@@ -676,13 +694,10 @@ pre {
   height: 800px; }
 
 .sailing {
-  color: #0182e7; }
+  color: #61b6ca; }
 
 .ss {
-  background: linear-gradient(to top, #3D6EC9, #4688F4);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  .ss:hover {
-    background: #01579b; }
+  background: #3891a6; }
 
 .aldo {
   height: 150px; }
