@@ -37,7 +37,7 @@
 
 }
 
-.content:hover {
+.content:hover:not(.year) {
   opacity: 1;
   //color: gold;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -77,6 +77,7 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
+
   display:inline-block;
 }
 
@@ -89,6 +90,7 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px;
   line-height: 20px;
+
   display:none;
 }
 
@@ -101,35 +103,20 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px;
   line-height: 20px;
+
   display:none;
 }
 
 @media screen and (max-width: 800px) {
-    .detail{
-       display:none;
-    }
-
-    .shorter{
-       display:inline-block;
-    }
-
-    .summary{
-       display:none;
-    }
+    .detail{display:none;}
+    .shorter{display:inline-block;}
+    .summary{display:none;}
 }
 
 @media screen and (max-width: 500px) {
-    .detail{
-       display:none;
-    }
-
-    .shorter{
-       display:none;
-    }
-
-    .summary{
-       display:inline-block;
-    }
+    .detail{display:none;}
+    .shorter{display:none;}
+    .summary{display:inline-block;}
 }
 
 
@@ -147,8 +134,7 @@ color: $grey-color-light;
   position: relative;
 
 }
-.year:hover {
-  box-shadow: 0 0px 0px rgba(0,0,0,1);
+
 
 }
 .year:after {

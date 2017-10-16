@@ -571,7 +571,7 @@ pre {
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out; }
 
-.content:hover {
+.content:hover:not(.year) {
   opacity: 1;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
 
