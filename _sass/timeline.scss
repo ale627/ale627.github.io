@@ -3,7 +3,7 @@
   grid-template-areas: "date analytics sailing trading";
   background-color: $background-color;
   //grid-template-columns: 75px 35% 35% 20%;
-  grid-template-columns: 50px 45% 435;
+  grid-template-columns: 42.5% 15% 42.5%;
 
 }
 
@@ -66,9 +66,7 @@ color: $grey-color-light;
 
 }
 
-
-
-.detail {
+.text {
   font-size: 16px;
   text-transform: none;
   letter-spacing: 0px;
@@ -77,46 +75,32 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
+}
 
-  display:inline-block;
+.detail {
+  display:block;
 }
 
 .shorter{
-  font-size: 16px;
-  text-transform: none;
-  letter-spacing: 0px;
-  font-weight: 300;
-  color: $background-color;
-  text-align: left;
-  padding: 10px;
-  line-height: 20px;
-
   display:none;
 }
 
 .summary{
-  font-size: 16px;
-  text-transform: none;
-  letter-spacing: 0px;
-  font-weight: 300;
-  color: $background-color;
-  text-align: left;
   padding: 10px;
-  line-height: 20px;
-
   display:none;
 }
 
 @media screen and (max-width: 800px) {
     .detail{display:none;}
-    .shorter{display:inline-block;}
+    .shorter{display:block;}
     .summary{display:none;}
 }
 
 @media screen and (max-width: 500px) {
     .detail{display:none;}
     .shorter{display:none;}
-    .summary{display:inline-block;}
+    .summary{display:block;}
+    width: 100%;
 }
 
 
@@ -126,8 +110,8 @@ color: $grey-color-light;
 }
 .year {
   padding-bottom: 300px;
-  text-align: right;
-  //background-color: darken($background-color, 5%);
+  min-width: 30px;
+  text-align: center;
   color: #999;
   font-size: 100%;
   box-shadow: none;
