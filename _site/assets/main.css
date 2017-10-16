@@ -654,9 +654,6 @@ pre {
   box-shadow: none;
   position: relative; }
 
-.year:hover {
-  box-shadow: 0 0px 0px black; }
-
 .year:after {
   content: "";
   position: absolute;
