@@ -3,7 +3,8 @@
   grid-template-areas: "date analytics sailing trading";
   background-color: $background-color;
   //grid-template-columns: 75px 35% 35% 20%;
-  grid-template-columns: 45% 15% 45%;
+  grid-template-columns: auto auto auto;
+  width: auto;
 
 }
 
@@ -75,6 +76,7 @@ color: $grey-color-light;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
+  word-wrap: break-word;
 }
 
 .detail {
@@ -86,7 +88,6 @@ color: $grey-color-light;
 }
 
 .summary{
-  padding: 10px;
   display:none;
 }
 
@@ -96,7 +97,7 @@ color: $grey-color-light;
     .summary{display:none;}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .detail{display:none;}
     .shorter{display:none;}
     .summary{display:block;}
@@ -110,13 +111,12 @@ color: $grey-color-light;
 }
 .year {
   padding-bottom: 300px;
-  min-width: 30px;
   text-align: center;
   color: #999;
-  font-size: 100%;
+  font-size: 14px;
   box-shadow: none;
   position: relative;
-
+  //min-width: 20px;
 }
 
 .year:after {
