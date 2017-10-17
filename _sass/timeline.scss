@@ -3,7 +3,7 @@
   grid-template-areas: "date analytics sailing trading";
   background-color: $background-color;
   //grid-template-columns: 75px 35% 35% 20%;
-  grid-template-columns: 42.5% 15% 42.5%;
+  grid-template-columns: 45% 15% 45%;
 
 }
 
@@ -133,6 +133,11 @@ color: $grey-color-light;
 
 .current {
   padding-bottom: 250px;
+}
+
+.bottom {
+  padding-bottom: 200px;
+  
 }
 
 

@@ -545,7 +545,7 @@ pre {
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: #fdfdfd;
-  grid-template-columns: 42.5% 15% 42.5%; }
+  grid-template-columns: 45% 15% 45%; }
 
 .column {
   text-align: center;
@@ -656,6 +656,9 @@ pre {
 
 .current {
   padding-bottom: 250px; }
+
+.bottom {
+  padding-bottom: 200px; }
 
 .analytics {
   color: #eea29c; }
