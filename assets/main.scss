@@ -82,11 +82,36 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
     display: table;
     font-size: .85em;
     margin-bottom: 1em;
-    line-height: 1.4;
+    margin-left: 10px;
+    line-height: 1.3;
+    letter-spacing: 1px;
     font-family: $base-font-family;
-    padding: 10px 20px 10px 30px;
+    padding: 20px 20px 10px 20px;
     width: auto;
-    font-weight: 700;
+    font-weight: 600;
+    text-transform: uppercase;
+    ul {
+      display: none;
+    }
+
+li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+  list-style: none;
+  line-height: 1.3;
+
+}
+
+li::before {
+  content: counter(step-counter);
+  margin-right: 10px;
+  font-size: 90%;
+  background-color: $title-color;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
 }
 
 

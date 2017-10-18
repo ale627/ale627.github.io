@@ -11,7 +11,7 @@
 
 .column {
  text-align: center;
- font-weight: 300;
+ font-weight: 900;
  color: $background-color;
  padding: 0px 5px;
  font-family: $second-font-family;
@@ -25,7 +25,7 @@
   text-align: center;
   color: $background-color;
   font-family: $base-font-family;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
@@ -40,8 +40,11 @@
 
 .content:hover:not(.year) {
   opacity: 1;
+  border-radius: 4px 4px 4px 8px;
   //color: gold;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  position: relative; 
+  top: -4px;
 
 }
 
@@ -104,19 +107,25 @@ color: $grey-color-light;
     width: 100%;
 }
 
-
+/*
 .date {
   color: lighten(#999, 15%);
   text-align: center;
 }
+*/
 .year {
-  padding-bottom: 300px;
+  padding-bottom: 250px;
   text-align: center;
   color: #999;
   font-size: 14px;
   box-shadow: none;
   position: relative;
   //min-width: 20px;
+  text-transform: lowercase;
+}
+
+.year:first-child {
+  padding-top: 20px;
 }
 
 .year:after {
@@ -142,7 +151,7 @@ color: $grey-color-light;
 
 
 .analytics {
-  color: lighten(#e3655b, 15%);
+  color: #e3655b;
 }
 
 .aa {

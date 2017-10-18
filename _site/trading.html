@@ -109,9 +109,8 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>If asked about trading, I usually can’t give a good answer because I’m not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics and how are they related?</p>
-
-<p>So I’ve written it out.  Over the course of several weeks I expanded and rearranged several sections.  This reference now has a dedicated page and receives routine edits.  Check back as it evolves.</p>
+    <p>If asked about trading, I usually can’t give a good answer because I’m not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics and how are they related?
+So I’ve written it out.  Over the course of several weeks I expanded and rearranged several sections.  This reference now has a dedicated page and receives routine edits.  Check back as it evolves.</p>
 
 <ul id="markdown-toc">
   <li><a href="#markets" id="markdown-toc-markets">Markets</a></li>
@@ -173,7 +172,7 @@
 </ul>
 
 <h1 id="markets">Markets</h1>
-<p>There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.</p>
+<p>There are 6 markets to trade: OTC, equities, futures, commodities, and cryptocurrencies.</p>
 
 <ul>
   <li>
@@ -182,12 +181,60 @@
   <li>
     <p>Equities refers to exchange traded stocks.  This is the most common vehicle for investing and trading.</p>
   </li>
+  <li>
+    <p>Indexes are aggregations of equities based on a methodology.</p>
+  </li>
   <li>Futures are dated based on month and are the market’s best guess of future value.  These trade 24/7.</li>
   <li>
     <p>Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.</p>
   </li>
   <li>Cryptocurrencies are blockchain based digital currencies.  <code class="highlighter-rouge">$BTCUSD</code>, <code class="highlighter-rouge">$ETHUSD</code>, and <code class="highlighter-rouge">$LTCUSD</code> are the most common currently.</li>
 </ul>
+
+<p>Here’s instrument availability across markets:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Markets</th>
+      <th style="text-align: left">Vanilla</th>
+      <th style="text-align: left">Optionable?</th>
+      <th style="text-align: left">Futures</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">OTC</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">no</td>
+      <td style="text-align: left">no</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Equities</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">some</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Indexes</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">yes</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Commodities</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">no</td>
+      <td style="text-align: left">yes</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Crypto</td>
+      <td style="text-align: left">yes</td>
+      <td style="text-align: left">few</td>
+      <td style="text-align: left">few</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="styles">Styles</h1>
 <p>There are 2 trading styles: investing and price action trading.</p>
@@ -226,53 +273,14 @@ There are various measurements value investors use in assessing a stock’s valu
 <h2 id="price-action-trading">Price action trading</h2>
 <p>Price action trading is the focus of this reference. A trade is a “swing” if it is medium-long term, while it is a “scalp” if it is short term.</p>
 
-<p>Definitions of long, medium, and short term are subjective, but for our purposes here long will refer to &gt;= 1 quarter, medium will refer to &gt;= 1 month, and short will refer to &lt; 1 month.</p>
+<p>Definitions of long, medium, and short term are subjective, but for our purposes here:</p>
+<ul>
+  <li>long will refer to &gt;= 1 quarter</li>
+  <li>medium will refer to &gt;= 1 month</li>
+  <li>short will refer to &lt; 1 month.</li>
+</ul>
 
 <p>Price action trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.</p>
-
-<p>Here’s my experience across styles and markets:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th style="text-align: right">Investing</th>
-      <th style="text-align: right">Price Action Trading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>OTC</td>
-      <td style="text-align: right"> </td>
-      <td style="text-align: right">1 year</td>
-    </tr>
-    <tr>
-      <td>Equities</td>
-      <td style="text-align: right">6 years</td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Commodities</td>
-      <td style="text-align: right"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Futures</td>
-      <td style="text-align: right"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Crypto</td>
-      <td style="text-align: right"> </td>
-      <td style="text-align: right">1 year</td>
-    </tr>
-    <tr>
-      <td>Options</td>
-      <td style="text-align: right"> </td>
-      <td style="text-align: right">2 years</td>
-    </tr>
-  </tbody>
-</table>
 
 <h1 id="what-are-options">What are options</h1>
 <p>Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.</p>
@@ -543,6 +551,11 @@ Bar charts reduce noise for long term trades.</p>
 <p>The most common type of chart for traders is the Candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.<br />
 Each of these candlestick bodies contain info: <code class="highlighter-rouge">Open, High, Low, Close</code>  The longer the period contained by the candlestick, the more significant its levels are.</p>
 
+<!--
+![image-title-here](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Candlestick_chart_scheme_01-en.svg/1200px-Candlestick_chart_scheme_01-en.svg.png){:class="img-responsive"}
+![image-title-here](/img/candlestick.jpg){:class="img-responsive"}
+-->
+
 <p>As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.</p>
 
 <h2 id="trade-setups">Trade setups</h2>
@@ -680,7 +693,7 @@ So you lack conviction and hesitate to take entries as they appear.  Better to g
 
 <p>It is very easy to rationalize a bad position and hold onto a losing position, hoping it will return.  This is called “holding the bag.”  The problem with this approach is: if you are trading price action, and price has decreased more than you expected, you have received bearish info which further invalidates your trade idea.  So remaining in the position is not a sound trading move, it is purely emotional.</p>
 
-<p>Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.</p>
+<p>Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.  Optimally, you are fully agnostic, letting odds play out.</p>
 
 <p>Let’s be real: since it’s real money, there will always be emotion.  The goal is to trade safely, so your emotions are not in control.</p>
 

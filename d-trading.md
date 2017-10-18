@@ -6,24 +6,34 @@ pagename: Trading
 ---
 
 If asked about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics and how are they related?
-
 So I've written it out.  Over the course of several weeks I expanded and rearranged several sections.  This reference now has a dedicated page and receives routine edits.  Check back as it evolves.
 
 * TOC
 {:toc}
 
 # Markets
-There are 6 markets to trade: OTC, equities, futures, commodities, cryptocurrencies, and options.
+There are 6 markets to trade: OTC, equities, futures, commodities, and cryptocurrencies.
 
 - OTC, over-the-counter, "pinks", and penny stocks are all names for the same thing.  These equities are not big enough to trade on a regulated exchange.  These low quality stocks tend to lay dormant for years, and spike on news.  Since prices can be as low as hundredths of a penny, leverage is built into the product.
 
 - Equities refers to exchange traded stocks.  This is the most common vehicle for investing and trading.
+
+- Indexes are aggregations of equities based on a methodology.
 
 - Futures are dated based on month and are the market's best guess of future value.  These trade 24/7.
 - Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.
 
 - Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
 
+Here's instrument availability across markets:
+
+| Markets          | Vanilla | Optionable? | Futures |
+|:-----------------|:--------|:------------|:--------|
+| OTC              | yes     | no          | no      |
+| Equities         | yes     | yes         | some    |
+| Indexes          | yes     | yes         | yes     |
+| Commodities      | yes     | no          | yes     |
+| Crypto           | yes     | few         | few     |
 
 # Styles
 There are 2 trading styles: investing and price action trading.  
@@ -59,20 +69,12 @@ I have maintained a passive portfolio for 6 years, as well as a 401k, but I do n
 ## Price action trading
 Price action trading is the focus of this reference. A trade is a "swing" if it is medium-long term, while it is a "scalp" if it is short term.
 
-Definitions of long, medium, and short term are subjective, but for our purposes here long will refer to >= 1 quarter, medium will refer to >= 1 month, and short will refer to < 1 month.
+Definitions of long, medium, and short term are subjective, but for our purposes here:
+- long will refer to >= 1 quarter
+- medium will refer to >= 1 month
+- short will refer to < 1 month.
 
 Price action trading looks at price action to find prices that offer good risk/return versus an area of support or resistance.  It uses a systematic approach.
-
-Here's my experience across styles and markets:
-
-|                  | Investing | Price Action Trading |
-|------------------|----------:|---------------------:|
-| OTC              |           | 1 year               | 
-| Equities         | 6 years   |                      |
-| Commodities      |           |                      |
-| Futures          |           |                      |
-| Crypto           |           | 1 year               |
-| Options          |           | 2 years              |
 
 # What are options
 Options are a type of derivative created to hedge underlying positions.  They require less capital than an equity position and allow fine-tuning of risk.  Call options are long positions and put options are short positions.
@@ -243,6 +245,11 @@ Bar charts reduce noise for long term trades.
 The most common type of chart for traders is the Candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.  
 Each of these candlestick bodies contain info: `Open, High, Low, Close`  The longer the period contained by the candlestick, the more significant its levels are.  
 
+<!--
+![image-title-here](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Candlestick_chart_scheme_01-en.svg/1200px-Candlestick_chart_scheme_01-en.svg.png){:class="img-responsive"}
+![image-title-here](/img/candlestick.jpg){:class="img-responsive"}
+-->
+
 As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.  
 
 ## Trade setups
@@ -374,7 +381,7 @@ You will not win every time because you won't be right every time.  So you need 
 
 It is very easy to rationalize a bad position and hold onto a losing position, hoping it will return.  This is called "holding the bag."  The problem with this approach is: if you are trading price action, and price has decreased more than you expected, you have received bearish info which further invalidates your trade idea.  So remaining in the position is not a sound trading move, it is purely emotional.
 
-Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.  
+Since trading is systematic, the goal is to remove as much emotion as possible.  An emotional trader will buy the top, sell the bottom, scalp a swing, etc.  Optimally, you are fully agnostic, letting odds play out. 
 
 Let's be real: since it's real money, there will always be emotion.  The goal is to trade safely, so your emotions are not in control.  
 
