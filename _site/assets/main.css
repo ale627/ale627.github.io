@@ -179,7 +179,8 @@ pre {
   letter-spacing: 1px;
   margin-bottom: 0;
   float: left;
-  color: #2ecc40; }
+  color: #2ecc40;
+  display: none; }
   .site-title:hover {
     color: #ff4136;
     text-decoration: none;
