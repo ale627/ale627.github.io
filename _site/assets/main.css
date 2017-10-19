@@ -584,15 +584,6 @@ pre {
   position: relative;
   top: -4px; }
 
-.top-right {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  right: 0;
-  position: absolute;
-  background-image: url("/assets/think_favicon.ico");
-  background-repeat: no-repeat; }
-
 .type {
   font-style: italic;
   text-transform: none;
@@ -767,17 +758,6 @@ pre {
   height: 800px;
 }
 */
-/* drop cap
-.post-content p:first-child:first-letter {
-  color: #903;
-  float: left;
-  font-size: 55px;
-  line-height: 40px;
-  padding-top: 5px;
-  padding-right: 3px;
-  padding-left: 3px;
-}
-*/
 .top-border {
   border-top: 3px solid;
   border-image: linear-gradient(to right, #874da2 0%, #c43a30 100%);
@@ -829,74 +809,76 @@ tr:nth-child(odd) {
   height: 100%; }
 
 #markdown-toc {
+  counter-reset: first;
   display: table;
   width: auto;
   font-family: "Inconsolata", monospace;
-  font-size: 1.25em;
+  font-size: 110%;
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: 1px; }
   #markdown-toc a {
     color: #fdfdfd; }
     #markdown-toc a:hover {
+      color: #546e7a;
+      text-decoration: none;
+      position: relative;
+      left: 4px;
       -o-transition: .3s;
       -ms-transition: .3s;
       -moz-transition: .3s;
       -webkit-transition: .3s;
-      transition: .3s;
-      color: #546e7a;
-      text-decoration: none;
-      position: relative;
-      left: 4px; }
+      transition: .3s; }
   #markdown-toc li {
-    counter-increment: step-counter;
-    margin-bottom: 5px;
+    counter-increment: first;
     list-style: none;
-    line-height: 1.5;
-    padding-right: 5px;
     background: #d7d7d7;
-    font-size: 110%; }
+    font-size: 100%;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    line-height: 1.5; }
     #markdown-toc li:before {
       display: inline;
-      content: counter(step-counter);
+      content: counter(first);
       margin-right: 10px;
-      font-size: 90%;
-      background: #546e7a;
-      border-radius: 2px;
-      color: #dddddd;
-      font-weight: bold;
       padding: 4.5px 8px;
-      text-align: center; }
+      border-radius: 2px;
+      background: #546e7a;
+      font-size: 90%;
+      text-align: center;
+      font-weight: bold;
+      color: #dddddd; }
   #markdown-toc li:hover::before {
-    background: red;
+    background: #c43a30;
     color: #546e7a; }
-  #markdown-toc ul > li {
+  #markdown-toc ul > li > ul > li {
     display: inline;
-    font-size: 90%; }
-    @media screen and (max-width: 600px) {
-      #markdown-toc ul > li {
-        display: none; } }
-  #markdown-toc ul {
+    font-size: 90%;
     margin-left: 40px; }
+  #markdown-toc ul {
+    margin-left: 35px; }
+    @media screen and (max-width: 600px) {
+      #markdown-toc ul {
+        display: none; } }
 
 .site-title {
   content: "";
   float: right;
+  display: inline-block;
   margin-left: 8px;
   margin-top: 2px;
-  display: inline-block;
   width: 52px;
   height: 64px;
   position: absolute;
   background-image: url("/assets/shaka.svg");
   background-repeat: no;
+  opacity: .5;
   -o-transition: .3s;
   -ms-transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-backface-visibility: hidden;
-  opacity: .5; }
+  -webkit-backface-visibility: hidden; }
   .site-title:hover {
     transform: rotate(20deg);
     -webkit-transform-origin: 30% 60%;

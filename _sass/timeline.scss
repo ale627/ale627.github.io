@@ -48,23 +48,6 @@
 
 }
 
-.top-right {
-  //float: right;
-  //padding: 5px;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  right: 0;
-  position: absolute;
-  background-image: url('/assets/think_favicon.ico');
-
-  //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  //filter: grayscale(100%);
-
-  background-repeat: no-repeat;
-
-}
-
 .type {
 font-style: italic;
 text-transform: none;

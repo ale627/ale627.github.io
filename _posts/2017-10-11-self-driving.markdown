@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Self-driving aggression"
+title:  "Selfish self-driving cars?"
 date:   2017-10-09 12:00:00 -0700
 category: traffic
 //color: rgb(255, 114, 33)
@@ -37,6 +37,8 @@ My questions are:
 Kinda looking forward to their debut, kinda not.  I'm afraid the future will be frustrating too, but in a different way, where all our cars are unwilling to just scoot ahead. 
 
 Check out [this Fortune article][fortune] about how Google is humanizing their cars. 
+
+I have heard the theory that blockchain will enable self-driving cars to have their own ledger, and be incentivized to seek out gas, provide cheaper rates, etc. in pursuit of capital accumulation.  In this case, I am sure these cars won't be "shy."
 
 
 
