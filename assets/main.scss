@@ -79,7 +79,7 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
     display: table;
     width: auto;
     font-family: $second-font-family;
-    font-size: 110%;
+    font-size: 150%; //overall size
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: 1px;
@@ -104,7 +104,7 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
       counter-increment: first;
       list-style: none;
       background: darken($background-color, 15%);
-      font-size: 100%; 
+      font-size: 90%; //ratio of levels to themselves
       margin-bottom: 5px;
       padding-right: 5px;
       line-height: 1.5;
