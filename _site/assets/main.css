@@ -816,7 +816,9 @@ tr:nth-child(odd) {
   font-size: 150%;
   font-weight: 900;
   line-height: 1.2;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin-left: 10px;
+  margin-right: 10px; }
   #markdown-toc a {
     color: #fdfdfd; }
     #markdown-toc a:hover {
@@ -849,8 +851,7 @@ tr:nth-child(odd) {
       font-weight: bold;
       color: #dddddd; }
   #markdown-toc li:hover::before {
-    background: #c43a30;
-    color: #546e7a; }
+    background: #c43a30; }
   #markdown-toc ul > li > ul > li {
     display: inline;
     font-size: 90%;

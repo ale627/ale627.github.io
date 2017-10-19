@@ -75,6 +75,7 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
 //TABLE OF CONTENTS
 
 #markdown-toc {
+  //the whole thing
     counter-reset: first;
     display: table;
     width: auto;
@@ -83,6 +84,8 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     a {
       color: $background-color;
@@ -125,7 +128,7 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
     }
     li:hover::before{
       background: #c43a30; //red
-      color: #546e7a;
+      //color: #546e7a;
     }
     ul > li > ul > li {
       display: inline;
