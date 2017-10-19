@@ -271,7 +271,7 @@ Falling wedges are a very reliable method of buying bottoms.  They are a bullish
 
 2 common methods of finding reliable moves is buying dips in uptrends or selling rips in downtrends, or buying breakouts.  The former is better in shorter timeframes or to trade around positions, while the latter is a longer timeframe approach for entering holding positions. (investments)
 
-### Buying dips and selling rips
+### Rips and Dips
 BTFD (buy the fucking dip) or less commonly STFR (sell the fucking rip) is very counterintuitive but essential to grasp in today's markets.  BTFD has been working since early 2016 as the market has trended up strongly.  STFR works in bear markets.  
 
 A gap in either direction can provide the range necessary to trade short term.  If the overnight session action leads to significantly different opening prices from yesterday's close, either the gap will fill or the gap will provide buy/sell imbalance fuel (a "short squeeze" if up, or a sell panic if down).  
@@ -291,7 +291,7 @@ As price often will retest the breakout area, some traders will use the breakout
 ### Gaps
 Another tradeable setup is an overnight gap.  Price tends to continue in the direction of the gap, as the overnight trade imbalance is usually due to a material exogenous event.
 
-### Catching a falling knife
+### Catching a knife
 Catching a falling knife is buying a stock that has fallen sharp and fast, in hopes of the reason for the sell-off being invalid.
 
 ## Indicators
