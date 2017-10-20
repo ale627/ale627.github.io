@@ -22,7 +22,8 @@ $spacing-unit:     30px !default;
 //colors
 $text-color:       #696969 !default;  //light-blue darken-4 materialize
 $background-color: #fdfdfd !default; //whiteish
-$brand-color:      #0080ff !default; //blue
+$brand-color:      #33A1C9 !default; //peacock
+
 
 //$head-color: 	   #85144b !default; //maroon, http://clrs.cc/
 $grey-color:       #aaaaaa !default;
@@ -32,7 +33,7 @@ $grey-color-dark:  darken($grey-color, 20%) !default;
 $post-color:	   $grey-color-dark;
 $title-color:	   #2ecc40;  //green, http://clrs.cc/
 
-$table-color:	   #3D9970;
+$table-color:	   #85144b; //maroon
 $code-color:	   #fdf6e3;
 
 

@@ -5,8 +5,8 @@ title:  Trading Reference
 pagename: Trading
 ---
 
-If asked about trading, I usually can't give a good answer because I'm not sure where to start.  Knowledge can be really amorphous in your head.  What are the main topics and how are they related?
-So I've written it out.  Over the course of several weeks I expanded and rearranged several sections.  This reference now has a dedicated page and receives routine edits.  Check back as it evolves.
+Trading can be really amorphous in your head.  What are the main topics and how are they related?
+So I decided to put together a reference, both for myself and for you.  This dedicated page receives routine edits.  Check back!
 
 * TOC
 {:toc}
@@ -411,7 +411,7 @@ If you are interested in building a trade system, start pulling some basic data 
 
 Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn't make money, right?
 
-# Reference
+# Twitter
 [Twitter List of Traders][list]
 
 [ef]: htts://en.wikipedia.org/wiki/Efficient_frontier

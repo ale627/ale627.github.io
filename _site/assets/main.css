@@ -76,14 +76,14 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #0080ff;
+  color: #33A1C9;
   text-decoration: none;
   /*  &:visited {
       color: darken($brand-color, 15%);
     }
   */ }
   a:hover {
-    color: #005ab3;
+    color: #24708c;
     text-decoration: underline; }
   .social-media-list a:hover {
     text-decoration: none; }
@@ -546,7 +546,7 @@ pre {
   .highlight .il {
     color: #099; }
 
-.timeline {
+.history {
   display: grid;
   grid-template-areas: "date analytics sailing trading";
   background-color: #fdfdfd;
@@ -582,7 +582,7 @@ pre {
   border-radius: 4px 4px 4px 8px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   position: relative;
-  top: -4px; }
+  top: -2px; }
 
 .type {
   font-style: italic;
@@ -700,10 +700,10 @@ pre {
   height: 800px; }
 
 .sailing {
-  color: #61b6ca; }
+  color: #0092cc; }
 
 .ss {
-  background: #3891a6; }
+  background: #0092cc; }
 
 .aldo {
   height: 150px; }
@@ -777,8 +777,8 @@ td {
 
 th {
   padding: 5px 15px;
-  color: #ffffff;
-  background: #3D9970;
+  color: #fdfdfd;
+  background: #85144b;
   font-weight: 300; }
 
 tr:hover td {
@@ -809,53 +809,59 @@ tr:nth-child(odd) {
   height: 100%; }
 
 #markdown-toc {
+  /* floating toc
+  position: absolute;
+  left: 0;
+  top: 50px;
+  */
   counter-reset: first;
   display: table;
   width: auto;
-  font-family: "Inconsolata", monospace;
-  font-size: 150%;
+  font-family: "Chivo", sans-serif;
+  font-size: 125%;
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: 1px;
   margin-left: 10px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
   #markdown-toc a {
-    color: #fdfdfd; }
+    color: #aaaaaa;
+    font-weight: 300; }
     #markdown-toc a:hover {
       color: #546e7a;
       text-decoration: none;
-      position: relative;
-      left: 4px;
-      -o-transition: .3s;
-      -ms-transition: .3s;
-      -moz-transition: .3s;
-      -webkit-transition: .3s;
-      transition: .3s; }
+      position: relative; }
   #markdown-toc li {
     counter-increment: first;
     list-style: none;
-    background: #d7d7d7;
+    background: #f0f0f0;
     font-size: 90%;
     margin-bottom: 5px;
-    padding-right: 5px;
     line-height: 1.5; }
     #markdown-toc li:before {
       display: inline;
       content: counter(first);
       margin-right: 10px;
-      padding: 4.5px 8px;
+      padding: 3px 8px;
       border-radius: 2px;
-      background: #546e7a;
+      background: #c19ed1;
       font-size: 90%;
       text-align: center;
       font-weight: bold;
-      color: #dddddd; }
+      color: #fdfdfd; }
   #markdown-toc li:hover::before {
-    background: #c43a30; }
+    background: #874da2;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s; }
   #markdown-toc ul > li > ul > li {
     display: inline;
     font-size: 90%;
-    margin-left: 40px; }
+    margin-right: 10px; }
   #markdown-toc ul {
     margin-left: 35px; }
     @media screen and (max-width: 600px) {

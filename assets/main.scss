@@ -3,7 +3,7 @@
 ---
 
 @import "minima";
-@import "timeline";
+@import "history";
 
 .top-border {
   border-top: 3px solid;
@@ -35,7 +35,7 @@ td {
 
 th {
 	padding: 5px 15px;
-    color: #ffffff;
+    color: $background-color;
     background: $table-color;
     font-weight: 300;
 }
@@ -76,64 +76,78 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
 
 #markdown-toc {
   //the whole thing
+
+    /* floating toc
+    position: absolute;
+    left: 0;
+    top: 50px;
+    */
+    
     counter-reset: first;
     display: table;
     width: auto;
-    font-family: $second-font-family;
-    font-size: 150%; //overall size
+    font-family: $base-font-family;
+    font-size: 125%; //overall size
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: 1px;
     margin-left: 10px;
     margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     a {
-      color: $background-color;
+      color: $grey-color;
+      font-weight: 300;
       &:hover {
         color: #546e7a;
+        //color: #3D9970;
         text-decoration: none;
         position: relative; 
-        left: 4px;
+        //left: 4px;
 
-        -o-transition:.3s;
-        -ms-transition:.3s;
-        -moz-transition:.3s;
-        -webkit-transition:.3s;
-        transition:.3s;
+
       }
     }
 
     li {
       counter-increment: first;
       list-style: none;
-      background: darken($background-color, 15%);
+      background: darken($background-color, 5%);
       font-size: 90%; //ratio of levels to themselves
       margin-bottom: 5px;
-      padding-right: 5px;
       line-height: 1.5;
       //2nd lvl
-  
+
       &:before {
         display: inline;
         content: counter(first);
         margin-right: 10px;
-        padding: 4.5px 8px;
+        padding: 3px 8px;
         border-radius: 2px;
-        background: #546e7a;
+        background: lighten(#874da2, 25%);
         font-size: 90%;
         text-align: center;
         font-weight: bold;
-        color: $grey-color-light;
+        color: $background-color;
+
+
       }
     }
     li:hover::before{
-      background: #c43a30; //red
-      //color: #546e7a;
+      background: #874da2;
+
+      -o-transition:.3s;
+      -ms-transition:.3s;
+      -moz-transition:.3s;
+      -webkit-transition:.3s;
+      transition:.3s;
     }
+
     ul > li > ul > li {
       display: inline;
       font-size: 90%;
-      margin-left: 40px;
+      margin-right: 10px;
 
     }
     ul {

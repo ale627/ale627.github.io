@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Selfish self-driving cars?"
+title:  "Selfish-driving cars?"
 date:   2017-10-09 12:00:00 -0700
 category: traffic
 //color: rgb(255, 114, 33)
@@ -28,7 +28,7 @@ My questions are:
 		-If beta by design, will regular cars be able to drive even more aggressively?
 
 - Will self-driving aggression be user-controlled?
-	- If user-controlled, will there be incentives to keep levels low?  Why wouldn't everyone set the aggression at 10/10?  (related to insurance premiums)
+	- If user-controlled, will there be incentives to keep levels low?  Wouldn't everyone set the aggression at 10/10?  (related to insurance premiums)
 
 - Or decided by the car?
 	- If car-controlled, will each car be competing on time or other convenience factors?
