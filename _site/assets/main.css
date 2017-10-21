@@ -770,7 +770,7 @@ table {
   border: 1px solid #dddddd;
   line-height: 1.4; }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   th, td {
     font-size: 80%;
     letter-spacing: -1px;
