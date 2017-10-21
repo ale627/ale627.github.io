@@ -148,7 +148,7 @@ Do you dare jettison the basis of your current happiness and future goals, in pu
 td:first-child {
   background-color: #85144b !important;
   color: #fdfdfd;
-  width: 20%;
+  white-space: nowrap;
 }
 th {display: none;}
 table {

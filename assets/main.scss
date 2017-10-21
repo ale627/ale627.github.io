@@ -21,10 +21,19 @@
 table {
   border-spacing: 10px;
   border-collapse: collapse;
-  width: 100%;
   margin: 0 0 40px 0;
   border: 1px solid $grey-color-light;
   line-height: 1.4;
+
+}
+
+th, td {
+  @media (max-width: 400px) {
+  font-size: 80%;
+  letter-spacing: -1px;
+  padding: 0;
+  margin: 0;
+  }
 }
 
 td {
@@ -82,7 +91,7 @@ tr:nth-child(odd) { background-color: #e9e9e9;}
     left: 0;
     top: 50px;
     */
-    
+
     counter-reset: first;
     display: table;
     width: auto;
