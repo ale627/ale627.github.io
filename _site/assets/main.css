@@ -772,7 +772,7 @@ table {
 
 @media (max-width: 600px) {
   th, td {
-    font-size: 80%;
+    font-size: 90%;
     letter-spacing: -1px;
     padding: 0;
     margin: 0; } }
