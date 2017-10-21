@@ -239,6 +239,11 @@ pre {
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
+        -o-transition: .2s;
+        -ms-transition: .2s;
+        -moz-transition: .2s;
+        -webkit-transition: .2s;
+        transition: .2s;
         margin-left: 20px; }
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
@@ -766,16 +771,14 @@ pre {
 table {
   border-spacing: 10px;
   border-collapse: collapse;
-  margin: 0 0 40px 0;
+  margin: 0 auto 30px;
   border: 1px solid #dddddd;
   line-height: 1.4; }
 
 @media (max-width: 600px) {
   th, td {
-    font-size: 90%;
-    letter-spacing: -1px;
-    padding: 0;
-    margin: 0; } }
+    font-size: 95%;
+    padding: 1px 10px 1px 10px !important; } }
 
 td {
   padding: 5px 15px;
@@ -828,8 +831,7 @@ tr:nth-child(odd) {
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: 1px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto 30px;
   padding-top: 10px;
   padding-bottom: 10px; }
   #markdown-toc a {
@@ -838,27 +840,28 @@ tr:nth-child(odd) {
     #markdown-toc a:hover {
       color: #546e7a;
       text-decoration: none;
-      position: relative; }
+      font-weight: bold; }
   #markdown-toc li {
     counter-increment: first;
     list-style: none;
     background: #f0f0f0;
     font-size: 90%;
     margin-bottom: 5px;
-    line-height: 1.5; }
+    padding: 1px 0px 1px 2px;
+    line-height: 1.7; }
     #markdown-toc li:before {
       display: inline;
       content: counter(first);
-      margin-right: 10px;
+      margin-right: 3px;
       padding: 3px 8px;
       border-radius: 2px;
-      background: #c19ed1;
+      background: #ff9999;
       font-size: 90%;
       text-align: center;
       font-weight: bold;
       color: #fdfdfd; }
   #markdown-toc li:hover::before {
-    background: #874da2;
+    background: #f33;
     -o-transition: .3s;
     -ms-transition: .3s;
     -moz-transition: .3s;
@@ -866,13 +869,13 @@ tr:nth-child(odd) {
     transition: .3s; }
   #markdown-toc ul > li > ul > li {
     display: inline;
-    font-size: 90%;
-    margin-right: 10px; }
-  #markdown-toc ul {
-    margin-left: 35px; }
-    @media screen and (max-width: 600px) {
-      #markdown-toc ul {
-        display: none; } }
+    margin-right: 5px; }
+  @media screen and (max-width: 600px) {
+    #markdown-toc ul {
+      display: none; } }
+  @media screen and (max-width: 600px) {
+    #markdown-toc li {
+      padding-right: 20px !important; } }
 
 .site-title {
   content: "";

@@ -27,13 +27,13 @@ There are 6 markets to trade: OTC, equities, futures, commodities, and cryptocur
 
 Here's instrument availability across markets:
 
-| Markets          | Vanilla | Optionable? | Futures |
-|:-----------------|:--------|:------------|:--------|
-| OTC              | yes     | no          | no      |
-| Equities         | yes     | yes         | some    |
-| Indexes          | yes     | yes         | yes     |
-| Commodities      | yes     | no          | yes     |
-| Crypto           | yes     | few         | few     |
+| Markets     | Vanilla | Options | Futures |
+|:------------|:--------|:--------|:--------|
+| OTC         | yes     | no      | no      |
+| Equities    | yes     | yes     | some    |
+| Indexes     | yes     | yes     | yes     |
+| Commodities | yes     | no      | yes     |
+| Crypto      | yes     | few     | few     |
 
 # Styles
 There are 2 trading styles: investing and price action trading.  
