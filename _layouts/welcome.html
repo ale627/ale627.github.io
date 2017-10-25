@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 
 </head>
 <body>
@@ -10,7 +9,6 @@
     <div class="wrapper">
 
       <a class="blog" href="/home"></a>
-
 
         <div class = "paragraph">
 
@@ -36,8 +34,6 @@
       background: #fdfdfd;
     }
 
-
-
     .blog {
     background-image: url('/assets/shaka.svg');
     width: 52px;
@@ -51,6 +47,10 @@
     }
     .blog:hover {
       opacity: .8;
+      transition:.25s;
+      transform: rotate(20deg);
+      -webkit-transform-origin: 30% 60%;
+      -webkit-backface-visibility: hidden;
     }
 
 
@@ -64,6 +64,7 @@
     }
 
     .paragraph {
+      animation: fadein 3s;
       margin-top: 12.5%;
       font-family: 'Chivo', sans-serif;
       font-size: 4.5vh;
@@ -75,6 +76,14 @@
       text-shadow: 0 3px 3px rgba(0,0,0,0.2);
       display: block;
 
+    }
+
+    @keyframes fadein {
+        from { opacity:0;
+        }
+        to {
+            opacity:.8;
+        }
     }
 
 
@@ -106,7 +115,7 @@
     }
 
     .adobe:hover {
-      background: hotpink;
+      background: #7FDBFF;
     }
 
     .sailing:hover {
@@ -116,18 +125,11 @@
       background: #2ecc40;
     }
     .workr:hover {
-      background: #85144b;
+      background: orange;
     }
     .scu:hover {
       background: #f33;
     }
-
-
-
-
-
-
-
 
   </style>
 </body>
