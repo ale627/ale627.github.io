@@ -553,7 +553,7 @@ pre {
 
 .history {
   display: grid;
-  grid-template-areas: "date analytics sailing trading";
+  grid-template-areas: "analytics date sailing";
   background-color: #fdfdfd;
   grid-template-columns: auto auto auto;
   width: auto; }
@@ -825,15 +825,23 @@ tr:nth-child(odd) {
   */
   counter-reset: first;
   display: table;
-  width: auto;
   font-family: "Chivo", sans-serif;
   font-size: 125%;
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: 1px;
-  margin: 0 auto 30px;
+  margin: 0 auto 0 0;
+  width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  /*
+  position: fixed;
+  left: 0em;
+  top: 0em;
+  @media screen and (max-width: 600px) { 
+    position: relative; 
+  }
+  */ }
   #markdown-toc a {
     color: #aaaaaa;
     font-weight: 300; }
@@ -841,6 +849,8 @@ tr:nth-child(odd) {
       color: #546e7a;
       text-decoration: none;
       font-weight: bold; }
+  #markdown-toc a.current {
+    color: red; }
   #markdown-toc li {
     counter-increment: first;
     list-style: none;
@@ -855,7 +865,7 @@ tr:nth-child(odd) {
       margin-right: 3px;
       padding: 3px 8px;
       border-radius: 2px;
-      background: #ff9999;
+      background: #ff8080;
       font-size: 90%;
       text-align: center;
       font-weight: bold;
@@ -870,9 +880,9 @@ tr:nth-child(odd) {
   #markdown-toc ul > li > ul > li {
     display: inline;
     margin-right: 5px; }
-  @media screen and (max-width: 600px) {
-    #markdown-toc ul {
-      display: none; } }
+    @media screen and (max-width: 600px) {
+      #markdown-toc ul > li > ul > li {
+        display: block; } }
   @media screen and (max-width: 600px) {
     #markdown-toc li {
       padding-right: 20px !important; } }

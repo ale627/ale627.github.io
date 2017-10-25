@@ -1,6 +1,6 @@
 .history {
   display: grid;
-  grid-template-areas: "date analytics sailing trading";
+  grid-template-areas: "analytics date sailing";
   background-color: $background-color;
   //grid-template-columns: 75px 35% 35% 20%;
   grid-template-columns: auto auto auto;

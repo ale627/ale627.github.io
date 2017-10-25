@@ -1,17 +1,19 @@
 ---
 layout: post
-permalink: /important.html
-title:  "What is important to you?"
-pagename: "Important"
+permalink: /want.html
+title:  "What do you want?"
+pagename: "Want"
 ---
 
-You exist.  You want.  How do you get?
+How do you get things you want?
 
-First, you need direction.  You have to know where you want to go, in order to go there.  
+First, you need direction.  You have to know where you want to go, in order to go there.  What you want, in order to get it.
 
-Not everyone has the same priorities in life.  Some don't have any.  Most do, but their priorities are decided on-the-fly or as a result of circumstances.
+This means not simultaneous wanting two things which are mutually exclusive.
 
-Flimsy priorities lead to fuzzy decision making, meaning you might do different things under the same conditions.  The only long-term output from this sort of process is randomness.
+Not everyone has the same priorities in life.  Some people haven't prioritized at all, flying by the seat of their pants.  Most have, but their priorities lack rigor - they are flimsy.
+
+Flimsy priorities lead to fuzzy decision making, meaning you might act differently under similar conditions.  The only long-term output from this sort of process is randomness.
 
 Therefore it's important to define your priorities in a robust way, even if those priorities are relaxing 24/7 and going barefoot.  It's important to decide and know why you decided, to avoid regret later in life.
 
@@ -127,13 +129,15 @@ This framework allows clarity of thought.  With action items in mind, your subco
 **This is how you get lucky.  There's a ton of time.**
 
 # How to get there
-Identifying your priority mix and delineating what happiness and success look like lets you troubleshoot your lifestyle more accurately than a therapist.  
+Identifying your priority mix and delineating what happiness and success look like lets you troubleshoot your lifestyle accurately.  
 Given that you know what makes you happy, if you feel anxiety or stress, it means you are living too much in the future.  Do things that stoke your true identity, or engage others.
 
 Given that you know what to do to succeed, if you feel like you're not making progress, it means you are living too much in the now.  Consult your established goals and roadmaps.
 
+It's this balance that you must control in order to actualize your priorities.  These are the ingredients necessary to get on the paths to happiness and success.  
+
 ## Ego
-I've given tips for identifying and getting what's important to you.
+Now there's a personal definition of priority, and a roadmap for getting what's important to you.  Is that it?
 
 These things you want, whether short-term happiness or long-term accomplishments, arise from ego.  Getting what you want fulfills the ego, briefly.
 

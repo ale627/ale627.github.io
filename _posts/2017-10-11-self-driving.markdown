@@ -3,7 +3,6 @@ layout: post
 title:  "Selfish-driving cars?"
 date:   2017-10-09 12:00:00 -0700
 category: traffic
-//color: rgb(255, 114, 33)
 color: rgb(250, 210, 1)
 ---
 
