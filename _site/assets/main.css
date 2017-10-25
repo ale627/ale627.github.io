@@ -586,8 +586,7 @@ pre {
   opacity: 1;
   border-radius: 4px 4px 4px 8px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: -2px; }
+  position: relative; }
 
 .type {
   font-style: italic;
@@ -643,9 +642,7 @@ pre {
     display: none; }
 
   .summary {
-    display: block; }
-
-  width: 100%; }
+    display: block; } }
 /*
 .date {
   color: lighten(#999, 15%);

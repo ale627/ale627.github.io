@@ -36,26 +36,23 @@
 
     .blog {
     background-image: url('/assets/shaka.svg');
-    width: 20vh;
-    height: 25vh;
+    width: 12vh;
+    height: 15vh;
     display: block;
     margin: auto;  
     background-repeat: no;
     opacity: .5;
-    -webkit-backface-visibility: hidden;
-
+    transition:.25s;
     }
     .blog:hover {
       opacity: .8;
-      transition:.25s;
       transform: rotate(20deg);
       -webkit-transform-origin: 30% 60%;
       -webkit-backface-visibility: hidden;
     }
 
-
     .wrapper {
-      padding: 5% 15% 7.5% 15%; 
+      padding: 5% 20vw 7.5% 20vw; 
       //top right bottom left
       position: relative;
       width: auto;
@@ -66,8 +63,8 @@
     .paragraph {
       animation: fadein 3s;
       font-family: 'Chivo', sans-serif;
-      margin-top: 5vh;
-      font-size: 4.5vh;
+      margin-top: 6vw;
+      font-size: 4vh;
       color: #001f3f;
         font-weight: 300;
       line-height: 1.4em;
@@ -79,7 +76,7 @@
     }
 
     @keyframes fadein {
-        from { opacity:0;
+        from { opacity:.1;
         }
         to {
             opacity:.8;
@@ -106,29 +103,29 @@
     .link:hover{
       transition:.25s;
       opacity: 1;
-      text-shadow: 0 1px 1px #fdfdfd;
-
+      //text-shadow: 0 1px 1px #fdfdfd;
+      opacity: 1;
     }
 
     .oracle:hover {
-      background: red;
+      color: #ff0000;
     }
 
     .adobe:hover {
-      background: #7FDBFF;
+      color: #008C30;
     }
 
     .sailing:hover {
-      background: #0092cc;
+      color: #00a4e4;
     }
     .trading:hover {
-      background: #2ecc40;
+      color: #2ecc40;
     }
     .workr:hover {
-      background: orange;
+      color: orange;
     }
     .scu:hover {
-      background: #f33;
+      color: #f33;
     }
 
   </style>
