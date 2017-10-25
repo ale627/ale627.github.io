@@ -849,8 +849,6 @@ tr:nth-child(odd) {
       color: #546e7a;
       text-decoration: none;
       font-weight: bold; }
-  #markdown-toc a.current {
-    color: red; }
   #markdown-toc li {
     counter-increment: first;
     list-style: none;
