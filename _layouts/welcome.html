@@ -2,87 +2,112 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+<script src="https://use.fontawesome.com/85aed47919.js"></script>
 
 
 </head>
 <body>
 
     <div class="wrapper">
-      <a class="blog" href="/home"></a>
 
+        <!-- <a href="/blog"> <i class="fa fa-user-circle-o fa-4x" id="logo" aria-hidden="true"></i></a> -->
 
+        <a class="blog" href="/home"></a> 
 
         <div class = "paragraph">
 
           I work in 
-          <a href="https://www.oracle.com/applications/primavera/products/facilities-and-real-estate-management/index.html" target="_blank" class="oracle link">BizOps @Oracle</a>, 
+          <a href="https://www.oracle.com/applications/primavera/products/facilities-and-real-estate-management/index.html" target="_blank" class="oracle link">Oracle <i class="fa fa-database"></i> BizOps</a>, race  
  
-          <a href="http://www.sail-world.com/Australia/Rolex-Big-Boat-Series---Images-from-the-final-day-in-San-Francisco/148387" target="_blank" class="sailing link">race sailboats on SF bay</a>, and
+          <a href="http://www.sail-world.com/Australia/Rolex-Big-Boat-Series---Images-from-the-final-day-in-San-Francisco/148387" target="_blank" class="sailing link">sailboats <i class="fa fa-anchor" aria-hidden="true"></i> in SF</a>, and trade
 
-          <a href="/trading.html" target="_blank" class="trading link">trade options</a>.
+          <a href="/trading.html" target="_blank" class="trading link">equity <i class="fa fa-line-chart" aria-hidden="true"></i> options</a>.
 
-        <div class = "divider"></div>
+          <div class = "divider"></div>
 
           I graduated
-          <a href="https://www.scu.edu/business/" target="_blank" class="scu link">SCU Finance/MIS</a>, 
-          while interning in 
-          <a href="http://www.adobe.com/data-analytics-cloud/analytics/marketing-attribution.html" target="_blank" class="adobe link">Analytics @Adobe</a> and 
-          <a href="https://www.crunchbase.com/organization/workr" target="_blank" class="workr link">Product @Workr</a>. 
+          <a href="https://www.scu.edu/business/" target="_blank" class="scu link">SCU <i class="fa fa-graduation-cap" aria-hidden="true"></i> Finance/MIS</a>, 
+          interned in 
+          <a href="http://www.adobe.com/data-analytics-cloud/analytics/marketing-attribution.html" target="_blank" class="adobe link">Adobe <i class="fa fa-area-chart" aria-hidden="true"></i> Analytics</a> and 
+          <a href="https://www.crunchbase.com/organization/workr" target="_blank" class="workr link">Workr <i class="fa fa-rocket" aria-hidden="true"></i> Product</a>. 
         </div>
     </div>
 
   <style>
     body {
       background: #fdfdfd;
+      //background-image: linear-gradient(to bottom, hsl(200, 100%, 7%), hsl(200, 100%, 12%));
     }
 
-    .blog {
-    background-image: url('/assets/shaka.svg');
-    width: 12vh;
-    height: 15vh;
-    display: block;
-    margin: auto;  
-    background-repeat: no;
-    opacity: .5;
-    transition:.25s;
+
+/*
+    #logo {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      font-size: 12vh;
+      transition: .25s;
+      opacity: .5;
+      color: red !important;
     }
+    #logo:hover {
+      opacity: 1;
+
+    }
+*/
+  
+
+
+    .blog {
+      background-image: url('/assets/shaka.svg');
+      width: 12vh;
+      height: 15vh;
+      display: block;
+      margin: auto;  
+      background-repeat: no;
+      opacity: .75;
+      transition:.25s;
+      -webkit-filter: drop-shadow(4px 3px #444);
+      }
     .blog:hover {
-      opacity: .8;
+      opacity: 1;
       transform: rotate(20deg);
       -webkit-transform-origin: 30% 60%;
       -webkit-backface-visibility: hidden;
+      -webkit-filter: drop-shadow(4px 3px #85144b);
     }
+
 
     .wrapper {
       padding: 5% 20vw 7.5% 20vw; 
       //top right bottom left
       position: relative;
       width: auto;
-      opacity: .9;
+      opacity: 1;
       display: block;
     }
 
     .paragraph {
-      animation: fadein 3s;
+      animation: fadein 2s;
       //font-family: 'Bitter', serif;
       font-family: 'Chivo', sans-serif;
       margin-top: 6vw;
       font-size: 4vh;
-      color: #444;
+      //color: #aaa;
+      color: #404040;
         font-weight: 300;
       line-height: 1.4em;
-      letter-spacing: 1px;
+      letter-spacing: -.5px;
       opacity: .8;
       //text-shadow: 0 3px 3px rgba(0,0,0,0.2);
-      display: block;
-
+      display: block;      
     }
 
     @keyframes fadein {
         from { opacity:.1;
         }
         to {
-            opacity:.8;
+            opacity: .8;
         }
     }
 
@@ -102,12 +127,11 @@
       text-decoration: none;
       font-weight: 600;
       color: #444;
+      //color: #fdfdfd;
+      transition:.5s;
+      letter-spacing: 1.5px;
     }
     .link:hover{
-      transition:.25s;
-      opacity: 1;
-      //text-shadow: 0 1px 1px #fdfdfd;
-      opacity: 1;
     }
 
     .oracle:hover {
