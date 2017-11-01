@@ -68,7 +68,33 @@
       opacity: .75;
       transition:.25s;
       -webkit-filter: drop-shadow(4px 3px #444);
+      animation: wiggle .75s;
+
+
+
+
       }
+
+    @keyframes wiggle {
+      15% {
+        transform: rotate(0deg);
+      }
+
+      30% {
+        transform: rotate(-20deg);
+      }
+      65% {
+        transform: rotate(0deg);
+      }
+      80% {
+        transform: rotate(-10deg);
+      }    
+      100% {
+        transform: rotate(0deg);
+      }
+
+    }
+
     .blog:hover {
       opacity: 1;
       transform: rotate(20deg);
