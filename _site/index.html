@@ -80,32 +80,38 @@
         transform: rotate(0deg);
       }
 
-      30% {
+      35% {
         transform: rotate(-20deg);
       }
       65% {
-        transform: rotate(0deg);
+        transform: rotate(5deg);
       }
       80% {
-        transform: rotate(-10deg);
+        transform: rotate(-15deg);
       }    
-      100% {
+      90% {
         transform: rotate(0deg);
       }
 
     }
 
     .blog:hover {
-      opacity: 1;
+      opacity: .9;
       transform: rotate(20deg);
       -webkit-transform-origin: 30% 60%;
       -webkit-backface-visibility: hidden;
-      -webkit-filter: drop-shadow(4px 3px #85144b);
+      -webkit-filter: drop-shadow(4px 3px #8a7967);
     }
 
 
     .wrapper {
-      padding: 5% 20vw 7.5% 20vw; 
+      max-width: calc(800px - (30px * 2));
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      padding-top: 4vw;
       //top right bottom left
       position: relative;
       width: auto;
@@ -117,8 +123,8 @@
       animation: fadein 2s;
       //font-family: 'Bitter', serif;
       font-family: 'Chivo', sans-serif;
-      margin-top: 6vw;
-      font-size: 4vh;
+      margin-top: 5vw;
+      font-size: 5vh;
       //color: #aaa;
       color: #404040;
         font-weight: 300;
@@ -141,10 +147,10 @@
     .divider {
       height: 0px;
       margin: 2.5vh 0 2.5vh 0;
-      border-bottom: 3px solid;
+      border-bottom: 1vh solid;
       border-image: linear-gradient(to right, #874da2 0%, #c43a30 100%);
       border-image-slice: 1;
-      transform: translateY(-50%);  
+      //transform: translateY(-50%);  
       background: transparent;
     }
 
