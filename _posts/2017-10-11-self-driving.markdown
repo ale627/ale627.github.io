@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Selfish-driving cars?"
+title:  "Traffic and self-driving ethics"
 date:   2017-10-09 12:00:00 -0700
-category: traffic
+category:
 color: rgb(250, 210, 1)
 ---
 

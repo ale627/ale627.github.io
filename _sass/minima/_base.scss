@@ -155,11 +155,12 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
-  border: 1px solid darken($code-color, 10%);
-  border-radius: 3px;
+  //@include relative-font-size(0.9375);
   background-color: $code-color;
-  color: $title-color;
+  color: #e5ecea;
+  font-family: "inconsolata";
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.28);
+  line-height: 1.15em;
 }
 
 code {
@@ -167,7 +168,8 @@ code {
 }
 
 pre {
-  padding: 8px 12px;
+  //padding: 8px 12px;
+  padding: 10px 20px 10px 20px;
   overflow-x: auto;
 
   > code {

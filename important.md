@@ -109,14 +109,14 @@ Why do you want to succeed at anything at all?  Why be anything or do anything, 
 
 **It is in the human spirit to continually reach for richer experience.**  For a mortal with an ego (anyone), there is intense appeal in creating something which outlasts you - a legacy.  It is a test of your abilities.
 
-Many goals require years of specific and concentrated effort and are mutually exclusive with other goals.  You can't achieve them all, so which goals are the most important to you?
-
 There are different types of goals.
 - Physical feats
 - Social connections
 - Capital accumulation
 - Items
 - Experiences
+
+Many goals require years of specific and concentrated effort and are mutually exclusive with other goals.  You can't achieve them all, so which goals are the most important to you?
 
 Once you have defined and prioritized your goals, you can build a gameplan.  
 

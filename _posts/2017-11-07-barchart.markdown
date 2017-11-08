@@ -1,0 +1,371 @@
+---
+layout: post
+title:  "Stock Data with Jupyter"
+date:   2017-11-07 12:00:00 -0700
+category: python
+color: green
+---
+
+*This is an initial dive into [Jupyter notebooks][jn], the self-contained Python environment.  The below post is [exported directly from a Jupyter Notebook][nb].  The tables below each code block are the API responses.*
+
+*I am using the [BarChart.com OnDemand API][bc] to call getHistory() and receive minute-level stock price data for a basket of stocks.  Then I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.*
+
+*To use the code yourself, you will need to setup a python environment, jupyter notebook or otherwise.  Then, you'll need to [request a free BarChart.com OnDemand API key][bc], and plug it into the code.*
+
+*Last, set the file path for your project directory, and in that folder create a folder 'Stock_Price_Data' to export data to, and a folder 'assets' for your list.  In 'assets' create an Excel file 'Watchlist'.  Starting in row 4 with the header, have names in the first column and tickers in the second column.*
+
+[jn]: https://jupyter.org/
+[nb]: https://github.com/jupyter/nbconvert
+[bc]: https://www.barchart.com/ondemand/free-market-data-api
+
+# Fetch the data from BarChart
+
+Here we call the barchart getHistory API.  This is an adaptation of BlackArb's Python [tutorial][tut].
+
+#### Steps:
+- import libraries
+- set directories and API key
+- build URL to call API
+- get_minute_data() function
+- call the function
+
+**outputs: symbol, timestamp, tradingDay, open, high, low, close, volume, openInterest**
+
+[tut]: http://www.blackarbs.com/blog/how-to-get-free-intraday-stock-data-with-python-and-barcharts-ondemand-api/9/22/2015
+
+
+```python
+# -*- coding: utf-8 -*-
+
+#----------IMPORT LIBRARIES----------#
+import time
+t0 = time.clock()
+
+import pandas as pd
+from pandas.tseries.offsets import BDay
+
+import numpy as np
+import datetime as dt
+
+from copy import copy
+import warnings
+warnings.filterwarnings('ignore',category=pd.io.pytables.PerformanceWarning)
+ 
+
+    
+#----------SET DIRECTORIES----------#
+    
+project_dir = r'C:\Users/user/fakepath/' 
+price_path = project_dir + r'Stock_Price_Data\\'
+
+# header=3 to skip metadata   
+spy_components = pd.read_excel(project_dir +\
+                             'assets/Watchlist.xls', header=3)
+syms = spy_components.Identifier.dropna()
+syms = syms.drop(syms.index[-1]).sort_values()
+
+
+apikey = 'insert API key'
+
+
+
+#----------BUILD URL----------#
+
+def construct_barChart_url(sym, start_date, freq, api_key=apikey):
+    '''Function to construct barchart api url'''
+    
+    url = 'http://marketdata.websol.barchart.com/getHistory.csv?' +\
+            'key={}&symbol={}&type={}&startDate={}'.format(api_key, sym, freq, start_date)
+    return url
+
+
+
+
+#----------F(X) DEFINITION----------#
+
+def get_minute_data():
+    '''Function to Retrieve <= 3 months of minute data for SP500 components'''
+    
+    # YYYY MM DD HH MM SS
+    start = '20171001000000'
+    #end = d
+    freq = 'minutes'    
+    prices = {}
+    symbol_count = len(syms)
+    
+    try:
+        for i, sym in enumerate(syms, start=1):
+            api_url = construct_barChart_url(sym, start, freq, api_key=apikey)
+            try:
+                csvfile = pd.read_csv(api_url, parse_dates=['timestamp'])
+                csvfile.set_index('timestamp', inplace=True)
+                prices[sym] = csvfile
+            except:
+                continue
+
+            print('{}..[fetched] | {} of {} tickers |'.format(sym, i, symbol_count)) 
+    except Exception as e: 
+        print(e)
+    finally:
+        pass
+    
+    px = pd.Panel.from_dict(prices)
+    px.major_axis = px.major_axis.tz_localize('utc').tz_convert('US/Pacific')
+    return px
+
+
+
+#----------CALL FUNCTION----------#
+
+pxx = get_minute_data()
+pxx
+
+
+
+# timer
+secs      = np.round( ( time.clock()  - t0 ), 4 )
+time_secs = "{timeSecs} seconds to run".format(timeSecs = secs)
+mins      = np.round( ( (  time.clock() ) -  t0 )  / 60, 4 ) 
+time_mins = "| {timeMins} minutes to run".format(timeMins = mins)
+hours     = np.round( (  time.clock()  -  t0 )  / 60 / 60, 4 ) 
+time_hrs  = "| {timeHrs} hours to run".format(timeHrs = hours)
+
+print( time_secs, time_mins, time_hrs )
+```
+
+    AAPL..[fetched] | 1 of 9 tickers |
+    AMZN..[fetched] | 2 of 9 tickers |
+    BIDU..[fetched] | 3 of 9 tickers |
+    FB..[fetched] | 4 of 9 tickers |
+    GOOGL..[fetched] | 5 of 9 tickers |
+    GS..[fetched] | 6 of 9 tickers |
+    IBB..[fetched] | 7 of 9 tickers |
+    NFLX..[fetched] | 8 of 9 tickers |
+    TSLA..[fetched] | 9 of 9 tickers |
+    ('49.2381 seconds to run', '| 0.8206 minutes to run', '| 0.0137 hours to run')   
+
+# Select stock
+Choose a ticker to analyze, and test the output.
+
+
+```python
+stock = 'NFLX'
+
+ohlc = pxx[stock]
+ohlc.head(1)
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>symbol</th>
+      <th>tradingDay</th>
+      <th>open</th>
+      <th>high</th>
+      <th>low</th>
+      <th>close</th>
+      <th>volume</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-10-02 06:30:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>182.11</td>
+      <td>182.22</td>
+      <td>181.815</td>
+      <td>181.945</td>
+      <td>74650</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# 1-min accumulation bars
+Where 1 min candlestick closes on highs, flag as accumulated.
+
+
+```python
+#create accum column: for closing on highs, assign 1
+ohlc["accum"] = np.where(ohlc["high"] == ohlc["close"], 1, 0)
+
+#list matches
+accumulation_bars = ohlc[(ohlc.accum == 1)]
+accumulation_bars[["high", "close", "accum"]].tail(3)
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>high</th>
+      <th>close</th>
+      <th>accum</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-11-07 12:38:00-08:00</th>
+      <td>195.38</td>
+      <td>195.38</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2017-11-07 12:56:00-08:00</th>
+      <td>195.87</td>
+      <td>195.87</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2017-11-07 13:00:00-08:00</th>
+      <td>195.89</td>
+      <td>195.89</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# Consecutive accumulation
+*Add the previous accumulated (or not) to current row*
+
+Measures when two 1-min candlesticks in a row close at highs.
+
+
+```python
+#create conf column adding prev column
+ohlc["conf"] = ohlc.accum + ohlc.accum.shift(1)
+
+#where conf is 2, make a table
+confirmation = ohlc[(ohlc.conf == 2)]
+confirmation[["high", "close", "conf"]].tail(3)
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>high</th>
+      <th>close</th>
+      <th>conf</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-11-06 09:44:00-08:00</th>
+      <td>201.54</td>
+      <td>201.54</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2017-11-06 10:09:00-08:00</th>
+      <td>201.32</td>
+      <td>201.32</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2017-11-06 12:36:00-08:00</th>
+      <td>199.97</td>
+      <td>199.97</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+## Roll up to daily signal
+
+*sum the consecutive accumulation by day*
+
+#### Return the 3 biggest daily signals
+
+
+```python
+#combine minutes into days
+signal = confirmation.resample('D',how='sum')
+
+#sort based on sum(conf)
+#signal.sort_values(['double'], ascending=[False])
+signal.nlargest(3,'conf')
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>accum</th>
+      <th>conf</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-10-03 00:00:00-07:00</th>
+      <td>22</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>2017-11-02 00:00:00-07:00</th>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2017-11-03 00:00:00-07:00</th>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+

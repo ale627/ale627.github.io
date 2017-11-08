@@ -108,17 +108,17 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
-  border: 1px solid #fae7b3;
-  border-radius: 3px;
-  background-color: #fdf6e3;
-  color: #2ecc40; }
+  background-color: #166066;
+  color: #e5ecea;
+  font-family: "inconsolata";
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.28);
+  line-height: 1.15em; }
 
 code {
   padding: 1px 5px; }
 
 pre {
-  padding: 8px 12px;
+  padding: 10px 20px 10px 20px;
   overflow-x: auto; }
   pre > code {
     border: 0;
@@ -416,14 +416,15 @@ pre {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background: #eef; }
+    background: #166066; }
   .highlight .c {
-    color: #998;
+    color: #9B8065;
     font-style: italic; }
   .highlight .err {
     color: #a61717;
     background-color: #e3d2d2; }
   .highlight .k {
+    color: yellow;
     font-weight: bold; }
   .highlight .o {
     font-weight: bold; }
@@ -479,14 +480,16 @@ pre {
   .highlight .kt {
     color: #458;
     font-weight: bold; }
+  .highlight .kn {
+    color: #e3655b; }
   .highlight .m {
     color: #099; }
   .highlight .s {
-    color: #d14; }
+    color: #33A1C9; }
   .highlight .na {
     color: #008080; }
   .highlight .nb {
-    color: #0086B3; }
+    color: #2ecc40; }
   .highlight .nc {
     color: #458;
     font-weight: bold; }
@@ -498,14 +501,14 @@ pre {
     color: #900;
     font-weight: bold; }
   .highlight .nf {
-    color: #900;
+    color: #fff9c4;
     font-weight: bold; }
   .highlight .nn {
-    color: #555; }
+    color: #E5ECEA; }
   .highlight .nt {
     color: #000080; }
   .highlight .nv {
-    color: #008080; }
+    color: #E5ECEA; }
   .highlight .ow {
     font-weight: bold; }
   .highlight .w {
@@ -543,11 +546,11 @@ pre {
   .highlight .bp {
     color: #999; }
   .highlight .vc {
-    color: #008080; }
+    color: #e3655b; }
   .highlight .vg {
-    color: #008080; }
+    color: #e3655b; }
   .highlight .vi {
-    color: #008080; }
+    color: #e3655b; }
   .highlight .il {
     color: #099; }
 
@@ -774,7 +777,7 @@ table {
 @media (max-width: 600px) {
   th, td {
     font-size: 95%;
-    padding: 1px 10px 1px 10px !important; } }
+    padding: 1px 10px 1px 10px; } }
 
 td {
   padding: 5px 15px;
@@ -799,6 +802,24 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   background-color: #e9e9e9; }
+
+.dataframe {
+  word-wrap: break-word;
+  margin: 0;
+  margin-bottom: 30px;
+  width: auto; }
+  @media (max-width: 600px) {
+    .dataframe {
+      font-size: 80%;
+      padding: 0px !important; } }
+  .dataframe th {
+    background: none;
+    color: #696969;
+    font-weight: bold;
+    padding: 2px;
+    text-align: center; }
+  .dataframe td {
+    padding: 0px 3px 0px 5px; }
 
 .container {
   position: relative;
