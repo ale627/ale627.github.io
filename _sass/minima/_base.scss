@@ -99,7 +99,9 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight * 1.5;
-  color: $post-color;
+  //color: $post-color;
+  color: #cc3700;
+  opacity: .8;
   letter-spacing: 1px;
 
 }
@@ -156,7 +158,7 @@ blockquote {
 pre,
 code {
   //@include relative-font-size(0.9375);
-  background-color: $code-color;
+  //background-color: $code-color;
   color: #e5ecea;
   font-family: "inconsolata";
   text-shadow: 2px 2px rgba(0, 0, 0, 0.28);
@@ -171,6 +173,7 @@ pre {
   //padding: 8px 12px;
   padding: 10px 20px 10px 20px;
   overflow-x: auto;
+
 
   > code {
     border: 0;

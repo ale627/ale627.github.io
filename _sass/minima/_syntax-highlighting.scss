@@ -6,7 +6,9 @@
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: #166066;
+    //background: #166066;
+    background-image: linear-gradient(to bottom, hsl(200, 100%, 7%), hsl(200, 100%, 12%));
+
   }
 
   .c     { color: #9B8065; font-style: italic } // Comment
