@@ -413,12 +413,16 @@ System 2:
 
 If you are interested in building a trade system, start pulling some basic data into [Google Sheets][gs] and running backtests on [Quantopian][quant].
 
+[I wrote a post about pulling basic data from BarChart's API.][bc]
+
 Frankly, you need a lot of money and patience to trade fully automated.  I trade by hand and am testing various strategies in real time.  No point in automating something if it doesn't make money, right?
 
 # Twitter
 [Twitter List of Traders][list]
 
-[ef]: htts://en.wikipedia.org/wiki/Efficient_frontier
+
+[ef]: https://en.wikipedia.org/wiki/Efficient_frontier
+[bc]: https://ale627.github.io/python/2017/11/07/barchart.html
 [list]: https://twitter.com/ale627/lists/trading-whitelist
 [gs]: https://google.com/sheets
 [quant]: https://quantopian.com
