@@ -23,7 +23,7 @@ There are 6 markets to trade: OTC, equities, futures, commodities, and cryptocur
 - Futures are dated based on month and are the market's best guess of future value.  These trade 24/7.
 - Commodities are futures contracts for amounts of commodities such as hog, corn, sugar, coffee.  These also trade 24/7.
 
-- Cryptocurrencies are blockchain based digital currencies.  `$BTCUSD`, `$ETHUSD`, and `$LTCUSD` are the most common currently.
+- Cryptocurrencies are blockchain based digital currencies.  $BTCUSD, $ETHUSD, and $LTCUSD are the most common currently.
 
 Here's instrument availability across markets:
 
@@ -83,15 +83,15 @@ Here's a quick scenario demonstrating why options exist.
 
 ## The original option
 *Goldman holds a lot of General Motors in its Blue Chip ETF.  
-Tesla Motors is founded and poses a significant threat to `$GM`. 
-Goldman wants to reduce exposure to `$GM` downside.  Goldman's can't liquidate the stake.*  
+Tesla Motors is founded and poses a significant threat to $GM. 
+Goldman wants to reduce exposure to $GM downside.  Goldman's can't liquidate the stake.*  
 
-*His buddy Silverman is a big `$GM` bull.
-So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a `$GM` share at today's price until the new year".  
-Sounds good to Silverman, (who doesn't think `$GM` is going down) so he writes a contract and sells it to Goldman.*
+*His buddy Silverman is a big $GM bull.
+So Goldman says to Silverman, "I'll give you a dime now for the right to sell you a $GM share at today's price until the new year".  
+Sounds good to Silverman, (who doesn't think $GM is going down) so he writes a contract and sells it to Goldman.*
 
-If `$GM` tanks, Goldman could offload his `$GM` shares to Silverman at the higher price from several months ago.
-If `$GM` price goes up or doesn't move, the option will go to zero.
+If $GM tanks, Goldman could offload his $GM shares to Silverman at the higher price from several months ago.
+If $GM price goes up or doesn't move, the option will go to zero.
 
 That's a put.
 
@@ -121,7 +121,7 @@ There's no free lunch - Trades that have a high probability of working have a lo
 
 The advantage of options is the ability to specifically express your level of certainty of a given price move in a given time. 
 
-(Options on equities are not bought to directly take advantage of volatility increases.  This can be accomplished by going long the volatility index (VIX) through ETFs such as 1x `$VXX` and 3x `$UVXY`.)
+(Options on equities are not bought to directly take advantage of volatility increases.  This can be accomplished by going long the volatility index (VIX) through ETFs such as 1x $VXX and 3x $UVXY.)
 
 ### Greeks
 The "greeks" are mathematical factors that contribute to option price.  While I simplified premium above by breaking it into price/strike difference + volatility + time to expiration, quants look at option pricing a little differently.
@@ -137,10 +137,10 @@ A delta of .5 means a move of $2 will give $1 option change.
 ### Why option over stock
 Say you think $AAPL is going to go up from $150 to $160 during the special event this week.  This idea can be traded with a stock, or with an option.  
 You could spend $15,000 on 100 shares for a potential return of $1000.  
-`1000/15000 = 6.6% return`
+1000/15000 = 6.6% return
 
 Or you could buy a weekly call option with 150 strike for $2 per share est.  This would cost $200 for 100 shares and would increase to $10+ per share on a move to $160, or $1000+ potential return. 
-`1000/200 = 500% return`
+1000/200 = 500% return
 
 If Apple announces that they are getting out of the computer business and the stock drops to $100. The equity position would lose $5,000 ($15k-10k) but the call option would only lose its premium, $200.
 
@@ -201,23 +201,23 @@ A portfolio of $10,000 therefore could risk $200.
 
 ### R
 Each trade is measured by R - how many units of risk you won or lost on the trade.  
-`R = (profit or loss)/(risked amount`
+R = (profit or loss)/(risked amount
 
-For example say you want to buy the bottom in `$SNAP`.  It has been going down ever since it IPO'd.  If last week `$SNAP` hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea. 
+For example say you want to buy the bottom in $SNAP.  It has been going down ever since it IPO'd.  If last week $SNAP hit $10 and bounced to $11, and you think $10 is support and $15 is resistance, then you can build a trade around this idea. 
 
 If you want to lose no more than $50 on the trade, you can do two things:
-- buy 50 shares and stop out below $10.  If you are correct and `$SNAP` continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
-- buy a weekly 10 call option around $120 and set a stop at $70.  If `$SNAP` hits $15 the option will be worth at least $500, a 10R trade.
+- buy 50 shares and stop out below $10.  If you are correct and $SNAP continues upwards, you can lock in profits along the way by trailing your stop up or selling partials at price targets, ie. $15, a 5R trade.
+- buy a weekly 10 call option around $120 and set a stop at $70.  If $SNAP hits $15 the option will be worth at least $500, a 10R trade.
 
 
 ### Expectancy
 The overall goal is to maximize your overall expectancy.  
-`Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))`
+Expectancy = (P(Win) * Avg(Win)) - (P(Loss) * Avg(Loss))
 
 *If you win 50% of trades and win 1R per trade, your expectancy is 0.
 If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.*
 
-Here's the table showing expectancy, given a `Win %` and an `R`.
+Here's the table showing expectancy, given a Win % and an R.
 
 | Win % |  1R |  2R |  3R |  4R |  5R |
 |:-----:|:---:|:---:|:---:|:---:|:---:|
@@ -243,7 +243,7 @@ Heikin Ashi charts show trend reversals.
 Bar charts reduce noise for long term trades.
 
 The most common type of chart for traders is the Candlestick chart.  A candlestick chart divides price action into periods, usually 5m, 1hr, or 1d in length.  
-Each of these candlestick bodies contain info: `Open, High, Low, Close`  The longer the period contained by the candlestick, the more significant its levels are.  
+Each of these candlestick bodies contain info: Open, High, Low, Close  The longer the period contained by the candlestick, the more significant its levels are.  
 
 <!--
 ![image-title-here](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Candlestick_chart_scheme_01-en.svg/1200px-Candlestick_chart_scheme_01-en.svg.png){:class="img-responsive"}
@@ -253,7 +253,9 @@ Each of these candlestick bodies contain info: `Open, High, Low, Close`  The lon
 As charts can be viewed on various timeframes, any timeframe can be traded.  Shorter timeframes are more volatile and subject to noise.  Longer timeframes are more reliable, but may not help intraday.  
 
 ## Trade setups
-As uncorrelated assets reduce risk in a portfolio, trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.
+As uncorrelated assets reduce risk in a portfolio, trade ideas can be strengthened by multiple sources of uncorrelated confirmation.  
+
+A way to be more confident in a trade is to find confluence between indicators, timeframes, and trading styles.
 
 There are several general shapes which price action will take, given a market condition, that indicates specific information.
 - Head and Shoulders
@@ -299,21 +301,23 @@ Indicators are price calculations with a trailing period. They are used to build
 
 The reason indicators work, in my opinion, is their succinct capture of human trading psychology.  Charts as a visual system enable the viewer to estimate the relative significance of price moves.  Indicators are derived from this price, summarizing specific aspects of the price movement.  They are like business reports, enabling a higher level view into the data.  Of course, they are not all always relevant.  But if you know the correct conditions under which to apply an indicator, they do accurately predict participant reactions.
 
+A single indicator signal is difficult to distinguish from a false positive.  The salient question is: **How many times does this indicator give a signal, that later ends up failing?**  A high rate of failure doesn't mean the source is invalid - especially if it hits big when it does succeed.  
+
 The reason why price tends to react *exactly* to indicator values is hard to identify.  It is partially due to the snowball effect of their usage, wherein more participants relying on these indicators increases their significance.  
 
 We *could* be just collectively imagining it.
 
 I use moving averages and fibonacci levels.  Here are some of the others:
 
-- `VWAP` (volume weighted average price)
-- `KC` (keltner curves)
-- `BB` (bollinger bands)
+- VWAP (volume weighted average price)
+- KC (keltner curves)
+- BB (bollinger bands)
 
-- `RSI` (relative strength index)
-- `MACD` (moving average convergence divergence)
-- `%R` (william's %R) 
+- RSI (relative strength index)
+- MACD (moving average convergence divergence)
+- %R (william's %R) 
 
-- `ATR` (average true range)
+- ATR (average true range)
 
 ### Moving averages
 Moving Averages are lines used as dynamic support/resistance.  
@@ -332,7 +336,7 @@ Fibonacci Levels are from the Fibonacci sequence where each number (after two 1'
 
 Its application in the market is in measuring moves, as the market tends to expand in a natural way, given price is an aggregation of natural market participants' motives.
 
-The levels are: `23.6%, 38.2%, 50%, 61.8%, 100%, 161.8%, 261.8%..`
+The levels are: 23.6%, 38.2%, 50%, 61.8%, 100%, 161.8%, 261.8%..
 The rule of thumb is if a pullback holds the .618 (61.8%) of the move, that's a healthy move and solid support level to trade against.
 
 Of course, it makes some non-fancy sense that 61.8% would be an approximate good place for a trade to hold, as it's a little less than 2/3.  But that doesn't account for the numerous instances of price reversing directly (to the .01) at the various fibonacci levels.
