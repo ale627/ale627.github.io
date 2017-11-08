@@ -6,16 +6,17 @@ category: python
 color: green
 ---
 
-*This is an initial dive into [Jupyter notebooks][jn], the self-contained Python environment.  The below post is [exported directly from a Jupyter Notebook][nb].  The tables below each code block are the API responses.*
+*This is an initial dive into [Jupyter notebooks][jn], the self-contained Python environment.  The below post is [exported directly][ex] from [a Jupyter Notebook][nb].  The tables below each code block are the API responses.*
 
-*I am using the [BarChart.com OnDemand API][bc] to call getHistory() and receive minute-level stock price data for a basket of stocks.  Then I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.*
+*I am using the [BarChart.com OnDemand API][bc] to call getHistory() and receive up to 3 months of minute-level stock price data for a basket of stocks.  Then I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.*
 
 *To use the code yourself, you will need to setup a python environment, jupyter notebook or otherwise.  Then, you'll need to [request a free BarChart.com OnDemand API key][bc], and plug it into the code.*
 
 *Last, set the file path for your project directory, and in that folder create a folder 'Stock_Price_Data' to export data to, and a folder 'assets' for your list.  In 'assets' create an Excel file 'Watchlist'.  Starting in row 4 with the header, have names in the first column and tickers in the second column.*
 
 [jn]: https://jupyter.org/
-[nb]: https://github.com/jupyter/nbconvert
+[ex]: https://github.com/jupyter/nbconvert
+[nb]: https://github.com/ale627/python/blob/master/barchart.ipynb
 [bc]: https://www.barchart.com/ondemand/free-market-data-api
 
 # Fetch the data from BarChart
