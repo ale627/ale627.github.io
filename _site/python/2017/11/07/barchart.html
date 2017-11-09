@@ -303,7 +303,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 </table>
 </div>
 
-<h1 id="1-min-accumulation-bars">1-min accumulation bars</h1>
+<h1 id="accumulation">Accumulation</h1>
 <p>Where 1 min candlestick closes on highs, flag as accumulated.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#create accum column: for closing on highs, assign 1</span>
@@ -354,7 +354,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 </table>
 </div>
 
-<h1 id="consecutive-accumulation">Consecutive accumulation</h1>
+<h2 id="two-in-a-row">Two-in-a-row</h2>
 <p><em>Add the previous accumulated (or not) to current row</em></p>
 
 <p>Measures when two 1-min candlesticks in a row close at highs.</p>
@@ -407,7 +407,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 </table>
 </div>
 
-<h2 id="roll-up-to-daily-signal">Roll up to daily signal</h2>
+<h2 id="accumulation-daily-signal">Accumulation daily signal</h2>
 
 <p><em>sum the consecutive accumulation by day</em></p>
 
@@ -455,7 +455,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 </table>
 </div>
 
-<h1 id="examining-highs-and-lows">Examining highs and lows</h1>
+<h1 id="trend">Trend</h1>
 
 <ul>
   <li>See if minute bar is making new highs, new lows</li>
@@ -483,7 +483,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 
 
 <span class="c">#ohlc.tail(3)</span>
-<span class="n">ohlc</span><span class="p">[[</span><span class="s">"high"</span><span class="p">,</span> <span class="s">"low"</span><span class="p">,</span> <span class="s">"close"</span><span class="p">,</span> <span class="s">"higher"</span><span class="p">,</span> <span class="s">"lower"</span><span class="p">,</span> <span class="s">"up_tr"</span><span class="p">,</span> <span class="s">"down_tr"</span><span class="p">,</span> <span class="s">"buy"</span><span class="p">,</span> <span class="s">"sell"</span><span class="p">,</span> <span class="s">"exp"</span><span class="p">,</span> <span class="s">"cont"</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ohlc</span><span class="p">[[</span><span class="s">"high"</span><span class="p">,</span> <span class="s">"low"</span><span class="p">,</span> <span class="s">"close"</span><span class="p">,</span> <span class="s">"higher"</span><span class="p">,</span> <span class="s">"lower"</span><span class="p">,</span> <span class="s">"up_tr"</span><span class="p">,</span> <span class="s">"down_tr"</span><span class="p">,</span> <span class="s">"exp"</span><span class="p">,</span> <span class="s">"cont"</span><span class="p">,</span> <span class="s">"buy"</span><span class="p">,</span> <span class="s">"sell"</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 </code></pre>
 </div>
@@ -500,10 +500,10 @@ TSLA..[fetched] | 9 of 9 tickers |
       <th>lower</th>
       <th>up_tr</th>
       <th>down_tr</th>
-      <th>buy</th>
-      <th>sell</th>
       <th>exp</th>
       <th>cont</th>
+      <th>buy</th>
+      <th>sell</th>
     </tr>
     <tr>
       <th>timestamp</th>
@@ -531,9 +531,9 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:52:00-08:00</th>
@@ -544,9 +544,9 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>-0.051</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
@@ -559,9 +559,9 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:54:00-08:00</th>
@@ -572,9 +572,9 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>-0.02</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
@@ -615,9 +615,9 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:58:00-08:00</th>
@@ -657,56 +657,21 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<h2 id="simulate-trading-and-output">Simulate trading and output</h2>
+<h2 id="simulation">Simulation</h2>
 
 <ul>
   <li>Loop through the minute bars, print buys and sells.<br />
 1 share long on long signal, and 1 share short on short signal.
 This is not additive.  If there’s a short on, and a long signal is received, you fully close the short and open the long.</li>
 </ul>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># PRINTING</span>
-
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">buys</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">sells</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">prev</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">trade</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-    <span class="c">#every row list # buys and sells</span>
-    <span class="c">#print buys," long","and",sells,"short"</span>
-
-    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">'buy'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">buys</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">buys</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="n">sells</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span> <span class="o">+</span> <span class="n">prev</span>
-            
-        <span class="k">print</span> <span class="n">trade</span><span class="p">,</span><span class="s">"long from"</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">],</span><span class="s">"... total="</span><span class="p">,</span><span class="n">total</span>
-        
-        <span class="n">prev</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span>
-        <span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">'sell'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">sells</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">sells</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="n">buys</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span> <span class="o">-</span> <span class="n">prev</span>
-            
-        <span class="k">print</span> <span class="n">trade</span><span class="p">,</span><span class="s">"short from"</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">],</span><span class="s">"... total="</span><span class="p">,</span><span class="n">total</span>
-
-        <span class="n">prev</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span>
-        <span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span> <span class="o">+</span> <span class="mi">1</span>
-        
-</code></pre>
-</div>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># PUSHING TO LOG[] DATAFRAME</span>
 
@@ -828,7 +793,6 @@ This is not additive.  If there’s a short on, and a long signal is received, y
   </tbody>
 </table>
 </div>
-
 
 
   </div>

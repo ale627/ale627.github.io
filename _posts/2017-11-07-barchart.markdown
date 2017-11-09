@@ -201,7 +201,7 @@ ohlc.head(1)
 
 
 
-# 1-min accumulation bars
+# Accumulation
 Where 1 min candlestick closes on highs, flag as accumulated.
 
 
@@ -258,7 +258,7 @@ accumulation_bars[["high", "close", "accum"]].tail(3)
 
 
 
-# Consecutive accumulation
+## Two-in-a-row
 *Add the previous accumulated (or not) to current row*
 
 Measures when two 1-min candlesticks in a row close at highs.
@@ -317,7 +317,7 @@ confirmation[["high", "close", "conf"]].tail(3)
 
 
 
-## Roll up to daily signal
+## Accumulation daily signal
 
 *sum the consecutive accumulation by day*
 
@@ -371,7 +371,7 @@ signal.nlargest(3,'conf')
 
 
 
-# Examining highs and lows
+# Trend
 
 - See if minute bar is making new highs, new lows
 - Return 1 for uptrend or downtrend
@@ -399,7 +399,7 @@ ohlc["sell"] = np.where((ohlc["down_tr"] == 1) & (ohlc["down_tr"].shift(1) == 0)
 
 
 #ohlc.tail(3)
-ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sell", "exp", "cont"]].tail(10)
+ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "exp", "cont", "buy", "sell"]].tail(10)
 
 ```
 
@@ -418,10 +418,10 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <th>lower</th>
       <th>up_tr</th>
       <th>down_tr</th>
-      <th>buy</th>
-      <th>sell</th>
       <th>exp</th>
       <th>cont</th>
+      <th>buy</th>
+      <th>sell</th>
     </tr>
     <tr>
       <th>timestamp</th>
@@ -449,9 +449,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:52:00-08:00</th>
@@ -462,9 +462,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>-0.051</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
@@ -477,9 +477,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:54:00-08:00</th>
@@ -490,9 +490,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>-0.02</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
@@ -533,9 +533,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2017-11-08 12:58:00-08:00</th>
@@ -575,9 +575,9 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -585,47 +585,11 @@ ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sel
 
 
 
-## Simulate trading and output
+## Simulation
 
 - Loop through the minute bars, print buys and sells.  
 1 share long on long signal, and 1 share short on short signal.
 This is not additive.  If there's a short on, and a long signal is received, you fully close the short and open the long.
-
-
-```python
-# PRINTING
-
-total = 0
-buys = 0
-sells = 0
-prev = 0
-trade = 0
-
-for index, row in ohlc.iterrows():
-    #every row list # buys and sells
-    #print buys," long","and",sells,"short"
-
-    if row['buy'] > 0 and buys == 0:
-        buys = 1
-        sells = 0
-        if prev > 0: total = total - row['close'] + prev
-            
-        print trade,"long from",row['close'],"... total=",total
-        
-        prev = row['close']
-        trade = trade + 1
-
-    if row['sell'] == 1 and sells == 0:
-        sells = 1
-        buys = 0
-        if prev > 0: total = total + row['close'] - prev
-            
-        print trade,"short from",row['close'],"... total=",total
-
-        prev = row['close']
-        trade = trade + 1
-        
-```
 
 
 ```python
@@ -751,5 +715,3 @@ log.tail(10)
   </tbody>
 </table>
 </div>
-
-
