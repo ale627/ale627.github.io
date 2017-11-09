@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Traffic and self-driving ethics"
+title:  "Driverless effect on traffic"
 date:   2017-10-09 12:00:00 -0700
 category:
 color: rgb(250, 210, 1)

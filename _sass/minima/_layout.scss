@@ -47,7 +47,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color;
     font-family: $base-font-family;
     line-height: $base-line-height;
     //font-weight: 600;
@@ -240,6 +240,7 @@
   @include relative-font-size(2);
   letter-spacing: 1px;
   color: $grey-color;
+  opacity: .5;
 
 }
 
@@ -300,8 +301,9 @@
   @include relative-font-size(2);
   letter-spacing: 1px;
   line-height: 1;
-  color: $post-color;
-
+  color: $grey-color;
+  opacity: .5;
+  text-transform: uppercase;
   @include media-query($on-laptop) {
     @include relative-font-size(1.75);
   }

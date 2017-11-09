@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "Chivo", sans-serif;
-  color: #696969;
+  color: #546e7a;
   background-color: #fdfdfd;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -203,7 +203,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #696969;
+    color: #aaaaaa;
     font-family: "Chivo", sans-serif;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
@@ -343,7 +343,8 @@ pre {
 .page-heading {
   font-size: 32px;
   letter-spacing: 1px;
-  color: #aaaaaa; }
+  color: #aaaaaa;
+  opacity: .5; }
 
 .post-list {
   margin-left: 0;
@@ -385,7 +386,9 @@ pre {
   font-size: 32px;
   letter-spacing: 1px;
   line-height: 1;
-  color: #777777; }
+  color: #aaaaaa;
+  opacity: .5;
+  text-transform: uppercase; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 28px; } }
@@ -780,6 +783,11 @@ table {
   line-height: 1.4;
   font-family: "cousine", monospace; }
 
+@media (max-width: 600px) {
+  th, td {
+    font-size: 95%;
+    padding: 1px 10px 1px 10px; } }
+
 td {
   padding: 5px 15px;
   color: #2a2a2a; }
@@ -815,12 +823,13 @@ tr:nth-child(odd) {
       padding: 0px !important; } }
   .dataframe th {
     background: none;
-    color: #696969;
+    color: #777777;
     font-weight: bold;
     padding: 2px;
     text-align: center; }
   .dataframe td {
-    padding: 0px 3px 0px 5px; }
+    padding: 0px 3px 0px 5px;
+    color: #777777; }
 
 .container {
   position: relative;

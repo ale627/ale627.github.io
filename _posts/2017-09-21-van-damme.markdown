@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Van Damme camping"
+title:  "Camping in Mendocino County"
 date:   2017-09-21 10:30:00 -0700
 category:
 color: rgb(61, 153, 112)
