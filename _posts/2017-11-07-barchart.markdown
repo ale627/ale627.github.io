@@ -6,7 +6,6 @@ category: python
 color: green
 ---
 
-
 *This is an initial dive into [Jupyter notebooks][jn], the self-contained Python environment.  The below post is [exported directly][ex] from [a Jupyter Notebook][nb].  The tables below each code block are the API responses.*
 
 *I am using the [BarChart.com OnDemand API][bc] to call getHistory() and receive up to 3 months of minute-level stock price data for a basket of stocks.*  
@@ -132,12 +131,7 @@ pxx
 # timer
 secs      = np.round( ( time.clock()  - t0 ), 4 )
 time_secs = "{timeSecs} seconds to run".format(timeSecs = secs)
-mins      = np.round( ( (  time.clock() ) -  t0 )  / 60, 4 ) 
-time_mins = "| {timeMins} minutes to run".format(timeMins = mins)
-hours     = np.round( (  time.clock()  -  t0 )  / 60 / 60, 4 ) 
-time_hrs  = "| {timeHrs} hours to run".format(timeHrs = hours)
-
-print( time_secs, time_mins, time_hrs )
+print( time_secs )
 ```
 
     AAPL..[fetched] | 1 of 9 tickers |
@@ -149,7 +143,7 @@ print( time_secs, time_mins, time_hrs )
     IBB..[fetched] | 7 of 9 tickers |
     NFLX..[fetched] | 8 of 9 tickers |
     TSLA..[fetched] | 9 of 9 tickers |
-    ('52.7655 seconds to run', '| 0.8794 minutes to run', '| 0.0147 hours to run')
+    51.9491 seconds to run
     
 
 # Select stock
@@ -157,7 +151,7 @@ Choose a ticker to analyze, and test the output.
 
 
 ```python
-stock = 'NFLX'
+stock = 'TSLA'
 
 ohlc = pxx[stock]
 ohlc.head(1)
@@ -193,13 +187,13 @@ ohlc.head(1)
   <tbody>
     <tr>
       <th>2017-10-02 06:30:00-07:00</th>
-      <td>NFLX</td>
+      <td>TSLA</td>
       <td>2017-10-02</td>
-      <td>182.11</td>
-      <td>182.22</td>
-      <td>181.815</td>
-      <td>181.945</td>
-      <td>74650</td>
+      <td>342.52</td>
+      <td>342.84</td>
+      <td>341.77</td>
+      <td>342.33</td>
+      <td>49907</td>
     </tr>
   </tbody>
 </table>
@@ -241,21 +235,21 @@ accumulation_bars[["high", "close", "accum"]].tail(3)
   </thead>
   <tbody>
     <tr>
-      <th>2017-11-08 12:53:00-08:00</th>
-      <td>196.25</td>
-      <td>196.25</td>
+      <th>2017-11-08 12:48:00-08:00</th>
+      <td>304.1</td>
+      <td>304.1</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2017-11-08 12:54:00-08:00</th>
-      <td>196.34</td>
-      <td>196.34</td>
+      <th>2017-11-08 12:56:00-08:00</th>
+      <td>304.98</td>
+      <td>304.98</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2017-11-08 13:00:00-08:00</th>
-      <td>196.44</td>
-      <td>196.44</td>
+      <td>304.39</td>
+      <td>304.39</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -300,21 +294,21 @@ confirmation[["high", "close", "conf"]].tail(3)
   </thead>
   <tbody>
     <tr>
-      <th>2017-11-08 12:31:00-08:00</th>
-      <td>196</td>
-      <td>196</td>
+      <th>2017-11-08 09:59:00-08:00</th>
+      <td>303</td>
+      <td>303</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>2017-11-08 12:53:00-08:00</th>
-      <td>196.25</td>
-      <td>196.25</td>
+      <th>2017-11-08 10:37:00-08:00</th>
+      <td>304.04</td>
+      <td>304.04</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>2017-11-08 12:54:00-08:00</th>
-      <td>196.34</td>
-      <td>196.34</td>
+      <th>2017-11-08 10:46:00-08:00</th>
+      <td>304.041</td>
+      <td>304.041</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -357,19 +351,19 @@ signal.nlargest(3,'conf')
   </thead>
   <tbody>
     <tr>
-      <th>2017-10-03 00:00:00-07:00</th>
+      <th>2017-10-11 00:00:00-07:00</th>
+      <td>18</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>2017-10-02 00:00:00-07:00</th>
+      <td>16</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>2017-10-13 00:00:00-07:00</th>
+      <td>11</td>
       <td>22</td>
-      <td>44</td>
-    </tr>
-    <tr>
-      <th>2017-11-08 00:00:00-08:00</th>
-      <td>12</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <th>2017-11-02 00:00:00-07:00</th>
-      <td>10</td>
-      <td>20</td>
     </tr>
   </tbody>
 </table>
@@ -393,15 +387,19 @@ ohlc["lower"] = ohlc.low.shift(1) - ohlc.low
 #where >0, give 1
 #uptrend means higher highs, downtrend means lower lows, both means expansion, neither means contraction
 
-ohlc["uptrend"] = np.where(ohlc["higher"] > 0, 1, 0)
-ohlc["downtrend"] = np.where(ohlc["lower"] > 0, 1, 0)
+ohlc["up_tr"] = np.where(ohlc["higher"] > 0, 1, 0)
+ohlc["down_tr"] = np.where(ohlc["lower"] > 0, 1, 0)
+
+ohlc["exp"] = np.where((ohlc["higher"]>0) & (ohlc["lower"]>0),1,0)
+ohlc["cont"] = np.where((ohlc["higher"]<0) & (ohlc["lower"]<0),1,0)
 
 #where new uptrend established, buyable.. new downtrend sellable
-ohlc["buyable"] = np.where((ohlc["uptrend"] == 1) & (ohlc["uptrend"].shift(1) == 0), 1, 0)
-ohlc["sellable"] = np.where((ohlc["downtrend"] == 1) & (ohlc["downtrend"].shift(1) == 0), 1, 0)
+ohlc["buy"] = np.where((ohlc["up_tr"] == 1) & (ohlc["up_tr"].shift(1) == 0), 1, 0)
+ohlc["sell"] = np.where((ohlc["down_tr"] == 1) & (ohlc["down_tr"].shift(1) == 0), 1, 0)
 
 
-ohlc.tail(3)
+#ohlc.tail(3)
+ohlc[["high", "low", "close", "higher", "lower", "up_tr", "down_tr", "buy", "sell", "exp", "cont"]].tail(10)
 
 ```
 
@@ -413,28 +411,20 @@ ohlc.tail(3)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>symbol</th>
-      <th>tradingDay</th>
-      <th>open</th>
       <th>high</th>
       <th>low</th>
       <th>close</th>
-      <th>volume</th>
-      <th>accum</th>
-      <th>conf</th>
       <th>higher</th>
       <th>lower</th>
-      <th>uptrend</th>
-      <th>downtrend</th>
-      <th>buyable</th>
-      <th>sellable</th>
+      <th>up_tr</th>
+      <th>down_tr</th>
+      <th>buy</th>
+      <th>sell</th>
+      <th>exp</th>
+      <th>cont</th>
     </tr>
     <tr>
       <th>timestamp</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -450,94 +440,144 @@ ohlc.tail(3)
   </thead>
   <tbody>
     <tr>
-      <th>2017-10-02 06:30:00-07:00</th>
-      <td>NFLX</td>
-      <td>2017-10-02</td>
-      <td>182.11</td>
-      <td>182.22</td>
-      <td>181.815</td>
-      <td>181.945</td>
-      <td>74650</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2017-10-02 06:31:00-07:00</th>
-      <td>NFLX</td>
-      <td>2017-10-02</td>
-      <td>182.01</td>
-      <td>182.05</td>
-      <td>181.52</td>
-      <td>181.578</td>
-      <td>7877</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-0.17</td>
-      <td>0.295</td>
+      <th>2017-11-08 12:51:00-08:00</th>
+      <td>304.35</td>
+      <td>304.01</td>
+      <td>304.14</td>
+      <td>-0.5</td>
+      <td>0.28</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2017-10-02 06:32:00-07:00</th>
-      <td>NFLX</td>
-      <td>2017-10-02</td>
-      <td>181.5</td>
-      <td>181.548</td>
-      <td>181.23</td>
-      <td>181.415</td>
-      <td>21240</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-0.5016</td>
-      <td>0.29</td>
       <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>2017-10-02 06:33:00-07:00</th>
-      <td>NFLX</td>
-      <td>2017-10-02</td>
-      <td>181.3</td>
-      <td>181.877</td>
-      <td>181.22</td>
-      <td>181.755</td>
-      <td>9265</td>
+      <th>2017-11-08 12:52:00-08:00</th>
+      <td>304.42</td>
+      <td>304.061</td>
+      <td>304.34</td>
+      <td>0.07</td>
+      <td>-0.051</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>0.3286</td>
-      <td>0.01</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>2017-10-02 06:34:00-07:00</th>
-      <td>NFLX</td>
-      <td>2017-10-02</td>
-      <td>181.812</td>
-      <td>182.16</td>
-      <td>181.705</td>
-      <td>181.93</td>
-      <td>17933</td>
+      <th>2017-11-08 12:53:00-08:00</th>
+      <td>304.41</td>
+      <td>304.23</td>
+      <td>304.346</td>
+      <td>-0.01</td>
+      <td>-0.1691</td>
       <td>0</td>
       <td>0</td>
-      <td>0.283</td>
-      <td>-0.485</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:54:00-08:00</th>
+      <td>304.45</td>
+      <td>304.25</td>
+      <td>304.28</td>
+      <td>0.04</td>
+      <td>-0.02</td>
+      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:55:00-08:00</th>
+      <td>304.6</td>
+      <td>304.375</td>
+      <td>304.53</td>
+      <td>0.15</td>
+      <td>-0.1249</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:56:00-08:00</th>
+      <td>304.98</td>
+      <td>304.515</td>
+      <td>304.98</td>
+      <td>0.38</td>
+      <td>-0.14</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:57:00-08:00</th>
+      <td>304.936</td>
+      <td>304.51</td>
+      <td>304.594</td>
+      <td>-0.044</td>
+      <td>0.005</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:58:00-08:00</th>
+      <td>304.63</td>
+      <td>304.5</td>
+      <td>304.52</td>
+      <td>-0.306</td>
+      <td>0.0099</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 12:59:00-08:00</th>
+      <td>304.57</td>
+      <td>304.21</td>
+      <td>304.31</td>
+      <td>-0.06</td>
+      <td>0.2901</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-11-08 13:00:00-08:00</th>
+      <td>304.39</td>
+      <td>304.34</td>
+      <td>304.39</td>
+      <td>-0.18</td>
+      <td>-0.13</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -551,6 +591,41 @@ ohlc.tail(3)
 1 share long on long signal, and 1 share short on short signal.
 This is not additive.  If there's a short on, and a long signal is received, you fully close the short and open the long.
 
+
+```python
+# PRINTING
+
+total = 0
+buys = 0
+sells = 0
+prev = 0
+trade = 0
+
+for index, row in ohlc.iterrows():
+    #every row list # buys and sells
+    #print buys," long","and",sells,"short"
+
+    if row['buy'] > 0 and buys == 0:
+        buys = 1
+        sells = 0
+        if prev > 0: total = total - row['close'] + prev
+            
+        print trade,"long from",row['close'],"... total=",total
+        
+        prev = row['close']
+        trade = trade + 1
+
+    if row['sell'] == 1 and sells == 0:
+        sells = 1
+        buys = 0
+        if prev > 0: total = total + row['close'] - prev
+            
+        print trade,"short from",row['close'],"... total=",total
+
+        prev = row['close']
+        trade = trade + 1
+        
+```
 
 
 ```python
@@ -571,7 +646,7 @@ for index, row in ohlc.iterrows():
     #every row list # buys and sells
     #print buys," long","and",sells,"short"
 
-    if row['buyable'] > 0 and buys == 0:
+    if row['buy'] > 0 and buys == 0:
         buys = 1
         sells = 0
         if prev > 0: total = total - row['close'] + prev
@@ -583,7 +658,7 @@ for index, row in ohlc.iterrows():
         prev = row['close']
         trade = trade + 1
 
-    if row['sellable'] == 1 and sells == 0:
+    if row['sell'] == 1 and sells == 0:
         sells = 1
         buys = 0
         if prev > 0: total = total + row['close'] - prev
@@ -595,7 +670,7 @@ for index, row in ohlc.iterrows():
         prev = row['close']
         trade = trade + 1
     
-log
+log.tail(10)
 #log.sort_values(by='total',ascending=0)
 ```
 
@@ -614,375 +689,67 @@ log
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>short</td>
-      <td>181.578</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
+      <th>4047</th>
       <td>long</td>
-      <td>181.755</td>
-      <td>-0.1766</td>
+      <td>305.37</td>
+      <td>-44.7164</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4048</th>
       <td>short</td>
-      <td>181.815</td>
-      <td>-0.1166</td>
+      <td>305.37</td>
+      <td>-44.7164</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4049</th>
       <td>long</td>
-      <td>181.915</td>
-      <td>-0.2166</td>
+      <td>304.14</td>
+      <td>-43.4864</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>4050</th>
       <td>short</td>
-      <td>182.615</td>
-      <td>0.4834</td>
+      <td>304.14</td>
+      <td>-43.4864</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>4051</th>
       <td>long</td>
-      <td>182.735</td>
-      <td>0.3634</td>
+      <td>304.208</td>
+      <td>-43.554</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>4052</th>
       <td>short</td>
-      <td>182.17</td>
-      <td>-0.2016</td>
+      <td>303.99</td>
+      <td>-43.7716</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>4053</th>
       <td>long</td>
-      <td>182.29</td>
-      <td>-0.3216</td>
+      <td>304.35</td>
+      <td>-44.1316</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>4054</th>
       <td>short</td>
-      <td>182.24</td>
-      <td>-0.3716</td>
+      <td>304.14</td>
+      <td>-44.3416</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>4055</th>
       <td>long</td>
-      <td>182.23</td>
-      <td>-0.3616</td>
+      <td>304.34</td>
+      <td>-44.5416</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>4056</th>
       <td>short</td>
-      <td>182.295</td>
-      <td>-0.2966</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>long</td>
-      <td>182.17</td>
-      <td>-0.1716</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>short</td>
-      <td>181.955</td>
-      <td>-0.3863</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>long</td>
-      <td>181.39</td>
-      <td>0.179</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>short</td>
-      <td>181.265</td>
-      <td>0.054</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>long</td>
-      <td>181.01</td>
-      <td>0.309</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>short</td>
-      <td>180.709</td>
-      <td>0.008</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>long</td>
-      <td>180.809</td>
-      <td>-0.092</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>short</td>
-      <td>180.86</td>
-      <td>-0.041</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>long</td>
-      <td>180.78</td>
-      <td>0.039</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>short</td>
-      <td>180.77</td>
-      <td>0.029</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>long</td>
-      <td>180.23</td>
-      <td>0.569</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>short</td>
-      <td>180.19</td>
-      <td>0.529</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>long</td>
-      <td>180.35</td>
-      <td>0.369</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>short</td>
-      <td>179.91</td>
-      <td>-0.071</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>long</td>
-      <td>179.59</td>
-      <td>0.249</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>short</td>
-      <td>179.511</td>
-      <td>0.1699</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>long</td>
-      <td>179.65</td>
-      <td>0.0308</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>short</td>
-      <td>179.55</td>
-      <td>-0.0692</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>long</td>
-      <td>179.32</td>
-      <td>0.1608</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>3938</th>
-      <td>short</td>
-      <td>195.579</td>
-      <td>-1.838</td>
-    </tr>
-    <tr>
-      <th>3939</th>
-      <td>long</td>
-      <td>195.64</td>
-      <td>-1.899</td>
-    </tr>
-    <tr>
-      <th>3940</th>
-      <td>short</td>
-      <td>195.83</td>
-      <td>-1.709</td>
-    </tr>
-    <tr>
-      <th>3941</th>
-      <td>long</td>
-      <td>195.911</td>
-      <td>-1.7896</td>
-    </tr>
-    <tr>
-      <th>3942</th>
-      <td>short</td>
-      <td>195.89</td>
-      <td>-1.8102</td>
-    </tr>
-    <tr>
-      <th>3943</th>
-      <td>long</td>
-      <td>195.9</td>
-      <td>-1.8202</td>
-    </tr>
-    <tr>
-      <th>3944</th>
-      <td>short</td>
-      <td>195.97</td>
-      <td>-1.7506</td>
-    </tr>
-    <tr>
-      <th>3945</th>
-      <td>long</td>
-      <td>196.04</td>
-      <td>-1.821</td>
-    </tr>
-    <tr>
-      <th>3946</th>
-      <td>short</td>
-      <td>196.07</td>
-      <td>-1.791</td>
-    </tr>
-    <tr>
-      <th>3947</th>
-      <td>long</td>
-      <td>196.09</td>
-      <td>-1.8109</td>
-    </tr>
-    <tr>
-      <th>3948</th>
-      <td>short</td>
-      <td>196.004</td>
-      <td>-1.897</td>
-    </tr>
-    <tr>
-      <th>3949</th>
-      <td>long</td>
-      <td>195.974</td>
-      <td>-1.8674</td>
-    </tr>
-    <tr>
-      <th>3950</th>
-      <td>short</td>
-      <td>195.84</td>
-      <td>-2.0016</td>
-    </tr>
-    <tr>
-      <th>3951</th>
-      <td>long</td>
-      <td>196</td>
-      <td>-2.1616</td>
-    </tr>
-    <tr>
-      <th>3952</th>
-      <td>short</td>
-      <td>195.87</td>
-      <td>-2.2916</td>
-    </tr>
-    <tr>
-      <th>3953</th>
-      <td>long</td>
-      <td>195.95</td>
-      <td>-2.3716</td>
-    </tr>
-    <tr>
-      <th>3954</th>
-      <td>short</td>
-      <td>195.95</td>
-      <td>-2.3716</td>
-    </tr>
-    <tr>
-      <th>3955</th>
-      <td>long</td>
-      <td>195.955</td>
-      <td>-2.3766</td>
-    </tr>
-    <tr>
-      <th>3956</th>
-      <td>short</td>
-      <td>196.03</td>
-      <td>-2.3016</td>
-    </tr>
-    <tr>
-      <th>3957</th>
-      <td>long</td>
-      <td>196.02</td>
-      <td>-2.2916</td>
-    </tr>
-    <tr>
-      <th>3958</th>
-      <td>short</td>
-      <td>196.02</td>
-      <td>-2.2916</td>
-    </tr>
-    <tr>
-      <th>3959</th>
-      <td>long</td>
-      <td>196.16</td>
-      <td>-2.4316</td>
-    </tr>
-    <tr>
-      <th>3960</th>
-      <td>short</td>
-      <td>196.01</td>
-      <td>-2.5816</td>
-    </tr>
-    <tr>
-      <th>3961</th>
-      <td>long</td>
-      <td>196.05</td>
-      <td>-2.6216</td>
-    </tr>
-    <tr>
-      <th>3962</th>
-      <td>short</td>
-      <td>196.05</td>
-      <td>-2.6216</td>
-    </tr>
-    <tr>
-      <th>3963</th>
-      <td>long</td>
-      <td>196.02</td>
-      <td>-2.5916</td>
-    </tr>
-    <tr>
-      <th>3964</th>
-      <td>short</td>
-      <td>196.02</td>
-      <td>-2.5916</td>
-    </tr>
-    <tr>
-      <th>3965</th>
-      <td>long</td>
-      <td>196.14</td>
-      <td>-2.7116</td>
-    </tr>
-    <tr>
-      <th>3966</th>
-      <td>short</td>
-      <td>196.427</td>
-      <td>-2.4242</td>
-    </tr>
-    <tr>
-      <th>3967</th>
-      <td>long</td>
-      <td>196.42</td>
-      <td>-2.4168</td>
+      <td>304.594</td>
+      <td>-44.2871</td>
     </tr>
   </tbody>
 </table>
-<p>3968 rows × 3 columns</p>
 </div>
-
 
 

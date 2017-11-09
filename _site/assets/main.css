@@ -782,7 +782,7 @@ table {
 
 @media (max-width: 600px) {
   th, td {
-    font-size: 95%;
+    font-size: 14px;
     padding: 1px 10px 1px 10px; } }
 
 td {
