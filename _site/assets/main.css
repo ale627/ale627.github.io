@@ -768,7 +768,7 @@ pre {
 }
 */
 .top-border {
-  border-top: 3px solid;
+  border-top: 4px solid;
   border-image: linear-gradient(to right, #874da2 0%, #c43a30 100%);
   border-image-slice: 1; }
 

@@ -120,9 +120,13 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p><em>This is an initial dive into <a href="https://jupyter.org/">Jupyter notebooks</a>, the self-contained Python environment.  The below post is <a href="https://github.com/jupyter/nbconvert">exported directly from a Jupyter Notebook</a>.  The tables below each code block are the API responses.</em></p>
+    <p><em>This is an initial dive into <a href="https://jupyter.org/">Jupyter notebooks</a>, the self-contained Python environment.  The below post is <a href="https://github.com/jupyter/nbconvert">exported directly</a> from <a href="https://github.com/ale627/python/blob/master/barchart.ipynb">a Jupyter Notebook</a>.  The tables below each code block are the API responses.</em></p>
 
-<p><em>I am using the <a href="https://www.barchart.com/ondemand/free-market-data-api">BarChart.com OnDemand API</a> to call getHistory() and receive minute-level stock price data for a basket of stocks.  Then I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.</em></p>
+<p><em>I am using the <a href="https://www.barchart.com/ondemand/free-market-data-api">BarChart.com OnDemand API</a> to call getHistory() and receive up to 3 months of minute-level stock price data for a basket of stocks.</em></p>
+
+<p><em>Then I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.</em></p>
+
+<p><em>After, I measure trends to find potential buy spots.  This analysis compares sequential bar highs/lows to assert trend reversals.</em></p>
 
 <p><em>To use the code yourself, you will need to setup a python environment, jupyter notebook or otherwise.  Then, you’ll need to <a href="https://www.barchart.com/ondemand/free-market-data-api">request a free BarChart.com OnDemand API key</a>, and plug it into the code.</em></p>
 
@@ -163,7 +167,7 @@
     
 <span class="c">#----------SET DIRECTORIES----------#</span>
     
-<span class="n">project_dir</span> <span class="o">=</span> <span class="s">r'C:</span><span class="err">\</span><span class="s">Users/user/fakepath/'</span> 
+<span class="n">project_dir</span> <span class="o">=</span> <span class="s">r'C:</span><span class="err">\</span><span class="s">Users/drale/Desktop/python/'</span> 
 <span class="n">price_path</span> <span class="o">=</span> <span class="n">project_dir</span> <span class="o">+</span> <span class="s">r'Stock_Price_Data</span><span class="se">\\</span><span class="s">'</span>
 
 <span class="c"># header=3 to skip metadata   </span>
@@ -173,7 +177,7 @@
 <span class="n">syms</span> <span class="o">=</span> <span class="n">syms</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">syms</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
 
 
-<span class="n">apikey</span> <span class="o">=</span> <span class="s">'insert API key'</span>
+<span class="n">apikey</span> <span class="o">=</span> <span class="s">'99f7186682f41a3bd739984105aef52a'</span>
 
 
 
@@ -251,7 +255,7 @@ GS..[fetched] | 6 of 9 tickers |
 IBB..[fetched] | 7 of 9 tickers |
 NFLX..[fetched] | 8 of 9 tickers |
 TSLA..[fetched] | 9 of 9 tickers |
-('49.2381 seconds to run', '| 0.8206 minutes to run', '| 0.0137 hours to run')   
+('52.7655 seconds to run', '| 0.8794 minutes to run', '| 0.0147 hours to run')
 </code></pre>
 </div>
 
@@ -334,21 +338,21 @@ TSLA..[fetched] | 9 of 9 tickers |
   </thead>
   <tbody>
     <tr>
-      <th>2017-11-07 12:38:00-08:00</th>
-      <td>195.38</td>
-      <td>195.38</td>
+      <th>2017-11-08 12:53:00-08:00</th>
+      <td>196.25</td>
+      <td>196.25</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2017-11-07 12:56:00-08:00</th>
-      <td>195.87</td>
-      <td>195.87</td>
+      <th>2017-11-08 12:54:00-08:00</th>
+      <td>196.34</td>
+      <td>196.34</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2017-11-07 13:00:00-08:00</th>
-      <td>195.89</td>
-      <td>195.89</td>
+      <th>2017-11-08 13:00:00-08:00</th>
+      <td>196.44</td>
+      <td>196.44</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -364,7 +368,7 @@ TSLA..[fetched] | 9 of 9 tickers |
 <span class="n">ohlc</span><span class="p">[</span><span class="s">"conf"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">accum</span> <span class="o">+</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">accum</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c">#where conf is 2, make a table</span>
-<span class="n">confirmation</span> <span class="o">=</span> <span class="n">ohlc</span><span class="p">[(</span><span class="n">ohlc</span><span class="o">.</span><span class="n">conf</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="n">confirmation</span> <span class="o">=</span> <span class="n">ohlc</span><span class="p">[(</span><span class="n">ohlc</span><span class="o">.</span><span class="n">conf</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="n">confirmation</span><span class="p">[[</span><span class="s">"high"</span><span class="p">,</span> <span class="s">"close"</span><span class="p">,</span> <span class="s">"conf"</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -387,21 +391,21 @@ TSLA..[fetched] | 9 of 9 tickers |
   </thead>
   <tbody>
     <tr>
-      <th>2017-11-06 09:44:00-08:00</th>
-      <td>201.54</td>
-      <td>201.54</td>
+      <th>2017-11-08 12:31:00-08:00</th>
+      <td>196</td>
+      <td>196</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>2017-11-06 10:09:00-08:00</th>
-      <td>201.32</td>
-      <td>201.32</td>
+      <th>2017-11-08 12:53:00-08:00</th>
+      <td>196.25</td>
+      <td>196.25</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>2017-11-06 12:36:00-08:00</th>
-      <td>199.97</td>
-      <td>199.97</td>
+      <th>2017-11-08 12:54:00-08:00</th>
+      <td>196.34</td>
+      <td>196.34</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -412,13 +416,12 @@ TSLA..[fetched] | 9 of 9 tickers |
 
 <p><em>sum the consecutive accumulation by day</em></p>
 
-<h4 id="return-the-3-biggest-daily-signals">Return the 3 biggest daily signals</h4>
+<p><strong>Return the 3 biggest daily signals</strong></p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#combine minutes into days</span>
 <span class="n">signal</span> <span class="o">=</span> <span class="n">confirmation</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s">'D'</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s">'sum'</span><span class="p">)</span>
 
 <span class="c">#sort based on sum(conf)</span>
-<span class="c">#signal.sort_values(['double'], ascending=[False])</span>
 <span class="n">signal</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">'conf'</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -444,17 +447,617 @@ TSLA..[fetched] | 9 of 9 tickers |
       <td>44</td>
     </tr>
     <tr>
-      <th>2017-11-02 00:00:00-07:00</th>
-      <td>10</td>
-      <td>20</td>
+      <th>2017-11-08 00:00:00-08:00</th>
+      <td>12</td>
+      <td>24</td>
     </tr>
     <tr>
-      <th>2017-11-03 00:00:00-07:00</th>
+      <th>2017-11-02 00:00:00-07:00</th>
       <td>10</td>
       <td>20</td>
     </tr>
   </tbody>
 </table>
+</div>
+
+<h1 id="examining-highs-and-lows">Examining highs and lows</h1>
+
+<ul>
+  <li>See if minute bar is making new highs, new lows</li>
+  <li>Return 1 for uptrend or downtrend</li>
+  <li>If new trend starting, flag as buyable or sellable.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#create trend column based on up or not</span>
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"higher"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">high</span> <span class="o">-</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">high</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"lower"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">low</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">low</span> 
+
+
+<span class="c">#where &gt;0, give 1</span>
+<span class="c">#uptrend means higher highs, downtrend means lower lows, both means expansion, neither means contraction</span>
+
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"uptrend"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"higher"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"downtrend"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"lower"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c">#where new uptrend established, buyable.. new downtrend sellable</span>
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"buyable"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"uptrend"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"uptrend"</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">ohlc</span><span class="p">[</span><span class="s">"sellable"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"downtrend"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ohlc</span><span class="p">[</span><span class="s">"downtrend"</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="n">ohlc</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>symbol</th>
+      <th>tradingDay</th>
+      <th>open</th>
+      <th>high</th>
+      <th>low</th>
+      <th>close</th>
+      <th>volume</th>
+      <th>accum</th>
+      <th>conf</th>
+      <th>higher</th>
+      <th>lower</th>
+      <th>uptrend</th>
+      <th>downtrend</th>
+      <th>buyable</th>
+      <th>sellable</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-10-02 06:30:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>182.11</td>
+      <td>182.22</td>
+      <td>181.815</td>
+      <td>181.945</td>
+      <td>74650</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-10-02 06:31:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>182.01</td>
+      <td>182.05</td>
+      <td>181.52</td>
+      <td>181.578</td>
+      <td>7877</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-0.17</td>
+      <td>0.295</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2017-10-02 06:32:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>181.5</td>
+      <td>181.548</td>
+      <td>181.23</td>
+      <td>181.415</td>
+      <td>21240</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-0.5016</td>
+      <td>0.29</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-10-02 06:33:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>181.3</td>
+      <td>181.877</td>
+      <td>181.22</td>
+      <td>181.755</td>
+      <td>9265</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.3286</td>
+      <td>0.01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-10-02 06:34:00-07:00</th>
+      <td>NFLX</td>
+      <td>2017-10-02</td>
+      <td>181.812</td>
+      <td>182.16</td>
+      <td>181.705</td>
+      <td>181.93</td>
+      <td>17933</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.283</td>
+      <td>-0.485</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="simulate-trading-and-output">Simulate trading and output</h2>
+
+<ul>
+  <li>Loop through the minute bars, print buys and sells.<br />
+1 share long on long signal, and 1 share short on short signal.
+This is not additive.  If there’s a short on, and a long signal is received, you fully close the short and open the long.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># PUSHING TO LOG[] DATAFRAME</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">buys</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sells</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'L/S'</span><span class="p">,</span><span class="s">'price_close'</span><span class="p">,</span> <span class="s">'total'</span><span class="p">]</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ohlc</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c">#every row list # buys and sells</span>
+    <span class="c">#print buys," long","and",sells,"short"</span>
+
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">'buyable'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">buys</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">buys</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">sells</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span> <span class="o">+</span> <span class="n">prev</span>
+            
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'L/S'</span><span class="p">,</span><span class="s">'long'</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'price_close'</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">])</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'total'</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
+
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span>
+        <span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">'sellable'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">sells</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sells</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">buys</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">prev</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span> <span class="o">-</span> <span class="n">prev</span>
+                    
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'L/S'</span><span class="p">,</span><span class="s">'short'</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'price_close'</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">])</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span><span class="s">'total'</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
+
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'close'</span><span class="p">]</span>
+        <span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span> <span class="o">+</span> <span class="mi">1</span>
+    
+<span class="n">log</span>
+<span class="c">#log.sort_values(by='total',ascending=0)</span>
+</code></pre>
+</div>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>L/S</th>
+      <th>price_close</th>
+      <th>total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>short</td>
+      <td>181.578</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>long</td>
+      <td>181.755</td>
+      <td>-0.1766</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>short</td>
+      <td>181.815</td>
+      <td>-0.1166</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>long</td>
+      <td>181.915</td>
+      <td>-0.2166</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>short</td>
+      <td>182.615</td>
+      <td>0.4834</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>long</td>
+      <td>182.735</td>
+      <td>0.3634</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>short</td>
+      <td>182.17</td>
+      <td>-0.2016</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>long</td>
+      <td>182.29</td>
+      <td>-0.3216</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>short</td>
+      <td>182.24</td>
+      <td>-0.3716</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>long</td>
+      <td>182.23</td>
+      <td>-0.3616</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>short</td>
+      <td>182.295</td>
+      <td>-0.2966</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>long</td>
+      <td>182.17</td>
+      <td>-0.1716</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>short</td>
+      <td>181.955</td>
+      <td>-0.3863</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>long</td>
+      <td>181.39</td>
+      <td>0.179</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>short</td>
+      <td>181.265</td>
+      <td>0.054</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>long</td>
+      <td>181.01</td>
+      <td>0.309</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>short</td>
+      <td>180.709</td>
+      <td>0.008</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>long</td>
+      <td>180.809</td>
+      <td>-0.092</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>short</td>
+      <td>180.86</td>
+      <td>-0.041</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>long</td>
+      <td>180.78</td>
+      <td>0.039</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>short</td>
+      <td>180.77</td>
+      <td>0.029</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>long</td>
+      <td>180.23</td>
+      <td>0.569</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>short</td>
+      <td>180.19</td>
+      <td>0.529</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>long</td>
+      <td>180.35</td>
+      <td>0.369</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>short</td>
+      <td>179.91</td>
+      <td>-0.071</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>long</td>
+      <td>179.59</td>
+      <td>0.249</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>short</td>
+      <td>179.511</td>
+      <td>0.1699</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>long</td>
+      <td>179.65</td>
+      <td>0.0308</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>short</td>
+      <td>179.55</td>
+      <td>-0.0692</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>long</td>
+      <td>179.32</td>
+      <td>0.1608</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3938</th>
+      <td>short</td>
+      <td>195.579</td>
+      <td>-1.838</td>
+    </tr>
+    <tr>
+      <th>3939</th>
+      <td>long</td>
+      <td>195.64</td>
+      <td>-1.899</td>
+    </tr>
+    <tr>
+      <th>3940</th>
+      <td>short</td>
+      <td>195.83</td>
+      <td>-1.709</td>
+    </tr>
+    <tr>
+      <th>3941</th>
+      <td>long</td>
+      <td>195.911</td>
+      <td>-1.7896</td>
+    </tr>
+    <tr>
+      <th>3942</th>
+      <td>short</td>
+      <td>195.89</td>
+      <td>-1.8102</td>
+    </tr>
+    <tr>
+      <th>3943</th>
+      <td>long</td>
+      <td>195.9</td>
+      <td>-1.8202</td>
+    </tr>
+    <tr>
+      <th>3944</th>
+      <td>short</td>
+      <td>195.97</td>
+      <td>-1.7506</td>
+    </tr>
+    <tr>
+      <th>3945</th>
+      <td>long</td>
+      <td>196.04</td>
+      <td>-1.821</td>
+    </tr>
+    <tr>
+      <th>3946</th>
+      <td>short</td>
+      <td>196.07</td>
+      <td>-1.791</td>
+    </tr>
+    <tr>
+      <th>3947</th>
+      <td>long</td>
+      <td>196.09</td>
+      <td>-1.8109</td>
+    </tr>
+    <tr>
+      <th>3948</th>
+      <td>short</td>
+      <td>196.004</td>
+      <td>-1.897</td>
+    </tr>
+    <tr>
+      <th>3949</th>
+      <td>long</td>
+      <td>195.974</td>
+      <td>-1.8674</td>
+    </tr>
+    <tr>
+      <th>3950</th>
+      <td>short</td>
+      <td>195.84</td>
+      <td>-2.0016</td>
+    </tr>
+    <tr>
+      <th>3951</th>
+      <td>long</td>
+      <td>196</td>
+      <td>-2.1616</td>
+    </tr>
+    <tr>
+      <th>3952</th>
+      <td>short</td>
+      <td>195.87</td>
+      <td>-2.2916</td>
+    </tr>
+    <tr>
+      <th>3953</th>
+      <td>long</td>
+      <td>195.95</td>
+      <td>-2.3716</td>
+    </tr>
+    <tr>
+      <th>3954</th>
+      <td>short</td>
+      <td>195.95</td>
+      <td>-2.3716</td>
+    </tr>
+    <tr>
+      <th>3955</th>
+      <td>long</td>
+      <td>195.955</td>
+      <td>-2.3766</td>
+    </tr>
+    <tr>
+      <th>3956</th>
+      <td>short</td>
+      <td>196.03</td>
+      <td>-2.3016</td>
+    </tr>
+    <tr>
+      <th>3957</th>
+      <td>long</td>
+      <td>196.02</td>
+      <td>-2.2916</td>
+    </tr>
+    <tr>
+      <th>3958</th>
+      <td>short</td>
+      <td>196.02</td>
+      <td>-2.2916</td>
+    </tr>
+    <tr>
+      <th>3959</th>
+      <td>long</td>
+      <td>196.16</td>
+      <td>-2.4316</td>
+    </tr>
+    <tr>
+      <th>3960</th>
+      <td>short</td>
+      <td>196.01</td>
+      <td>-2.5816</td>
+    </tr>
+    <tr>
+      <th>3961</th>
+      <td>long</td>
+      <td>196.05</td>
+      <td>-2.6216</td>
+    </tr>
+    <tr>
+      <th>3962</th>
+      <td>short</td>
+      <td>196.05</td>
+      <td>-2.6216</td>
+    </tr>
+    <tr>
+      <th>3963</th>
+      <td>long</td>
+      <td>196.02</td>
+      <td>-2.5916</td>
+    </tr>
+    <tr>
+      <th>3964</th>
+      <td>short</td>
+      <td>196.02</td>
+      <td>-2.5916</td>
+    </tr>
+    <tr>
+      <th>3965</th>
+      <td>long</td>
+      <td>196.14</td>
+      <td>-2.7116</td>
+    </tr>
+    <tr>
+      <th>3966</th>
+      <td>short</td>
+      <td>196.427</td>
+      <td>-2.4242</td>
+    </tr>
+    <tr>
+      <th>3967</th>
+      <td>long</td>
+      <td>196.42</td>
+      <td>-2.4168</td>
+    </tr>
+  </tbody>
+</table>
+<p>3968 rows × 3 columns</p>
 </div>
 
 
