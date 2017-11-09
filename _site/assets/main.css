@@ -780,11 +780,6 @@ table {
   line-height: 1.4;
   font-family: "cousine", monospace; }
 
-@media (max-width: 600px) {
-  th, td {
-    font-size: 95%;
-    padding: 1px 10px 1px 10px; } }
-
 td {
   padding: 5px 15px;
   color: #2a2a2a; }
