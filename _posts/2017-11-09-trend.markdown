@@ -634,7 +634,8 @@ log.tail(25)
 </div>
 
 
-
+## Last week's trades
+Line chart of price action with green dots for buys and red dots for sells, generated with matplotlib.
 
 ```python
 import matplotlib.pyplot as plt
