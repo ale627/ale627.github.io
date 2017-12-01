@@ -146,17 +146,3 @@ You may notice that your wants are fleeting.  As soon as you get something, you 
 Without ego, you are able to interact with the world without a filter of perception, seeing and experiencing things as they truly are.  This real interaction is the truest form of living, as it is open to actual reality.  
 
 Do you dare jettison the basis of your current happiness and future goals, in pursuit of an objective truth?  Is such a state of neutrality really desirable?  
-
-
-<style>
-td:first-child {
-  background-color: #85144b !important;
-  color: #fdfdfd;
-  white-space: nowrap;
-}
-th {display: none;}
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>

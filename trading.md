@@ -220,7 +220,7 @@ If you win 30% of trades and win 2.5R per trade, your expectancy is 10%.*
 Here's the table showing expectancy, given a Win % and an R.
 
 | Win % |  1R |  2R |  3R |  4R |  5R |
-|:-----:|:---:|:---:|:---:|:---:|:---:|
+|:-----:|-----|-----|-----|-----|-----|
 | 10    | -.8 | -.7 | -.6 | -.5 | -.4 |
 | 20    | -.6 | -.4 | -.2 | 0   |  .2 |
 | 30    | -.4 | -.1 |  .2 |  .5 |  .8 |
@@ -329,7 +329,7 @@ Stocks in a short term trend hold the 8 and 21 MA, while stocks in a long term u
 
 Important to note, Moving Averages vary depending on timeframe.  So they move around if you change timeframes.  For example, a 8MA on the 15m chart is equal to 24MA on the 5m chart because it contains 120 minutes.
 
-Moving averages can be exponential (EMA) or simple (SMA) depending on preference.  It makes little difference.
+Moving averages can be exponential (EMA) or simple (SMA).  SMA is a flat average of the period.  EMA weights the most recent periods more heavily - past period weights asymptotically approach 0.  
 
 ### Fibonacci levels
 Fibonacci Levels are from the Fibonacci sequence where each number (after two 1's) is the sum of the two before it.  This growth pattern shows up in nature such as flower petal and plant leaf arrangements, tree branching, nautilus shell chambers, etc.  
