@@ -130,6 +130,9 @@ tr:hover td{
     left: 0;
     top: 50px;
     */
+    //border-left: 2px solid;
+    //border-image: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
+    //border-image-slice: 1;
 
     counter-reset: first;
     display: table;
@@ -170,7 +173,7 @@ tr:hover td{
       list-style: none;
       //background: darken($background-color, 5%);
       font-size: 90%; //ratio of levels to themselves
-      margin-bottom: 5px;
+      //margin-bottom: 5px;
       padding: 1px 0px 1px 2px;
       //line-height: 1.7;
       //2nd lvl
