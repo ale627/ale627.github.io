@@ -25,7 +25,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="/assets/2017-09-22-nhl.txt">
-  <link rel="alternate" type="application/rss+xml" title="dylanale.com" href="/feed.xml">  
+  <link rel="alternate" type="application/rss+xml" title="Dylan Ale" href="/feed.xml">  
 
 
   
@@ -40,7 +40,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/home">dylanale.com</a>
+    <a class="site-title" href="/home">Dylan Ale</a>
 
   
     
@@ -147,7 +147,7 @@ Good fun!  Thanks again to Brian, Eric and MicroSemi.
 <script> </script> <!-- chrome fix for firing transition animations on load -->
   <div class="wrapper">
 
-    <!--<h2 class="footer-heading">dylanale.com</h2> -->
+    <!--<h2 class="footer-heading">Dylan Ale</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
