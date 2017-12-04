@@ -582,7 +582,7 @@ pre {
   text-align: center;
   color: #fdfdfd;
   font-family: "Chivo", sans-serif;
-  border-radius: 13px 0px 4px 4px;
+  border-radius: 4px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
@@ -595,7 +595,6 @@ pre {
 
 .content:hover:not(.year) {
   opacity: 1;
-  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   position: relative; }
 
@@ -605,7 +604,8 @@ pre {
   font-size: 14px;
   font-weight: 300;
   line-height: 14px;
-  color: #dddddd; }
+  color: #dddddd;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .location {
   font-style: italic;
@@ -613,7 +613,8 @@ pre {
   text-transform: none;
   font-weight: 300;
   letter-spacing: 0px;
-  color: #dddddd; }
+  color: #dddddd;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .text {
   font-size: 16px;
@@ -625,7 +626,8 @@ pre {
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .detail {
   display: block; }
@@ -652,19 +654,21 @@ pre {
   font-size: 14px;
   box-shadow: none;
   position: relative;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .year:first-child {
   padding-top: 20px; }
 
 .year:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 45px;
   bottom: 0;
   left: 50%;
-  border-left: 3px dotted #dddddd;
+  border-left: 2px dashed #dddddd;
   transform: translate(-50%); }
 
 .current {
@@ -677,8 +681,7 @@ pre {
   color: #85144b; }
 
 .aa {
-  background: #e3655b;
-  border-left: 1vw solid #85144b; }
+  background: #e3655b; }
 
 .oracle {
   height: 450px; }
@@ -702,8 +705,7 @@ pre {
   color: #005b7f; }
 
 .ss {
-  background: #0092cc;
-  border-left: 1vw solid #001f3f; }
+  background: #0092cc; }
 
 .fa-trophy {
   position: relative;
@@ -716,6 +718,9 @@ pre {
   padding-right: 17px;
   color: yellow;
   font-size: 120%; }
+
+.fa-certificate {
+  color: red; }
 
 .aldo {
   height: 150px; }

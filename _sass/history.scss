@@ -25,7 +25,7 @@
   text-align: center;
   color: $background-color;
   font-family: $base-font-family;
-  border-radius: 13px 0px 4px 4px;
+  border-radius: 4px;
   padding: 5px 10px;
   margin: 10px 0px;
   font-size: 110%;
@@ -41,7 +41,6 @@
 
 .content:hover:not(.year) {
   opacity: 1;
-  border-radius: 4px;
   //color: gold;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   position: relative; 
@@ -58,6 +57,8 @@ font-weight: 300;
 //letter-spacing: 0px;
 line-height: 14px;
 color: $grey-color-light;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
 
 
 }
@@ -69,6 +70,8 @@ text-transform: none;
 font-weight: 300;
 letter-spacing: 0px;
 color: $grey-color-light;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
 
 }
 
@@ -83,6 +86,9 @@ color: $grey-color-light;
   padding: 10px 15px;
   line-height: 20px;
   word-wrap: break-word;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+
+
 }
 
 .detail {
@@ -113,6 +119,8 @@ color: $grey-color-light;
   position: relative;
   //min-width: 20px;
   text-transform: lowercase;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .year:first-child {
@@ -120,13 +128,13 @@ color: $grey-color-light;
 }
 
 .year:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 45px;
   bottom: 0;
   left: 50%;
-  border-left: 3px dotted $grey-color-light;
+  border-left: 2px dashed $grey-color-light;
   transform: translate(-50%);  
 }
 
@@ -148,9 +156,9 @@ color: $grey-color-light;
 
 .aa {
   background: #e3655b;
-  border-left: 1vw solid #85144b;
 
 }
+
 
 .oracle {
   height: 450px;
@@ -183,8 +191,6 @@ color: $grey-color-light;
 
 .ss {
   background: darken(#7FDBFF, 35%);
-  border-left: 1vw solid #001f3f;
-
 }
 
 .fa-trophy {
@@ -196,6 +202,10 @@ color: $grey-color-light;
   padding-right: 17px;
   color: yellow;
   font-size: 120%;
+}
+
+.fa-certificate {
+  color: red;
 }
 
 
