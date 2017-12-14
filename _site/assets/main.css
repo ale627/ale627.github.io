@@ -436,7 +436,7 @@ pre {
   background: #fff; }
   .highlighter-rouge .highlight {
     background: #eee;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+    border: 1px solid #ddd; }
   .highlight .c {
     color: #9B8065;
     font-style: italic; }
