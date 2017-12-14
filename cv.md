@@ -2,7 +2,7 @@
 layout: blank
 title: Curriculum Vitae
 pagename: CV
-permalink: /resume.pdf
+permalink: /Dylan_Ale_Resume_2018.pdf
 ---
 
 

@@ -9,7 +9,7 @@ How do you get things you want?
 
 First, you need direction.  You have to know where you want to go, in order to go there.  What you want, in order to get it.
 
-This means not simultaneous wanting two things which are mutually exclusive.
+This means not simultaneously wanting two things which are mutually exclusive.
 
 Not everyone has the same priorities in life.  Some people haven't prioritized at all, flying by the seat of their pants.  Most have, but their priorities lack rigor - they are flimsy.
 
@@ -22,7 +22,7 @@ Therefore it's important to define your priorities in a robust way, even if thos
 
 # What you want
 
-Here's the thing: it doesn't objectively matter if you hit your priorities.  The universe will keep on chuggging whether you live a good life or not.  Close friends and family can only provide advice from their point of view, through their personal filter of experiences and biases.
+Here's the thing: it doesn't objectively matter if you hit your priorities.  The universe will keep on chugging whether you live a good life or not.  Close friends and family can only provide advice from their point of view, through their personal filter of experiences and biases.
 
 You need to buy in to the idea that you are uniquely responsible for determining your quality of life by setting and executing your priorities.
 **Make life quality your #1 life mission.**

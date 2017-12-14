@@ -12,9 +12,9 @@
 
     <div class="wrapper">
 
-        <!-- <a href="/blog"> <i class="fa fa-user-circle-o fa-4x" id="logo" aria-hidden="true"></i></a> -->
+        <a class = "title" href="/home">Dylan Ale</a> 
 
-        <a class="blog" href="/home"></a> 
+        <!-- <a class="blog" href="/home"></a> -->
 
         <div class = "paragraph">
 
@@ -59,35 +59,22 @@
 */
   
 
-    .blog {
-      background-image: url('/assets/shaka.svg');
-      width: 12vh;
-      height: 15vh;
+    .title {
+    	font-family: 'Chivo', sans-serif;
+    	font-size: 4.5vh;
+    	text-decoration: none;
+    	color: #aaa;
+    	opacity: .5;
+    	text-align: center;
+    	font-weight: 900;
+    	letter-spacing: 2px;
       display: block;
       margin: auto;  
       background-repeat: no;
-      opacity: .6;
+      opacity: .75;
       transition:.25s;
-      //-webkit-filter: drop-shadow(4px 3px #444);
-      animation: wiggle 1s;
-
-      }
-
-    @keyframes wiggle {
-      25% {transform: rotate(0deg);}
-      45% {transform: rotate(-20deg);}
-      75% {transform: rotate(5deg);}
-      90% {transform: rotate(-15deg);}    
-      100% {transform: rotate(0deg);}
-    }
-
-    .blog:hover {
-      opacity: .8;
-      transform: rotate(20deg);
-      -webkit-transform-origin: 30% 60%;
-      -webkit-backface-visibility: hidden;
-      //-webkit-filter: drop-shadow(4px 3px #8a7967);
-    }
+      -webkit-filter: drop-shadow(2px 2px rgba(0,0,0,.1));
+}
 
 
     .wrapper {
