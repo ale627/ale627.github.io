@@ -3,7 +3,7 @@ layout: post
 title:  "Quant: Accumulation"
 date:   2017-11-07 12:00:00 -0700
 category: python
-color: green
+color: royalblue
 ---
 
 *Here I do bar analysis to find potential buy spots.  This analysis is simply counting instances of minutely bars closing on highs.*

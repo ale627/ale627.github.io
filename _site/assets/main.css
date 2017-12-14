@@ -69,7 +69,7 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: #cc3700;
+  color: burlywood;
   opacity: .8;
   letter-spacing: 1px; }
 
@@ -77,14 +77,14 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #33A1C9;
+  color: mediumseagreen;
   text-decoration: none;
   /*  &:visited {
       color: darken($brand-color, 15%);
     }
   */ }
   a:hover {
-    color: #24708c;
+    color: #297a4d;
     text-decoration: underline; }
   .social-media-list a:hover {
     text-decoration: none; }
@@ -95,8 +95,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #aaaaaa;
-  border-left: 4px solid #dddddd;
+  color: #546e7a;
+  border-left: 4px solid #a6b9c1;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -160,8 +160,8 @@ pre {
 .icon > svg {
   display: inline-block;
   vertical-align: middle; }
-  .icon > svg path {
-    fill: #aaaaaa; }
+  .icon > svg .twitter path {
+    fill: royalblue; }
 
 .social-media-list .icon {
   padding-right: 5px; }
@@ -172,7 +172,7 @@ pre {
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid linen;
   min-height: 55.95px;
   position: relative; }
 
@@ -203,7 +203,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #aaaaaa;
+    color: #546e7a;
     font-family: "Chivo", sans-serif;
     line-height: 1.5; }
     .site-nav .page-link:hover {
@@ -216,7 +216,7 @@ pre {
       top: 9px;
       right: 15px;
       background-color: #fdfdfd;
-      border: 1px solid #dddddd;
+      border: 1px solid #a6b9c1;
       border-radius: 5px;
       text-align: right; }
       .site-nav label[for="nav-trigger"] {
@@ -235,7 +235,7 @@ pre {
         padding-top: 10px;
         text-align: center; }
         .site-nav .menu-icon > svg path {
-          fill: #777777; }
+          fill: #2a383e; }
       .site-nav input ~ .trigger {
         clear: both;
         display: none; }
@@ -258,7 +258,7 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid linen;
   padding: 30px 0; }
 
 .footer-heading {
@@ -272,7 +272,7 @@ pre {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #aaaaaa;
+  color: #a6b9c1;
   margin-left: -15px; }
 
 .footer-col {
@@ -345,7 +345,7 @@ pre {
 .page-heading {
   font-size: 32px;
   letter-spacing: 1px;
-  color: #aaaaaa;
+  color: #546e7a;
   opacity: .5; }
 
 .post-list {
@@ -356,7 +356,7 @@ pre {
 
 .post-meta {
   font-size: 14px;
-  color: #777777;
+  color: #a6b9c1;
   font-family: "Inconsolata", monospace; }
 
 .post-category {
@@ -389,7 +389,7 @@ pre {
   font-size: 32px;
   letter-spacing: 1px;
   line-height: 1;
-  color: #aaaaaa;
+  color: #546e7a;
   opacity: .5;
   text-transform: uppercase; }
   @media screen and (max-width: 800px) {
@@ -399,7 +399,8 @@ pre {
 .post-content {
   margin-bottom: 30px;
   font-family: "Chivo", sans-serif;
-  letter-spacing: 0.25px; }
+  letter-spacing: 0.25px;
+  font-weight: 300; }
   .post-content h1 {
     font-size: 28px; }
     @media screen and (max-width: 800px) {
@@ -577,7 +578,7 @@ pre {
   font-family: "Inconsolata", monospace; }
 
 .content {
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -603,18 +604,18 @@ pre {
   font-style: italic;
   text-transform: none;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 14px;
-  color: #dddddd;
+  color: #a6b9c1;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .location {
   font-style: italic;
   font-size: 12px;
   text-transform: none;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0px;
-  color: #dddddd;
+  color: #a6b9c1;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .text {
@@ -622,7 +623,7 @@ pre {
   font-family: "Chivo", sans-serif;
   text-transform: none;
   letter-spacing: 0px;
-  font-weight: 300;
+  font-weight: 400;
   color: #fdfdfd;
   text-align: left;
   padding: 10px 15px;
@@ -669,7 +670,7 @@ pre {
   top: 45px;
   bottom: 0;
   left: 50%;
-  border-left: 2px dashed #dddddd;
+  border-left: 2px dashed #a6b9c1;
   transform: translate(-50%); }
 
 .current {
@@ -694,7 +695,7 @@ pre {
   height: 750px; }
 
 .workr {
-  height: 200px; }
+  height: 250px; }
 
 .workr-kyc-gap {
   height: 100px; }
@@ -797,14 +798,14 @@ table {
 td {
   padding: 5px 15px 2px;
   font-size: 95%;
-  color: #2a2a2a;
-  border-bottom: 1px solid #dddddd; }
+  color: #555;
+  border-bottom: 1px solid #a6b9c1; }
 
 th {
   padding: 5px 15px;
-  border-bottom: 3px solid #85144b;
+  border-bottom: 3px solid darkseagreen;
   font-size: 80%;
-  color: #777777;
+  color: #2a383e;
   text-transform: uppercase;
   font-weight: 300; }
 
@@ -829,15 +830,15 @@ tr:hover td {
     border-collapse: collapse; }
   .dataframe th {
     background: none;
-    color: #777777;
-    border: 1px solid #dddddd;
+    color: #2a383e;
+    border: 1px solid #a6b9c1;
     font-weight: bold;
     padding: 2px;
     text-align: center; }
   .dataframe td {
     padding: 0px 3px 0px 5px;
-    color: #777777;
-    border: 1px solid #dddddd; }
+    color: #2a383e;
+    border: 1px solid #a6b9c1; }
 
 .container {
   position: relative;
@@ -862,7 +863,7 @@ tr:hover td {
   display: table;
   font-family: "Chivo", sans-serif;
   font-size: 110%;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   margin: 0 auto 0 0;
   width: 100%;
@@ -877,13 +878,13 @@ tr:hover td {
   }
   */ }
   #markdown-toc a {
-    color: #aaaaaa;
-    font-weight: 300;
+    color: #546e7a;
+    font-weight: 400;
     transition: .1s; }
     #markdown-toc a:hover {
-      color: #cc3700;
+      color: mediumseagreen;
       text-decoration: none;
-      font-weight: bold; }
+      font-weight: 900; }
   #markdown-toc li {
     counter-increment: first;
     list-style: none;
@@ -898,10 +899,10 @@ tr:hover td {
       font-size: 90%;
       text-align: center;
       font-weight: bold;
-      color: #85144b;
+      color: mediumseagreen;
       transition: .3s; }
   #markdown-toc li:hover::before {
-    background: #85144b;
+    background: mediumseagreen;
     color: #fdfdfd; }
   #markdown-toc ul > li > ul > li {
     display: inline;

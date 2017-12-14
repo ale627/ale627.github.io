@@ -22,18 +22,19 @@ $spacing-unit:     30px !default;
 //colors
 $text-color:       #546e7a !default;  //greyshark
 $background-color: #fdfdfd !default; //whiteish
-$brand-color:      #33A1C9 !default; //peacock
+//$brand-color:      #33A1C9 !default; //peacock
+$brand-color:		mediumseagreen;
 
 
 //$head-color: 	   #85144b !default; //maroon, http://clrs.cc/
-$grey-color:       #aaaaaa !default;
-$grey-color-light: lighten($grey-color, 20%) !default;
+$grey-color:       #546e7a !default;
+$grey-color-light: lighten($grey-color, 30%) !default;
 $grey-color-dark:  darken($grey-color, 20%) !default;
 
 //$post-color:	   $grey-color;
 $title-color:	   #2ecc40;  //green, http://clrs.cc/
 
-$table-color:	   #85144b; //maroon
+$table-color:	   darkseagreen; 
 $code-color:	   #166066;
 
 

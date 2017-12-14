@@ -100,7 +100,7 @@ li {
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight * 1.5;
   //color: $post-color;
-  color: #cc3700;
+  color: burlywood;
   opacity: .8;
   letter-spacing: 1px;
 
@@ -230,8 +230,8 @@ pre {
   display: inline-block;
   vertical-align: middle;
 
-  path {
-    fill: $grey-color;
+  .twitter path {
+    fill: royalblue;
   }
 }
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Quant: Trend"
 date:   2017-11-09 12:00:00 -0700
 category: python
-color: green
+color: royalblue
 ---
 
 Here I measure trends to find potential buy spots.  This analysis compares sequential bar highs/lows to assert trend reversals. 
