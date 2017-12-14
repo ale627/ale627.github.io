@@ -82,7 +82,6 @@
       margin-left: auto;
       padding-right: 30px;
       padding-left: 30px;
-
       padding-top: 3vw;
       position: relative;
       width: auto;
@@ -94,16 +93,24 @@
       animation: fadein 2s;
       font-family: 'Chivo', sans-serif;
       margin-top: 3vw;
-      font-size: -webkit-xxx-large;
+      font-size: 30pt;
       //color: #404040;
       color: #546e7a;
       font-weight: 300;
-      line-height: 6vh;
+      line-height: 1.1em;
       letter-spacing: -.5px;
       opacity: .8;
       -webkit-filter: drop-shadow(2px 2px rgba(0,0,0,.1));
-      display: block;      
+      display: block;    
+
+
     }
+
+@media (max-width: 800px) {
+    .paragraph {
+        font-size: 100pt;
+    }
+}
 
     @keyframes fadein {
         from { opacity:.1;
