@@ -317,7 +317,7 @@
 .post-content {
   margin-bottom: $spacing-unit;
   font-family: $base-font-family;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
 
   h1 {
     @include relative-font-size(1.75);

@@ -399,7 +399,7 @@ pre {
 .post-content {
   margin-bottom: 30px;
   font-family: "Chivo", sans-serif;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.25px; }
   .post-content h1 {
     font-size: 28px; }
     @media screen and (max-width: 800px) {
