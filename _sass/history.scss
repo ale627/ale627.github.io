@@ -42,6 +42,7 @@
 .content:hover:not(.year) {
   opacity: 1;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  color: $background-color;
 }
 
 .type {
@@ -51,7 +52,7 @@ font-size: 14px;
 font-weight: 600;
 //letter-spacing: 0px;
 line-height: 14px;
-color: $grey-color-dark;
+//color: $grey-color-dark;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 
 
@@ -64,7 +65,7 @@ font-size: 12px;
 text-transform: none;
 font-weight: 600;
 letter-spacing: 0px;
-color: $grey-color-dark;
+//color: $grey-color-dark;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 
 
@@ -76,7 +77,7 @@ color: $grey-color-dark;
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 400;
-  color: $grey-color;
+  //color: $grey-color;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
@@ -159,23 +160,18 @@ color: $grey-color-dark;
 
 .oracle {
   height: 450px;
-  &:hover {background: red;
-    .text {
-    color: $background-color;
-  }}
+  &:hover {background: indianred;
+}
 }
 
 .adobe {
   height: 350px;
-  &:hover {background: mediumspringgreen;}
+  &:hover {background: seagreen;}
 }
 
 .scu {
   height: 750px;
-  &:hover {background: #b50043;
-  .text {
-    color: $background-color;
-  }}
+  &:hover {background: #b50043;}
 }
 
 .workr {
@@ -190,7 +186,7 @@ color: $grey-color-dark;
 
 .kyc {
   height: 800px;
-  &:hover {background: skyblue;}
+  &:hover {background: royalblue;}
 
 }
 
@@ -223,27 +219,24 @@ color: $grey-color-dark;
 
 .aldo {
   height: 150px;
-  &:hover {background: paleturquoise;}
+  &:hover {background: mediumpurple;}
 }
 
 .westpoint {
   height: 160px;
-  &:hover {background: coral;}
+  &:hover {background: darkslateblue;}
 
 }
 
 .gg {
   height: 160px;
-  &:hover {background: deepskyblue;}
+  &:hover {background: teal;}
 
 }
 
 .bbs {
   height: 200px;
-  &:hover {background: green;
-      .text {
-    color: $background-color;
-  }}
+  &:hover {background: mediumseagreen;}
 
 }
 
@@ -253,15 +246,12 @@ color: $grey-color-dark;
 
 .college {
   height: 600px;
-  &:hover {background: #b50043;
-  .text {
-    color: $background-color;
-  }}
+  &:hover {background: #b50043;}
 }
 
 .youths {
   height: 300px;
-  &:hover {background: gold;}
+  &:hover {background: steelblue;}
 
 }
 
@@ -273,10 +263,7 @@ color: $grey-color-dark;
 
 .bemis {
   height: 300px;
-  &:hover {background: mediumpurple;
-    .text {
-    color: $background-color;
-  }}
+  &:hover {background: slateblue;}
 
 }
 

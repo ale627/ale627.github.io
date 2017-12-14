@@ -85,11 +85,11 @@ a {
   */ }
   a:hover {
     color: #297a4d;
-    text-decoration: underline; }
+    text-decoration: none; }
   .social-media-list a:hover {
     text-decoration: none; }
     .social-media-list a:hover .username {
-      text-decoration: underline; }
+      text-decoration: none; }
 
 /**
  * Blockquotes
@@ -109,8 +109,8 @@ blockquote {
  */
 pre,
 code {
-  color: #e5ecea;
   font-family: "cousine", monospace;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
   line-height: 1.15em;
   font-size: 14px; }
   @media (max-width: 600px) {
@@ -423,6 +423,11 @@ pre {
         font-size: 18px; } }
   .post-content a {
     font-weight: 400; }
+    .post-content a:hover {
+      color: #6dce98;
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 3px; }
 
 /**
  * Syntax highlighting styles
@@ -430,7 +435,8 @@ pre {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background-image: linear-gradient(to bottom, #001824, #00293d); }
+    background: #eee;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
   .highlight .c {
     color: #9B8065;
     font-style: italic; }
@@ -438,7 +444,7 @@ pre {
     color: #a61717;
     background-color: #e3d2d2; }
   .highlight .k {
-    color: yellow; }
+    color: orange; }
   .highlight .o {
     font-weight: bold; }
   .highlight .cm {
@@ -494,11 +500,11 @@ pre {
     color: #458;
     font-weight: bold; }
   .highlight .kn {
-    color: #e3655b; }
+    color: crimson; }
   .highlight .m {
     color: #099; }
   .highlight .s {
-    color: #33A1C9; }
+    color: mediumseagreen; }
   .highlight .na {
     color: #008080; }
   .highlight .nb {
@@ -514,9 +520,9 @@ pre {
     color: #900;
     font-weight: bold; }
   .highlight .nf {
-    color: #fff9c4; }
+    color: blueviolet; }
   .highlight .nn {
-    color: #E5ECEA; }
+    color: royalblue; }
   .highlight .nt {
     color: #000080; }
   .highlight .nv {
@@ -599,7 +605,8 @@ pre {
 
 .content:hover:not(.year) {
   opacity: 1;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  color: #fdfdfd; }
 
 .type {
   font-style: italic;
@@ -607,7 +614,6 @@ pre {
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
-  color: #2a383e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .location {
@@ -616,7 +622,6 @@ pre {
   text-transform: none;
   font-weight: 600;
   letter-spacing: 0px;
-  color: #2a383e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .text {
@@ -625,7 +630,6 @@ pre {
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 400;
-  color: #546e7a;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
@@ -686,21 +690,17 @@ pre {
 .oracle {
   height: 450px; }
   .oracle:hover {
-    background: red; }
-    .oracle:hover .text {
-      color: #fdfdfd; }
+    background: indianred; }
 
 .adobe {
   height: 350px; }
   .adobe:hover {
-    background: mediumspringgreen; }
+    background: seagreen; }
 
 .scu {
   height: 750px; }
   .scu:hover {
     background: #b50043; }
-    .scu:hover .text {
-      color: #fdfdfd; }
 
 .workr {
   height: 250px; }
@@ -713,7 +713,7 @@ pre {
 .kyc {
   height: 800px; }
   .kyc:hover {
-    background: skyblue; }
+    background: royalblue; }
 
 .ss {
   transition: .5s; }
@@ -736,24 +736,22 @@ pre {
 .aldo {
   height: 150px; }
   .aldo:hover {
-    background: paleturquoise; }
+    background: mediumpurple; }
 
 .westpoint {
   height: 160px; }
   .westpoint:hover {
-    background: coral; }
+    background: darkslateblue; }
 
 .gg {
   height: 160px; }
   .gg:hover {
-    background: deepskyblue; }
+    background: teal; }
 
 .bbs {
   height: 200px; }
   .bbs:hover {
-    background: green; }
-    .bbs:hover .text {
-      color: #fdfdfd; }
+    background: mediumseagreen; }
 
 .bb-college-gap {
   height: 150px; }
@@ -762,13 +760,11 @@ pre {
   height: 600px; }
   .college:hover {
     background: #b50043; }
-    .college:hover .text {
-      color: #fdfdfd; }
 
 .youths {
   height: 300px; }
   .youths:hover {
-    background: gold; }
+    background: steelblue; }
 
 .cisa {
   height: 150px; }
@@ -778,9 +774,7 @@ pre {
 .bemis {
   height: 300px; }
   .bemis:hover {
-    background: mediumpurple; }
-    .bemis:hover .text {
-      color: #fdfdfd; }
+    background: slateblue; }
 
 .states {
   height: 200px; }

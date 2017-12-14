@@ -354,5 +354,11 @@
 
   a {
     font-weight: 400;
+    &:hover {
+    color: lighten($brand-color, 15%);
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+    }
   }
 }
