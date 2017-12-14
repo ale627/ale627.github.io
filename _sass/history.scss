@@ -23,7 +23,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  color: $background-color;
+  color: $grey-color-dark;
   font-family: $base-font-family;
   border-radius: 4px;
   padding: 5px 10px;
@@ -41,19 +41,14 @@
 
 .content:hover:not(.year) {
   opacity: 1;
-  //color: gold;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-  position: relative; 
-  //top: -2px;
-
 }
-
 
 .type {
 font-style: italic;
 text-transform: none;
 font-size: 14px;
-font-weight: 400;
+font-weight: 600;
 //letter-spacing: 0px;
 line-height: 14px;
 color: $grey-color-dark;
@@ -67,9 +62,9 @@ color: $grey-color-dark;
 font-style: italic;
 font-size: 12px;
 text-transform: none;
-font-weight: 400;
+font-weight: 600;
 letter-spacing: 0px;
-color: $grey-color-light;
+color: $grey-color-dark;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 
 
@@ -81,12 +76,12 @@ color: $grey-color-light;
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 400;
-  color: $background-color;
+  color: $grey-color;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
   word-wrap: break-word;
-  text-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 
 
 }
@@ -150,30 +145,43 @@ color: $grey-color-light;
 
 
 .analytics {
-  color: #85144b;
+  //color: #85144b;
 
 }
 
 .aa {
-  background: #e3655b;
+  //background: transparent;
+  transition: .5s;
+
 
 }
 
 
 .oracle {
   height: 450px;
+  &:hover {background: red;
+    .text {
+    color: $background-color;
+  }}
 }
 
 .adobe {
   height: 350px;
+  &:hover {background: mediumspringgreen;}
 }
 
 .scu {
   height: 750px;
+  &:hover {background: #b50043;
+  .text {
+    color: $background-color;
+  }}
 }
 
 .workr {
   height: 250px;
+  &:hover {background: #ef5734;}
+
 }
 
 .workr-kyc-gap {
@@ -182,16 +190,20 @@ color: $grey-color-light;
 
 .kyc {
   height: 800px;
+  &:hover {background: skyblue;}
+
 }
 
 .sailing {
-  color: darken(#7FDBFF, 50%);
+  //color: darken(#7FDBFF, 50%);
 
 }
 
 .ss {
-  background: darken(#7FDBFF, 35%);
+  //background: darken(#7FDBFF, 35%);
+  transition: .5s;
 }
+
 
 .fa-trophy {
   position: relative;
@@ -205,25 +217,34 @@ color: $grey-color-light;
 }
 
 .fa-certificate {
-  color: red;
+  color: yellow;
 }
 
 
 .aldo {
   height: 150px;
+  &:hover {background: paleturquoise;}
 }
 
 .westpoint {
   height: 160px;
+  &:hover {background: coral;}
 
 }
 
 .gg {
   height: 160px;
+  &:hover {background: deepskyblue;}
+
 }
 
 .bbs {
   height: 200px;
+  &:hover {background: green;
+      .text {
+    color: $background-color;
+  }}
+
 }
 
 .bb-college-gap {
@@ -232,26 +253,43 @@ color: $grey-color-light;
 
 .college {
   height: 600px;
+  &:hover {background: #b50043;
+  .text {
+    color: $background-color;
+  }}
 }
 
 .youths {
   height: 300px;
+  &:hover {background: gold;}
+
 }
 
 .cisa {
   height: 150px;
+  &:hover {background: crimson;}
+
 }
 
 .bemis {
   height: 300px;
+  &:hover {background: mediumpurple;
+    .text {
+    color: $background-color;
+  }}
+
 }
 
 .states {
   height: 200px;
+  &:hover {background: mediumaquamarine;}
+
 }
 
 .traps {
   height: 300px;
+  &:hover {background: lightsteelblue;}
+
 }
 
 

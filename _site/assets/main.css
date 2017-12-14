@@ -421,6 +421,8 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+  .post-content a {
+    font-weight: 400; }
 
 /**
  * Syntax highlighting styles
@@ -582,7 +584,7 @@ pre {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  color: #fdfdfd;
+  color: #2a383e;
   font-family: "Chivo", sans-serif;
   border-radius: 4px;
   padding: 5px 10px;
@@ -597,14 +599,13 @@ pre {
 
 .content:hover:not(.year) {
   opacity: 1;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  position: relative; }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
 
 .type {
   font-style: italic;
   text-transform: none;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 14px;
   color: #2a383e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
@@ -613,9 +614,9 @@ pre {
   font-style: italic;
   font-size: 12px;
   text-transform: none;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0px;
-  color: #a6b9c1;
+  color: #2a383e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .text {
@@ -624,12 +625,12 @@ pre {
   text-transform: none;
   letter-spacing: 0px;
   font-weight: 400;
-  color: #fdfdfd;
+  color: #546e7a;
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
   word-wrap: break-word;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
 
 .detail {
   display: block; }
@@ -679,35 +680,43 @@ pre {
 .bottom {
   padding-bottom: 200px; }
 
-.analytics {
-  color: #85144b; }
-
 .aa {
-  background: #e3655b; }
+  transition: .5s; }
 
 .oracle {
   height: 450px; }
+  .oracle:hover {
+    background: red; }
+    .oracle:hover .text {
+      color: #fdfdfd; }
 
 .adobe {
   height: 350px; }
+  .adobe:hover {
+    background: mediumspringgreen; }
 
 .scu {
   height: 750px; }
+  .scu:hover {
+    background: #b50043; }
+    .scu:hover .text {
+      color: #fdfdfd; }
 
 .workr {
   height: 250px; }
+  .workr:hover {
+    background: #ef5734; }
 
 .workr-kyc-gap {
   height: 100px; }
 
 .kyc {
   height: 800px; }
-
-.sailing {
-  color: #005b7f; }
+  .kyc:hover {
+    background: skyblue; }
 
 .ss {
-  background: #0092cc; }
+  transition: .5s; }
 
 .fa-trophy {
   position: relative;
@@ -722,40 +731,66 @@ pre {
   font-size: 120%; }
 
 .fa-certificate {
-  color: red; }
+  color: yellow; }
 
 .aldo {
   height: 150px; }
+  .aldo:hover {
+    background: paleturquoise; }
 
 .westpoint {
   height: 160px; }
+  .westpoint:hover {
+    background: coral; }
 
 .gg {
   height: 160px; }
+  .gg:hover {
+    background: deepskyblue; }
 
 .bbs {
   height: 200px; }
+  .bbs:hover {
+    background: green; }
+    .bbs:hover .text {
+      color: #fdfdfd; }
 
 .bb-college-gap {
   height: 150px; }
 
 .college {
   height: 600px; }
+  .college:hover {
+    background: #b50043; }
+    .college:hover .text {
+      color: #fdfdfd; }
 
 .youths {
   height: 300px; }
+  .youths:hover {
+    background: gold; }
 
 .cisa {
   height: 150px; }
+  .cisa:hover {
+    background: crimson; }
 
 .bemis {
   height: 300px; }
+  .bemis:hover {
+    background: mediumpurple; }
+    .bemis:hover .text {
+      color: #fdfdfd; }
 
 .states {
   height: 200px; }
+  .states:hover {
+    background: mediumaquamarine; }
 
 .traps {
   height: 300px; }
+  .traps:hover {
+    background: lightsteelblue; }
 
 .trading {
   color: #006400; }

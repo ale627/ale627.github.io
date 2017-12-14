@@ -351,4 +351,8 @@
       @include relative-font-size(1.125);
     }
   }
+
+  a {
+    font-weight: 400;
+  }
 }
