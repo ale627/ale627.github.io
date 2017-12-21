@@ -136,7 +136,7 @@ ohlc["lower"]  = np.where((ohlc.low  - ohlc.low.shift(1))  < 0, True, False)
 ohlc["outside"]  = np.logical_and(ohlc.higher==True, ohlc.lower==True)
 ohlc["inside"]   = np.logical_and(ohlc.higher==False, ohlc.lower==False)
 
-#buy where previous inside bar and current higher highs
+#buy where current inside bar and previous higher highs
 ohlc["buy"]  = np.logical_and(ohlc.inside ==True, ohlc.higher.shift(1) ==True)
 
 # sell where close < previous lows
