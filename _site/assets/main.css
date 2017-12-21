@@ -69,7 +69,7 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  color: burlywood;
+  color: coral;
   opacity: .8;
   letter-spacing: 1px; }
 
@@ -216,7 +216,7 @@ pre {
       top: 9px;
       right: 15px;
       background-color: #fdfdfd;
-      border: 1px solid #a6b9c1;
+      border: 1px solid linen;
       border-radius: 5px;
       text-align: right; }
       .site-nav label[for="nav-trigger"] {
@@ -235,7 +235,7 @@ pre {
         padding-top: 10px;
         text-align: center; }
         .site-nav .menu-icon > svg path {
-          fill: #2a383e; }
+          fill: #a6b9c1; }
       .site-nav input ~ .trigger {
         clear: both;
         display: none; }
@@ -435,8 +435,7 @@ pre {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background: #eee;
-    border: 1px solid #ddd; }
+    background: #eee; }
   .highlight .c {
     color: #9B8065;
     font-style: italic; }
@@ -613,16 +612,14 @@ pre {
   text-transform: none;
   font-size: 14px;
   font-weight: 600;
-  line-height: 14px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  line-height: 14px; }
 
 .location {
   font-style: italic;
   font-size: 12px;
   text-transform: none;
   font-weight: 600;
-  letter-spacing: 0px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  letter-spacing: 0px; }
 
 .text {
   font-size: 16px;
@@ -633,8 +630,7 @@ pre {
   text-align: left;
   padding: 10px 15px;
   line-height: 20px;
-  word-wrap: break-word;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+  word-wrap: break-word; }
 
 .detail {
   display: block; }
@@ -660,8 +656,6 @@ pre {
   color: #999;
   font-size: 14px;
   box-shadow: none;
-  position: relative;
-  text-transform: lowercase;
   padding-left: 10px;
   padding-right: 10px; }
 
@@ -727,11 +721,11 @@ pre {
   /* Adjust as needed */
   float: left;
   padding-right: 17px;
-  color: yellow;
+  color: burlywood;
   font-size: 120%; }
 
 .fa-certificate {
-  color: yellow; }
+  color: goldenrod; }
 
 .aldo {
   height: 150px; }
@@ -827,14 +821,13 @@ table {
 td {
   padding: 5px 15px 2px;
   font-size: 95%;
-  color: #555;
-  border-bottom: 1px solid #a6b9c1; }
+  border-bottom: 1px solid #ddd; }
 
 th {
   padding: 5px 15px;
   border-bottom: 3px solid darkseagreen;
   font-size: 80%;
-  color: #2a383e;
+  color: #a6b9c1;
   text-transform: uppercase;
   font-weight: 300; }
 

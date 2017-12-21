@@ -1,0 +1,696 @@
+---
+layout: post
+title:  "Quant: Inside n Up"
+date:   2017-12-20 12:00:00 -0700
+category: python
+color: royalblue
+---
+
+Here I try to find inside and up bars on the daily timeframe.
+
+# Fetch the data from BarChart
+
+We call the barchart getHistory API.  This is adapted from [BlackArb][tut].
+
+#### Steps:
+- import libraries
+- set locations & key
+- build URL
+- function
+- call function
+
+[tut]: http://www.blackarbs.com/blog/how-to-get-free-intraday-stock-data-with-python-and-barcharts-ondemand-api/9/22/2015
+
+
+
+```python
+#----------IMPORT LIBRARIES----------#
+import time
+t0 = time.clock()
+import pandas as pd
+from pandas.tseries.offsets import BDay
+import numpy as np
+import datetime as dt
+from copy import copy
+import warnings
+warnings.filterwarnings('ignore',category=pd.io.pytables.PerformanceWarning)
+ 
+    
+#----------SET DIRECTORIES----------#
+    
+project_dir = r'C:\Users/drale/Desktop/python/' 
+price_path = project_dir + r'Stock_Price_Data\\'
+
+components = pd.read_excel(project_dir +\
+                             'assets/Watchlist.xls', header=0)
+syms = components.Identifier.dropna()
+syms = syms.drop(syms.index[-1]).sort_values()
+
+
+apikey = '99f7186682f41a3bd739984105aef52a'
+
+
+#----------BUILD URL----------#
+
+def construct_barChart_url(sym, start_date, freq, api_key=apikey):
+    
+    url = 'http://marketdata.websol.barchart.com/getHistory.csv?' +\
+            'key={}&symbol={}&type={}&startDate={}'.format(api_key, sym, freq, start_date)
+    return url
+
+#----------F(X) DEFINITION----------#
+
+def get_minute_data():
+    
+    # YYYY MM DD HH MM SS
+    start = '20170101'#'20160101000000'
+    #end = d
+    freq = 'daily'    
+    prices = {}
+    symbol_count = len(syms)
+    
+    try:
+        for i, sym in enumerate(syms, start=1):
+            api_url = construct_barChart_url(sym, start, freq, api_key=apikey)
+            try:
+                csvfile = pd.read_csv(api_url, parse_dates=['timestamp'])
+                csvfile.set_index('timestamp', inplace=True)
+                prices[sym] = csvfile
+            except:
+                continue
+
+            print('{}..[got] | {}/{} tickers |'.format(sym, i, symbol_count)) 
+    except Exception as e: 
+        print(e)
+    finally:
+        pass
+    
+    px = pd.Panel.from_dict(prices)
+    px.major_axis = px.major_axis.tz_localize('utc').tz_convert('US/Pacific')
+    return px
+
+#----------CALL FUNCTION----------#
+pxx = get_minute_data()
+pxx
+
+
+# timer
+secs      = np.round( ( time.clock()  - t0 ), 4 )
+time_secs = "{timeSecs} seconds to run".format(timeSecs = secs)
+print( time_secs )
+```
+
+    AAPL..[got] | 1/18 tickers |
+    ACIA..[got] | 2/18 tickers |
+    AMZN..[got] | 3/18 tickers |
+    BABA..[got] | 4/18 tickers |
+    BIDU..[got] | 5/18 tickers |
+    FB..[got] | 6/18 tickers |
+    GILD..[got] | 7/18 tickers |
+    GOOGL..[got] | 8/18 tickers |
+    GS..[got] | 9/18 tickers |
+    IBB..[got] | 10/18 tickers |
+    INTC..[got] | 11/18 tickers |
+    JD..[got] | 12/18 tickers |
+    JPM..[got] | 13/18 tickers |
+    NFLX..[got] | 14/18 tickers |
+    NVDA..[got] | 15/18 tickers |
+    PANW..[got] | 16/18 tickers |
+    SQ..[got] | 17/18 tickers |
+    TSLA..[got] | 18/18 tickers |
+    21.8674 seconds to run
+    
+
+# Analysis
+
+
+```python
+stock = 'TSLA'
+ohlc = pxx[stock]
+
+#higher highs and lower lows
+ohlc["higher"] = np.where((ohlc.high - ohlc.high.shift(1)) > 0, True, False)
+ohlc["lower"]  = np.where((ohlc.low  - ohlc.low.shift(1))  < 0, True, False)
+
+#inside and outside bars
+ohlc["outside"]  = np.logical_and(ohlc.higher==True, ohlc.lower==True)
+ohlc["inside"]   = np.logical_and(ohlc.higher==False, ohlc.lower==False)
+
+#buy where previous inside bar and current higher highs
+ohlc["buy"]  = np.logical_and(ohlc.inside ==True, ohlc.higher.shift(1) ==True)
+
+# sell where close < previous lows
+ohlc["sell"] = np.where((ohlc["close"] < ohlc["low"].shift(1)), True, False)
+
+ohlc[["high", "low", "close", "higher", "lower", "inside", "outside", "buy", "sell"]].head(10)
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>high</th>
+      <th>low</th>
+      <th>close</th>
+      <th>higher</th>
+      <th>lower</th>
+      <th>inside</th>
+      <th>outside</th>
+      <th>buy</th>
+      <th>sell</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-01-02 21:00:00-08:00</th>
+      <td>220.33</td>
+      <td>210.96</td>
+      <td>216.99</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-03 21:00:00-08:00</th>
+      <td>228</td>
+      <td>214.31</td>
+      <td>226.99</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-04 21:00:00-08:00</th>
+      <td>227.48</td>
+      <td>221.95</td>
+      <td>226.75</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-05 21:00:00-08:00</th>
+      <td>230.31</td>
+      <td>225.45</td>
+      <td>229.01</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-08 21:00:00-08:00</th>
+      <td>231.92</td>
+      <td>228</td>
+      <td>231.28</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-09 21:00:00-08:00</th>
+      <td>232</td>
+      <td>226.89</td>
+      <td>229.87</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-10 21:00:00-08:00</th>
+      <td>229.98</td>
+      <td>226.68</td>
+      <td>229.73</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-11 21:00:00-08:00</th>
+      <td>230.7</td>
+      <td>225.58</td>
+      <td>229.59</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-12 21:00:00-08:00</th>
+      <td>237.85</td>
+      <td>229.59</td>
+      <td>237.75</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-01-16 21:00:00-08:00</th>
+      <td>239.96</td>
+      <td>234.37</td>
+      <td>235.58</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+## Backtest
+
+
+```python
+pnl = 0
+change = 0
+pos = False
+
+log = pd.DataFrame()
+
+
+for index, row in ohlc.iterrows(): 
+    
+    if row.buy == True & pos == False:
+        pos = True
+        entry = row.close
+
+        log.set_value(index,'pos', pos)
+        log.set_value(index,'close',row['close'])
+        log.set_value(index,'pnl',pnl)
+
+    if row.sell == True:
+
+        pos = False
+        pnl = pnl + row['close'] - entry
+
+        log.set_value(index,'pos', pos)
+        log.set_value(index,'close',row['close'])
+        log.set_value(index,'pnl',pnl)
+
+    
+log.head(50)
+#log.sort_values(by='change',ascending=0)
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pos</th>
+      <th>close</th>
+      <th>pnl</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-01-02 21:00:00-08:00</th>
+      <td>True</td>
+      <td>216.99</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>2017-02-15 21:00:00-08:00</th>
+      <td>False</td>
+      <td>268.95</td>
+      <td>51.96</td>
+    </tr>
+    <tr>
+      <th>2017-02-16 21:00:00-08:00</th>
+      <td>True</td>
+      <td>272.23</td>
+      <td>51.96</td>
+    </tr>
+    <tr>
+      <th>2017-02-21 21:00:00-08:00</th>
+      <td>False</td>
+      <td>273.51</td>
+      <td>53.24</td>
+    </tr>
+    <tr>
+      <th>2017-02-22 21:00:00-08:00</th>
+      <td>False</td>
+      <td>255.99</td>
+      <td>53.24</td>
+    </tr>
+    <tr>
+      <th>2017-02-23 21:00:00-08:00</th>
+      <td>True</td>
+      <td>257.00</td>
+      <td>53.24</td>
+    </tr>
+    <tr>
+      <th>2017-02-26 21:00:00-08:00</th>
+      <td>False</td>
+      <td>246.23</td>
+      <td>42.47</td>
+    </tr>
+    <tr>
+      <th>2017-02-27 21:00:00-08:00</th>
+      <td>True</td>
+      <td>249.99</td>
+      <td>42.47</td>
+    </tr>
+    <tr>
+      <th>2017-03-07 21:00:00-08:00</th>
+      <td>False</td>
+      <td>246.87</td>
+      <td>39.35</td>
+    </tr>
+    <tr>
+      <th>2017-03-08 21:00:00-08:00</th>
+      <td>False</td>
+      <td>244.90</td>
+      <td>39.35</td>
+    </tr>
+    <tr>
+      <th>2017-03-09 21:00:00-08:00</th>
+      <td>True</td>
+      <td>243.69</td>
+      <td>39.35</td>
+    </tr>
+    <tr>
+      <th>2017-03-20 21:00:00-07:00</th>
+      <td>False</td>
+      <td>250.68</td>
+      <td>46.34</td>
+    </tr>
+    <tr>
+      <th>2017-03-22 21:00:00-07:00</th>
+      <td>True</td>
+      <td>254.78</td>
+      <td>46.34</td>
+    </tr>
+    <tr>
+      <th>2017-04-11 21:00:00-07:00</th>
+      <td>False</td>
+      <td>296.84</td>
+      <td>88.40</td>
+    </tr>
+    <tr>
+      <th>2017-04-12 21:00:00-07:00</th>
+      <td>True</td>
+      <td>304.00</td>
+      <td>88.40</td>
+    </tr>
+    <tr>
+      <th>2017-04-26 21:00:00-07:00</th>
+      <td>False</td>
+      <td>308.63</td>
+      <td>93.03</td>
+    </tr>
+    <tr>
+      <th>2017-04-27 21:00:00-07:00</th>
+      <td>True</td>
+      <td>314.07</td>
+      <td>93.03</td>
+    </tr>
+    <tr>
+      <th>2017-05-02 21:00:00-07:00</th>
+      <td>False</td>
+      <td>311.02</td>
+      <td>89.98</td>
+    </tr>
+    <tr>
+      <th>2017-05-03 21:00:00-07:00</th>
+      <td>False</td>
+      <td>295.46</td>
+      <td>89.98</td>
+    </tr>
+    <tr>
+      <th>2017-05-04 21:00:00-07:00</th>
+      <td>True</td>
+      <td>308.35</td>
+      <td>89.98</td>
+    </tr>
+    <tr>
+      <th>2017-05-14 21:00:00-07:00</th>
+      <td>False</td>
+      <td>315.88</td>
+      <td>97.51</td>
+    </tr>
+    <tr>
+      <th>2017-05-15 21:00:00-07:00</th>
+      <td>True</td>
+      <td>317.01</td>
+      <td>97.51</td>
+    </tr>
+    <tr>
+      <th>2017-05-16 21:00:00-07:00</th>
+      <td>False</td>
+      <td>306.11</td>
+      <td>86.61</td>
+    </tr>
+    <tr>
+      <th>2017-05-17 21:00:00-07:00</th>
+      <td>True</td>
+      <td>313.06</td>
+      <td>86.61</td>
+    </tr>
+    <tr>
+      <th>2017-05-22 21:00:00-07:00</th>
+      <td>False</td>
+      <td>303.86</td>
+      <td>77.41</td>
+    </tr>
+    <tr>
+      <th>2017-05-23 21:00:00-07:00</th>
+      <td>True</td>
+      <td>310.22</td>
+      <td>77.41</td>
+    </tr>
+    <tr>
+      <th>2017-06-08 21:00:00-07:00</th>
+      <td>False</td>
+      <td>357.32</td>
+      <td>124.51</td>
+    </tr>
+    <tr>
+      <th>2017-06-11 21:00:00-07:00</th>
+      <td>True</td>
+      <td>359.01</td>
+      <td>124.51</td>
+    </tr>
+    <tr>
+      <th>2017-06-14 21:00:00-07:00</th>
+      <td>False</td>
+      <td>375.34</td>
+      <td>140.84</td>
+    </tr>
+    <tr>
+      <th>2017-06-15 21:00:00-07:00</th>
+      <td>True</td>
+      <td>371.40</td>
+      <td>140.84</td>
+    </tr>
+    <tr>
+      <th>2017-06-18 21:00:00-07:00</th>
+      <td>False</td>
+      <td>369.80</td>
+      <td>139.24</td>
+    </tr>
+    <tr>
+      <th>2017-06-19 21:00:00-07:00</th>
+      <td>True</td>
+      <td>372.24</td>
+      <td>139.24</td>
+    </tr>
+    <tr>
+      <th>2017-06-25 21:00:00-07:00</th>
+      <td>False</td>
+      <td>377.49</td>
+      <td>144.49</td>
+    </tr>
+    <tr>
+      <th>2017-06-26 21:00:00-07:00</th>
+      <td>False</td>
+      <td>362.37</td>
+      <td>144.49</td>
+    </tr>
+    <tr>
+      <th>2017-06-27 21:00:00-07:00</th>
+      <td>True</td>
+      <td>371.24</td>
+      <td>144.49</td>
+    </tr>
+    <tr>
+      <th>2017-06-28 21:00:00-07:00</th>
+      <td>False</td>
+      <td>360.75</td>
+      <td>134.00</td>
+    </tr>
+    <tr>
+      <th>2017-06-29 21:00:00-07:00</th>
+      <td>True</td>
+      <td>361.61</td>
+      <td>134.00</td>
+    </tr>
+    <tr>
+      <th>2017-07-02 21:00:00-07:00</th>
+      <td>False</td>
+      <td>352.62</td>
+      <td>125.01</td>
+    </tr>
+    <tr>
+      <th>2017-07-04 21:00:00-07:00</th>
+      <td>False</td>
+      <td>327.09</td>
+      <td>125.01</td>
+    </tr>
+    <tr>
+      <th>2017-07-05 21:00:00-07:00</th>
+      <td>False</td>
+      <td>308.83</td>
+      <td>125.01</td>
+    </tr>
+    <tr>
+      <th>2017-07-06 21:00:00-07:00</th>
+      <td>True</td>
+      <td>313.22</td>
+      <td>125.01</td>
+    </tr>
+    <tr>
+      <th>2017-07-12 21:00:00-07:00</th>
+      <td>False</td>
+      <td>323.41</td>
+      <td>135.20</td>
+    </tr>
+    <tr>
+      <th>2017-07-13 21:00:00-07:00</th>
+      <td>True</td>
+      <td>327.78</td>
+      <td>135.20</td>
+    </tr>
+    <tr>
+      <th>2017-07-16 21:00:00-07:00</th>
+      <td>False</td>
+      <td>319.57</td>
+      <td>126.99</td>
+    </tr>
+    <tr>
+      <th>2017-07-17 21:00:00-07:00</th>
+      <td>True</td>
+      <td>328.24</td>
+      <td>126.99</td>
+    </tr>
+    <tr>
+      <th>2017-07-26 21:00:00-07:00</th>
+      <td>False</td>
+      <td>334.46</td>
+      <td>133.21</td>
+    </tr>
+    <tr>
+      <th>2017-07-30 21:00:00-07:00</th>
+      <td>False</td>
+      <td>323.47</td>
+      <td>133.21</td>
+    </tr>
+    <tr>
+      <th>2017-07-31 21:00:00-07:00</th>
+      <td>False</td>
+      <td>319.57</td>
+      <td>133.21</td>
+    </tr>
+    <tr>
+      <th>2017-08-01 21:00:00-07:00</th>
+      <td>True</td>
+      <td>325.89</td>
+      <td>133.21</td>
+    </tr>
+    <tr>
+      <th>2017-08-09 21:00:00-07:00</th>
+      <td>False</td>
+      <td>355.40</td>
+      <td>162.72</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+## Chart
+Line chart of price action with green dots for entries and yellow dots for exits, generated with matplotlib.
+
+
+```python
+import matplotlib.pyplot as plt
+
+#exposes fig and ax components of the plot (for modification)
+fig, ax = plt.subplots(1)
+
+start = '2017-01-01'
+end = '2017-9-01'
+
+cut = ohlc.ix[start:end]
+plt.plot(cut.index, cut.close, 'burlywood', linewidth=3)
+
+buy_list = log[(log.pos == True)]
+exit_list = log[(log.pos == False)]
+buy_list = buy_list.ix[start:end]
+exit_list = exit_list.ix[start:end]
+x= buy_list.index
+x1= exit_list.index
+y= buy_list['close']
+y1= exit_list['close']
+
+plt.plot(x,y,'c^', x1,y1,'rv', markersize=5)
+
+plt.title(stock + " trades, " + start + " to " + end)
+plt.grid(True)
+fig.autofmt_xdate()
+
+plt.show()
+```
+
+
+![png](/assets/insideup.png){:class="img-responsive"}
