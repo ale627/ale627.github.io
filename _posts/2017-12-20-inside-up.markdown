@@ -659,7 +659,6 @@ log.head(50)
 
 
 ## Chart
-Line chart of price action with green dots for entries and yellow dots for exits, generated with matplotlib.
 
 
 ```python
