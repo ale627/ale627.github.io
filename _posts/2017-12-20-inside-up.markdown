@@ -6,11 +6,11 @@ category: python
 color: royalblue
 ---
 
-Here I try to find inside and up bars on the daily timeframe.
+Here I find inside bars on the daily.
 
 # Fetch the data from BarChart
 
-We call the barchart getHistory API.  This is adapted from [BlackArb][tut].
+Call the barchart getHistory API.  This is adapted from [BlackArb][tut].
 
 #### Steps:
 - import libraries
@@ -19,7 +19,7 @@ We call the barchart getHistory API.  This is adapted from [BlackArb][tut].
 - function
 - call function
 
-[tut]: http://www.blackarbs.com/blog/how-to-get-free-intraday-stock-data-with-python-and-barcharts-ondemand-api/9/22/2015
+[tut]: http://www.blackarbs.com/bback/how-to-get-free-intraday-stock-data-with-python-and-barcharts-ondemand-api/9/22/2015
 
 
 
@@ -118,14 +118,14 @@ print( time_secs )
     PANW..[got] | 16/18 tickers |
     SQ..[got] | 17/18 tickers |
     TSLA..[got] | 18/18 tickers |
-    21.8674 seconds to run
+    20.8557 seconds to run
     
 
 # Analysis
 
 
 ```python
-stock = 'TSLA'
+stock = 'NVDA'
 ohlc = pxx[stock]
 
 #higher highs and lower lows
@@ -136,13 +136,14 @@ ohlc["lower"]  = np.where((ohlc.low  - ohlc.low.shift(1))  < 0, True, False)
 ohlc["outside"]  = np.logical_and(ohlc.higher==True, ohlc.lower==True)
 ohlc["inside"]   = np.logical_and(ohlc.higher==False, ohlc.lower==False)
 
-#buy where current inside bar and previous higher highs
-ohlc["buy"]  = np.logical_and(ohlc.inside ==True, ohlc.higher.shift(1) ==True)
+# buy where prev inside and current higher high
+ohlc["buy"] = np.logical_and(ohlc.inside.shift(1) == True, ohlc.higher == True)
 
 # sell where close < previous lows
 ohlc["sell"] = np.where((ohlc["close"] < ohlc["low"].shift(1)), True, False)
 
 ohlc[["high", "low", "close", "higher", "lower", "inside", "outside", "buy", "sell"]].head(10)
+#ohlc.to_csv('analysis.csv')
 ```
 
 
@@ -179,9 +180,9 @@ ohlc[["high", "low", "close", "higher", "lower", "inside", "outside", "buy", "se
   <tbody>
     <tr>
       <th>2017-01-02 21:00:00-08:00</th>
-      <td>220.33</td>
-      <td>210.96</td>
-      <td>216.99</td>
+      <td>105.957</td>
+      <td>98.9943</td>
+      <td>101.614</td>
       <td>False</td>
       <td>False</td>
       <td>True</td>
@@ -191,93 +192,93 @@ ohlc[["high", "low", "close", "higher", "lower", "inside", "outside", "buy", "se
     </tr>
     <tr>
       <th>2017-01-03 21:00:00-08:00</th>
-      <td>228</td>
-      <td>214.31</td>
-      <td>226.99</td>
+      <td>105.091</td>
+      <td>101.136</td>
+      <td>103.985</td>
+      <td>False</td>
+      <td>False</td>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2017-01-04 21:00:00-08:00</th>
-      <td>227.48</td>
-      <td>221.95</td>
-      <td>226.75</td>
-      <td>False</td>
-      <td>False</td>
+      <td>105.409</td>
+      <td>100.658</td>
+      <td>101.345</td>
+      <td>True</td>
       <td>True</td>
       <td>False</td>
+      <td>True</td>
       <td>True</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2017-01-05 21:00:00-08:00</th>
-      <td>230.31</td>
-      <td>225.45</td>
-      <td>229.01</td>
+      <td>103.845</td>
+      <td>100.807</td>
+      <td>102.7</td>
+      <td>False</td>
+      <td>False</td>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2017-01-08 21:00:00-08:00</th>
-      <td>231.92</td>
-      <td>228</td>
-      <td>231.28</td>
+      <td>107.581</td>
+      <td>103.098</td>
+      <td>106.864</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
+      <td>True</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2017-01-09 21:00:00-08:00</th>
-      <td>232</td>
-      <td>226.89</td>
-      <td>229.87</td>
-      <td>True</td>
+      <td>108.766</td>
+      <td>105.22</td>
+      <td>106.057</td>
       <td>True</td>
       <td>False</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2017-01-10 21:00:00-08:00</th>
-      <td>229.98</td>
-      <td>226.68</td>
-      <td>229.73</td>
+      <td>105.788</td>
+      <td>103.746</td>
+      <td>104.752</td>
       <td>False</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <th>2017-01-11 21:00:00-08:00</th>
-      <td>230.7</td>
-      <td>225.58</td>
-      <td>229.59</td>
-      <td>True</td>
-      <td>True</td>
+      <td>104.294</td>
+      <td>101.226</td>
+      <td>103.039</td>
       <td>False</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
+      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <th>2017-01-12 21:00:00-08:00</th>
-      <td>237.85</td>
-      <td>229.59</td>
-      <td>237.75</td>
+      <td>104.593</td>
+      <td>102.66</td>
+      <td>103.029</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
@@ -287,15 +288,15 @@ ohlc[["high", "low", "close", "higher", "lower", "inside", "outside", "buy", "se
     </tr>
     <tr>
       <th>2017-01-16 21:00:00-08:00</th>
-      <td>239.96</td>
-      <td>234.37</td>
-      <td>235.58</td>
+      <td>102.799</td>
+      <td>100.18</td>
+      <td>100.718</td>
+      <td>False</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -311,31 +312,27 @@ pnl = 0
 change = 0
 pos = False
 
-log = pd.DataFrame()
-
+back = pd.DataFrame()
 
 for index, row in ohlc.iterrows(): 
     
-    if row.buy == True & pos == False:
+    if row.buy == True and pos == False:
         pos = True
         entry = row.close
+        back.set_value(index,'pos', pos)
+        back.set_value(index,'price',row['close'])
+        back.set_value(index,'pnl',pnl)
 
-        log.set_value(index,'pos', pos)
-        log.set_value(index,'close',row['close'])
-        log.set_value(index,'pnl',pnl)
-
-    if row.sell == True:
-
+    if row.sell == True and pos == True:
         pos = False
-        pnl = pnl + row['close'] - entry
-
-        log.set_value(index,'pos', pos)
-        log.set_value(index,'close',row['close'])
-        log.set_value(index,'pnl',pnl)
+        pnl += row['close'] - entry
+        back.set_value(index,'pos', pos)
+        back.set_value(index,'price',row['close'])
+        back.set_value(index,'pnl',pnl)
 
     
-log.head(50)
-#log.sort_values(by='change',ascending=0)
+back.head(50)
+#back.sort_values(by='change',ascending=0)
 ```
 
 
@@ -347,310 +344,166 @@ log.head(50)
     <tr style="text-align: right;">
       <th></th>
       <th>pos</th>
-      <th>close</th>
+      <th>price</th>
       <th>pnl</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2017-01-02 21:00:00-08:00</th>
+      <th>2017-01-04 21:00:00-08:00</th>
       <td>True</td>
-      <td>216.99</td>
-      <td>0.00</td>
+      <td>101.3452</td>
+      <td>0.0000</td>
     </tr>
     <tr>
-      <th>2017-02-15 21:00:00-08:00</th>
+      <th>2017-01-10 21:00:00-08:00</th>
       <td>False</td>
-      <td>268.95</td>
-      <td>51.96</td>
+      <td>104.7519</td>
+      <td>3.4067</td>
     </tr>
     <tr>
-      <th>2017-02-16 21:00:00-08:00</th>
+      <th>2017-01-23 21:00:00-08:00</th>
       <td>True</td>
-      <td>272.23</td>
-      <td>51.96</td>
+      <td>106.9135</td>
+      <td>3.4067</td>
     </tr>
     <tr>
-      <th>2017-02-21 21:00:00-08:00</th>
+      <th>2017-02-09 21:00:00-08:00</th>
       <td>False</td>
-      <td>273.51</td>
-      <td>53.24</td>
+      <td>113.1791</td>
+      <td>9.6723</td>
     </tr>
     <tr>
-      <th>2017-02-22 21:00:00-08:00</th>
-      <td>False</td>
-      <td>255.99</td>
-      <td>53.24</td>
-    </tr>
-    <tr>
-      <th>2017-02-23 21:00:00-08:00</th>
+      <th>2017-04-30 21:00:00-07:00</th>
       <td>True</td>
-      <td>257.00</td>
-      <td>53.24</td>
+      <td>106.3602</td>
+      <td>9.6723</td>
     </tr>
     <tr>
-      <th>2017-02-26 21:00:00-08:00</th>
+      <th>2017-05-01 21:00:00-07:00</th>
       <td>False</td>
-      <td>246.23</td>
-      <td>42.47</td>
-    </tr>
-    <tr>
-      <th>2017-02-27 21:00:00-08:00</th>
-      <td>True</td>
-      <td>249.99</td>
-      <td>42.47</td>
-    </tr>
-    <tr>
-      <th>2017-03-07 21:00:00-08:00</th>
-      <td>False</td>
-      <td>246.87</td>
-      <td>39.35</td>
-    </tr>
-    <tr>
-      <th>2017-03-08 21:00:00-08:00</th>
-      <td>False</td>
-      <td>244.90</td>
-      <td>39.35</td>
-    </tr>
-    <tr>
-      <th>2017-03-09 21:00:00-08:00</th>
-      <td>True</td>
-      <td>243.69</td>
-      <td>39.35</td>
-    </tr>
-    <tr>
-      <th>2017-03-20 21:00:00-07:00</th>
-      <td>False</td>
-      <td>250.68</td>
-      <td>46.34</td>
-    </tr>
-    <tr>
-      <th>2017-03-22 21:00:00-07:00</th>
-      <td>True</td>
-      <td>254.78</td>
-      <td>46.34</td>
-    </tr>
-    <tr>
-      <th>2017-04-11 21:00:00-07:00</th>
-      <td>False</td>
-      <td>296.84</td>
-      <td>88.40</td>
-    </tr>
-    <tr>
-      <th>2017-04-12 21:00:00-07:00</th>
-      <td>True</td>
-      <td>304.00</td>
-      <td>88.40</td>
-    </tr>
-    <tr>
-      <th>2017-04-26 21:00:00-07:00</th>
-      <td>False</td>
-      <td>308.63</td>
-      <td>93.03</td>
-    </tr>
-    <tr>
-      <th>2017-04-27 21:00:00-07:00</th>
-      <td>True</td>
-      <td>314.07</td>
-      <td>93.03</td>
-    </tr>
-    <tr>
-      <th>2017-05-02 21:00:00-07:00</th>
-      <td>False</td>
-      <td>311.02</td>
-      <td>89.98</td>
+      <td>103.2085</td>
+      <td>6.5206</td>
     </tr>
     <tr>
       <th>2017-05-03 21:00:00-07:00</th>
-      <td>False</td>
-      <td>295.46</td>
-      <td>89.98</td>
-    </tr>
-    <tr>
-      <th>2017-05-04 21:00:00-07:00</th>
       <td>True</td>
-      <td>308.35</td>
-      <td>89.98</td>
-    </tr>
-    <tr>
-      <th>2017-05-14 21:00:00-07:00</th>
-      <td>False</td>
-      <td>315.88</td>
-      <td>97.51</td>
-    </tr>
-    <tr>
-      <th>2017-05-15 21:00:00-07:00</th>
-      <td>True</td>
-      <td>317.01</td>
-      <td>97.51</td>
+      <td>103.5775</td>
+      <td>6.5206</td>
     </tr>
     <tr>
       <th>2017-05-16 21:00:00-07:00</th>
       <td>False</td>
-      <td>306.11</td>
-      <td>86.61</td>
+      <td>127.3849</td>
+      <td>30.3280</td>
     </tr>
     <tr>
-      <th>2017-05-17 21:00:00-07:00</th>
+      <th>2017-06-01 21:00:00-07:00</th>
       <td>True</td>
-      <td>313.06</td>
-      <td>86.61</td>
-    </tr>
-    <tr>
-      <th>2017-05-22 21:00:00-07:00</th>
-      <td>False</td>
-      <td>303.86</td>
-      <td>77.41</td>
-    </tr>
-    <tr>
-      <th>2017-05-23 21:00:00-07:00</th>
-      <td>True</td>
-      <td>310.22</td>
-      <td>77.41</td>
+      <td>143.4140</td>
+      <td>30.3280</td>
     </tr>
     <tr>
       <th>2017-06-08 21:00:00-07:00</th>
       <td>False</td>
-      <td>357.32</td>
-      <td>124.51</td>
-    </tr>
-    <tr>
-      <th>2017-06-11 21:00:00-07:00</th>
-      <td>True</td>
-      <td>359.01</td>
-      <td>124.51</td>
-    </tr>
-    <tr>
-      <th>2017-06-14 21:00:00-07:00</th>
-      <td>False</td>
-      <td>375.34</td>
-      <td>140.84</td>
-    </tr>
-    <tr>
-      <th>2017-06-15 21:00:00-07:00</th>
-      <td>True</td>
-      <td>371.40</td>
-      <td>140.84</td>
-    </tr>
-    <tr>
-      <th>2017-06-18 21:00:00-07:00</th>
-      <td>False</td>
-      <td>369.80</td>
-      <td>139.24</td>
-    </tr>
-    <tr>
-      <th>2017-06-19 21:00:00-07:00</th>
-      <td>True</td>
-      <td>372.24</td>
-      <td>139.24</td>
-    </tr>
-    <tr>
-      <th>2017-06-25 21:00:00-07:00</th>
-      <td>False</td>
-      <td>377.49</td>
-      <td>144.49</td>
-    </tr>
-    <tr>
-      <th>2017-06-26 21:00:00-07:00</th>
-      <td>False</td>
-      <td>362.37</td>
-      <td>144.49</td>
-    </tr>
-    <tr>
-      <th>2017-06-27 21:00:00-07:00</th>
-      <td>True</td>
-      <td>371.24</td>
-      <td>144.49</td>
-    </tr>
-    <tr>
-      <th>2017-06-28 21:00:00-07:00</th>
-      <td>False</td>
-      <td>360.75</td>
-      <td>134.00</td>
-    </tr>
-    <tr>
-      <th>2017-06-29 21:00:00-07:00</th>
-      <td>True</td>
-      <td>361.61</td>
-      <td>134.00</td>
-    </tr>
-    <tr>
-      <th>2017-07-02 21:00:00-07:00</th>
-      <td>False</td>
-      <td>352.62</td>
-      <td>125.01</td>
-    </tr>
-    <tr>
-      <th>2017-07-04 21:00:00-07:00</th>
-      <td>False</td>
-      <td>327.09</td>
-      <td>125.01</td>
+      <td>149.3646</td>
+      <td>36.2786</td>
     </tr>
     <tr>
       <th>2017-07-05 21:00:00-07:00</th>
-      <td>False</td>
-      <td>308.83</td>
-      <td>125.01</td>
-    </tr>
-    <tr>
-      <th>2017-07-06 21:00:00-07:00</th>
       <td>True</td>
-      <td>313.22</td>
-      <td>125.01</td>
+      <td>143.2543</td>
+      <td>36.2786</td>
     </tr>
     <tr>
-      <th>2017-07-12 21:00:00-07:00</th>
+      <th>2017-07-24 21:00:00-07:00</th>
       <td>False</td>
-      <td>323.41</td>
-      <td>135.20</td>
-    </tr>
-    <tr>
-      <th>2017-07-13 21:00:00-07:00</th>
-      <td>True</td>
-      <td>327.78</td>
-      <td>135.20</td>
-    </tr>
-    <tr>
-      <th>2017-07-16 21:00:00-07:00</th>
-      <td>False</td>
-      <td>319.57</td>
-      <td>126.99</td>
-    </tr>
-    <tr>
-      <th>2017-07-17 21:00:00-07:00</th>
-      <td>True</td>
-      <td>328.24</td>
-      <td>126.99</td>
-    </tr>
-    <tr>
-      <th>2017-07-26 21:00:00-07:00</th>
-      <td>False</td>
-      <td>334.46</td>
-      <td>133.21</td>
+      <td>165.0899</td>
+      <td>58.1142</td>
     </tr>
     <tr>
       <th>2017-07-30 21:00:00-07:00</th>
-      <td>False</td>
-      <td>323.47</td>
-      <td>133.21</td>
-    </tr>
-    <tr>
-      <th>2017-07-31 21:00:00-07:00</th>
-      <td>False</td>
-      <td>319.57</td>
-      <td>133.21</td>
-    </tr>
-    <tr>
-      <th>2017-08-01 21:00:00-07:00</th>
       <td>True</td>
-      <td>325.89</td>
-      <td>133.21</td>
+      <td>162.2543</td>
+      <td>58.1142</td>
     </tr>
     <tr>
       <th>2017-08-09 21:00:00-07:00</th>
       <td>False</td>
-      <td>355.40</td>
-      <td>162.72</td>
+      <td>164.4808</td>
+      <td>60.3407</td>
+    </tr>
+    <tr>
+      <th>2017-08-22 21:00:00-07:00</th>
+      <td>True</td>
+      <td>165.6849</td>
+      <td>60.3407</td>
+    </tr>
+    <tr>
+      <th>2017-08-24 21:00:00-07:00</th>
+      <td>False</td>
+      <td>163.6963</td>
+      <td>58.3521</td>
+    </tr>
+    <tr>
+      <th>2017-09-06 21:00:00-07:00</th>
+      <td>True</td>
+      <td>166.4644</td>
+      <td>58.3521</td>
+    </tr>
+    <tr>
+      <th>2017-09-07 21:00:00-07:00</th>
+      <td>False</td>
+      <td>163.5764</td>
+      <td>55.4641</td>
+    </tr>
+    <tr>
+      <th>2017-09-28 21:00:00-07:00</th>
+      <td>True</td>
+      <td>178.6459</td>
+      <td>55.4641</td>
+    </tr>
+    <tr>
+      <th>2017-10-24 21:00:00-07:00</th>
+      <td>False</td>
+      <td>193.5255</td>
+      <td>70.3437</td>
+    </tr>
+    <tr>
+      <th>2017-10-26 21:00:00-07:00</th>
+      <td>True</td>
+      <td>201.7198</td>
+      <td>70.3437</td>
+    </tr>
+    <tr>
+      <th>2017-11-07 21:00:00-08:00</th>
+      <td>False</td>
+      <td>209.0148</td>
+      <td>77.6387</td>
+    </tr>
+    <tr>
+      <th>2017-11-26 21:00:00-08:00</th>
+      <td>False</td>
+      <td>214.1400</td>
+      <td>77.6387</td>
+    </tr>
+    <tr>
+      <th>2017-12-06 21:00:00-08:00</th>
+      <td>True</td>
+      <td>191.9900</td>
+      <td>77.6387</td>
+    </tr>
+    <tr>
+      <th>2017-12-11 21:00:00-08:00</th>
+      <td>False</td>
+      <td>190.8400</td>
+      <td>76.4887</td>
+    </tr>
+    <tr>
+      <th>2017-12-19 21:00:00-08:00</th>
+      <td>True</td>
+      <td>196.8000</td>
+      <td>76.4887</td>
     </tr>
   </tbody>
 </table>
@@ -663,29 +516,37 @@ log.head(50)
 
 ```python
 import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 #exposes fig and ax components of the plot (for modification)
 fig, ax = plt.subplots(1)
 
+#set date range
 start = '2017-01-01'
-end = '2017-9-01'
+end = '2017-12-20'
 
+#plot closes in range
 cut = ohlc.ix[start:end]
-plt.plot(cut.index, cut.close, 'burlywood', linewidth=3)
+plt.plot(cut.index, cut.close, 'white', linewidth=3)
 
-buy_list = log[(log.pos == True)]
-exit_list = log[(log.pos == False)]
-buy_list = buy_list.ix[start:end]
-exit_list = exit_list.ix[start:end]
+#get buys in range
+buy_list = back[(back.pos == True)].ix[start:end]
 x= buy_list.index
+y= buy_list['price']
+#get sells in range
+exit_list = back[(back.pos == False)].ix[start:end]
 x1= exit_list.index
-y= buy_list['close']
-y1= exit_list['close']
+y1= exit_list['price']
+#plot buys and sells
+plt.plot(x,y,'g^', x1,y1,'rv', markersize=5.5)
 
-plt.plot(x,y,'c^', x1,y1,'rv', markersize=5)
+#title
+plt.title("$"+stock+" trades: "+start+" thru "+end, fontweight='bold', color='lightseagreen')
 
-plt.title(stock + " trades, " + start + " to " + end)
-plt.grid(True)
+#font, ticks, dates
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Arial']
+ax.tick_params(bottom="off", right="off", top="off")
 fig.autofmt_xdate()
 
 plt.show()
