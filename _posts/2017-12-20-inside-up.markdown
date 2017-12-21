@@ -6,7 +6,7 @@ category: python
 color: royalblue
 ---
 
-Here I find inside bars on the daily.
+This explores the inside and up setup on the daily.  It's as simple as Analysis-Backtest-Chart.
 
 # Fetch the data from BarChart
 
@@ -527,7 +527,7 @@ end = '2017-12-20'
 
 #plot closes in range
 cut = ohlc.ix[start:end]
-plt.plot(cut.index, cut.close, 'white', linewidth=3)
+plt.plot(cut.index, cut.close, 'white', linewidth=5)
 
 #get buys in range
 buy_list = back[(back.pos == True)].ix[start:end]
@@ -538,10 +538,10 @@ exit_list = back[(back.pos == False)].ix[start:end]
 x1= exit_list.index
 y1= exit_list['price']
 #plot buys and sells
-plt.plot(x,y,'g^', x1,y1,'rv', markersize=5.5)
+plt.plot(x,y,'g^', x1,y1,'rv', markersize=6)
 
 #title
-plt.title("$"+stock+" trades: "+start+" thru "+end, fontweight='bold', color='lightseagreen')
+plt.title("$"+stock+" trades: "+start+" to "+end, fontweight='bold', color='coral')
 
 #font, ticks, dates
 plt.rcParams['font.family'] = 'sans-serif'
