@@ -47,7 +47,7 @@ syms = components.Identifier.dropna()
 syms = syms.drop(syms.index[-1]).sort_values()
 
 
-apikey = '99f7186682f41a3bd739984105aef52a'
+apikey = 'nope'
 
 
 #----------BUILD URL----------#
