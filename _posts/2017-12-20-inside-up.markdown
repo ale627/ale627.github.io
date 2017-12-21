@@ -6,9 +6,9 @@ category: python
 color: royalblue
 ---
 
-This explores the inside and up setup on the daily.  It's as simple as Analysis-Backtest-Chart.
+This explores the inside and up setup on the daily.  After getting the data, it's Analysis-Backtest-Chart.
 
-# Fetch the data from BarChart
+# Get data
 
 Call the barchart getHistory API.  This is adapted from [BlackArb][tut].
 
