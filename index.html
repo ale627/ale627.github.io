@@ -16,26 +16,25 @@
             margin: 10px 0;
             color: #007bff;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
         footer {
-
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <h1>Dylan Ale</h1>
-    <p>Hello! 👋 Welcome to my website. 🌐</p>
-    <p>I'm located in Kāne'ohe, Hawai'i. 📌 I work remotely Pacific hours. 🌎</p>
-    <p>
-        
-    </p>
+    <p>What's up! 🤙</p>
 
-    <a href="resume_dylanale.pdf" target="_blank">Resume 📜</a>
-    <a href="https://www.linkedin.com/in/dylanale" target="_blank">LinkedIn 💼</a>
-    <a href="mailto:ale627@gmail.com">Email ✉️</a>
+
+    <a href="resume_dylanale.pdf" target="_blank">View Resume 📜</a>
+    <a href="https://www.linkedin.com/in/dylanale" target="_blank">Open LinkedIn Profile 💼</a>
+    <a href="mailto:ale627@gmail.com">Send Email ✉️</a>
+    <p>Working Pacific Time 🌎 from Kāne'ohe, Hawai'i 📌  </p>
 
     <footer id="lastUpdate"></footer>
 
@@ -46,7 +45,7 @@
                 const lastCommitDate = new Date(data[0].commit.author.date);
                 const options = { year: 'numeric', month: 'long', day: 'numeric' };
                 const formattedDate = lastCommitDate.toLocaleDateString('en-US', options);
-                document.getElementById('lastUpdate').innerHTML = `Updated: ${formattedDate} 🤙`;
+                document.getElementById('lastUpdate').innerHTML = `Updated: ${formattedDate} `;
             })
     </script>
 </body>
