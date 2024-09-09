@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underwater WebGL Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #001e3c;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+        }
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .slider-container {
+            margin-bottom: 10px;
+        }
+        input[type="range"] {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <div class="slider-container">
+            <label for="particle-count">Particle Count: <span id="particle-value">7500</span></label>
+            <input type="range" id="particle-count" min="5000" max="10000" value="7500" step="100">
+        </div>
+        <div class="slider-container">
+            <label for="particle-size">Particle Size: <span id="size-value">0.02</span></label>
+            <input type="range" id="particle-size" min="0.01" max="0.03" value="0.02" step="0.001">
+        </div>
+        <div class="slider-container">
+            <label for="particle-spread">Particle Spread: <span id="spread-value">3</span></label>
+            <input type="range" id="particle-spread" min="1" max="5" value="3" step="0.1">
+        </div>
+        <div class="slider-container">
+            <label for="rotation-speed">Rotation Speed: <span id="rotation-value">0.0001</span></label>
+            <input type="range" id="rotation-speed" min="0" max="0.0002" value="0.0001" step="0.00001">
+        </div>
+    </div>
+    <canvas id="underwater-bg"></canvas>
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('underwater-bg'), alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        let particlesGeometry = new THREE.BufferGeometry();
+        let particlesMesh;
+        let particlesCount = 7500;
+        let particleSize = 0.02;
+        let particleSpread = 3;
+        let rotationSpeed = 0.0001;
+
+        const particleShaderMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                size: { value: particleSize },
+                time: { value: 0 }
+            },
+            vertexShader: `
+                uniform float size;
+                uniform float time;
+                attribute vec3 color;
+                varying vec3 vColor;
+                void main() {
+                    vColor = color;
+                    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                    gl_PointSize = size * (300.0 / -mvPosition.z);
+                    gl_Position = projectionMatrix * mvPosition;
+                }
+            `,
+            fragmentShader: `
+                varying vec3 vColor;
+                void main() {
+                    float r = 0.0, delta = 0.0, alpha = 1.0;
+                    vec2 cxy = 2.0 * gl_PointCoord - 1.0;
+                    r = dot(cxy, cxy);
+                    if (r > 1.0) {
+                        discard;
+                    }
+                    delta = fwidth(r);
+                    alpha = 1.0 - smoothstep(1.0 - delta, 1.0 + delta, r);
+                    gl_FragColor = vec4(vColor, alpha * 0.8);
+                }
+            `,
+            transparent: true,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        });
+
+        function createParticles() {
+            if (particlesMesh) scene.remove(particlesMesh);
+
+            const posArray = new Float32Array(particlesCount * 3);
+            const colorArray = new Float32Array(particlesCount * 3);
+
+            for (let i = 0; i < particlesCount * 3; i += 3) {
+                const z = -Math.log(Math.random()) * particleSpread;
+                const theta = Math.random() * Math.PI * 2;
+                const r = Math.random() * 5;
+
+                posArray[i] = r * Math.cos(theta);
+                posArray[i + 1] = r * Math.sin(theta);
+                posArray[i + 2] = z;
+
+                const t = Math.random();
+                colorArray[i] = 0.2 + 0.3 * t;
+                colorArray[i + 1] = 0.5 + 0.5 * t;
+                colorArray[i + 2] = 0.8;
+            }
+
+            particlesGeometry = new THREE.BufferGeometry();
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+
+            particlesMesh = new THREE.Points(particlesGeometry, particleShaderMaterial);
+            scene.add(particlesMesh);
+        }
+
+        createParticles();
+        camera.position.z = 5;
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+
+            particleShaderMaterial.uniforms.time.value = time * 0.005;
+            particlesMesh.rotation.y += rotationSpeed;
+            particlesMesh.rotation.x += rotationSpeed * 0.5;
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function updateSliderValue(sliderId, valueId) {
+            const slider = document.getElementById(sliderId);
+            const value = document.getElementById(valueId);
+            value.textContent = slider.value;
+        }
+
+        document.getElementById('particle-count').addEventListener('input', (event) => {
+            particlesCount = parseInt(event.target.value);
+            updateSliderValue('particle-count', 'particle-value');
+            createParticles();
+        });
+
+        document.getElementById('particle-size').addEventListener('input', (event) => {
+            particleSize = parseFloat(event.target.value);
+            updateSliderValue('particle-size', 'size-value');
+            particleShaderMaterial.uniforms.size.value = particleSize;
+        });
+
+        document.getElementById('particle-spread').addEventListener('input', (event) => {
+            particleSpread = parseFloat(event.target.value);
+            updateSliderValue('particle-spread', 'spread-value');
+            createParticles();
+        });
+
+        document.getElementById('rotation-speed').addEventListener('input', (event) => {
+            rotationSpeed = parseFloat(event.target.value);
+            updateSliderValue('rotation-speed', 'rotation-value');
+        });
+    </script>
+</body>
+</html>

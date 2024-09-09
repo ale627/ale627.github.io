@@ -6,25 +6,20 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
     <title>ale627.github.io</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html, body {
-            height: 100%;
-        }
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 1em;
             color: #000;
             transition: background-color 0.3s, color 0.3s;
-            display: flex;
-            flex-direction: column;
-            padding: 1em;
         }
         body.dark-mode {
             background-color: #222;
             color: #fff;
+        }
+        #content {
+            position: relative;
+            z-index: 1;
         }
         a {
             display: block;
@@ -41,9 +36,6 @@
         }
         footer {
             font-style: italic;
-            text-align: center;
-            margin-top: auto;
-            padding-top: 1em;
         }
         #dark-mode-toggle {
             position: absolute;
@@ -51,27 +43,27 @@
             right: 10px;
             cursor: pointer;
             font-size: 24px;
-        }
-        #content {
-            flex-grow: 1;
+            z-index: 2;
         }
     </style>
 </head>
 <body>
-    <div id="dark-mode-toggle">🌓</div>
     <div id="content">
+        <div id="dark-mode-toggle">🌓</div>
         <h1>Dylan Ale</h1>
         <p>What's up! 🤙</p>
+        <a href="underwater.html" target="_blank">WebGL Underwater Animation</a>
 
         <a href="resume_dylanale.pdf" target="_blank">View Resume 📜</a>
         <a href="https://www.linkedin.com/in/dylanale" target="_blank">LinkedIn Profile 💼</a>
         <a href="mailto:ale627@gmail.com">Send Email ✉️</a>
         <p>Working Pacific Time 🌎 from Kāne'ohe, Hawai'i 📌  </p>
+
+        <footer id="lastUpdate"></footer>
     </div>
 
-    <footer id="lastUpdate"></footer>
-
     <script>
+        // Fetch last update date
         fetch('https://api.github.com/repos/ale627/ale627.github.io/commits')
             .then(response => response.json())
             .then(data => {
@@ -92,7 +84,8 @@
 
         darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
+            const isDarkMode = body.classList.contains('dark-mode');
+            if (isDarkMode) {
                 localStorage.setItem('darkMode', 'enabled');
             } else {
                 localStorage.setItem('darkMode', null);
