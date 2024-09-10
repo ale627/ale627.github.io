@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Audio Visualizer</title>
+    <title>Fully Mirrored Symmetrical Outline Visualizer</title>
     <style>
         body, html {
             margin: 0;
@@ -43,10 +43,13 @@
     <script>
         const startButton = document.getElementById('startButton');
         const canvas = document.getElementById('visualizer');
-        const ctx = canvas.getContext('2d');
+        const canvasCtx = canvas.getContext('2d');
 
-        let audioContext, analyser, dataArray, bufferLength;
-        let particles = [];
+        let audioContext;
+        let analyser;
+        let dataArray;
+        let bufferLength;
+        const frequencyCutoff = 0.35; // Fixed at 35%
 
         startButton.addEventListener('click', initAudio);
 
@@ -63,67 +66,59 @@
                     bufferLength = analyser.frequencyBinCount;
                     dataArray = new Uint8Array(bufferLength);
 
-                    createParticles();
-                    animate();
+                    draw();
                 })
                 .catch(err => console.error('Error accessing audio:', err));
 
             startButton.style.display = 'none';
         }
 
-        function createParticles() {
-            for (let i = 0; i < bufferLength; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 5 + 2,
-                    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
-                    velocity: { x: 0, y: 0 }
-                });
-            }
-        }
+        function draw() {
+            const WIDTH = canvas.width;
+            const HEIGHT = canvas.height;
 
-        function animate() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            requestAnimationFrame(draw);
 
             analyser.getByteFrequencyData(dataArray);
 
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const radius = Math.min(centerX, centerY) * 0.8;
+            canvasCtx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-            particles.forEach((particle, index) => {
-                const amplitude = dataArray[index] / 255;
-                const angle = (index / bufferLength) * Math.PI * 2;
-                const targetX = centerX + Math.cos(angle) * radius * amplitude;
-                const targetY = centerY + Math.sin(angle) * radius * amplitude;
+            canvasCtx.lineWidth = 2;
+            canvasCtx.strokeStyle = 'white';
 
-                particle.velocity.x += (targetX - particle.x) * 0.03;
-                particle.velocity.y += (targetY - particle.y) * 0.03;
+            const cutoffIndex = Math.floor(bufferLength * frequencyCutoff);
+            const sliceWidth = (WIDTH / 2) / cutoffIndex;
 
-                particle.x += particle.velocity.x;
-                particle.y += particle.velocity.y;
+            function drawQuadrant(startX, startY, xDirection, yDirection) {
+                canvasCtx.beginPath();
+                let x = startX;
+                for (let i = 0; i < cutoffIndex; i++) {
+                    const v = dataArray[i] / 255.0;
+                    const y = v * (HEIGHT / 2) * 0.9;
 
-                particle.velocity.x *= 0.95;
-                particle.velocity.y *= 0.95;
+                    if (i === 0) {
+                        canvasCtx.moveTo(x, startY + yDirection * y);
+                    } else {
+                        canvasCtx.lineTo(x, startY + yDirection * y);
+                    }
 
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.radius * amplitude, 0, Math.PI * 2);
-                ctx.fillStyle = particle.color;
-                ctx.fill();
-
-                if (index < bufferLength - 1) {
-                    const nextParticle = particles[index + 1];
-                    ctx.beginPath();
-                    ctx.moveTo(particle.x, particle.y);
-                    ctx.lineTo(nextParticle.x, nextParticle.y);
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${amplitude * 0.5})`;
-                    ctx.stroke();
+                    x += xDirection * sliceWidth;
                 }
-            });
+                canvasCtx.stroke();
+            }
 
-            requestAnimationFrame(animate);
+            // Draw top-left quadrant
+            drawQuadrant(WIDTH / 2, HEIGHT / 2, -1, -1);
+
+            // Draw top-right quadrant
+            drawQuadrant(WIDTH / 2, HEIGHT / 2, 1, -1);
+
+            // Draw bottom-right quadrant
+            drawQuadrant(WIDTH / 2, HEIGHT / 2, 1, 1);
+
+            // Draw bottom-left quadrant
+            drawQuadrant(WIDTH / 2, HEIGHT / 2, -1, 1);
         }
 
         function resizeCanvas() {
@@ -131,12 +126,7 @@
             canvas.height = window.innerHeight;
         }
 
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            particles = [];
-            createParticles();
-        });
-
+        window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
     </script>
 </body>
